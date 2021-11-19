@@ -18,22 +18,21 @@ import sys
 import os
 import platform
 from aplicaciones.Aplicacion import *
-from tkinter.filedialog import askdirectory
 
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
-#os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:/Users/Usuario/anaconda3/envs/py39-demo/Lib/site-packages/PyQt5/Qt5/plugins/platforms"
-#os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:/Users/Usuario/venv/Lib/site-packages/PyQt5/Qt5/bin/platforms"
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:/Users/Usuario/anaconda3/envs/py39-demo/Library/plugins"
 
 # SET AS GLOBAL WIDGETS
 # ///////////////////////////////////////////////////////////////
 widgets = None
 cambioUnidadesLongitud = {"Milímetros": "mm" , "Centímetros": "cm", "Metros": "m", "Pulgadas": "in"}
 cambioUnidadesAngulo = {"Adimensional":"m/m", "Grados": "grados", "Radianes": "radianes"}
+
+parametrosGrafica = ''
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -140,15 +139,24 @@ class MainWindow(QMainWindow):
         
         # Sección Análisis RH
         widgets.RHAnalisisBotonCalcular.clicked.connect(self.RHAnalisis)
+        widgets.RHAnalisisBotonReiniciar.clicked.connect(self.reiniciarCamposRHAnalisis)
 
         # Sección Propiedades RH
         widgets.RHPropiedadesBotonCalcular.clicked.connect(self.RHPropiedades)
+        widgets.RHPropiedadesBotonReiniciar.clicked.connect(self.reiniciarCamposRHPropiedades)
 
         # Sección Tipo resalto
         widgets.RHTipoBotonCalcular.clicked.connect(self.RHTipo)
+        widgets.RHTipoBotonReiniciar.clicked.connect(self.reiniciarCamposRHTipo)
 
         # Sección Compuertas
         widgets.RHCompuertasBotonCalcular.clicked.connect(self.RHCompuertas)
+        widgets.RHCompuertasBotonReiniciar.clicked.connect(self.reiniciarCamposRHCompuertas)
+
+
+        # ///////////////////////////////////////////////////////////////
+        # ECUACIÓN DE MANNING
+
 
         # ///////////////////////////////////////////////////////////////
         # FLUJO GRADUALMENTE VARIADO
@@ -159,6 +167,9 @@ class MainWindow(QMainWindow):
         widgets.FGVPasoDBotonCalcular.clicked.connect(self.FGVPasoDirecto)
         widgets.FGVPasoDBotonDescargarCSV.clicked.connect(self.RGVTxt_pasoDirecto)
         widgets.FGVPasoDBotonDescargarPerfil.clicked.connect(self.RGVGrafica_pasoDirecto)
+
+
+
 
 
     # BUTTONS CLICK
@@ -189,6 +200,10 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
    
+
+
+
+
     # ///////////////////////////////////////////////////////////////
     # MENÚ PRINCIPAL
 
@@ -221,8 +236,8 @@ class MainWindow(QMainWindow):
         widgets.geoCFieldProfundidadHidraulica.setText(str(round(D, 3)) + " m")
 
     def reiniciarCamposGeoC(self):
-        widgets.geoCFieldDiametro.setText("")
-        widgets.geoCFieldRelacionLlenado.setText("")
+        widgets.geoCFieldDiametro.setText(0)
+        widgets.geoCFieldRelacionLlenado.setText(0)
 
         widgets.geoCComboBoxDiametro.setCurrentIndex(0)
 
@@ -234,6 +249,7 @@ class MainWindow(QMainWindow):
         widgets.geoCFieldAnchoSuperficial.setText("")
         widgets.geoCFieldProfundidadHidraulica.setText("")
 
+
     def geometriaRectangular (self):
         
         y =  float (widgets.geoCFieldProfundidadSeccion.text())
@@ -241,8 +257,13 @@ class MainWindow(QMainWindow):
         m1 = float (widgets.geoCFieldPendienteLateral.text())
         m2 = float (widgets.geoCFieldPendienteLateral2.text())
 
-        um = widgets.geoRComboBoxPendienteLateral.currentText()
-        um = cambioUnidadesAngulo[um]
+        um1 = widgets.geoRComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        print (um1)
+
+        um2 = widgets.geoRComboBoxPendienteLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
 
         uy = widgets.geoRComboBoxProfundidad.currentText()
         uy = cambioUnidadesLongitud[uy]
@@ -260,8 +281,7 @@ class MainWindow(QMainWindow):
             widgets.geoRImagenCanal.setStyleSheet(u"background-image: url(:/geometria/images/geometria/Geometria-rectangular.PNG);")
 
 
-        A,P,Rh,T,D = geom_r(y,b,m1,m2,um,uy,ub)
-        print(A)
+        A,P,Rh,T,D = geom_r(y,b,m1,m2,um1,uy,ub)
 
         widgets.geoRFieldArea.setText(str(round(A, 3)) + " m²")
         widgets.geoRFieldPerimetro.setText(str(round(P, 3)) + " m")
@@ -270,12 +290,13 @@ class MainWindow(QMainWindow):
         widgets.geoRFieldProfundidadHidraulica.setText(str(round(D, 3)) + " m")
     
     def reiniciarCamposGeoR(self):
-        widgets.geoCFieldProfundidadSeccion.setText("")
-        widgets.geoCFieldAncho.setText("")
-        widgets.geoCFieldPendienteLateral.setText("")
-        widgets.geoCFieldPendienteLateral2.setText("")
+        widgets.geoCFieldProfundidadSeccion.setText(0)
+        widgets.geoCFieldAncho.setText(0)
+        widgets.geoCFieldPendienteLateral.setText(0)
+        widgets.geoCFieldPendienteLateral2.setText(0)
 
         widgets.geoRComboBoxPendienteLateral.setCurrentIndex(0)
+        widgets.geoRComboBoxPendienteLateral2.setCurrentIndex(0)
         widgets.geoRComboBoxProfundidad.setCurrentIndex(0)
         widgets.geoRComboBoxAncho.setCurrentIndex(0)
 
@@ -286,6 +307,7 @@ class MainWindow(QMainWindow):
         widgets.geoCFieldRadio.setText("")
         widgets.geoRFieldProfundidadHidraulica.setText("")
 
+
     def geometriaFroude (self):
         y =  float (widgets.geoFroudeFieldProfundidadSeccion.text())
         b =  float (widgets.geoFroudeFieldAncho.text())
@@ -295,8 +317,11 @@ class MainWindow(QMainWindow):
         v = float (widgets.geoFroudeFieldVelocidad.text())
         d = float (widgets.geoFroudeFieldDiametro.text())
          
-        um = widgets.geoFroudeComboBoxPendienteLateral.currentText()
-        um = cambioUnidadesAngulo[um]
+        um1 = widgets.geoFroudeComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.geoFroudeComboBoxPendienteLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]       
 
         uy = widgets.geoFroudeComboBoxProfundidad.currentText()
         uy = cambioUnidadesLongitud[uy]
@@ -310,22 +335,25 @@ class MainWindow(QMainWindow):
         ud = widgets.geoFroudeComboBoxDiametro.currentText()
         ud = cambioUnidadesLongitud[ud]
 
-        Fr = froude(y,b,m1,m2,um,Q,v,d,uy,ub,ud,uQ)
+        Fr = froude(y,b,m1,m2,um1,Q,v,d,uy,ub,ud,uQ)
     
         widgets.geoFroudeFieldFroude.setText(str(round(Fr, 3)))
 
     def reiniciarCamposGeoFroude(self):
-        widgets.geoFroudeFieldProfundidadSeccion.setText("")
-        widgets.geoFroudeFieldAncho.setText("")
-        widgets.geoFroudeFieldPendienteLateral.setText("")
-        widgets.geoFroudeComboBoxProfundidad.setText("")
-        widgets.geoFroudeFieldCaudal.setText("")
-        widgets.geoFroudeFieldVelocidad.setText("")
-        widgets.geoFroudeFieldDiametro.setText("")
+        widgets.geoFroudeFieldProfundidadSeccion.setText(0)
+        widgets.geoFroudeFieldAncho.setText(0)
+        widgets.geoFroudeFieldPendienteLateral.setText(0)
+        widgets.geoFroudeFieldPendienteLateral2.setText(0)
+        widgets.geoFroudeFieldCaudal.setText(0)
+        widgets.geoFroudeFieldVelocidad.setText(0)
+        widgets.geoFroudeFieldDiametro.setText(0)
 
         widgets.geoFroudeComboBoxPendienteLateral.setCurrentIndex(0)
+        widgets.geoFroudeComboBoxPendienteLateral2.setCurrentIndex(0)
         widgets.geoFroudeComboBoxProfundidad.setCurrentIndex(0)
         widgets.geoFroudeComboBoxAncho.setCurrentIndex(0)
+        widgets.geoFroudeComboBoxCaudal.setCurrentIndex(0)
+        widgets.geoFroudeComboBoxDiametro.setCurrentIndex(0)
 
         widgets.geoFroudeFieldFroude.setText("")
 
@@ -339,44 +367,73 @@ class MainWindow(QMainWindow):
         y1 =  float (widgets.RHAnalisisFieldProfundidad1.text())
         Q =  float (widgets.RHAnalisisFieldCaudal.text())
         
-        l =  widgets.RHAnalisisFieldLongitudInclinada.text()
-        l = float(l) if l else 0
+        l =  float (widgets.RHAnalisisFieldLongitudInclinada.text())
+        yn =  float (widgets.RHAnalisisFieldProfundidad.text())
+        i =  float (widgets.RHAnalisisFieldInclinacion.text())
+        f = float (widgets.RHAnalisisFieldFuerza.text())
 
-        yn =  widgets.RHAnalisisFieldProfundidad.text()
-        yn = float(yn) if yn else 0
-
-        i =  widgets.RHAnalisisFieldInclinacion.text()
-        i = float(i) if i else 0
-
-        f =  widgets.RHAnalisisFieldFuerza.text()
-        f = float(f) if f else 0
-
-        um = widgets.RHAnalisisComboBoxPendienteLateral.currentText()
-        um = cambioUnidadesAngulo[um]
-
-        uy1 = widgets.RHAnalisisComboBoxProfundidad1.currentText()
-        uy1 = cambioUnidadesLongitud[uy1]
 
         ub = widgets.RHAnalisisComboBoxAncho.currentText()
         ub = cambioUnidadesLongitud[ub]
 
+        um1 = widgets.RHAnalisisComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.RHAnalisisComboBoxPendienteLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
+
+        uy1 = widgets.RHAnalisisComboBoxProfundidad1.currentText()
+        uy1 = cambioUnidadesLongitud[uy1]
+
         uQ = widgets.RHAnalisisComboBoxCaudal.currentText()
         uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+
 
         ul = widgets.RHAnalisisComboBoxLongitudInclinada.currentText()
         ul = cambioUnidadesLongitud[ul]
 
-        ui = widgets.RHAnalisisComboBoxPendienteLateral.currentText()
+        uyn = widgets.RHAnalisisComboBoxProfundidad.currentText()
+        uyn = cambioUnidadesLongitud[uyn]
+
+        ui = widgets.RHAnalisisComboBoxInclinacion.currentText()
         ui = cambioUnidadesAngulo[ui]
 
-        calculos, resultados = eficienciaRH(Q,b,m1,m2,um,y1,yn,f,l,i,uQ,ub,uy1,ul,ui)
+        calculos, resultados = eficienciaRH(Q,b,m1,m2,um1,y1,yn,f,l,i,uQ,ub,uy1,ul,ui)
         E1, E2, z = calculos
 
         widgets.RHAnalisisFieldAltura.setText(str(round(z, 3)) + " m")
-        widgets.RHAnalisisFieldE1.setText(str(round(z, 3)) + " m")
-        widgets.RHAnalisisFieldE2.setText(str(round(z, 3)) + " m")
+        widgets.RHAnalisisFieldE1.setText(str(round(E1, 3)) + " m")
+        widgets.RHAnalisisFieldE2.setText(str(round(E2, 3)) + " m")
 
         widgets.RHAnalisisFieldEficiencia.setText(str(round(resultados[0], 3)) + " %")
+
+    def reiniciarCamposRHAnalisis(self):
+
+        widgets.RHAnalisisFieldAncho.setText(0)
+        widgets.RHAnalisisFieldPendienteLateral.setText(0)
+        widgets.RHAnalisisFieldPendienteLateral2.setText(0)
+        widgets.RHAnalisisFieldProfundidad1.setText(0)
+        widgets.RHAnalisisFieldCaudal.setText(0)
+        
+        widgets.RHAnalisisFieldLongitudInclinada.setText(0)
+        widgets.RHAnalisisFieldProfundidad.setText(0)
+        widgets.RHAnalisisFieldInclinacion.setText(0)
+        widgets.RHAnalisisFieldFuerza.setText(0)
+
+        widgets.RHAnalisisComboBoxAncho.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxPendienteLateral.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxPendienteLateral2.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxProfundidad1.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxCaudal.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxLongitudInclinada.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxProfundidad.setCurrentIndex(0)
+        widgets.RHAnalisisComboBoxInclinacion.setCurrentIndex(0)
+
+        widgets.RHAnalisisFieldAltura.setText("")
+        widgets.RHAnalisisFieldE1.setText("")
+        widgets.RHAnalisisFieldE2.setText("")
+        widgets.RHAnalisisFieldEficiencia.setText("")
+
 
     def RHPropiedades(self):
         b =  float (widgets.RHPropiedadesFieldBase.text())
@@ -387,14 +444,18 @@ class MainWindow(QMainWindow):
         Q =  float (widgets.RHPropiedadesFieldCaudal.text())
         d =  float (widgets.RHPropiedadesFieldDiametro.text())
         
-        um = widgets.RHPropiedadesComboBoxPendienteLateral.currentText()
-        um = cambioUnidadesAngulo[um]
+        
+        ub = widgets.RHPropiedadesComboBoxBase.currentText()
+        ub = cambioUnidadesLongitud[ub]
+
+        um1 = widgets.RHPropiedadesComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.RHPropiedadesComboBoxPendientaLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
 
         uy = widgets.RHPropiedadesComboBoxProfundidad.currentText()
         uy = cambioUnidadesLongitud[uy]
-
-        ub = widgets.RHPropiedadesComboBoxBase.currentText()
-        ub = cambioUnidadesLongitud[ub]
 
         uQ = widgets.RHPropiedadesComboBoxCaudal.currentText()
         uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
@@ -402,12 +463,34 @@ class MainWindow(QMainWindow):
         ud = widgets.RHPropiedadesComboBoxDiametro.currentText()
         ud = cambioUnidadesLongitud[ud]
 
-        opcionales, resultados = clasificacionResalto(Q,b,m1,m2,d,ud,um,y,ub,uy,uQ)
+        opcionales, resultados = clasificacionResalto(Q,b,m1,m2,d,ud,um1,y,ub,uy,uQ)
         widgets.RHPropiedadesFieldFroude.setText(str(round(opcionales[0], 3)))
         widgets.RHPropiedadesFieldClasificacion.setText(resultados[0])
 
-        Lr = longitudResalto(y,b,m1,m2,Q,d,uy,ub,uQ,ud,um)
+        Lr = longitudResalto(y,b,m1,m2,Q,d,uy,ub,uQ,ud,um1)
         widgets.RHPropiedadesFieldLongitud.setText(str(round(Lr, 3)) + " m")
+
+    def reiniciarCamposRHPropiedades(self):
+        widgets.RHPropiedadesFieldBase.setText(0)
+        widgets.RHPropiedadesFieldProfundidad.setText(0) 
+        widgets.RHPropiedadesFieldPendienteLateral.setText(0)
+        widgets.RHPropiedadesFieldPendienteLateral2.setText(0)
+        widgets.RHPropiedadesFieldProfundidad.setText(0)
+        widgets.RHPropiedadesFieldCaudal.setText(0)
+        widgets.RHPropiedadesFieldDiametro.setText(0)
+        
+        widgets.RHPropiedadesComboBoxBase.setCurrentIndex(0)
+        widgets.RHPropiedadesComboBoxPendienteLateral.setCurrentIndex(0)
+        widgets.RHPropiedadesComboBoxPendientaLateral2.setCurrentIndex(0)
+        widgets.RHPropiedadesComboBoxProfundidad.setCurrentIndex(0)
+        widgets.RHPropiedadesComboBoxCaudal.setCurrentIndex(0)
+        widgets.RHPropiedadesComboBoxDiametro.setCurrentIndex(0)
+
+
+        widgets.RHPropiedadesFieldFroude.setText("")
+        widgets.RHPropiedadesFieldClasificacion.setText("")
+        widgets.RHPropiedadesFieldLongitud.setText("")
+
 
     def RHTipo (self):
         b =  float (widgets.RHTipoFieldBase.text())
@@ -417,18 +500,22 @@ class MainWindow(QMainWindow):
         m2 =  float (widgets.RHTipoFieldPendienteLateral2.text())
         s0 =  float (widgets.RHTipoFieldInclinacion.text())
         Q =  float (widgets.RHTipoFieldCaudal.text())
+
         
-        um = widgets.RHTipoComboBoxPendientaLateral.currentText()
-        um = cambioUnidadesAngulo[um]
+        ub = widgets.RHTipoComboBoxBase.currentText()
+        ub = cambioUnidadesLongitud[ub]
+
+        um1 = widgets.RHTipoComboBoxPendientaLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.RHTipoComboBoxPendienteLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
 
         uy = widgets.RHTipoComboBoxProfundidad.currentText()
         uy = cambioUnidadesLongitud[uy]
 
         uyn = widgets.RHTipoComboBoxNormal.currentText()
         uyn = cambioUnidadesLongitud[uyn]
-
-        ub = widgets.RHTipoComboBoxBase.currentText()
-        ub = cambioUnidadesLongitud[ub]
 
         uQ = widgets.RHTipoComboBoxCaudal.currentText()
         uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
@@ -445,6 +532,28 @@ class MainWindow(QMainWindow):
 
         widgets.RHTipoFieldTipo.setText(resultados[0])
 
+    def reiniciarCamposRHTipo (self):
+        widgets.RHTipoFieldBase.setText(0) 
+        widgets.RHTipoFieldProfundidad.setText(0)      
+        widgets.RHTipoFieldNormal.setText(0)       
+        widgets.RHTipoFieldPendienteLateral.setText(0) 
+        widgets.RHTipoFieldPendienteLateral2.setText(0) 
+        widgets.RHTipoFieldInclinacion.setText(0) 
+        widgets.RHTipoFieldCaudal.setText(0) 
+
+        widgets.RHTipoComboBoxBase.setCurrentIndex(0)
+        widgets.RHTipoComboBoxPendientaLateral.setCurrentIndex(0)
+        widgets.RHTipoComboBoxPendienteLateral2.setCurrentIndex(0)
+        widgets.RHTipoComboBoxProfundidad.setCurrentIndex(0)
+        widgets.RHTipoComboBoxNormal.setCurrentIndex(0)
+        widgets.RHTipoComboBoxCaudal.setCurrentIndex(0)
+        widgets.RHTipoComboBoxInclinacion.setCurrentIndex(0)
+
+        widgets.RHTipoFieldSubsecuente.setText("")
+        widgets.RHTipoFieldAsterisco.setText("")
+        widgets.RHTipoFieldTipo.setText("")
+
+
     def RHCompuertas(self):
         b =  float (widgets.RHCompuertasFieldAncho.text())
         y1 =  float (widgets.RHCompuertasFieldProfundidad.text())       
@@ -453,23 +562,24 @@ class MainWindow(QMainWindow):
         Q =  float (widgets.RHCompuertasFieldCaudal.text())
         d =  float (widgets.RHCompuertasFieldDiametro.text())
 
-        y2 =  widgets.RHCompuertasFieldProfundidad2.text()
-        y2 = float(y2) if y2 else 0
+        y2 =  float(widgets.RHCompuertasFieldProfundidad2.text())
+        rho =  float(widgets.RHCompuertasFieldDensidad.text())
 
-        rho =  widgets.RHCompuertasFieldDensidad.text()
-        rho = float(rho) if rho else 0
-
-        um = widgets.RHCompuertasComboBoxPendienteLateral.currentText()
-        um = cambioUnidadesAngulo[um]
-
-        uy1 = widgets.RHCompuertasComboBoxProfundidad.currentText()
-        uy1 = cambioUnidadesLongitud[uy1]
-
-        ud = widgets.RHCompuertasComboBoxDiametro.currentText()
-        ud = cambioUnidadesLongitud[ud]
 
         ub = widgets.RHCompuertasComboBoxAncho.currentText()
         ub = cambioUnidadesLongitud[ub]
+
+        uy1 = widgets.RHCompuertasComboBoxProfundidad.currentText()
+        uy1 = cambioUnidadesLongitud[uy1]
+        
+        um1 = widgets.RHCompuertasComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.RHCompuertasComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
+
+        ud = widgets.RHCompuertasComboBoxDiametro.currentText()
+        ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.RHCompuertasComboBoxCaudal.currentText()
         uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
@@ -477,22 +587,45 @@ class MainWindow(QMainWindow):
         uy2 = widgets.RHCompuertasComboBoxProfundidad2.currentText()
         uy2 = cambioUnidadesLongitud[uy2]
 
-        M1 = momentum(Q,b,m1,m2,um,y1,d,uQ,ub,uy1,ud)
+        M1 = momentum(Q,b,m1,m2,um1,y1,d,uQ,ub,uy1,ud)
         M2 = "No aplica."
         F_a = "No aplica."
         f = "No aplica."
 
         if d == 0 and y2 and rho:
-            M1,M2,F_a,f = fuerzaCompuerta(y1,y2,b,Q,m1,m2,um,rho,uy1,uy2,ub,uQ)
+            M1,M2,F_a,f = fuerzaCompuerta(y1,y2,b,Q,m1,m2,um1,rho,uy1,uy2,ub,uQ)
             M2 = str(round(M2, 3)) + " m²"
             F_a = str(round(F_a, 3)) + " m²"
             f = str(round(f, 3)) + " N"
-
 
         widgets.RHCompuertasFieldMomentum.setText(str(round(M1, 3)) + "m²")
         widgets.RHCompuertasFieldMomentum2.setText(M2)
         widgets.RHCompuertasFieldFuerza.setText(F_a)
         widgets.RHCompuertasFieldFuerzaCompuerta.setText(f)
+
+    def reiniciarCamposRHCompuertas(self):
+        widgets.RHCompuertasFieldAncho.setText(0) 
+        widgets.RHCompuertasFieldProfundidad.setText(0)      
+        widgets.RHCompuertasFieldPendienteLateral.setText(0) 
+        widgets.RHCompuertasFieldPendienteLateral2.setText(0) 
+        widgets.RHCompuertasFieldCaudal.setText(0) 
+        widgets.RHCompuertasFieldDiametro.setText(0) 
+
+        widgets.RHCompuertasFieldProfundidad2.setText(0) 
+        widgets.RHCompuertasFieldDensidad.setText(0) 
+
+        widgets.RHCompuertasComboBoxAncho.setCurrentIndex(0)
+        widgets.RHCompuertasComboBoxProfundidad.setCurrentIndex(0)       
+        widgets.RHCompuertasComboBoxPendienteLateral.setCurrentIndex(0)
+        widgets.RHCompuertasComboBoxPendienteLateral.setCurrentIndex(0)
+        widgets.RHCompuertasComboBoxDiametro.setCurrentIndex(0)
+        widgets.RHCompuertasComboBoxCaudal.setCurrentIndex(0)
+        widgets.RHCompuertasComboBoxProfundidad2.setCurrentIndex(0)
+
+        widgets.RHCompuertasFieldMomentum.setText("")
+        widgets.RHCompuertasFieldMomentum2.setText("")
+        widgets.RHCompuertasFieldFuerza.setText("")
+        widgets.RHCompuertasFieldFuerzaCompuerta.setText("")
 
     # ///////////////////////////////////////////////////////////////
     # FLUJO GRADUALMENTE VARIADO (FGV)
@@ -576,12 +709,25 @@ class MainWindow(QMainWindow):
         return parametrosGrafica 
 
     def RGVTxt_pasoDirecto (self):
-        ruta = askdirectory(title='Seleccionar carpeta')
-        txt_pasoDirecto(parametrosGrafica, ruta)
+        
+        txt_pasoDirecto(parametrosGrafica, './')
+
+        """ fname = QFileDialog.getExistingDirectory(self, 'Select a directory', '/home')
+
+        if fname:
+            # Returns pathName with the '/' separators converted to separators that are appropriate for the underlying operating system.
+            # On Windows, toNativeSeparators("c:/winnt/system32") returns
+            # "c:\winnt\system32".
+            fname = QDir.toNativeSeparators(fname)
+
+        if os.path.isdir(fname):
+            self.download_folder_lineEdit.setText(fname)
+ """
 
     def RGVGrafica_pasoDirecto (self):
-        ruta = askdirectory(title='Seleccionar carpeta')
-        grafica_pasoDirecto(parametrosGrafica, ruta)
+        """         global parametrosGrafica
+                (_, _, _, _, _, _, _, _, _, _, _, _, plot_x, plot_fondo, plot_y, plot_yc, plot_yn) = parametrosGrafica
+                graficaMatlab (plot_x,plot_fondo,plot_y,plot_yc,plot_yn,'') """
 
 
 

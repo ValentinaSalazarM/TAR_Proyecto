@@ -1,23 +1,35 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainBdYimS.ui'
+## Form generated from reading UI file 'mainzxPwtH.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.2
+## Created by: Qt User Interface Compiler version 6.2.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QCheckBox,
+    QComboBox, QCommandLinkButton, QFrame, QGridLayout,
+    QGroupBox, QHBoxLayout, QHeaderView, QLabel,
+    QLayout, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QRadioButton, QScrollArea, QScrollBar,
+    QSizePolicy, QSlider, QSpacerItem, QStackedWidget,
+    QTabWidget, QTableWidget, QTableWidgetItem, QTextEdit,
+    QVBoxLayout, QWidget)
 from .resources_rc import *
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1229, 813)
+        MainWindow.resize(1226, 813)
         MainWindow.setMinimumSize(QSize(940, 560))
         MainWindow.setLayoutDirection(Qt.LeftToRight)
         self.styleSheet = QWidget(MainWindow)
@@ -1649,232 +1661,6 @@ class Ui_MainWindow(object):
 "font: 500 11pt \"Allerta\";")
         self.gridLayout_11 = QGridLayout(self.geometriaCircular)
         self.gridLayout_11.setObjectName(u"gridLayout_11")
-        self.groupBox_Resultados = QGroupBox(self.geometriaCircular)
-        self.groupBox_Resultados.setObjectName(u"groupBox_Resultados")
-        sizePolicy6 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.groupBox_Resultados.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados.setSizePolicy(sizePolicy6)
-        self.groupBox_Resultados.setStyleSheet(u"QGroupBox {\n"
-"color: rgb(203, 208, 253);\n"
-"font: bold; \n"
-"font: 700 11pt \"Allerta\";\n"
-"border: 2px solid;\n"
-"border-color: rgb(203, 208, 253);\n"
-"border-radius: 6px;\n"
-"margin: 10px;\n"
-"\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"   	subcontrol-position: top left;\n"
-"    padding: 0px 15px 0px 15px;\n"
-"}\n"
-"")
-        self.gridLayout_6 = QGridLayout(self.groupBox_Resultados)
-        self.gridLayout_6.setObjectName(u"gridLayout_6")
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.gridLayout_6.addItem(self.verticalSpacer_2, 2, 0, 1, 1)
-
-        self.row_5 = QFrame(self.groupBox_Resultados)
-        self.row_5.setObjectName(u"row_5")
-        self.row_5.setStyleSheet(u"")
-        self.row_5.setFrameShape(QFrame.StyledPanel)
-        self.row_5.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_24 = QVBoxLayout(self.row_5)
-        self.verticalLayout_24.setSpacing(0)
-        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
-        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_7 = QGridLayout()
-        self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.gridLayout_7.setSizeConstraint(QLayout.SetNoConstraint)
-        self.gridLayout_7.setHorizontalSpacing(25)
-        self.gridLayout_7.setVerticalSpacing(15)
-        self.gridLayout_7.setContentsMargins(15, 20, 15, 20)
-        self.geoCLabelAngulo = QLabel(self.row_5)
-        self.geoCLabelAngulo.setObjectName(u"geoCLabelAngulo")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.geoCLabelAngulo.sizePolicy().hasHeightForWidth())
-        self.geoCLabelAngulo.setSizePolicy(sizePolicy7)
-        self.geoCLabelAngulo.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelAngulo.setLineWidth(1)
-        self.geoCLabelAngulo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelAngulo, 0, 0, 1, 1)
-
-        self.geoCFieldRadio = QLineEdit(self.row_5)
-        self.geoCFieldRadio.setObjectName(u"geoCFieldRadio")
-        sizePolicy5.setHeightForWidth(self.geoCFieldRadio.sizePolicy().hasHeightForWidth())
-        self.geoCFieldRadio.setSizePolicy(sizePolicy5)
-        self.geoCFieldRadio.setMinimumSize(QSize(0, 30))
-        self.geoCFieldRadio.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-
-        self.gridLayout_7.addWidget(self.geoCFieldRadio, 4, 1, 1, 1)
-
-        self.geoCFieldArea = QLineEdit(self.row_5)
-        self.geoCFieldArea.setObjectName(u"geoCFieldArea")
-        sizePolicy5.setHeightForWidth(self.geoCFieldArea.sizePolicy().hasHeightForWidth())
-        self.geoCFieldArea.setSizePolicy(sizePolicy5)
-        self.geoCFieldArea.setMinimumSize(QSize(0, 30))
-        self.geoCFieldArea.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_7.addWidget(self.geoCFieldArea, 2, 1, 1, 1)
-
-        self.geoCLabelAnchoSuperficial = QLabel(self.row_5)
-        self.geoCLabelAnchoSuperficial.setObjectName(u"geoCLabelAnchoSuperficial")
-        sizePolicy7.setHeightForWidth(self.geoCLabelAnchoSuperficial.sizePolicy().hasHeightForWidth())
-        self.geoCLabelAnchoSuperficial.setSizePolicy(sizePolicy7)
-        self.geoCLabelAnchoSuperficial.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelAnchoSuperficial.setLineWidth(1)
-        self.geoCLabelAnchoSuperficial.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelAnchoSuperficial, 5, 0, 1, 1)
-
-        self.geoCLabelProfundidadHidraulica = QLabel(self.row_5)
-        self.geoCLabelProfundidadHidraulica.setObjectName(u"geoCLabelProfundidadHidraulica")
-        sizePolicy7.setHeightForWidth(self.geoCLabelProfundidadHidraulica.sizePolicy().hasHeightForWidth())
-        self.geoCLabelProfundidadHidraulica.setSizePolicy(sizePolicy7)
-        self.geoCLabelProfundidadHidraulica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelProfundidadHidraulica.setLineWidth(1)
-        self.geoCLabelProfundidadHidraulica.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelProfundidadHidraulica, 6, 0, 1, 1)
-
-        self.geoCLabelPerimetro = QLabel(self.row_5)
-        self.geoCLabelPerimetro.setObjectName(u"geoCLabelPerimetro")
-        sizePolicy7.setHeightForWidth(self.geoCLabelPerimetro.sizePolicy().hasHeightForWidth())
-        self.geoCLabelPerimetro.setSizePolicy(sizePolicy7)
-        self.geoCLabelPerimetro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelPerimetro.setLineWidth(1)
-        self.geoCLabelPerimetro.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelPerimetro, 3, 0, 1, 1)
-
-        self.geoCLabelArea = QLabel(self.row_5)
-        self.geoCLabelArea.setObjectName(u"geoCLabelArea")
-        sizePolicy7.setHeightForWidth(self.geoCLabelArea.sizePolicy().hasHeightForWidth())
-        self.geoCLabelArea.setSizePolicy(sizePolicy7)
-        self.geoCLabelArea.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelArea.setLineWidth(1)
-        self.geoCLabelArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelArea, 2, 0, 1, 1)
-
-        self.geoCFieldAnchoSuperficial = QLineEdit(self.row_5)
-        self.geoCFieldAnchoSuperficial.setObjectName(u"geoCFieldAnchoSuperficial")
-        sizePolicy5.setHeightForWidth(self.geoCFieldAnchoSuperficial.sizePolicy().hasHeightForWidth())
-        self.geoCFieldAnchoSuperficial.setSizePolicy(sizePolicy5)
-        self.geoCFieldAnchoSuperficial.setMinimumSize(QSize(0, 30))
-        self.geoCFieldAnchoSuperficial.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_7.addWidget(self.geoCFieldAnchoSuperficial, 5, 1, 1, 1)
-
-        self.geoCLabelRadio = QLabel(self.row_5)
-        self.geoCLabelRadio.setObjectName(u"geoCLabelRadio")
-        sizePolicy7.setHeightForWidth(self.geoCLabelRadio.sizePolicy().hasHeightForWidth())
-        self.geoCLabelRadio.setSizePolicy(sizePolicy7)
-        self.geoCLabelRadio.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelRadio.setLineWidth(1)
-        self.geoCLabelRadio.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelRadio, 4, 0, 1, 1)
-
-        self.geoCFieldPerimetro = QLineEdit(self.row_5)
-        self.geoCFieldPerimetro.setObjectName(u"geoCFieldPerimetro")
-        sizePolicy5.setHeightForWidth(self.geoCFieldPerimetro.sizePolicy().hasHeightForWidth())
-        self.geoCFieldPerimetro.setSizePolicy(sizePolicy5)
-        self.geoCFieldPerimetro.setMinimumSize(QSize(0, 30))
-        self.geoCFieldPerimetro.setMaximumSize(QSize(16777215, 30))
-        self.geoCFieldPerimetro.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_7.addWidget(self.geoCFieldPerimetro, 3, 1, 1, 1)
-
-        self.geoCFieldProfundidadHidraulica = QLineEdit(self.row_5)
-        self.geoCFieldProfundidadHidraulica.setObjectName(u"geoCFieldProfundidadHidraulica")
-        sizePolicy5.setHeightForWidth(self.geoCFieldProfundidadHidraulica.sizePolicy().hasHeightForWidth())
-        self.geoCFieldProfundidadHidraulica.setSizePolicy(sizePolicy5)
-        self.geoCFieldProfundidadHidraulica.setMinimumSize(QSize(0, 30))
-        self.geoCFieldProfundidadHidraulica.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_7.addWidget(self.geoCFieldProfundidadHidraulica, 6, 1, 1, 1)
-
-        self.geoCLabelProfundidadNormal = QLabel(self.row_5)
-        self.geoCLabelProfundidadNormal.setObjectName(u"geoCLabelProfundidadNormal")
-        sizePolicy7.setHeightForWidth(self.geoCLabelProfundidadNormal.sizePolicy().hasHeightForWidth())
-        self.geoCLabelProfundidadNormal.setSizePolicy(sizePolicy7)
-        self.geoCLabelProfundidadNormal.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoCLabelProfundidadNormal.setLineWidth(1)
-        self.geoCLabelProfundidadNormal.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_7.addWidget(self.geoCLabelProfundidadNormal, 1, 0, 1, 1)
-
-        self.geoCFieldAngulo = QLineEdit(self.row_5)
-        self.geoCFieldAngulo.setObjectName(u"geoCFieldAngulo")
-        sizePolicy5.setHeightForWidth(self.geoCFieldAngulo.sizePolicy().hasHeightForWidth())
-        self.geoCFieldAngulo.setSizePolicy(sizePolicy5)
-        self.geoCFieldAngulo.setMinimumSize(QSize(0, 30))
-        self.geoCFieldAngulo.setMaximumSize(QSize(16777215, 30))
-        self.geoCFieldAngulo.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_7.addWidget(self.geoCFieldAngulo, 0, 1, 1, 1)
-
-        self.geoCFieldProfundidadNormal = QLineEdit(self.row_5)
-        self.geoCFieldProfundidadNormal.setObjectName(u"geoCFieldProfundidadNormal")
-        sizePolicy5.setHeightForWidth(self.geoCFieldProfundidadNormal.sizePolicy().hasHeightForWidth())
-        self.geoCFieldProfundidadNormal.setSizePolicy(sizePolicy5)
-        self.geoCFieldProfundidadNormal.setMinimumSize(QSize(0, 30))
-        self.geoCFieldProfundidadNormal.setMaximumSize(QSize(16777215, 30))
-        self.geoCFieldProfundidadNormal.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-
-        self.gridLayout_7.addWidget(self.geoCFieldProfundidadNormal, 1, 1, 1, 1)
-
-
-        self.verticalLayout_24.addLayout(self.gridLayout_7)
-
-
-        self.gridLayout_6.addWidget(self.row_5, 0, 0, 1, 1)
-
-        self.geoCImagenCanal = QPushButton(self.groupBox_Resultados)
-        self.geoCImagenCanal.setObjectName(u"geoCImagenCanal")
-        self.geoCImagenCanal.setEnabled(False)
-        sizePolicy5.setHeightForWidth(self.geoCImagenCanal.sizePolicy().hasHeightForWidth())
-        self.geoCImagenCanal.setSizePolicy(sizePolicy5)
-        self.geoCImagenCanal.setMinimumSize(QSize(260, 213))
-        self.geoCImagenCanal.setStyleSheet(u"border-image: url(:/geometria/images/geometria/Geometria-rectangular.PNG);\n"
-"background-color: rgb(255,255,255);")
-        self.geoCImagenCanal.setFlat(True)
-
-        self.gridLayout_6.addWidget(self.geoCImagenCanal, 0, 1, 1, 1)
-
-
-        self.gridLayout_11.addWidget(self.groupBox_Resultados, 2, 0, 1, 4)
-
         self.groupBox_Propiedades = QGroupBox(self.geometriaCircular)
         self.groupBox_Propiedades.setObjectName(u"groupBox_Propiedades")
         sizePolicy5.setHeightForWidth(self.groupBox_Propiedades.sizePolicy().hasHeightForWidth())
@@ -1971,49 +1757,6 @@ class Ui_MainWindow(object):
         self.gridLayout_5.setHorizontalSpacing(40)
         self.gridLayout_5.setVerticalSpacing(20)
         self.gridLayout_5.setContentsMargins(0, 10, 0, 10)
-        self.geoLabelDiametro = QLabel(self.row_4)
-        self.geoLabelDiametro.setObjectName(u"geoLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.geoLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.geoLabelDiametro.setSizePolicy(sizePolicy7)
-        self.geoLabelDiametro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoLabelDiametro.setLineWidth(1)
-        self.geoLabelDiametro.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_5.addWidget(self.geoLabelDiametro, 0, 0, 1, 1)
-
-        self.geoCFieldDiametro = QLineEdit(self.row_4)
-        self.geoCFieldDiametro.setObjectName(u"geoCFieldDiametro")
-        sizePolicy8 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.geoCFieldDiametro.sizePolicy().hasHeightForWidth())
-        self.geoCFieldDiametro.setSizePolicy(sizePolicy8)
-        self.geoCFieldDiametro.setMinimumSize(QSize(150, 30))
-        self.geoCFieldDiametro.setMaximumSize(QSize(16777215, 30))
-        self.geoCFieldDiametro.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"color: rgb(255, 255, 255);")
-        self.geoCFieldDiametro.setInputMethodHints(Qt.ImhNone)
-        self.geoCFieldDiametro.setFrame(True)
-        self.geoCFieldDiametro.setEchoMode(QLineEdit.Normal)
-        self.geoCFieldDiametro.setPlaceholderText(u"")
-        self.geoCFieldDiametro.setClearButtonEnabled(False)
-
-        self.gridLayout_5.addWidget(self.geoCFieldDiametro, 0, 1, 1, 1)
-
-        self.geoCComboBoxRelacionLlenado = QComboBox(self.row_4)
-        self.geoCComboBoxRelacionLlenado.addItem("")
-        self.geoCComboBoxRelacionLlenado.setObjectName(u"geoCComboBoxRelacionLlenado")
-        sizePolicy5.setHeightForWidth(self.geoCComboBoxRelacionLlenado.sizePolicy().hasHeightForWidth())
-        self.geoCComboBoxRelacionLlenado.setSizePolicy(sizePolicy5)
-        self.geoCComboBoxRelacionLlenado.setMinimumSize(QSize(150, 30))
-        self.geoCComboBoxRelacionLlenado.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"border-color: rgb(211, 212, 216);")
-        self.geoCComboBoxRelacionLlenado.setEditable(True)
-
-        self.gridLayout_5.addWidget(self.geoCComboBoxRelacionLlenado, 1, 2, 1, 1)
-
         self.geoCComboBoxDiametro = QComboBox(self.row_4)
         self.geoCComboBoxDiametro.addItem("")
         self.geoCComboBoxDiametro.addItem("")
@@ -2029,6 +1772,51 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5.addWidget(self.geoCComboBoxDiametro, 0, 2, 1, 1)
 
+        self.geoLabelRelacionLlenado = QLabel(self.row_4)
+        self.geoLabelRelacionLlenado.setObjectName(u"geoLabelRelacionLlenado")
+        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.geoLabelRelacionLlenado.sizePolicy().hasHeightForWidth())
+        self.geoLabelRelacionLlenado.setSizePolicy(sizePolicy6)
+        self.geoLabelRelacionLlenado.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoLabelRelacionLlenado.setLineWidth(1)
+        self.geoLabelRelacionLlenado.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_5.addWidget(self.geoLabelRelacionLlenado, 1, 0, 1, 1)
+
+        self.geoCFieldDiametro = QLineEdit(self.row_4)
+        self.geoCFieldDiametro.setObjectName(u"geoCFieldDiametro")
+        sizePolicy7 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.geoCFieldDiametro.sizePolicy().hasHeightForWidth())
+        self.geoCFieldDiametro.setSizePolicy(sizePolicy7)
+        self.geoCFieldDiametro.setMinimumSize(QSize(150, 30))
+        self.geoCFieldDiametro.setMaximumSize(QSize(16777215, 30))
+        self.geoCFieldDiametro.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+        self.geoCFieldDiametro.setInputMethodHints(Qt.ImhNone)
+        self.geoCFieldDiametro.setFrame(True)
+        self.geoCFieldDiametro.setEchoMode(QLineEdit.Normal)
+        self.geoCFieldDiametro.setPlaceholderText(u"")
+        self.geoCFieldDiametro.setClearButtonEnabled(False)
+
+        self.gridLayout_5.addWidget(self.geoCFieldDiametro, 0, 1, 1, 1)
+
+        self.geoLabelDiametro = QLabel(self.row_4)
+        self.geoLabelDiametro.setObjectName(u"geoLabelDiametro")
+        sizePolicy6.setHeightForWidth(self.geoLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.geoLabelDiametro.setSizePolicy(sizePolicy6)
+        self.geoLabelDiametro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoLabelDiametro.setLineWidth(1)
+        self.geoLabelDiametro.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_5.addWidget(self.geoLabelDiametro, 0, 0, 1, 1)
+
         self.geoCFieldRelacionLlenado = QLineEdit(self.row_4)
         self.geoCFieldRelacionLlenado.setObjectName(u"geoCFieldRelacionLlenado")
         sizePolicy5.setHeightForWidth(self.geoCFieldRelacionLlenado.sizePolicy().hasHeightForWidth())
@@ -2041,16 +1829,17 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5.addWidget(self.geoCFieldRelacionLlenado, 1, 1, 1, 1)
 
-        self.geoLabelRelacionLlenado = QLabel(self.row_4)
-        self.geoLabelRelacionLlenado.setObjectName(u"geoLabelRelacionLlenado")
-        sizePolicy7.setHeightForWidth(self.geoLabelRelacionLlenado.sizePolicy().hasHeightForWidth())
-        self.geoLabelRelacionLlenado.setSizePolicy(sizePolicy7)
-        self.geoLabelRelacionLlenado.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 650 11pt \"Allerta\";")
-        self.geoLabelRelacionLlenado.setLineWidth(1)
-        self.geoLabelRelacionLlenado.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.geoCComboBoxRelacionLlenado = QComboBox(self.row_4)
+        self.geoCComboBoxRelacionLlenado.addItem("")
+        self.geoCComboBoxRelacionLlenado.setObjectName(u"geoCComboBoxRelacionLlenado")
+        sizePolicy5.setHeightForWidth(self.geoCComboBoxRelacionLlenado.sizePolicy().hasHeightForWidth())
+        self.geoCComboBoxRelacionLlenado.setSizePolicy(sizePolicy5)
+        self.geoCComboBoxRelacionLlenado.setMinimumSize(QSize(150, 30))
+        self.geoCComboBoxRelacionLlenado.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"border-color: rgb(211, 212, 216);")
+        self.geoCComboBoxRelacionLlenado.setEditable(True)
 
-        self.gridLayout_5.addWidget(self.geoLabelRelacionLlenado, 1, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.geoCComboBoxRelacionLlenado, 1, 2, 1, 1)
 
 
         self.verticalLayout_23.addLayout(self.gridLayout_5)
@@ -2059,7 +1848,230 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.row_4, 0, 0, 1, 1)
 
 
-        self.gridLayout_11.addWidget(self.groupBox_Propiedades, 1, 1, 1, 1)
+        self.gridLayout_11.addWidget(self.groupBox_Propiedades, 0, 1, 1, 1)
+
+        self.groupBox_Resultados = QGroupBox(self.geometriaCircular)
+        self.groupBox_Resultados.setObjectName(u"groupBox_Resultados")
+        sizePolicy8 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.groupBox_Resultados.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados.setSizePolicy(sizePolicy8)
+        self.groupBox_Resultados.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(203, 208, 253);\n"
+"font: bold; \n"
+"font: 700 11pt \"Allerta\";\n"
+"border: 2px solid;\n"
+"border-color: rgb(203, 208, 253);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
+"\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
+"")
+        self.gridLayout_6 = QGridLayout(self.groupBox_Resultados)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_6.addItem(self.verticalSpacer_2, 2, 0, 1, 1)
+
+        self.row_5 = QFrame(self.groupBox_Resultados)
+        self.row_5.setObjectName(u"row_5")
+        self.row_5.setStyleSheet(u"")
+        self.row_5.setFrameShape(QFrame.StyledPanel)
+        self.row_5.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_24 = QVBoxLayout(self.row_5)
+        self.verticalLayout_24.setSpacing(0)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_7 = QGridLayout()
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.gridLayout_7.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_7.setHorizontalSpacing(25)
+        self.gridLayout_7.setVerticalSpacing(15)
+        self.gridLayout_7.setContentsMargins(15, 20, 15, 20)
+        self.geoCLabelAngulo = QLabel(self.row_5)
+        self.geoCLabelAngulo.setObjectName(u"geoCLabelAngulo")
+        sizePolicy6.setHeightForWidth(self.geoCLabelAngulo.sizePolicy().hasHeightForWidth())
+        self.geoCLabelAngulo.setSizePolicy(sizePolicy6)
+        self.geoCLabelAngulo.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelAngulo.setLineWidth(1)
+        self.geoCLabelAngulo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelAngulo, 0, 0, 1, 1)
+
+        self.geoCFieldRadio = QLineEdit(self.row_5)
+        self.geoCFieldRadio.setObjectName(u"geoCFieldRadio")
+        sizePolicy5.setHeightForWidth(self.geoCFieldRadio.sizePolicy().hasHeightForWidth())
+        self.geoCFieldRadio.setSizePolicy(sizePolicy5)
+        self.geoCFieldRadio.setMinimumSize(QSize(0, 30))
+        self.geoCFieldRadio.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_7.addWidget(self.geoCFieldRadio, 4, 1, 1, 1)
+
+        self.geoCFieldArea = QLineEdit(self.row_5)
+        self.geoCFieldArea.setObjectName(u"geoCFieldArea")
+        sizePolicy5.setHeightForWidth(self.geoCFieldArea.sizePolicy().hasHeightForWidth())
+        self.geoCFieldArea.setSizePolicy(sizePolicy5)
+        self.geoCFieldArea.setMinimumSize(QSize(0, 30))
+        self.geoCFieldArea.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_7.addWidget(self.geoCFieldArea, 2, 1, 1, 1)
+
+        self.geoCLabelAnchoSuperficial = QLabel(self.row_5)
+        self.geoCLabelAnchoSuperficial.setObjectName(u"geoCLabelAnchoSuperficial")
+        sizePolicy6.setHeightForWidth(self.geoCLabelAnchoSuperficial.sizePolicy().hasHeightForWidth())
+        self.geoCLabelAnchoSuperficial.setSizePolicy(sizePolicy6)
+        self.geoCLabelAnchoSuperficial.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelAnchoSuperficial.setLineWidth(1)
+        self.geoCLabelAnchoSuperficial.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelAnchoSuperficial, 5, 0, 1, 1)
+
+        self.geoCLabelProfundidadHidraulica = QLabel(self.row_5)
+        self.geoCLabelProfundidadHidraulica.setObjectName(u"geoCLabelProfundidadHidraulica")
+        sizePolicy6.setHeightForWidth(self.geoCLabelProfundidadHidraulica.sizePolicy().hasHeightForWidth())
+        self.geoCLabelProfundidadHidraulica.setSizePolicy(sizePolicy6)
+        self.geoCLabelProfundidadHidraulica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelProfundidadHidraulica.setLineWidth(1)
+        self.geoCLabelProfundidadHidraulica.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelProfundidadHidraulica, 6, 0, 1, 1)
+
+        self.geoCLabelPerimetro = QLabel(self.row_5)
+        self.geoCLabelPerimetro.setObjectName(u"geoCLabelPerimetro")
+        sizePolicy6.setHeightForWidth(self.geoCLabelPerimetro.sizePolicy().hasHeightForWidth())
+        self.geoCLabelPerimetro.setSizePolicy(sizePolicy6)
+        self.geoCLabelPerimetro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelPerimetro.setLineWidth(1)
+        self.geoCLabelPerimetro.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelPerimetro, 3, 0, 1, 1)
+
+        self.geoCLabelArea = QLabel(self.row_5)
+        self.geoCLabelArea.setObjectName(u"geoCLabelArea")
+        sizePolicy6.setHeightForWidth(self.geoCLabelArea.sizePolicy().hasHeightForWidth())
+        self.geoCLabelArea.setSizePolicy(sizePolicy6)
+        self.geoCLabelArea.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelArea.setLineWidth(1)
+        self.geoCLabelArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelArea, 2, 0, 1, 1)
+
+        self.geoCFieldAnchoSuperficial = QLineEdit(self.row_5)
+        self.geoCFieldAnchoSuperficial.setObjectName(u"geoCFieldAnchoSuperficial")
+        sizePolicy5.setHeightForWidth(self.geoCFieldAnchoSuperficial.sizePolicy().hasHeightForWidth())
+        self.geoCFieldAnchoSuperficial.setSizePolicy(sizePolicy5)
+        self.geoCFieldAnchoSuperficial.setMinimumSize(QSize(0, 30))
+        self.geoCFieldAnchoSuperficial.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_7.addWidget(self.geoCFieldAnchoSuperficial, 5, 1, 1, 1)
+
+        self.geoCLabelRadio = QLabel(self.row_5)
+        self.geoCLabelRadio.setObjectName(u"geoCLabelRadio")
+        sizePolicy6.setHeightForWidth(self.geoCLabelRadio.sizePolicy().hasHeightForWidth())
+        self.geoCLabelRadio.setSizePolicy(sizePolicy6)
+        self.geoCLabelRadio.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelRadio.setLineWidth(1)
+        self.geoCLabelRadio.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelRadio, 4, 0, 1, 1)
+
+        self.geoCFieldPerimetro = QLineEdit(self.row_5)
+        self.geoCFieldPerimetro.setObjectName(u"geoCFieldPerimetro")
+        sizePolicy5.setHeightForWidth(self.geoCFieldPerimetro.sizePolicy().hasHeightForWidth())
+        self.geoCFieldPerimetro.setSizePolicy(sizePolicy5)
+        self.geoCFieldPerimetro.setMinimumSize(QSize(0, 30))
+        self.geoCFieldPerimetro.setMaximumSize(QSize(16777215, 30))
+        self.geoCFieldPerimetro.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_7.addWidget(self.geoCFieldPerimetro, 3, 1, 1, 1)
+
+        self.geoCFieldProfundidadHidraulica = QLineEdit(self.row_5)
+        self.geoCFieldProfundidadHidraulica.setObjectName(u"geoCFieldProfundidadHidraulica")
+        sizePolicy5.setHeightForWidth(self.geoCFieldProfundidadHidraulica.sizePolicy().hasHeightForWidth())
+        self.geoCFieldProfundidadHidraulica.setSizePolicy(sizePolicy5)
+        self.geoCFieldProfundidadHidraulica.setMinimumSize(QSize(0, 30))
+        self.geoCFieldProfundidadHidraulica.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_7.addWidget(self.geoCFieldProfundidadHidraulica, 6, 1, 1, 1)
+
+        self.geoCLabelProfundidadNormal = QLabel(self.row_5)
+        self.geoCLabelProfundidadNormal.setObjectName(u"geoCLabelProfundidadNormal")
+        sizePolicy6.setHeightForWidth(self.geoCLabelProfundidadNormal.sizePolicy().hasHeightForWidth())
+        self.geoCLabelProfundidadNormal.setSizePolicy(sizePolicy6)
+        self.geoCLabelProfundidadNormal.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 650 11pt \"Allerta\";")
+        self.geoCLabelProfundidadNormal.setLineWidth(1)
+        self.geoCLabelProfundidadNormal.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.geoCLabelProfundidadNormal, 1, 0, 1, 1)
+
+        self.geoCFieldAngulo = QLineEdit(self.row_5)
+        self.geoCFieldAngulo.setObjectName(u"geoCFieldAngulo")
+        sizePolicy5.setHeightForWidth(self.geoCFieldAngulo.sizePolicy().hasHeightForWidth())
+        self.geoCFieldAngulo.setSizePolicy(sizePolicy5)
+        self.geoCFieldAngulo.setMinimumSize(QSize(0, 30))
+        self.geoCFieldAngulo.setMaximumSize(QSize(16777215, 30))
+        self.geoCFieldAngulo.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_7.addWidget(self.geoCFieldAngulo, 0, 1, 1, 1)
+
+        self.geoCFieldProfundidadNormal = QLineEdit(self.row_5)
+        self.geoCFieldProfundidadNormal.setObjectName(u"geoCFieldProfundidadNormal")
+        sizePolicy5.setHeightForWidth(self.geoCFieldProfundidadNormal.sizePolicy().hasHeightForWidth())
+        self.geoCFieldProfundidadNormal.setSizePolicy(sizePolicy5)
+        self.geoCFieldProfundidadNormal.setMinimumSize(QSize(0, 30))
+        self.geoCFieldProfundidadNormal.setMaximumSize(QSize(16777215, 30))
+        self.geoCFieldProfundidadNormal.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_7.addWidget(self.geoCFieldProfundidadNormal, 1, 1, 1, 1)
+
+
+        self.verticalLayout_24.addLayout(self.gridLayout_7)
+
+
+        self.gridLayout_6.addWidget(self.row_5, 0, 0, 1, 1)
+
+        self.geoCImagenCanal = QPushButton(self.groupBox_Resultados)
+        self.geoCImagenCanal.setObjectName(u"geoCImagenCanal")
+        self.geoCImagenCanal.setEnabled(False)
+        sizePolicy5.setHeightForWidth(self.geoCImagenCanal.sizePolicy().hasHeightForWidth())
+        self.geoCImagenCanal.setSizePolicy(sizePolicy5)
+        self.geoCImagenCanal.setMinimumSize(QSize(260, 213))
+        self.geoCImagenCanal.setStyleSheet(u"border-image: url(:/geometria/images/geometria/Geometria-rectangular.PNG);\n"
+"background-color: rgb(255,255,255);")
+        self.geoCImagenCanal.setFlat(True)
+
+        self.gridLayout_6.addWidget(self.geoCImagenCanal, 0, 1, 1, 1)
+
+
+        self.gridLayout_11.addWidget(self.groupBox_Resultados, 1, 0, 1, 3)
 
         self.groupBox_Canal = QGroupBox(self.geometriaCircular)
         self.groupBox_Canal.setObjectName(u"groupBox_Canal")
@@ -2104,7 +2116,7 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.geoBotonCircular, 2, 1, 1, 1)
 
 
-        self.gridLayout_11.addWidget(self.groupBox_Canal, 1, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.groupBox_Canal, 0, 0, 1, 1)
 
         self.tabGeometria.addTab(self.geometriaCircular, "")
         self.geometriaNoCircular = QWidget()
@@ -2173,7 +2185,7 @@ class Ui_MainWindow(object):
         self.geoRComboBoxPendienteLateral.setObjectName(u"geoRComboBoxPendienteLateral")
         sizePolicy5.setHeightForWidth(self.geoRComboBoxPendienteLateral.sizePolicy().hasHeightForWidth())
         self.geoRComboBoxPendienteLateral.setSizePolicy(sizePolicy5)
-        self.geoRComboBoxPendienteLateral.setMinimumSize(QSize(150, 30))
+        self.geoRComboBoxPendienteLateral.setMinimumSize(QSize(190, 30))
         self.geoRComboBoxPendienteLateral.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "border-color: rgb(211, 212, 216);")
         self.geoRComboBoxPendienteLateral.setEditable(True)
@@ -2182,8 +2194,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelAncho = QLabel(self.row_8)
         self.geoRLabelAncho.setObjectName(u"geoRLabelAncho")
-        sizePolicy7.setHeightForWidth(self.geoRLabelAncho.sizePolicy().hasHeightForWidth())
-        self.geoRLabelAncho.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelAncho.sizePolicy().hasHeightForWidth())
+        self.geoRLabelAncho.setSizePolicy(sizePolicy6)
         self.geoRLabelAncho.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelAncho.setLineWidth(1)
@@ -2193,8 +2205,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelPendienteLateral = QLabel(self.row_8)
         self.geoRLabelPendienteLateral.setObjectName(u"geoRLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.geoRLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.geoRLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.geoRLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.geoRLabelPendienteLateral.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelPendienteLateral.setLineWidth(1)
@@ -2215,8 +2227,8 @@ class Ui_MainWindow(object):
 
         self.geoCFieldProfundidadSeccion = QLineEdit(self.row_8)
         self.geoCFieldProfundidadSeccion.setObjectName(u"geoCFieldProfundidadSeccion")
-        sizePolicy8.setHeightForWidth(self.geoCFieldProfundidadSeccion.sizePolicy().hasHeightForWidth())
-        self.geoCFieldProfundidadSeccion.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.geoCFieldProfundidadSeccion.sizePolicy().hasHeightForWidth())
+        self.geoCFieldProfundidadSeccion.setSizePolicy(sizePolicy7)
         self.geoCFieldProfundidadSeccion.setMinimumSize(QSize(150, 30))
         self.geoCFieldProfundidadSeccion.setMaximumSize(QSize(16777215, 30))
         self.geoCFieldProfundidadSeccion.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
@@ -2233,7 +2245,7 @@ class Ui_MainWindow(object):
         self.geoRComboBoxProfundidad.setObjectName(u"geoRComboBoxProfundidad")
         sizePolicy5.setHeightForWidth(self.geoRComboBoxProfundidad.sizePolicy().hasHeightForWidth())
         self.geoRComboBoxProfundidad.setSizePolicy(sizePolicy5)
-        self.geoRComboBoxProfundidad.setMinimumSize(QSize(150, 30))
+        self.geoRComboBoxProfundidad.setMinimumSize(QSize(190, 30))
         self.geoRComboBoxProfundidad.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "border-color: rgb(211, 212, 216);")
         self.geoRComboBoxProfundidad.setEditable(True)
@@ -2242,8 +2254,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelProfundidadSeccion = QLabel(self.row_8)
         self.geoRLabelProfundidadSeccion.setObjectName(u"geoRLabelProfundidadSeccion")
-        sizePolicy7.setHeightForWidth(self.geoRLabelProfundidadSeccion.sizePolicy().hasHeightForWidth())
-        self.geoRLabelProfundidadSeccion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelProfundidadSeccion.sizePolicy().hasHeightForWidth())
+        self.geoRLabelProfundidadSeccion.setSizePolicy(sizePolicy6)
         self.geoRLabelProfundidadSeccion.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelProfundidadSeccion.setLineWidth(1)
@@ -2259,7 +2271,7 @@ class Ui_MainWindow(object):
         self.geoRComboBoxAncho.setObjectName(u"geoRComboBoxAncho")
         sizePolicy5.setHeightForWidth(self.geoRComboBoxAncho.sizePolicy().hasHeightForWidth())
         self.geoRComboBoxAncho.setSizePolicy(sizePolicy5)
-        self.geoRComboBoxAncho.setMinimumSize(QSize(150, 30))
+        self.geoRComboBoxAncho.setMinimumSize(QSize(190, 30))
         self.geoRComboBoxAncho.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "border-color: rgb(211, 212, 216);")
         self.geoRComboBoxAncho.setEditable(True)
@@ -2268,8 +2280,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelPendienteLateral2 = QLabel(self.row_8)
         self.geoRLabelPendienteLateral2.setObjectName(u"geoRLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.geoRLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.geoRLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.geoRLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.geoRLabelPendienteLateral2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelPendienteLateral2.setLineWidth(1)
@@ -2295,7 +2307,7 @@ class Ui_MainWindow(object):
         self.geoRComboBoxPendienteLateral2.setObjectName(u"geoRComboBoxPendienteLateral2")
         sizePolicy5.setHeightForWidth(self.geoRComboBoxPendienteLateral2.sizePolicy().hasHeightForWidth())
         self.geoRComboBoxPendienteLateral2.setSizePolicy(sizePolicy5)
-        self.geoRComboBoxPendienteLateral2.setMinimumSize(QSize(150, 30))
+        self.geoRComboBoxPendienteLateral2.setMinimumSize(QSize(190, 30))
         self.geoRComboBoxPendienteLateral2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "border-color: rgb(211, 212, 216);")
         self.geoRComboBoxPendienteLateral2.setEditable(True)
@@ -2410,8 +2422,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_3 = QGroupBox(self.geometriaNoCircular)
         self.groupBox_Resultados_3.setObjectName(u"groupBox_Resultados_3")
         self.groupBox_Resultados_3.setGeometry(QRect(10, 330, 1071, 258))
-        sizePolicy6.setHeightForWidth(self.groupBox_Resultados_3.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_3.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.groupBox_Resultados_3.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_3.setSizePolicy(sizePolicy8)
         self.groupBox_Resultados_3.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(203, 208, 253);\n"
 "font: bold; \n"
@@ -2475,8 +2487,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelArea = QLabel(self.row_9)
         self.geoRLabelArea.setObjectName(u"geoRLabelArea")
-        sizePolicy7.setHeightForWidth(self.geoRLabelArea.sizePolicy().hasHeightForWidth())
-        self.geoRLabelArea.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelArea.sizePolicy().hasHeightForWidth())
+        self.geoRLabelArea.setSizePolicy(sizePolicy6)
         self.geoRLabelArea.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelArea.setLineWidth(1)
@@ -2497,8 +2509,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelRadio = QLabel(self.row_9)
         self.geoRLabelRadio.setObjectName(u"geoRLabelRadio")
-        sizePolicy7.setHeightForWidth(self.geoRLabelRadio.sizePolicy().hasHeightForWidth())
-        self.geoRLabelRadio.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelRadio.sizePolicy().hasHeightForWidth())
+        self.geoRLabelRadio.setSizePolicy(sizePolicy6)
         self.geoRLabelRadio.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelRadio.setLineWidth(1)
@@ -2508,8 +2520,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelAnchoSuperficial = QLabel(self.row_9)
         self.geoRLabelAnchoSuperficial.setObjectName(u"geoRLabelAnchoSuperficial")
-        sizePolicy7.setHeightForWidth(self.geoRLabelAnchoSuperficial.sizePolicy().hasHeightForWidth())
-        self.geoRLabelAnchoSuperficial.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelAnchoSuperficial.sizePolicy().hasHeightForWidth())
+        self.geoRLabelAnchoSuperficial.setSizePolicy(sizePolicy6)
         self.geoRLabelAnchoSuperficial.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelAnchoSuperficial.setLineWidth(1)
@@ -2519,8 +2531,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelPerimetro = QLabel(self.row_9)
         self.geoRLabelPerimetro.setObjectName(u"geoRLabelPerimetro")
-        sizePolicy7.setHeightForWidth(self.geoRLabelPerimetro.sizePolicy().hasHeightForWidth())
-        self.geoRLabelPerimetro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelPerimetro.sizePolicy().hasHeightForWidth())
+        self.geoRLabelPerimetro.setSizePolicy(sizePolicy6)
         self.geoRLabelPerimetro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelPerimetro.setLineWidth(1)
@@ -2530,8 +2542,8 @@ class Ui_MainWindow(object):
 
         self.geoRLabelProfundidadHidraulica = QLabel(self.row_9)
         self.geoRLabelProfundidadHidraulica.setObjectName(u"geoRLabelProfundidadHidraulica")
-        sizePolicy7.setHeightForWidth(self.geoRLabelProfundidadHidraulica.sizePolicy().hasHeightForWidth())
-        self.geoRLabelProfundidadHidraulica.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoRLabelProfundidadHidraulica.sizePolicy().hasHeightForWidth())
+        self.geoRLabelProfundidadHidraulica.setSizePolicy(sizePolicy6)
         self.geoRLabelProfundidadHidraulica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoRLabelProfundidadHidraulica.setLineWidth(1)
@@ -2588,8 +2600,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_6 = QGroupBox(self.geometriaFroude)
         self.groupBox_Resultados_6.setObjectName(u"groupBox_Resultados_6")
         self.groupBox_Resultados_6.setGeometry(QRect(20, 484, 1052, 101))
-        sizePolicy6.setHeightForWidth(self.groupBox_Resultados_6.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_6.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.groupBox_Resultados_6.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_6.setSizePolicy(sizePolicy8)
         self.groupBox_Resultados_6.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(203, 208, 253);\n"
 "font: bold; \n"
@@ -2625,8 +2637,8 @@ class Ui_MainWindow(object):
         self.gridLayout_34.setContentsMargins(15, 15, 15, 15)
         self.geoFroudeLabelRadio = QLabel(self.row_17)
         self.geoFroudeLabelRadio.setObjectName(u"geoFroudeLabelRadio")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelRadio.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelRadio.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelRadio.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelRadio.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelRadio.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelRadio.setLineWidth(1)
@@ -2783,8 +2795,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelPendienteLateral2 = QLabel(self.row_18)
         self.geoFroudeLabelPendienteLateral2.setObjectName(u"geoFroudeLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelPendienteLateral2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelPendienteLateral2.setLineWidth(1)
@@ -2794,8 +2806,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelPendienteLateral_3 = QLabel(self.row_18)
         self.geoFroudeLabelPendienteLateral_3.setObjectName(u"geoFroudeLabelPendienteLateral_3")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelPendienteLateral_3.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelPendienteLateral_3.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelPendienteLateral_3.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelPendienteLateral_3.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelPendienteLateral_3.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelPendienteLateral_3.setLineWidth(1)
@@ -2805,8 +2817,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelPendienteLateral_4 = QLabel(self.row_18)
         self.geoFroudeLabelPendienteLateral_4.setObjectName(u"geoFroudeLabelPendienteLateral_4")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelPendienteLateral_4.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelPendienteLateral_4.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelPendienteLateral_4.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelPendienteLateral_4.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelPendienteLateral_4.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelPendienteLateral_4.setLineWidth(1)
@@ -2816,8 +2828,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeFieldProfundidadSeccion = QLineEdit(self.row_18)
         self.geoFroudeFieldProfundidadSeccion.setObjectName(u"geoFroudeFieldProfundidadSeccion")
-        sizePolicy8.setHeightForWidth(self.geoFroudeFieldProfundidadSeccion.sizePolicy().hasHeightForWidth())
-        self.geoFroudeFieldProfundidadSeccion.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.geoFroudeFieldProfundidadSeccion.sizePolicy().hasHeightForWidth())
+        self.geoFroudeFieldProfundidadSeccion.setSizePolicy(sizePolicy7)
         self.geoFroudeFieldProfundidadSeccion.setMinimumSize(QSize(150, 30))
         self.geoFroudeFieldProfundidadSeccion.setMaximumSize(QSize(16777215, 30))
         self.geoFroudeFieldProfundidadSeccion.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
@@ -2839,8 +2851,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelPendienteLateral_2 = QLabel(self.row_18)
         self.geoFroudeLabelPendienteLateral_2.setObjectName(u"geoFroudeLabelPendienteLateral_2")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelPendienteLateral_2.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelPendienteLateral_2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelPendienteLateral_2.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelPendienteLateral_2.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelPendienteLateral_2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelPendienteLateral_2.setLineWidth(1)
@@ -2880,8 +2892,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelProfundidadSeccion = QLabel(self.row_18)
         self.geoFroudeLabelProfundidadSeccion.setObjectName(u"geoFroudeLabelProfundidadSeccion")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelProfundidadSeccion.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelProfundidadSeccion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelProfundidadSeccion.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelProfundidadSeccion.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelProfundidadSeccion.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelProfundidadSeccion.setLineWidth(1)
@@ -2922,8 +2934,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelAncho = QLabel(self.row_18)
         self.geoFroudeLabelAncho.setObjectName(u"geoFroudeLabelAncho")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelAncho.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelAncho.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelAncho.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelAncho.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelAncho.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelAncho.setLineWidth(1)
@@ -2945,8 +2957,8 @@ class Ui_MainWindow(object):
 
         self.geoFroudeLabelVelocidad = QLabel(self.row_18)
         self.geoFroudeLabelVelocidad.setObjectName(u"geoFroudeLabelVelocidad")
-        sizePolicy7.setHeightForWidth(self.geoFroudeLabelVelocidad.sizePolicy().hasHeightForWidth())
-        self.geoFroudeLabelVelocidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.geoFroudeLabelVelocidad.sizePolicy().hasHeightForWidth())
+        self.geoFroudeLabelVelocidad.setSizePolicy(sizePolicy6)
         self.geoFroudeLabelVelocidad.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.geoFroudeLabelVelocidad.setLineWidth(1)
@@ -3030,21 +3042,194 @@ class Ui_MainWindow(object):
         self.rhCalculoCaudal = QWidget()
         self.rhCalculoCaudal.setObjectName(u"rhCalculoCaudal")
         self.rhCalculoCaudal.setStyleSheet(u"font: 500 11pt \"Allerta\";")
-        self.groupBox_Propiedades_20 = QGroupBox(self.rhCalculoCaudal)
+        self.verticalLayoutWidget_4 = QWidget(self.rhCalculoCaudal)
+        self.verticalLayoutWidget_4.setObjectName(u"verticalLayoutWidget_4")
+        self.verticalLayoutWidget_4.setGeometry(QRect(800, 12, 271, 221))
+        self.verticalLayout_29 = QVBoxLayout(self.verticalLayoutWidget_4)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.verticalLayout_29.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_22 = QGridLayout()
+        self.gridLayout_22.setObjectName(u"gridLayout_22")
+        self.gridLayout_22.setHorizontalSpacing(10)
+        self.gridLayout_22.setVerticalSpacing(30)
+        self.gridLayout_23 = QGridLayout()
+        self.gridLayout_23.setObjectName(u"gridLayout_23")
+        self.gridLayout_23.setHorizontalSpacing(60)
+        self.gridLayout_23.setVerticalSpacing(0)
+        self.ManningUniformeTextoReiniciar_2 = QLabel(self.verticalLayoutWidget_4)
+        self.ManningUniformeTextoReiniciar_2.setObjectName(u"ManningUniformeTextoReiniciar_2")
+        sizePolicy5.setHeightForWidth(self.ManningUniformeTextoReiniciar_2.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeTextoReiniciar_2.setSizePolicy(sizePolicy5)
+        self.ManningUniformeTextoReiniciar_2.setStyleSheet(u"font: 500 12pt \"Allerta\";\n"
+"color: rgb(84, 84, 84);\n"
+"")
+        self.ManningUniformeTextoReiniciar_2.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_23.addWidget(self.ManningUniformeTextoReiniciar_2, 2, 1, 1, 1)
+
+        self.horizontalLayout_35 = QHBoxLayout()
+        self.horizontalLayout_35.setSpacing(20)
+        self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
+        self.horizontalLayout_35.setContentsMargins(-1, -1, -1, 20)
+        self.ManningUniformeBotonCalcular_2 = QPushButton(self.verticalLayoutWidget_4)
+        self.ManningUniformeBotonCalcular_2.setObjectName(u"ManningUniformeBotonCalcular_2")
+        self.ManningUniformeBotonCalcular_2.setMinimumSize(QSize(50, 50))
+        self.ManningUniformeBotonCalcular_2.setMaximumSize(QSize(40, 40))
+        self.ManningUniformeBotonCalcular_2.setStyleSheet(u"background-color: rgb(214, 112, 114);\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-width: 2px;\n"
+"border-radius: 20px;\n"
+"")
+
+        self.horizontalLayout_35.addWidget(self.ManningUniformeBotonCalcular_2)
+
+
+        self.gridLayout_23.addLayout(self.horizontalLayout_35, 0, 0, 1, 1)
+
+        self.horizontalLayout_36 = QHBoxLayout()
+        self.horizontalLayout_36.setObjectName(u"horizontalLayout_36")
+        self.horizontalLayout_36.setContentsMargins(-1, -1, -1, 20)
+        self.ManningUniformeBotonReiniciar_2 = QPushButton(self.verticalLayoutWidget_4)
+        self.ManningUniformeBotonReiniciar_2.setObjectName(u"ManningUniformeBotonReiniciar_2")
+        self.ManningUniformeBotonReiniciar_2.setMinimumSize(QSize(50, 50))
+        self.ManningUniformeBotonReiniciar_2.setMaximumSize(QSize(40, 40))
+        self.ManningUniformeBotonReiniciar_2.setStyleSheet(u"background-color: rgb(214, 112, 114);\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-width: 2px;\n"
+"border-radius: 20px;\n"
+"")
+
+        self.horizontalLayout_36.addWidget(self.ManningUniformeBotonReiniciar_2)
+
+
+        self.gridLayout_23.addLayout(self.horizontalLayout_36, 0, 1, 1, 1)
+
+        self.ManningUniformeTextoCalcular_2 = QLabel(self.verticalLayoutWidget_4)
+        self.ManningUniformeTextoCalcular_2.setObjectName(u"ManningUniformeTextoCalcular_2")
+        sizePolicy5.setHeightForWidth(self.ManningUniformeTextoCalcular_2.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeTextoCalcular_2.setSizePolicy(sizePolicy5)
+        self.ManningUniformeTextoCalcular_2.setStyleSheet(u"font: 500 12pt \"Allerta\";\n"
+"color: rgb(84, 84, 84);\n"
+"")
+        self.ManningUniformeTextoCalcular_2.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_23.addWidget(self.ManningUniformeTextoCalcular_2, 2, 0, 1, 1)
+
+        self.gridLayout_23.setColumnStretch(0, 10)
+
+        self.gridLayout_22.addLayout(self.gridLayout_23, 1, 0, 1, 1)
+
+
+        self.verticalLayout_29.addLayout(self.gridLayout_22)
+
+        self.groupBox_Propiedades_28 = QGroupBox(self.rhCalculoCaudal)
+        self.groupBox_Propiedades_28.setObjectName(u"groupBox_Propiedades_28")
+        self.groupBox_Propiedades_28.setGeometry(QRect(790, 270, 290, 301))
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_28.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_28.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_28.setMinimumSize(QSize(290, 0))
+        self.groupBox_Propiedades_28.setMaximumSize(QSize(290, 16777215))
+        self.groupBox_Propiedades_28.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
+"font: bold; \n"
+"border: 2px solid;\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
+"\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
+"")
+        self.groupBox_Propiedades_28.setAlignment(Qt.AlignCenter)
+        self.gridLayout_111 = QGridLayout(self.groupBox_Propiedades_28)
+        self.gridLayout_111.setObjectName(u"gridLayout_111")
+        self.row_54 = QFrame(self.groupBox_Propiedades_28)
+        self.row_54.setObjectName(u"row_54")
+        self.row_54.setStyleSheet(u"")
+        self.row_54.setFrameShape(QFrame.StyledPanel)
+        self.row_54.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_74 = QVBoxLayout(self.row_54)
+        self.verticalLayout_74.setSpacing(0)
+        self.verticalLayout_74.setObjectName(u"verticalLayout_74")
+        self.verticalLayout_74.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_112 = QGridLayout()
+        self.gridLayout_112.setObjectName(u"gridLayout_112")
+        self.gridLayout_112.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_112.setHorizontalSpacing(20)
+        self.gridLayout_112.setVerticalSpacing(50)
+        self.gridLayout_112.setContentsMargins(10, 5, 10, 5)
+        self.RHAnalisisFieldCaudal_7 = QLineEdit(self.row_54)
+        self.RHAnalisisFieldCaudal_7.setObjectName(u"RHAnalisisFieldCaudal_7")
+        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_7.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisFieldCaudal_7.setSizePolicy(sizePolicy5)
+        self.RHAnalisisFieldCaudal_7.setMinimumSize(QSize(115, 60))
+        self.RHAnalisisFieldCaudal_7.setMaximumSize(QSize(160, 16777215))
+        self.RHAnalisisFieldCaudal_7.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_112.addWidget(self.RHAnalisisFieldCaudal_7, 1, 1, 1, 1)
+
+        self.RHAnalisisLabelCaudal_7 = QLabel(self.row_54)
+        self.RHAnalisisLabelCaudal_7.setObjectName(u"RHAnalisisLabelCaudal_7")
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelCaudal_7.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelCaudal_7.setSizePolicy(sizePolicy6)
+        self.RHAnalisisLabelCaudal_7.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.RHAnalisisLabelCaudal_7.setLineWidth(1)
+        self.RHAnalisisLabelCaudal_7.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_112.addWidget(self.RHAnalisisLabelCaudal_7, 1, 0, 1, 1)
+
+        self.RHAnalisisLabelCaudal_8 = QLabel(self.row_54)
+        self.RHAnalisisLabelCaudal_8.setObjectName(u"RHAnalisisLabelCaudal_8")
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelCaudal_8.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelCaudal_8.setSizePolicy(sizePolicy6)
+        self.RHAnalisisLabelCaudal_8.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.RHAnalisisLabelCaudal_8.setLineWidth(1)
+        self.RHAnalisisLabelCaudal_8.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_112.addWidget(self.RHAnalisisLabelCaudal_8, 0, 0, 1, 1)
+
+        self.RHAnalisisFieldCaudal_8 = QLineEdit(self.row_54)
+        self.RHAnalisisFieldCaudal_8.setObjectName(u"RHAnalisisFieldCaudal_8")
+        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_8.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisFieldCaudal_8.setSizePolicy(sizePolicy5)
+        self.RHAnalisisFieldCaudal_8.setMinimumSize(QSize(115, 60))
+        self.RHAnalisisFieldCaudal_8.setMaximumSize(QSize(160, 16777215))
+        self.RHAnalisisFieldCaudal_8.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_112.addWidget(self.RHAnalisisFieldCaudal_8, 0, 1, 1, 1)
+
+
+        self.verticalLayout_74.addLayout(self.gridLayout_112)
+
+
+        self.gridLayout_111.addWidget(self.row_54, 0, 1, 1, 1)
+
+        self.widget = QWidget(self.rhCalculoCaudal)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(20, 10, 752, 581))
+        self.verticalLayout_30 = QVBoxLayout(self.widget)
+        self.verticalLayout_30.setObjectName(u"verticalLayout_30")
+        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
+        self.groupBox_Propiedades_20 = QGroupBox(self.widget)
         self.groupBox_Propiedades_20.setObjectName(u"groupBox_Propiedades_20")
-        self.groupBox_Propiedades_20.setGeometry(QRect(20, 10, 750, 411))
         sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_20.sizePolicy().hasHeightForWidth())
         self.groupBox_Propiedades_20.setSizePolicy(sizePolicy13)
         self.groupBox_Propiedades_20.setMinimumSize(QSize(750, 0))
         self.groupBox_Propiedades_20.setMaximumSize(QSize(700, 16777215))
         self.groupBox_Propiedades_20.setStyleSheet(u"QGroupBox {\n"
-"color: rgb(250, 148, 150);\n"
+"color: rgb(214, 112, 114);\n"
 "font: bold; \n"
 "border: 2px solid;\n"
-"border-color: rgb(250, 148, 150);\n"
+"border-color: rgb(214, 112, 114);\n"
 "border-radius: 6px;\n"
 "margin: 10px;\n"
-"\n"
 "}\n"
 "\n"
 "QGroupBox::title {\n"
@@ -3068,280 +3253,199 @@ class Ui_MainWindow(object):
         self.gridLayout_90 = QGridLayout()
         self.gridLayout_90.setObjectName(u"gridLayout_90")
         self.gridLayout_90.setSizeConstraint(QLayout.SetNoConstraint)
-        self.gridLayout_90.setHorizontalSpacing(35)
+        self.gridLayout_90.setHorizontalSpacing(30)
         self.gridLayout_90.setVerticalSpacing(10)
-        self.gridLayout_90.setContentsMargins(10, 10, 20, 10)
-        self.RHAnalisisLabelPendienteLateral2_2 = QLabel(self.row_43)
-        self.RHAnalisisLabelPendienteLateral2_2.setObjectName(u"RHAnalisisLabelPendienteLateral2_2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelPendienteLateral2_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelPendienteLateral2_2.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelPendienteLateral2_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelPendienteLateral2_2.setLineWidth(1)
-        self.RHAnalisisLabelPendienteLateral2_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_90.addWidget(self.RHAnalisisLabelPendienteLateral2_2, 2, 0, 1, 1)
-
-        self.RHAnalisisFieldProfundidad1_2 = QLineEdit(self.row_43)
-        self.RHAnalisisFieldProfundidad1_2.setObjectName(u"RHAnalisisFieldProfundidad1_2")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldProfundidad1_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldProfundidad1_2.setSizePolicy(sizePolicy5)
-        self.RHAnalisisFieldProfundidad1_2.setMinimumSize(QSize(0, 30))
-        self.RHAnalisisFieldProfundidad1_2.setMaximumSize(QSize(150, 16777215))
-        self.RHAnalisisFieldProfundidad1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";")
-
-        self.gridLayout_90.addWidget(self.RHAnalisisFieldProfundidad1_2, 3, 1, 1, 1)
-
-        self.RHAnalisisLabelCaudal_2 = QLabel(self.row_43)
-        self.RHAnalisisLabelCaudal_2.setObjectName(u"RHAnalisisLabelCaudal_2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelCaudal_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelCaudal_2.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelCaudal_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelCaudal_2.setLineWidth(1)
-        self.RHAnalisisLabelCaudal_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_90.addWidget(self.RHAnalisisLabelCaudal_2, 4, 0, 1, 1)
-
-        self.horizontalLayout_74 = QHBoxLayout()
-        self.horizontalLayout_74.setObjectName(u"horizontalLayout_74")
-        self.RHAnalisisComboBoxCaudal_2 = QComboBox(self.row_43)
-        self.RHAnalisisComboBoxCaudal_2.addItem("")
-        self.RHAnalisisComboBoxCaudal_2.addItem("")
-        self.RHAnalisisComboBoxCaudal_2.setObjectName(u"RHAnalisisComboBoxCaudal_2")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisComboBoxCaudal_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisComboBoxCaudal_2.setSizePolicy(sizePolicy5)
-        self.RHAnalisisComboBoxCaudal_2.setMinimumSize(QSize(150, 30))
-        self.RHAnalisisComboBoxCaudal_2.setMaximumSize(QSize(260, 16777215))
-        self.RHAnalisisComboBoxCaudal_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"background-color: rgb(255, 255, 255);")
-        self.RHAnalisisComboBoxCaudal_2.setEditable(True)
-        self.RHAnalisisComboBoxCaudal_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
-
-        self.horizontalLayout_74.addWidget(self.RHAnalisisComboBoxCaudal_2)
-
-
-        self.gridLayout_90.addLayout(self.horizontalLayout_74, 4, 2, 1, 1)
-
+        self.gridLayout_90.setContentsMargins(10, 5, 20, 5)
         self.horizontalLayout_64 = QHBoxLayout()
         self.horizontalLayout_64.setSpacing(0)
         self.horizontalLayout_64.setObjectName(u"horizontalLayout_64")
         self.horizontalLayout_64.setSizeConstraint(QLayout.SetMinimumSize)
-        self.RHAnalisisComboBoxPendienteLateral_2 = QComboBox(self.row_43)
-        self.RHAnalisisComboBoxPendienteLateral_2.addItem("")
-        self.RHAnalisisComboBoxPendienteLateral_2.addItem("")
-        self.RHAnalisisComboBoxPendienteLateral_2.addItem("")
-        self.RHAnalisisComboBoxPendienteLateral_2.setObjectName(u"RHAnalisisComboBoxPendienteLateral_2")
+        self.CEnergiaComboBoxPendienteLateralSec1 = QComboBox(self.row_43)
+        self.CEnergiaComboBoxPendienteLateralSec1.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1.setObjectName(u"CEnergiaComboBoxPendienteLateralSec1")
         sizePolicy14 = QSizePolicy(QSizePolicy.Ignored, QSizePolicy.Fixed)
         sizePolicy14.setHorizontalStretch(0)
         sizePolicy14.setVerticalStretch(0)
-        sizePolicy14.setHeightForWidth(self.RHAnalisisComboBoxPendienteLateral_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisComboBoxPendienteLateral_2.setSizePolicy(sizePolicy14)
-        self.RHAnalisisComboBoxPendienteLateral_2.setMinimumSize(QSize(260, 30))
-        self.RHAnalisisComboBoxPendienteLateral_2.setMaximumSize(QSize(260, 16777215))
-        self.RHAnalisisComboBoxPendienteLateral_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+        sizePolicy14.setHeightForWidth(self.CEnergiaComboBoxPendienteLateralSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateralSec1.setSizePolicy(sizePolicy14)
+        self.CEnergiaComboBoxPendienteLateralSec1.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateralSec1.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateralSec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
-        self.RHAnalisisComboBoxPendienteLateral_2.setEditable(True)
-        self.RHAnalisisComboBoxPendienteLateral_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+        self.CEnergiaComboBoxPendienteLateralSec1.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateralSec1.setSizeAdjustPolicy(QComboBox.AdjustToContents)
 
-        self.horizontalLayout_64.addWidget(self.RHAnalisisComboBoxPendienteLateral_2)
+        self.horizontalLayout_64.addWidget(self.CEnergiaComboBoxPendienteLateralSec1)
 
 
         self.gridLayout_90.addLayout(self.horizontalLayout_64, 1, 2, 1, 1)
-
-        self.RHAnalisisFieldCaudal_3 = QLineEdit(self.row_43)
-        self.RHAnalisisFieldCaudal_3.setObjectName(u"RHAnalisisFieldCaudal_3")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_3.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldCaudal_3.setSizePolicy(sizePolicy5)
-        self.RHAnalisisFieldCaudal_3.setMinimumSize(QSize(0, 30))
-        self.RHAnalisisFieldCaudal_3.setMaximumSize(QSize(150, 16777215))
-        self.RHAnalisisFieldCaudal_3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";")
-
-        self.gridLayout_90.addWidget(self.RHAnalisisFieldCaudal_3, 5, 1, 1, 1)
 
         self.horizontalLayout_73 = QHBoxLayout()
         self.horizontalLayout_73.setSpacing(0)
         self.horizontalLayout_73.setObjectName(u"horizontalLayout_73")
         self.horizontalLayout_73.setSizeConstraint(QLayout.SetMinimumSize)
-        self.RHAnalisisComboBoxAncho_2 = QComboBox(self.row_43)
-        self.RHAnalisisComboBoxAncho_2.addItem("")
-        self.RHAnalisisComboBoxAncho_2.addItem("")
-        self.RHAnalisisComboBoxAncho_2.addItem("")
-        self.RHAnalisisComboBoxAncho_2.addItem("")
-        self.RHAnalisisComboBoxAncho_2.setObjectName(u"RHAnalisisComboBoxAncho_2")
-        sizePolicy13.setHeightForWidth(self.RHAnalisisComboBoxAncho_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisComboBoxAncho_2.setSizePolicy(sizePolicy13)
-        self.RHAnalisisComboBoxAncho_2.setMinimumSize(QSize(150, 30))
-        self.RHAnalisisComboBoxAncho_2.setMaximumSize(QSize(260, 30))
-        self.RHAnalisisComboBoxAncho_2.setLayoutDirection(Qt.LeftToRight)
-        self.RHAnalisisComboBoxAncho_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+        self.CEnergiaComboBoxAnchoSec1 = QComboBox(self.row_43)
+        self.CEnergiaComboBoxAnchoSec1.addItem("")
+        self.CEnergiaComboBoxAnchoSec1.addItem("")
+        self.CEnergiaComboBoxAnchoSec1.addItem("")
+        self.CEnergiaComboBoxAnchoSec1.addItem("")
+        self.CEnergiaComboBoxAnchoSec1.setObjectName(u"CEnergiaComboBoxAnchoSec1")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxAnchoSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxAnchoSec1.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxAnchoSec1.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxAnchoSec1.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxAnchoSec1.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxAnchoSec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
-        self.RHAnalisisComboBoxAncho_2.setEditable(True)
-        self.RHAnalisisComboBoxAncho_2.setInsertPolicy(QComboBox.InsertAtCurrent)
-        self.RHAnalisisComboBoxAncho_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+        self.CEnergiaComboBoxAnchoSec1.setEditable(True)
+        self.CEnergiaComboBoxAnchoSec1.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxAnchoSec1.setSizeAdjustPolicy(QComboBox.AdjustToContents)
 
-        self.horizontalLayout_73.addWidget(self.RHAnalisisComboBoxAncho_2)
+        self.horizontalLayout_73.addWidget(self.CEnergiaComboBoxAnchoSec1)
 
 
         self.gridLayout_90.addLayout(self.horizontalLayout_73, 0, 2, 1, 1)
 
-        self.RHAnalisisLabelCaudal_3 = QLabel(self.row_43)
-        self.RHAnalisisLabelCaudal_3.setObjectName(u"RHAnalisisLabelCaudal_3")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelCaudal_3.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelCaudal_3.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelCaudal_3.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelCaudal_3.setLineWidth(1)
-        self.RHAnalisisLabelCaudal_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.CEnergiaLabelProfundidadSec1 = QLabel(self.row_43)
+        self.CEnergiaLabelProfundidadSec1.setObjectName(u"CEnergiaLabelProfundidadSec1")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelProfundidadSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelProfundidadSec1.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelProfundidadSec1.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelProfundidadSec1.setLineWidth(1)
+        self.CEnergiaLabelProfundidadSec1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.gridLayout_90.addWidget(self.RHAnalisisLabelCaudal_3, 5, 0, 1, 1)
+        self.gridLayout_90.addWidget(self.CEnergiaLabelProfundidadSec1, 3, 0, 1, 1)
 
-        self.RHAnalisisLabelPendienteLateral_2 = QLabel(self.row_43)
-        self.RHAnalisisLabelPendienteLateral_2.setObjectName(u"RHAnalisisLabelPendienteLateral_2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelPendienteLateral_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelPendienteLateral_2.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelPendienteLateral_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelPendienteLateral_2.setLineWidth(1)
-        self.RHAnalisisLabelPendienteLateral_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.CEnergiaLabelPendienteLateral2Sec1 = QLabel(self.row_43)
+        self.CEnergiaLabelPendienteLateral2Sec1.setObjectName(u"CEnergiaLabelPendienteLateral2Sec1")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateral2Sec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateral2Sec1.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateral2Sec1.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateral2Sec1.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateral2Sec1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.gridLayout_90.addWidget(self.RHAnalisisLabelPendienteLateral_2, 1, 0, 1, 1)
+        self.gridLayout_90.addWidget(self.CEnergiaLabelPendienteLateral2Sec1, 2, 0, 1, 1)
 
-        self.RHAnalisisFieldPendienteLateral_2 = QLineEdit(self.row_43)
-        self.RHAnalisisFieldPendienteLateral_2.setObjectName(u"RHAnalisisFieldPendienteLateral_2")
+        self.CEnergiaFieldPendienteLateralSec1 = QLineEdit(self.row_43)
+        self.CEnergiaFieldPendienteLateralSec1.setObjectName(u"CEnergiaFieldPendienteLateralSec1")
         sizePolicy15 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Minimum)
         sizePolicy15.setHorizontalStretch(0)
         sizePolicy15.setVerticalStretch(0)
-        sizePolicy15.setHeightForWidth(self.RHAnalisisFieldPendienteLateral_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldPendienteLateral_2.setSizePolicy(sizePolicy15)
-        self.RHAnalisisFieldPendienteLateral_2.setMinimumSize(QSize(110, 30))
-        self.RHAnalisisFieldPendienteLateral_2.setMaximumSize(QSize(150, 30))
-        self.RHAnalisisFieldPendienteLateral_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldPendienteLateralSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateralSec1.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldPendienteLateralSec1.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldPendienteLateralSec1.setMaximumSize(QSize(150, 30))
+        self.CEnergiaFieldPendienteLateralSec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "font: 650 11pt \"Allerta\";\n"
 "")
 
-        self.gridLayout_90.addWidget(self.RHAnalisisFieldPendienteLateral_2, 1, 1, 1, 1)
+        self.gridLayout_90.addWidget(self.CEnergiaFieldPendienteLateralSec1, 1, 1, 1, 1)
 
-        self.RHAnalisisLabelBase_2 = QLabel(self.row_43)
-        self.RHAnalisisLabelBase_2.setObjectName(u"RHAnalisisLabelBase_2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelBase_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelBase_2.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelBase_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelBase_2.setLineWidth(1)
-        self.RHAnalisisLabelBase_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_90.addWidget(self.RHAnalisisLabelBase_2, 0, 0, 1, 1)
-
-        self.RHAnalisisLabelProfundidad1_2 = QLabel(self.row_43)
-        self.RHAnalisisLabelProfundidad1_2.setObjectName(u"RHAnalisisLabelProfundidad1_2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelProfundidad1_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelProfundidad1_2.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelProfundidad1_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelProfundidad1_2.setLineWidth(1)
-        self.RHAnalisisLabelProfundidad1_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout_90.addWidget(self.RHAnalisisLabelProfundidad1_2, 3, 0, 1, 1)
-
-        self.RHAnalisisFieldAncho_2 = QLineEdit(self.row_43)
-        self.RHAnalisisFieldAncho_2.setObjectName(u"RHAnalisisFieldAncho_2")
-        sizePolicy15.setHeightForWidth(self.RHAnalisisFieldAncho_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldAncho_2.setSizePolicy(sizePolicy15)
-        self.RHAnalisisFieldAncho_2.setMinimumSize(QSize(110, 30))
-        self.RHAnalisisFieldAncho_2.setMaximumSize(QSize(150, 30))
-#if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldAncho_2.setToolTip(u"")
-#endif // QT_CONFIG(tooltip)
-        self.RHAnalisisFieldAncho_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";\n"
-"")
-
-        self.gridLayout_90.addWidget(self.RHAnalisisFieldAncho_2, 0, 1, 1, 1)
-
-        self.RHAnalisisFieldPendienteLateral2_2 = QLineEdit(self.row_43)
-        self.RHAnalisisFieldPendienteLateral2_2.setObjectName(u"RHAnalisisFieldPendienteLateral2_2")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldPendienteLateral2_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldPendienteLateral2_2.setSizePolicy(sizePolicy5)
-        self.RHAnalisisFieldPendienteLateral2_2.setMinimumSize(QSize(0, 30))
-        self.RHAnalisisFieldPendienteLateral2_2.setMaximumSize(QSize(150, 16777215))
-        self.RHAnalisisFieldPendienteLateral2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+        self.CEnergiaFieldProfundidad1Sec1 = QLineEdit(self.row_43)
+        self.CEnergiaFieldProfundidad1Sec1.setObjectName(u"CEnergiaFieldProfundidad1Sec1")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldProfundidad1Sec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldProfundidad1Sec1.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldProfundidad1Sec1.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldProfundidad1Sec1.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldProfundidad1Sec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "font: 650 11pt \"Allerta\";")
 
-        self.gridLayout_90.addWidget(self.RHAnalisisFieldPendienteLateral2_2, 2, 1, 1, 1)
+        self.gridLayout_90.addWidget(self.CEnergiaFieldProfundidad1Sec1, 3, 1, 1, 1)
+
+        self.CEnergiaLabelBaseSec1 = QLabel(self.row_43)
+        self.CEnergiaLabelBaseSec1.setObjectName(u"CEnergiaLabelBaseSec1")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelBaseSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelBaseSec1.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelBaseSec1.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelBaseSec1.setLineWidth(1)
+        self.CEnergiaLabelBaseSec1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_90.addWidget(self.CEnergiaLabelBaseSec1, 0, 0, 1, 1)
+
+        self.CEnergiaLabelPendienteLateralSec1 = QLabel(self.row_43)
+        self.CEnergiaLabelPendienteLateralSec1.setObjectName(u"CEnergiaLabelPendienteLateralSec1")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateralSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateralSec1.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateralSec1.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateralSec1.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateralSec1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_90.addWidget(self.CEnergiaLabelPendienteLateralSec1, 1, 0, 1, 1)
+
+        self.CEnergiaFieldPendienteLateral2Sec1 = QLineEdit(self.row_43)
+        self.CEnergiaFieldPendienteLateral2Sec1.setObjectName(u"CEnergiaFieldPendienteLateral2Sec1")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldPendienteLateral2Sec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateral2Sec1.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldPendienteLateral2Sec1.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldPendienteLateral2Sec1.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldPendienteLateral2Sec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_90.addWidget(self.CEnergiaFieldPendienteLateral2Sec1, 2, 1, 1, 1)
+
+        self.CEnergiaFieldAnchoSec1 = QLineEdit(self.row_43)
+        self.CEnergiaFieldAnchoSec1.setObjectName(u"CEnergiaFieldAnchoSec1")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldAnchoSec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldAnchoSec1.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldAnchoSec1.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldAnchoSec1.setMaximumSize(QSize(150, 30))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec1.setToolTip(u"")
+#endif // QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_90.addWidget(self.CEnergiaFieldAnchoSec1, 0, 1, 1, 1)
+
+        self.horizontalLayout_81 = QHBoxLayout()
+        self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
+        self.CEnergiaComboBoxPendienteLateral2Sec1 = QComboBox(self.row_43)
+        self.CEnergiaComboBoxPendienteLateral2Sec1.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setObjectName(u"CEnergiaComboBoxPendienteLateral2Sec1")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxPendienteLateral2Sec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_81.addWidget(self.CEnergiaComboBoxPendienteLateral2Sec1)
+
+
+        self.gridLayout_90.addLayout(self.horizontalLayout_81, 2, 2, 1, 1)
 
         self.horizontalLayout_82 = QHBoxLayout()
         self.horizontalLayout_82.setSpacing(0)
         self.horizontalLayout_82.setObjectName(u"horizontalLayout_82")
         self.horizontalLayout_82.setSizeConstraint(QLayout.SetMinimumSize)
-        self.RHAnalisisComboBoxProfundidad1_2 = QComboBox(self.row_43)
-        self.RHAnalisisComboBoxProfundidad1_2.addItem("")
-        self.RHAnalisisComboBoxProfundidad1_2.addItem("")
-        self.RHAnalisisComboBoxProfundidad1_2.addItem("")
-        self.RHAnalisisComboBoxProfundidad1_2.addItem("")
-        self.RHAnalisisComboBoxProfundidad1_2.setObjectName(u"RHAnalisisComboBoxProfundidad1_2")
-        sizePolicy13.setHeightForWidth(self.RHAnalisisComboBoxProfundidad1_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisComboBoxProfundidad1_2.setSizePolicy(sizePolicy13)
-        self.RHAnalisisComboBoxProfundidad1_2.setMinimumSize(QSize(150, 30))
-        self.RHAnalisisComboBoxProfundidad1_2.setMaximumSize(QSize(260, 30))
-        self.RHAnalisisComboBoxProfundidad1_2.setLayoutDirection(Qt.LeftToRight)
-        self.RHAnalisisComboBoxProfundidad1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+        self.CEnergiaComboBoxProfundidad1Sec1 = QComboBox(self.row_43)
+        self.CEnergiaComboBoxProfundidad1Sec1.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1.setObjectName(u"CEnergiaComboBoxProfundidad1Sec1")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxProfundidad1Sec1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxProfundidad1Sec1.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxProfundidad1Sec1.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxProfundidad1Sec1.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxProfundidad1Sec1.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxProfundidad1Sec1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
-        self.RHAnalisisComboBoxProfundidad1_2.setEditable(True)
-        self.RHAnalisisComboBoxProfundidad1_2.setInsertPolicy(QComboBox.InsertAtCurrent)
-        self.RHAnalisisComboBoxProfundidad1_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+        self.CEnergiaComboBoxProfundidad1Sec1.setEditable(True)
+        self.CEnergiaComboBoxProfundidad1Sec1.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxProfundidad1Sec1.setSizeAdjustPolicy(QComboBox.AdjustToContents)
 
-        self.horizontalLayout_82.addWidget(self.RHAnalisisComboBoxProfundidad1_2)
+        self.horizontalLayout_82.addWidget(self.CEnergiaComboBoxProfundidad1Sec1)
 
 
         self.gridLayout_90.addLayout(self.horizontalLayout_82, 3, 2, 1, 1)
-
-        self.RHAnalisisFieldCaudal_2 = QLineEdit(self.row_43)
-        self.RHAnalisisFieldCaudal_2.setObjectName(u"RHAnalisisFieldCaudal_2")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldCaudal_2.setSizePolicy(sizePolicy5)
-        self.RHAnalisisFieldCaudal_2.setMinimumSize(QSize(0, 30))
-        self.RHAnalisisFieldCaudal_2.setMaximumSize(QSize(150, 16777215))
-        self.RHAnalisisFieldCaudal_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"font: 650 11pt \"Allerta\";")
-
-        self.gridLayout_90.addWidget(self.RHAnalisisFieldCaudal_2, 4, 1, 1, 1)
-
-        self.horizontalLayout_81 = QHBoxLayout()
-        self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
-        self.RHAnalisisComboBoxPendienteLateral2_2 = QComboBox(self.row_43)
-        self.RHAnalisisComboBoxPendienteLateral2_2.addItem("")
-        self.RHAnalisisComboBoxPendienteLateral2_2.addItem("")
-        self.RHAnalisisComboBoxPendienteLateral2_2.addItem("")
-        self.RHAnalisisComboBoxPendienteLateral2_2.setObjectName(u"RHAnalisisComboBoxPendienteLateral2_2")
-        sizePolicy13.setHeightForWidth(self.RHAnalisisComboBoxPendienteLateral2_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisComboBoxPendienteLateral2_2.setSizePolicy(sizePolicy13)
-        self.RHAnalisisComboBoxPendienteLateral2_2.setMinimumSize(QSize(260, 30))
-        self.RHAnalisisComboBoxPendienteLateral2_2.setMaximumSize(QSize(260, 16777215))
-        self.RHAnalisisComboBoxPendienteLateral2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"background-color: rgb(255, 255, 255);")
-        self.RHAnalisisComboBoxPendienteLateral2_2.setEditable(True)
-        self.RHAnalisisComboBoxPendienteLateral2_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
-
-        self.horizontalLayout_81.addWidget(self.RHAnalisisComboBoxPendienteLateral2_2)
-
-
-        self.gridLayout_90.addLayout(self.horizontalLayout_81, 2, 2, 1, 1)
-
-        self.horizontalLayout_114 = QHBoxLayout()
-        self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
-        self.RHAnalisisComboBoxCaudal_3 = QComboBox(self.row_43)
-        self.RHAnalisisComboBoxCaudal_3.addItem("")
-        self.RHAnalisisComboBoxCaudal_3.setObjectName(u"RHAnalisisComboBoxCaudal_3")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisComboBoxCaudal_3.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisComboBoxCaudal_3.setSizePolicy(sizePolicy5)
-        self.RHAnalisisComboBoxCaudal_3.setMinimumSize(QSize(150, 30))
-        self.RHAnalisisComboBoxCaudal_3.setMaximumSize(QSize(260, 16777215))
-        self.RHAnalisisComboBoxCaudal_3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
-"background-color: rgb(255, 255, 255);")
-        self.RHAnalisisComboBoxCaudal_3.setEditable(True)
-        self.RHAnalisisComboBoxCaudal_3.setSizeAdjustPolicy(QComboBox.AdjustToContents)
-
-        self.horizontalLayout_114.addWidget(self.RHAnalisisComboBoxCaudal_3)
-
-
-        self.gridLayout_90.addLayout(self.horizontalLayout_114, 5, 2, 1, 1)
 
 
         self.verticalLayout_63.addLayout(self.gridLayout_90)
@@ -3349,22 +3453,20 @@ class Ui_MainWindow(object):
 
         self.gridLayout_89.addWidget(self.row_43, 0, 1, 1, 1)
 
-        self.groupBox_Resultados_20 = QGroupBox(self.rhCalculoCaudal)
-        self.groupBox_Resultados_20.setObjectName(u"groupBox_Resultados_20")
-        self.groupBox_Resultados_20.setGeometry(QRect(20, 450, 750, 140))
-        sizePolicy16 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        sizePolicy16.setHorizontalStretch(0)
-        sizePolicy16.setVerticalStretch(0)
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_20.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_20.setSizePolicy(sizePolicy16)
-        self.groupBox_Resultados_20.setMinimumSize(QSize(750, 0))
-        self.groupBox_Resultados_20.setMaximumSize(QSize(750, 16777215))
-        self.groupBox_Resultados_20.setStyleSheet(u"QGroupBox {\n"
-"color: rgb(250, 148, 150);\n"
+
+        self.verticalLayout_30.addWidget(self.groupBox_Propiedades_20)
+
+        self.groupBox_Propiedades_23 = QGroupBox(self.widget)
+        self.groupBox_Propiedades_23.setObjectName(u"groupBox_Propiedades_23")
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_23.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_23.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_23.setMinimumSize(QSize(750, 0))
+        self.groupBox_Propiedades_23.setMaximumSize(QSize(750, 16777215))
+        self.groupBox_Propiedades_23.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
 "font: bold; \n"
-"font: 700 11pt \"Allerta\";\n"
 "border: 2px solid;\n"
-"border-color: rgb(250, 148, 150);\n"
+"border-color: rgb(214, 112, 114);\n"
 "border-radius: 6px;\n"
 "margin: 10px;\n"
 "\n"
@@ -3376,9 +3478,10 @@ class Ui_MainWindow(object):
 "    padding: 0px 15px 0px 15px;\n"
 "}\n"
 "")
-        self.gridLayout_91 = QGridLayout(self.groupBox_Resultados_20)
+        self.groupBox_Propiedades_23.setAlignment(Qt.AlignCenter)
+        self.gridLayout_91 = QGridLayout(self.groupBox_Propiedades_23)
         self.gridLayout_91.setObjectName(u"gridLayout_91")
-        self.row_44 = QFrame(self.groupBox_Resultados_20)
+        self.row_44 = QFrame(self.groupBox_Propiedades_23)
         self.row_44.setObjectName(u"row_44")
         self.row_44.setStyleSheet(u"")
         self.row_44.setFrameShape(QFrame.StyledPanel)
@@ -3390,131 +3493,1184 @@ class Ui_MainWindow(object):
         self.gridLayout_92 = QGridLayout()
         self.gridLayout_92.setObjectName(u"gridLayout_92")
         self.gridLayout_92.setSizeConstraint(QLayout.SetNoConstraint)
-        self.gridLayout_92.setHorizontalSpacing(10)
-        self.gridLayout_92.setVerticalSpacing(15)
-        self.gridLayout_92.setContentsMargins(10, 10, 10, 10)
-        self.RHAnalisisFieldEficiencia_2 = QLineEdit(self.row_44)
-        self.RHAnalisisFieldEficiencia_2.setObjectName(u"RHAnalisisFieldEficiencia_2")
-        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldEficiencia_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisFieldEficiencia_2.setSizePolicy(sizePolicy5)
-        self.RHAnalisisFieldEficiencia_2.setMinimumSize(QSize(240, 40))
-        self.RHAnalisisFieldEficiencia_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+        self.gridLayout_92.setHorizontalSpacing(30)
+        self.gridLayout_92.setVerticalSpacing(10)
+        self.gridLayout_92.setContentsMargins(10, 5, 20, 5)
+        self.horizontalLayout_98 = QHBoxLayout()
+        self.horizontalLayout_98.setSpacing(0)
+        self.horizontalLayout_98.setObjectName(u"horizontalLayout_98")
+        self.horizontalLayout_98.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxProfundidad1Sec2 = QComboBox(self.row_44)
+        self.CEnergiaComboBoxProfundidad1Sec2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec2.setObjectName(u"CEnergiaComboBoxProfundidad1Sec2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxProfundidad1Sec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxProfundidad1Sec2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxProfundidad1Sec2.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxProfundidad1Sec2.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxProfundidad1Sec2.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxProfundidad1Sec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxProfundidad1Sec2.setEditable(True)
+        self.CEnergiaComboBoxProfundidad1Sec2.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxProfundidad1Sec2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_98.addWidget(self.CEnergiaComboBoxProfundidad1Sec2)
+
+
+        self.gridLayout_92.addLayout(self.horizontalLayout_98, 3, 2, 1, 1)
+
+        self.CEnergiaFieldAnchoSec2 = QLineEdit(self.row_44)
+        self.CEnergiaFieldAnchoSec2.setObjectName(u"CEnergiaFieldAnchoSec2")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldAnchoSec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldAnchoSec2.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldAnchoSec2.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldAnchoSec2.setMaximumSize(QSize(150, 30))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec2.setToolTip(u"")
+#endif // QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_92.addWidget(self.CEnergiaFieldAnchoSec2, 0, 1, 1, 1)
+
+        self.CEnergiaLabelPendienteLateral2Sec2 = QLabel(self.row_44)
+        self.CEnergiaLabelPendienteLateral2Sec2.setObjectName(u"CEnergiaLabelPendienteLateral2Sec2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateral2Sec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateral2Sec2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateral2Sec2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateral2Sec2.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateral2Sec2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_92.addWidget(self.CEnergiaLabelPendienteLateral2Sec2, 2, 0, 1, 1)
+
+        self.CEnergiaFieldProfundidad1Sec2 = QLineEdit(self.row_44)
+        self.CEnergiaFieldProfundidad1Sec2.setObjectName(u"CEnergiaFieldProfundidad1Sec2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldProfundidad1Sec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldProfundidad1Sec2.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldProfundidad1Sec2.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldProfundidad1Sec2.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldProfundidad1Sec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "font: 650 11pt \"Allerta\";")
 
-        self.gridLayout_92.addWidget(self.RHAnalisisFieldEficiencia_2, 0, 1, 1, 1)
+        self.gridLayout_92.addWidget(self.CEnergiaFieldProfundidad1Sec2, 3, 1, 1, 1)
 
-        self.RHAnalisisLabelEficiencia_2 = QLabel(self.row_44)
-        self.RHAnalisisLabelEficiencia_2.setObjectName(u"RHAnalisisLabelEficiencia_2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelEficiencia_2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelEficiencia_2.setSizePolicy(sizePolicy7)
-        self.RHAnalisisLabelEficiencia_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
-        self.RHAnalisisLabelEficiencia_2.setLineWidth(1)
-        self.RHAnalisisLabelEficiencia_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.horizontalLayout_74 = QHBoxLayout()
+        self.horizontalLayout_74.setSpacing(0)
+        self.horizontalLayout_74.setObjectName(u"horizontalLayout_74")
+        self.horizontalLayout_74.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxPendienteLateralSec1_2 = QComboBox(self.row_44)
+        self.CEnergiaComboBoxPendienteLateralSec1_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setObjectName(u"CEnergiaComboBoxPendienteLateralSec1_2")
+        sizePolicy14.setHeightForWidth(self.CEnergiaComboBoxPendienteLateralSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setSizePolicy(sizePolicy14)
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
 
-        self.gridLayout_92.addWidget(self.RHAnalisisLabelEficiencia_2, 0, 0, 1, 1)
+        self.horizontalLayout_74.addWidget(self.CEnergiaComboBoxPendienteLateralSec1_2)
+
+
+        self.gridLayout_92.addLayout(self.horizontalLayout_74, 1, 2, 1, 1)
+
+        self.horizontalLayout_96 = QHBoxLayout()
+        self.horizontalLayout_96.setSpacing(0)
+        self.horizontalLayout_96.setObjectName(u"horizontalLayout_96")
+        self.horizontalLayout_96.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxAnchoSec2 = QComboBox(self.row_44)
+        self.CEnergiaComboBoxAnchoSec2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2.setObjectName(u"CEnergiaComboBoxAnchoSec2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxAnchoSec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxAnchoSec2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxAnchoSec2.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxAnchoSec2.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxAnchoSec2.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxAnchoSec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxAnchoSec2.setEditable(True)
+        self.CEnergiaComboBoxAnchoSec2.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxAnchoSec2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_96.addWidget(self.CEnergiaComboBoxAnchoSec2)
+
+
+        self.gridLayout_92.addLayout(self.horizontalLayout_96, 0, 2, 1, 1)
+
+        self.CEnergiaLabelProfundidadSec2 = QLabel(self.row_44)
+        self.CEnergiaLabelProfundidadSec2.setObjectName(u"CEnergiaLabelProfundidadSec2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelProfundidadSec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelProfundidadSec2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelProfundidadSec2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelProfundidadSec2.setLineWidth(1)
+        self.CEnergiaLabelProfundidadSec2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_92.addWidget(self.CEnergiaLabelProfundidadSec2, 3, 0, 1, 1)
+
+        self.CEnergiaFieldPendienteLateralSec2 = QLineEdit(self.row_44)
+        self.CEnergiaFieldPendienteLateralSec2.setObjectName(u"CEnergiaFieldPendienteLateralSec2")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldPendienteLateralSec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateralSec2.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldPendienteLateralSec2.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldPendienteLateralSec2.setMaximumSize(QSize(150, 30))
+        self.CEnergiaFieldPendienteLateralSec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_92.addWidget(self.CEnergiaFieldPendienteLateralSec2, 1, 1, 1, 1)
+
+        self.CEnergiaFieldPendienteLateral2Sec2 = QLineEdit(self.row_44)
+        self.CEnergiaFieldPendienteLateral2Sec2.setObjectName(u"CEnergiaFieldPendienteLateral2Sec2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldPendienteLateral2Sec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateral2Sec2.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldPendienteLateral2Sec2.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldPendienteLateral2Sec2.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldPendienteLateral2Sec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_92.addWidget(self.CEnergiaFieldPendienteLateral2Sec2, 2, 1, 1, 1)
+
+        self.CEnergiaLabelBaseSec2 = QLabel(self.row_44)
+        self.CEnergiaLabelBaseSec2.setObjectName(u"CEnergiaLabelBaseSec2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelBaseSec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelBaseSec2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelBaseSec2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelBaseSec2.setLineWidth(1)
+        self.CEnergiaLabelBaseSec2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_92.addWidget(self.CEnergiaLabelBaseSec2, 0, 0, 1, 1)
+
+        self.CEnergiaLabelPendienteLateralSec2 = QLabel(self.row_44)
+        self.CEnergiaLabelPendienteLateralSec2.setObjectName(u"CEnergiaLabelPendienteLateralSec2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateralSec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateralSec2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateralSec2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateralSec2.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateralSec2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_92.addWidget(self.CEnergiaLabelPendienteLateralSec2, 1, 0, 1, 1)
+
+        self.horizontalLayout_97 = QHBoxLayout()
+        self.horizontalLayout_97.setObjectName(u"horizontalLayout_97")
+        self.CEnergiaComboBoxPendienteLateral2Sec2 = QComboBox(self.row_44)
+        self.CEnergiaComboBoxPendienteLateral2Sec2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setObjectName(u"CEnergiaComboBoxPendienteLateral2Sec2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxPendienteLateral2Sec2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_97.addWidget(self.CEnergiaComboBoxPendienteLateral2Sec2)
+
+
+        self.gridLayout_92.addLayout(self.horizontalLayout_97, 2, 2, 1, 1)
 
 
         self.verticalLayout_64.addLayout(self.gridLayout_92)
 
 
-        self.gridLayout_91.addWidget(self.row_44, 0, 0, 1, 1)
-
-        self.verticalLayoutWidget_4 = QWidget(self.rhCalculoCaudal)
-        self.verticalLayoutWidget_4.setObjectName(u"verticalLayoutWidget_4")
-        self.verticalLayoutWidget_4.setGeometry(QRect(800, 20, 264, 391))
-        self.verticalLayout_29 = QVBoxLayout(self.verticalLayoutWidget_4)
-        self.verticalLayout_29.setSpacing(10)
-        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
-        self.verticalLayout_29.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_44 = QHBoxLayout()
-        self.horizontalLayout_44.setObjectName(u"horizontalLayout_44")
-        self.geoCImagenCanal_12 = QPushButton(self.verticalLayoutWidget_4)
-        self.geoCImagenCanal_12.setObjectName(u"geoCImagenCanal_12")
-        self.geoCImagenCanal_12.setEnabled(False)
-        sizePolicy5.setHeightForWidth(self.geoCImagenCanal_12.sizePolicy().hasHeightForWidth())
-        self.geoCImagenCanal_12.setSizePolicy(sizePolicy5)
-        self.geoCImagenCanal_12.setMinimumSize(QSize(260, 213))
-        self.geoCImagenCanal_12.setStyleSheet(u"border-image: url(:/geometria/images/geometria/Geometria-rectangular.PNG);\n"
-"background-color: rgb(255,255,255);")
-        self.geoCImagenCanal_12.setFlat(True)
-
-        self.horizontalLayout_44.addWidget(self.geoCImagenCanal_12)
+        self.gridLayout_91.addWidget(self.row_44, 0, 1, 1, 1)
 
 
-        self.verticalLayout_29.addLayout(self.horizontalLayout_44)
+        self.verticalLayout_30.addWidget(self.groupBox_Propiedades_23)
 
-        self.layoutWidget = QWidget(self.rhCalculoCaudal)
-        self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(790, 470, 261, 101))
-        self.gridLayout_27 = QGridLayout(self.layoutWidget)
-        self.gridLayout_27.setObjectName(u"gridLayout_27")
-        self.gridLayout_27.setHorizontalSpacing(10)
-        self.gridLayout_27.setVerticalSpacing(0)
-        self.gridLayout_27.setContentsMargins(0, 0, 0, 0)
-        self.FGVTextoReiniciar_2 = QLabel(self.layoutWidget)
-        self.FGVTextoReiniciar_2.setObjectName(u"FGVTextoReiniciar_2")
-        sizePolicy5.setHeightForWidth(self.FGVTextoReiniciar_2.sizePolicy().hasHeightForWidth())
-        self.FGVTextoReiniciar_2.setSizePolicy(sizePolicy5)
-        self.FGVTextoReiniciar_2.setStyleSheet(u"font: 500 12pt \"Allerta\";\n"
-"color: rgb(84, 84, 84);\n"
-"")
-        self.FGVTextoReiniciar_2.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_27.addWidget(self.FGVTextoReiniciar_2, 2, 1, 1, 1)
-
-        self.FGVTextoCalcular_2 = QLabel(self.layoutWidget)
-        self.FGVTextoCalcular_2.setObjectName(u"FGVTextoCalcular_2")
-        sizePolicy5.setHeightForWidth(self.FGVTextoCalcular_2.sizePolicy().hasHeightForWidth())
-        self.FGVTextoCalcular_2.setSizePolicy(sizePolicy5)
-        self.FGVTextoCalcular_2.setStyleSheet(u"font: 500 12pt \"Allerta\";\n"
-"color: rgb(84, 84, 84);\n"
+        self.groupBox_Propiedades_24 = QGroupBox(self.widget)
+        self.groupBox_Propiedades_24.setObjectName(u"groupBox_Propiedades_24")
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_24.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_24.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_24.setMinimumSize(QSize(750, 0))
+        self.groupBox_Propiedades_24.setMaximumSize(QSize(750, 16777215))
+        self.groupBox_Propiedades_24.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
+"font: bold; \n"
+"border: 2px solid;\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
 "\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
 "")
-        self.FGVTextoCalcular_2.setAlignment(Qt.AlignCenter)
+        self.groupBox_Propiedades_24.setAlignment(Qt.AlignCenter)
+        self.gridLayout_101 = QGridLayout(self.groupBox_Propiedades_24)
+        self.gridLayout_101.setObjectName(u"gridLayout_101")
+        self.row_49 = QFrame(self.groupBox_Propiedades_24)
+        self.row_49.setObjectName(u"row_49")
+        self.row_49.setStyleSheet(u"")
+        self.row_49.setFrameShape(QFrame.StyledPanel)
+        self.row_49.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_69 = QVBoxLayout(self.row_49)
+        self.verticalLayout_69.setSpacing(0)
+        self.verticalLayout_69.setObjectName(u"verticalLayout_69")
+        self.verticalLayout_69.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_102 = QGridLayout()
+        self.gridLayout_102.setObjectName(u"gridLayout_102")
+        self.gridLayout_102.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_102.setHorizontalSpacing(30)
+        self.gridLayout_102.setVerticalSpacing(10)
+        self.gridLayout_102.setContentsMargins(10, 5, 20, 5)
+        self.RHAnalisisLabelCaudal_4 = QLabel(self.row_49)
+        self.RHAnalisisLabelCaudal_4.setObjectName(u"RHAnalisisLabelCaudal_4")
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelCaudal_4.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelCaudal_4.setSizePolicy(sizePolicy6)
+        self.RHAnalisisLabelCaudal_4.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.RHAnalisisLabelCaudal_4.setLineWidth(1)
+        self.RHAnalisisLabelCaudal_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.gridLayout_27.addWidget(self.FGVTextoCalcular_2, 2, 0, 1, 1)
+        self.gridLayout_102.addWidget(self.RHAnalisisLabelCaudal_4, 0, 0, 1, 1)
 
-        self.horizontalLayout_47 = QHBoxLayout()
-        self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
-        self.FGVBotonCalcular_2 = QPushButton(self.layoutWidget)
-        self.FGVBotonCalcular_2.setObjectName(u"FGVBotonCalcular_2")
-        self.FGVBotonCalcular_2.setMinimumSize(QSize(50, 50))
-        self.FGVBotonCalcular_2.setMaximumSize(QSize(40, 40))
-        self.FGVBotonCalcular_2.setStyleSheet(u"background-color: rgb(250, 148, 150);\n"
-"border-color: rgb(250, 148, 150);\n"
+        self.horizontalLayout_102 = QHBoxLayout()
+        self.horizontalLayout_102.setSpacing(0)
+        self.horizontalLayout_102.setObjectName(u"horizontalLayout_102")
+        self.horizontalLayout_102.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxAnchoSec2_3 = QComboBox(self.row_49)
+        self.CEnergiaComboBoxAnchoSec2_3.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_3.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_3.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_3.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_3.setObjectName(u"CEnergiaComboBoxAnchoSec2_3")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxAnchoSec2_3.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxAnchoSec2_3.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxAnchoSec2_3.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxAnchoSec2_3.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxAnchoSec2_3.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxAnchoSec2_3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxAnchoSec2_3.setEditable(True)
+        self.CEnergiaComboBoxAnchoSec2_3.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxAnchoSec2_3.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_102.addWidget(self.CEnergiaComboBoxAnchoSec2_3)
+
+
+        self.gridLayout_102.addLayout(self.horizontalLayout_102, 0, 2, 1, 1)
+
+        self.RHAnalisisFieldCaudal_4 = QLineEdit(self.row_49)
+        self.RHAnalisisFieldCaudal_4.setObjectName(u"RHAnalisisFieldCaudal_4")
+        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_4.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisFieldCaudal_4.setSizePolicy(sizePolicy5)
+        self.RHAnalisisFieldCaudal_4.setMinimumSize(QSize(0, 30))
+        self.RHAnalisisFieldCaudal_4.setMaximumSize(QSize(150, 16777215))
+        self.RHAnalisisFieldCaudal_4.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_102.addWidget(self.RHAnalisisFieldCaudal_4, 0, 1, 1, 1)
+
+
+        self.verticalLayout_69.addLayout(self.gridLayout_102)
+
+
+        self.gridLayout_101.addWidget(self.row_49, 0, 1, 1, 1)
+
+
+        self.verticalLayout_30.addWidget(self.groupBox_Propiedades_24)
+
+        self.tabConservacionEnergia.addTab(self.rhCalculoCaudal, "")
+        self.rhProfundidad = QWidget()
+        self.rhProfundidad.setObjectName(u"rhProfundidad")
+        self.rhProfundidad.setStyleSheet(u"font: 500 11pt \"Allerta\";")
+        self.layoutWidget_2 = QWidget(self.rhProfundidad)
+        self.layoutWidget_2.setObjectName(u"layoutWidget_2")
+        self.layoutWidget_2.setGeometry(QRect(830, 10, 198, 94))
+        self.gridLayout_25 = QGridLayout(self.layoutWidget_2)
+        self.gridLayout_25.setObjectName(u"gridLayout_25")
+        self.gridLayout_25.setHorizontalSpacing(60)
+        self.gridLayout_25.setVerticalSpacing(0)
+        self.gridLayout_25.setContentsMargins(0, 0, 0, 0)
+        self.ManningUniformeTextoReiniciar_3 = QLabel(self.layoutWidget_2)
+        self.ManningUniformeTextoReiniciar_3.setObjectName(u"ManningUniformeTextoReiniciar_3")
+        sizePolicy5.setHeightForWidth(self.ManningUniformeTextoReiniciar_3.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeTextoReiniciar_3.setSizePolicy(sizePolicy5)
+        self.ManningUniformeTextoReiniciar_3.setStyleSheet(u"font: 500 12pt \"Allerta\";\n"
+"color: rgb(84, 84, 84);\n"
+"")
+        self.ManningUniformeTextoReiniciar_3.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_25.addWidget(self.ManningUniformeTextoReiniciar_3, 2, 1, 1, 1)
+
+        self.horizontalLayout_37 = QHBoxLayout()
+        self.horizontalLayout_37.setSpacing(20)
+        self.horizontalLayout_37.setObjectName(u"horizontalLayout_37")
+        self.horizontalLayout_37.setContentsMargins(-1, -1, -1, 20)
+        self.ManningUniformeBotonCalcular_3 = QPushButton(self.layoutWidget_2)
+        self.ManningUniformeBotonCalcular_3.setObjectName(u"ManningUniformeBotonCalcular_3")
+        self.ManningUniformeBotonCalcular_3.setMinimumSize(QSize(50, 50))
+        self.ManningUniformeBotonCalcular_3.setMaximumSize(QSize(40, 40))
+        self.ManningUniformeBotonCalcular_3.setStyleSheet(u"background-color: rgb(214, 112, 114);\n"
+"border-color: rgb(214, 112, 114);\n"
 "border-width: 2px;\n"
 "border-radius: 20px;\n"
 "")
 
-        self.horizontalLayout_47.addWidget(self.FGVBotonCalcular_2)
+        self.horizontalLayout_37.addWidget(self.ManningUniformeBotonCalcular_3)
 
 
-        self.gridLayout_27.addLayout(self.horizontalLayout_47, 0, 0, 1, 1)
+        self.gridLayout_25.addLayout(self.horizontalLayout_37, 0, 0, 1, 1)
 
-        self.horizontalLayout_57 = QHBoxLayout()
-        self.horizontalLayout_57.setObjectName(u"horizontalLayout_57")
-        self.FGVBotonReiniciar_2 = QPushButton(self.layoutWidget)
-        self.FGVBotonReiniciar_2.setObjectName(u"FGVBotonReiniciar_2")
-        self.FGVBotonReiniciar_2.setMinimumSize(QSize(50, 50))
-        self.FGVBotonReiniciar_2.setMaximumSize(QSize(40, 40))
-        self.FGVBotonReiniciar_2.setStyleSheet(u"background-color: rgb(250, 148, 150);\n"
-"border-color: rgb(250, 148, 150);\n"
+        self.horizontalLayout_38 = QHBoxLayout()
+        self.horizontalLayout_38.setObjectName(u"horizontalLayout_38")
+        self.horizontalLayout_38.setContentsMargins(-1, -1, -1, 20)
+        self.ManningUniformeBotonReiniciar_3 = QPushButton(self.layoutWidget_2)
+        self.ManningUniformeBotonReiniciar_3.setObjectName(u"ManningUniformeBotonReiniciar_3")
+        self.ManningUniformeBotonReiniciar_3.setMinimumSize(QSize(50, 50))
+        self.ManningUniformeBotonReiniciar_3.setMaximumSize(QSize(40, 40))
+        self.ManningUniformeBotonReiniciar_3.setStyleSheet(u"background-color: rgb(214, 112, 114);\n"
+"border-color: rgb(214, 112, 114);\n"
 "border-width: 2px;\n"
-"border-radius: 20px;")
+"border-radius: 20px;\n"
+"")
 
-        self.horizontalLayout_57.addWidget(self.FGVBotonReiniciar_2)
+        self.horizontalLayout_38.addWidget(self.ManningUniformeBotonReiniciar_3)
 
 
-        self.gridLayout_27.addLayout(self.horizontalLayout_57, 0, 1, 1, 1)
+        self.gridLayout_25.addLayout(self.horizontalLayout_38, 0, 1, 1, 1)
 
-        self.gridLayout_27.setColumnStretch(0, 10)
-        self.gridLayout_27.setColumnStretch(1, 10)
-        self.gridLayout_27.setRowMinimumHeight(0, 10)
-        self.gridLayout_27.setRowMinimumHeight(1, 10)
-        self.tabConservacionEnergia.addTab(self.rhCalculoCaudal, "")
-        self.tab_3 = QWidget()
-        self.tab_3.setObjectName(u"tab_3")
-        self.tabConservacionEnergia.addTab(self.tab_3, "")
+        self.ManningUniformeTextoCalcular_3 = QLabel(self.layoutWidget_2)
+        self.ManningUniformeTextoCalcular_3.setObjectName(u"ManningUniformeTextoCalcular_3")
+        sizePolicy5.setHeightForWidth(self.ManningUniformeTextoCalcular_3.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeTextoCalcular_3.setSizePolicy(sizePolicy5)
+        self.ManningUniformeTextoCalcular_3.setStyleSheet(u"font: 500 12pt \"Allerta\";\n"
+"color: rgb(84, 84, 84);\n"
+"")
+        self.ManningUniformeTextoCalcular_3.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_25.addWidget(self.ManningUniformeTextoCalcular_3, 2, 0, 1, 1)
+
+        self.gridLayout_25.setColumnStretch(0, 10)
+        self.layoutWidget_3 = QWidget(self.rhProfundidad)
+        self.layoutWidget_3.setObjectName(u"layoutWidget_3")
+        self.layoutWidget_3.setGeometry(QRect(20, 10, 752, 582))
+        self.verticalLayout_31 = QVBoxLayout(self.layoutWidget_3)
+        self.verticalLayout_31.setSpacing(1)
+        self.verticalLayout_31.setObjectName(u"verticalLayout_31")
+        self.verticalLayout_31.setContentsMargins(0, 0, 0, 0)
+        self.groupBox_Propiedades_25 = QGroupBox(self.layoutWidget_3)
+        self.groupBox_Propiedades_25.setObjectName(u"groupBox_Propiedades_25")
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_25.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_25.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_25.setMinimumSize(QSize(750, 0))
+        self.groupBox_Propiedades_25.setMaximumSize(QSize(700, 16777215))
+        self.groupBox_Propiedades_25.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
+"font: bold; \n"
+"border: 2px solid;\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
+"")
+        self.groupBox_Propiedades_25.setAlignment(Qt.AlignCenter)
+        self.gridLayout_103 = QGridLayout(self.groupBox_Propiedades_25)
+        self.gridLayout_103.setObjectName(u"gridLayout_103")
+        self.row_50 = QFrame(self.groupBox_Propiedades_25)
+        self.row_50.setObjectName(u"row_50")
+        self.row_50.setStyleSheet(u"")
+        self.row_50.setFrameShape(QFrame.StyledPanel)
+        self.row_50.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_70 = QVBoxLayout(self.row_50)
+        self.verticalLayout_70.setSpacing(0)
+        self.verticalLayout_70.setObjectName(u"verticalLayout_70")
+        self.verticalLayout_70.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_104 = QGridLayout()
+        self.gridLayout_104.setObjectName(u"gridLayout_104")
+        self.gridLayout_104.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_104.setHorizontalSpacing(30)
+        self.gridLayout_104.setVerticalSpacing(5)
+        self.gridLayout_104.setContentsMargins(10, 10, 20, 5)
+        self.CEnergiaFieldAnchoSec1_2 = QLineEdit(self.row_50)
+        self.CEnergiaFieldAnchoSec1_2.setObjectName(u"CEnergiaFieldAnchoSec1_2")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldAnchoSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldAnchoSec1_2.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldAnchoSec1_2.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldAnchoSec1_2.setMaximumSize(QSize(150, 30))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec1_2.setToolTip(u"")
+#endif // QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_104.addWidget(self.CEnergiaFieldAnchoSec1_2, 0, 1, 1, 1)
+
+        self.horizontalLayout_99 = QHBoxLayout()
+        self.horizontalLayout_99.setSpacing(0)
+        self.horizontalLayout_99.setObjectName(u"horizontalLayout_99")
+        self.horizontalLayout_99.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxPendienteLateralSec1_3 = QComboBox(self.row_50)
+        self.CEnergiaComboBoxPendienteLateralSec1_3.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_3.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_3.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setObjectName(u"CEnergiaComboBoxPendienteLateralSec1_3")
+        sizePolicy14.setHeightForWidth(self.CEnergiaComboBoxPendienteLateralSec1_3.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setSizePolicy(sizePolicy14)
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_99.addWidget(self.CEnergiaComboBoxPendienteLateralSec1_3)
+
+
+        self.gridLayout_104.addLayout(self.horizontalLayout_99, 1, 2, 1, 1)
+
+        self.horizontalLayout_100 = QHBoxLayout()
+        self.horizontalLayout_100.setSpacing(0)
+        self.horizontalLayout_100.setObjectName(u"horizontalLayout_100")
+        self.horizontalLayout_100.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxAnchoSec1_2 = QComboBox(self.row_50)
+        self.CEnergiaComboBoxAnchoSec1_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec1_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec1_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec1_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec1_2.setObjectName(u"CEnergiaComboBoxAnchoSec1_2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxAnchoSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxAnchoSec1_2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxAnchoSec1_2.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxAnchoSec1_2.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxAnchoSec1_2.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxAnchoSec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxAnchoSec1_2.setEditable(True)
+        self.CEnergiaComboBoxAnchoSec1_2.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxAnchoSec1_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_100.addWidget(self.CEnergiaComboBoxAnchoSec1_2)
+
+
+        self.gridLayout_104.addLayout(self.horizontalLayout_100, 0, 2, 1, 1)
+
+        self.CEnergiaFieldProfundidad1Sec1_3 = QLineEdit(self.row_50)
+        self.CEnergiaFieldProfundidad1Sec1_3.setObjectName(u"CEnergiaFieldProfundidad1Sec1_3")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldProfundidad1Sec1_3.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldProfundidad1Sec1_3.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldProfundidad1Sec1_3.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldProfundidad1Sec1_3.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldProfundidad1Sec1_3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_104.addWidget(self.CEnergiaFieldProfundidad1Sec1_3, 4, 1, 1, 1)
+
+        self.CEnergiaLabelPendienteLateralSec1_2 = QLabel(self.row_50)
+        self.CEnergiaLabelPendienteLateralSec1_2.setObjectName(u"CEnergiaLabelPendienteLateralSec1_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateralSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateralSec1_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateralSec1_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateralSec1_2.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateralSec1_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_104.addWidget(self.CEnergiaLabelPendienteLateralSec1_2, 1, 0, 1, 1)
+
+        self.CEnergiaFieldProfundidad1Sec1_2 = QLineEdit(self.row_50)
+        self.CEnergiaFieldProfundidad1Sec1_2.setObjectName(u"CEnergiaFieldProfundidad1Sec1_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldProfundidad1Sec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldProfundidad1Sec1_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldProfundidad1Sec1_2.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldProfundidad1Sec1_2.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldProfundidad1Sec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_104.addWidget(self.CEnergiaFieldProfundidad1Sec1_2, 3, 1, 1, 1)
+
+        self.CEnergiaLabelProfundidadSec1_3 = QLabel(self.row_50)
+        self.CEnergiaLabelProfundidadSec1_3.setObjectName(u"CEnergiaLabelProfundidadSec1_3")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelProfundidadSec1_3.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelProfundidadSec1_3.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelProfundidadSec1_3.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelProfundidadSec1_3.setLineWidth(1)
+        self.CEnergiaLabelProfundidadSec1_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_104.addWidget(self.CEnergiaLabelProfundidadSec1_3, 4, 0, 1, 1)
+
+        self.CEnergiaLabelProfundidadSec1_2 = QLabel(self.row_50)
+        self.CEnergiaLabelProfundidadSec1_2.setObjectName(u"CEnergiaLabelProfundidadSec1_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelProfundidadSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelProfundidadSec1_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelProfundidadSec1_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelProfundidadSec1_2.setLineWidth(1)
+        self.CEnergiaLabelProfundidadSec1_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_104.addWidget(self.CEnergiaLabelProfundidadSec1_2, 3, 0, 1, 1)
+
+        self.CEnergiaFieldPendienteLateralSec1_2 = QLineEdit(self.row_50)
+        self.CEnergiaFieldPendienteLateralSec1_2.setObjectName(u"CEnergiaFieldPendienteLateralSec1_2")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldPendienteLateralSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateralSec1_2.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldPendienteLateralSec1_2.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldPendienteLateralSec1_2.setMaximumSize(QSize(150, 30))
+        self.CEnergiaFieldPendienteLateralSec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_104.addWidget(self.CEnergiaFieldPendienteLateralSec1_2, 1, 1, 1, 1)
+
+        self.CEnergiaLabelBaseSec1_2 = QLabel(self.row_50)
+        self.CEnergiaLabelBaseSec1_2.setObjectName(u"CEnergiaLabelBaseSec1_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelBaseSec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelBaseSec1_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelBaseSec1_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelBaseSec1_2.setLineWidth(1)
+        self.CEnergiaLabelBaseSec1_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_104.addWidget(self.CEnergiaLabelBaseSec1_2, 0, 0, 1, 1)
+
+        self.CEnergiaLabelPendienteLateral2Sec1_2 = QLabel(self.row_50)
+        self.CEnergiaLabelPendienteLateral2Sec1_2.setObjectName(u"CEnergiaLabelPendienteLateral2Sec1_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateral2Sec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateral2Sec1_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateral2Sec1_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateral2Sec1_2.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateral2Sec1_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_104.addWidget(self.CEnergiaLabelPendienteLateral2Sec1_2, 2, 0, 1, 1)
+
+        self.CEnergiaFieldPendienteLateral2Sec1_2 = QLineEdit(self.row_50)
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setObjectName(u"CEnergiaFieldPendienteLateral2Sec1_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldPendienteLateral2Sec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_104.addWidget(self.CEnergiaFieldPendienteLateral2Sec1_2, 2, 1, 1, 1)
+
+        self.horizontalLayout_101 = QHBoxLayout()
+        self.horizontalLayout_101.setObjectName(u"horizontalLayout_101")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2 = QComboBox(self.row_50)
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setObjectName(u"CEnergiaComboBoxPendienteLateral2Sec1_2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxPendienteLateral2Sec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_101.addWidget(self.CEnergiaComboBoxPendienteLateral2Sec1_2)
+
+
+        self.gridLayout_104.addLayout(self.horizontalLayout_101, 2, 2, 1, 1)
+
+        self.horizontalLayout_103 = QHBoxLayout()
+        self.horizontalLayout_103.setSpacing(0)
+        self.horizontalLayout_103.setObjectName(u"horizontalLayout_103")
+        self.horizontalLayout_103.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxProfundidad1Sec1_2 = QComboBox(self.row_50)
+        self.CEnergiaComboBoxProfundidad1Sec1_2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1_2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1_2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1_2.addItem("")
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setObjectName(u"CEnergiaComboBoxProfundidad1Sec1_2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxProfundidad1Sec1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setEditable(True)
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_103.addWidget(self.CEnergiaComboBoxProfundidad1Sec1_2)
+
+
+        self.gridLayout_104.addLayout(self.horizontalLayout_103, 3, 2, 1, 1)
+
+        self.horizontalLayout_118 = QHBoxLayout()
+        self.horizontalLayout_118.setObjectName(u"horizontalLayout_118")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3 = QComboBox(self.row_50)
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setObjectName(u"CEnergiaComboBoxPendienteLateral2Sec1_3")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxPendienteLateral2Sec1_3.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_118.addWidget(self.CEnergiaComboBoxPendienteLateral2Sec1_3)
+
+
+        self.gridLayout_104.addLayout(self.horizontalLayout_118, 4, 2, 1, 1)
+
+
+        self.verticalLayout_70.addLayout(self.gridLayout_104)
+
+
+        self.gridLayout_103.addWidget(self.row_50, 0, 1, 1, 1)
+
+
+        self.verticalLayout_31.addWidget(self.groupBox_Propiedades_25)
+
+        self.groupBox_Propiedades_26 = QGroupBox(self.layoutWidget_3)
+        self.groupBox_Propiedades_26.setObjectName(u"groupBox_Propiedades_26")
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_26.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_26.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_26.setMinimumSize(QSize(750, 0))
+        self.groupBox_Propiedades_26.setMaximumSize(QSize(750, 16777215))
+        self.groupBox_Propiedades_26.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
+"font: bold; \n"
+"border: 2px solid;\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
+"\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
+"")
+        self.groupBox_Propiedades_26.setAlignment(Qt.AlignCenter)
+        self.gridLayout_107 = QGridLayout(self.groupBox_Propiedades_26)
+        self.gridLayout_107.setObjectName(u"gridLayout_107")
+        self.row_52 = QFrame(self.groupBox_Propiedades_26)
+        self.row_52.setObjectName(u"row_52")
+        self.row_52.setStyleSheet(u"")
+        self.row_52.setFrameShape(QFrame.StyledPanel)
+        self.row_52.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_72 = QVBoxLayout(self.row_52)
+        self.verticalLayout_72.setSpacing(0)
+        self.verticalLayout_72.setObjectName(u"verticalLayout_72")
+        self.verticalLayout_72.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_108 = QGridLayout()
+        self.gridLayout_108.setObjectName(u"gridLayout_108")
+        self.gridLayout_108.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_108.setHorizontalSpacing(30)
+        self.gridLayout_108.setVerticalSpacing(5)
+        self.gridLayout_108.setContentsMargins(10, 10, 20, 5)
+        self.CEnergiaFieldPendienteLateral2Sec2_2 = QLineEdit(self.row_52)
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setObjectName(u"CEnergiaFieldPendienteLateral2Sec2_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaFieldPendienteLateral2Sec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setMinimumSize(QSize(0, 30))
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setMaximumSize(QSize(150, 16777215))
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_108.addWidget(self.CEnergiaFieldPendienteLateral2Sec2_2, 2, 1, 1, 1)
+
+        self.horizontalLayout_116 = QHBoxLayout()
+        self.horizontalLayout_116.setObjectName(u"horizontalLayout_116")
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2 = QComboBox(self.row_52)
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.addItem("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setObjectName(u"CEnergiaComboBoxPendienteLateral2Sec2_2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxPendienteLateral2Sec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_116.addWidget(self.CEnergiaComboBoxPendienteLateral2Sec2_2)
+
+
+        self.gridLayout_108.addLayout(self.horizontalLayout_116, 2, 2, 1, 1)
+
+        self.horizontalLayout_114 = QHBoxLayout()
+        self.horizontalLayout_114.setSpacing(0)
+        self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
+        self.horizontalLayout_114.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxPendienteLateralSec1_4 = QComboBox(self.row_52)
+        self.CEnergiaComboBoxPendienteLateralSec1_4.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_4.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_4.addItem("")
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setObjectName(u"CEnergiaComboBoxPendienteLateralSec1_4")
+        sizePolicy14.setHeightForWidth(self.CEnergiaComboBoxPendienteLateralSec1_4.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setSizePolicy(sizePolicy14)
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setMinimumSize(QSize(226, 30))
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setMaximumSize(QSize(260, 16777215))
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setEditable(True)
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_114.addWidget(self.CEnergiaComboBoxPendienteLateralSec1_4)
+
+
+        self.gridLayout_108.addLayout(self.horizontalLayout_114, 1, 2, 1, 1)
+
+        self.CEnergiaLabelBaseSec2_2 = QLabel(self.row_52)
+        self.CEnergiaLabelBaseSec2_2.setObjectName(u"CEnergiaLabelBaseSec2_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelBaseSec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelBaseSec2_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelBaseSec2_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelBaseSec2_2.setLineWidth(1)
+        self.CEnergiaLabelBaseSec2_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_108.addWidget(self.CEnergiaLabelBaseSec2_2, 0, 0, 1, 1)
+
+        self.horizontalLayout_115 = QHBoxLayout()
+        self.horizontalLayout_115.setSpacing(0)
+        self.horizontalLayout_115.setObjectName(u"horizontalLayout_115")
+        self.horizontalLayout_115.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxAnchoSec2_2 = QComboBox(self.row_52)
+        self.CEnergiaComboBoxAnchoSec2_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_2.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_2.setObjectName(u"CEnergiaComboBoxAnchoSec2_2")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxAnchoSec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxAnchoSec2_2.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxAnchoSec2_2.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxAnchoSec2_2.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxAnchoSec2_2.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxAnchoSec2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxAnchoSec2_2.setEditable(True)
+        self.CEnergiaComboBoxAnchoSec2_2.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxAnchoSec2_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_115.addWidget(self.CEnergiaComboBoxAnchoSec2_2)
+
+
+        self.gridLayout_108.addLayout(self.horizontalLayout_115, 0, 2, 1, 1)
+
+        self.CEnergiaLabelPendienteLateral2Sec2_2 = QLabel(self.row_52)
+        self.CEnergiaLabelPendienteLateral2Sec2_2.setObjectName(u"CEnergiaLabelPendienteLateral2Sec2_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateral2Sec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateral2Sec2_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateral2Sec2_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateral2Sec2_2.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateral2Sec2_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_108.addWidget(self.CEnergiaLabelPendienteLateral2Sec2_2, 2, 0, 1, 1)
+
+        self.CEnergiaFieldAnchoSec2_2 = QLineEdit(self.row_52)
+        self.CEnergiaFieldAnchoSec2_2.setObjectName(u"CEnergiaFieldAnchoSec2_2")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldAnchoSec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldAnchoSec2_2.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldAnchoSec2_2.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldAnchoSec2_2.setMaximumSize(QSize(150, 30))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec2_2.setToolTip(u"")
+#endif // QT_CONFIG(tooltip)
+        self.CEnergiaFieldAnchoSec2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_108.addWidget(self.CEnergiaFieldAnchoSec2_2, 0, 1, 1, 1)
+
+        self.CEnergiaFieldPendienteLateralSec2_2 = QLineEdit(self.row_52)
+        self.CEnergiaFieldPendienteLateralSec2_2.setObjectName(u"CEnergiaFieldPendienteLateralSec2_2")
+        sizePolicy15.setHeightForWidth(self.CEnergiaFieldPendienteLateralSec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaFieldPendienteLateralSec2_2.setSizePolicy(sizePolicy15)
+        self.CEnergiaFieldPendienteLateralSec2_2.setMinimumSize(QSize(110, 30))
+        self.CEnergiaFieldPendienteLateralSec2_2.setMaximumSize(QSize(150, 30))
+        self.CEnergiaFieldPendienteLateralSec2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";\n"
+"")
+
+        self.gridLayout_108.addWidget(self.CEnergiaFieldPendienteLateralSec2_2, 1, 1, 1, 1)
+
+        self.CEnergiaLabelPendienteLateralSec2_2 = QLabel(self.row_52)
+        self.CEnergiaLabelPendienteLateralSec2_2.setObjectName(u"CEnergiaLabelPendienteLateralSec2_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaLabelPendienteLateralSec2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaLabelPendienteLateralSec2_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaLabelPendienteLateralSec2_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaLabelPendienteLateralSec2_2.setLineWidth(1)
+        self.CEnergiaLabelPendienteLateralSec2_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_108.addWidget(self.CEnergiaLabelPendienteLateralSec2_2, 1, 0, 1, 1)
+
+
+        self.verticalLayout_72.addLayout(self.gridLayout_108)
+
+
+        self.gridLayout_107.addWidget(self.row_52, 0, 1, 1, 1)
+
+
+        self.verticalLayout_31.addWidget(self.groupBox_Propiedades_26)
+
+        self.groupBox_Propiedades_27 = QGroupBox(self.layoutWidget_3)
+        self.groupBox_Propiedades_27.setObjectName(u"groupBox_Propiedades_27")
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_27.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_27.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_27.setMinimumSize(QSize(750, 0))
+        self.groupBox_Propiedades_27.setMaximumSize(QSize(750, 16777215))
+        self.groupBox_Propiedades_27.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
+"font: bold; \n"
+"border: 2px solid;\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
+"\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
+"")
+        self.groupBox_Propiedades_27.setAlignment(Qt.AlignCenter)
+        self.gridLayout_109 = QGridLayout(self.groupBox_Propiedades_27)
+        self.gridLayout_109.setObjectName(u"gridLayout_109")
+        self.row_53 = QFrame(self.groupBox_Propiedades_27)
+        self.row_53.setObjectName(u"row_53")
+        self.row_53.setStyleSheet(u"")
+        self.row_53.setFrameShape(QFrame.StyledPanel)
+        self.row_53.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_73 = QVBoxLayout(self.row_53)
+        self.verticalLayout_73.setSpacing(0)
+        self.verticalLayout_73.setObjectName(u"verticalLayout_73")
+        self.verticalLayout_73.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_110 = QGridLayout()
+        self.gridLayout_110.setObjectName(u"gridLayout_110")
+        self.gridLayout_110.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_110.setHorizontalSpacing(30)
+        self.gridLayout_110.setVerticalSpacing(10)
+        self.gridLayout_110.setContentsMargins(10, 10, 20, 10)
+        self.horizontalLayout_117 = QHBoxLayout()
+        self.horizontalLayout_117.setSpacing(0)
+        self.horizontalLayout_117.setObjectName(u"horizontalLayout_117")
+        self.horizontalLayout_117.setSizeConstraint(QLayout.SetMinimumSize)
+        self.CEnergiaComboBoxAnchoSec2_4 = QComboBox(self.row_53)
+        self.CEnergiaComboBoxAnchoSec2_4.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_4.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_4.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_4.addItem("")
+        self.CEnergiaComboBoxAnchoSec2_4.setObjectName(u"CEnergiaComboBoxAnchoSec2_4")
+        sizePolicy13.setHeightForWidth(self.CEnergiaComboBoxAnchoSec2_4.sizePolicy().hasHeightForWidth())
+        self.CEnergiaComboBoxAnchoSec2_4.setSizePolicy(sizePolicy13)
+        self.CEnergiaComboBoxAnchoSec2_4.setMinimumSize(QSize(150, 30))
+        self.CEnergiaComboBoxAnchoSec2_4.setMaximumSize(QSize(260, 30))
+        self.CEnergiaComboBoxAnchoSec2_4.setLayoutDirection(Qt.LeftToRight)
+        self.CEnergiaComboBoxAnchoSec2_4.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.CEnergiaComboBoxAnchoSec2_4.setEditable(True)
+        self.CEnergiaComboBoxAnchoSec2_4.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.CEnergiaComboBoxAnchoSec2_4.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_117.addWidget(self.CEnergiaComboBoxAnchoSec2_4)
+
+
+        self.gridLayout_110.addLayout(self.horizontalLayout_117, 0, 2, 1, 1)
+
+        self.RHAnalisisFieldCaudal_5 = QLineEdit(self.row_53)
+        self.RHAnalisisFieldCaudal_5.setObjectName(u"RHAnalisisFieldCaudal_5")
+        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_5.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisFieldCaudal_5.setSizePolicy(sizePolicy5)
+        self.RHAnalisisFieldCaudal_5.setMinimumSize(QSize(0, 30))
+        self.RHAnalisisFieldCaudal_5.setMaximumSize(QSize(150, 16777215))
+        self.RHAnalisisFieldCaudal_5.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_110.addWidget(self.RHAnalisisFieldCaudal_5, 0, 1, 1, 1)
+
+        self.RHAnalisisLabelCaudal_5 = QLabel(self.row_53)
+        self.RHAnalisisLabelCaudal_5.setObjectName(u"RHAnalisisLabelCaudal_5")
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelCaudal_5.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelCaudal_5.setSizePolicy(sizePolicy6)
+        self.RHAnalisisLabelCaudal_5.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.RHAnalisisLabelCaudal_5.setLineWidth(1)
+        self.RHAnalisisLabelCaudal_5.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_110.addWidget(self.RHAnalisisLabelCaudal_5, 0, 0, 1, 1)
+
+        self.RHAnalisisLabelCaudal_11 = QLabel(self.row_53)
+        self.RHAnalisisLabelCaudal_11.setObjectName(u"RHAnalisisLabelCaudal_11")
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelCaudal_11.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelCaudal_11.setSizePolicy(sizePolicy6)
+        self.RHAnalisisLabelCaudal_11.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.RHAnalisisLabelCaudal_11.setLineWidth(1)
+        self.RHAnalisisLabelCaudal_11.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_110.addWidget(self.RHAnalisisLabelCaudal_11, 1, 0, 1, 1)
+
+        self.RHAnalisisFieldCaudal_6 = QLineEdit(self.row_53)
+        self.RHAnalisisFieldCaudal_6.setObjectName(u"RHAnalisisFieldCaudal_6")
+        sizePolicy5.setHeightForWidth(self.RHAnalisisFieldCaudal_6.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisFieldCaudal_6.setSizePolicy(sizePolicy5)
+        self.RHAnalisisFieldCaudal_6.setMinimumSize(QSize(0, 30))
+        self.RHAnalisisFieldCaudal_6.setMaximumSize(QSize(150, 16777215))
+        self.RHAnalisisFieldCaudal_6.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_110.addWidget(self.RHAnalisisFieldCaudal_6, 1, 1, 1, 1)
+
+        self.horizontalLayout_104 = QHBoxLayout()
+        self.horizontalLayout_104.setObjectName(u"horizontalLayout_104")
+        self.RHCompuertasComboBoxCaudal_2 = QComboBox(self.row_53)
+        self.RHCompuertasComboBoxCaudal_2.addItem("")
+        self.RHCompuertasComboBoxCaudal_2.addItem("")
+        self.RHCompuertasComboBoxCaudal_2.setObjectName(u"RHCompuertasComboBoxCaudal_2")
+        sizePolicy11.setHeightForWidth(self.RHCompuertasComboBoxCaudal_2.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasComboBoxCaudal_2.setSizePolicy(sizePolicy11)
+        self.RHCompuertasComboBoxCaudal_2.setMinimumSize(QSize(150, 36))
+        self.RHCompuertasComboBoxCaudal_2.setMaximumSize(QSize(255, 16777215))
+        self.RHCompuertasComboBoxCaudal_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"background-color: rgb(255, 255, 255);")
+        self.RHCompuertasComboBoxCaudal_2.setEditable(True)
+        self.RHCompuertasComboBoxCaudal_2.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+
+        self.horizontalLayout_104.addWidget(self.RHCompuertasComboBoxCaudal_2)
+
+
+        self.gridLayout_110.addLayout(self.horizontalLayout_104, 1, 2, 1, 1)
+
+
+        self.verticalLayout_73.addLayout(self.gridLayout_110)
+
+
+        self.gridLayout_109.addWidget(self.row_53, 0, 1, 1, 1)
+
+
+        self.verticalLayout_31.addWidget(self.groupBox_Propiedades_27)
+
+        self.groupBox_Propiedades_29 = QGroupBox(self.rhProfundidad)
+        self.groupBox_Propiedades_29.setObjectName(u"groupBox_Propiedades_29")
+        self.groupBox_Propiedades_29.setGeometry(QRect(780, 130, 310, 451))
+        sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_29.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_29.setSizePolicy(sizePolicy13)
+        self.groupBox_Propiedades_29.setMinimumSize(QSize(310, 0))
+        self.groupBox_Propiedades_29.setMaximumSize(QSize(310, 16777215))
+        self.groupBox_Propiedades_29.setStyleSheet(u"QGroupBox {\n"
+"color: rgb(214, 112, 114);\n"
+"font: bold; \n"
+"border: 2px solid;\n"
+"border-color: rgb(214, 112, 114);\n"
+"border-radius: 6px;\n"
+"margin: 10px;\n"
+"\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"   	subcontrol-position: top left;\n"
+"    padding: 0px 15px 0px 15px;\n"
+"}\n"
+"")
+        self.groupBox_Propiedades_29.setAlignment(Qt.AlignCenter)
+        self.gridLayout_113 = QGridLayout(self.groupBox_Propiedades_29)
+        self.gridLayout_113.setObjectName(u"gridLayout_113")
+        self.row_55 = QFrame(self.groupBox_Propiedades_29)
+        self.row_55.setObjectName(u"row_55")
+        self.row_55.setStyleSheet(u"")
+        self.row_55.setFrameShape(QFrame.StyledPanel)
+        self.row_55.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_75 = QVBoxLayout(self.row_55)
+        self.verticalLayout_75.setSpacing(0)
+        self.verticalLayout_75.setObjectName(u"verticalLayout_75")
+        self.verticalLayout_75.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_114 = QGridLayout()
+        self.gridLayout_114.setSpacing(10)
+        self.gridLayout_114.setObjectName(u"gridLayout_114")
+        self.gridLayout_114.setSizeConstraint(QLayout.SetMinAndMaxSize)
+        self.gridLayout_114.setContentsMargins(5, 5, 5, 5)
+        self.CEnergiaY2LabelEnergiaCritica = QLabel(self.row_55)
+        self.CEnergiaY2LabelEnergiaCritica.setObjectName(u"CEnergiaY2LabelEnergiaCritica")
+        sizePolicy16 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
+        sizePolicy16.setHorizontalStretch(0)
+        sizePolicy16.setVerticalStretch(0)
+        sizePolicy16.setHeightForWidth(self.CEnergiaY2LabelEnergiaCritica.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelEnergiaCritica.setSizePolicy(sizePolicy16)
+        self.CEnergiaY2LabelEnergiaCritica.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaY2LabelEnergiaCritica.setLineWidth(1)
+        self.CEnergiaY2LabelEnergiaCritica.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2LabelEnergiaCritica, 3, 0, 1, 1)
+
+        self.CEnergiaY2LabelProfundidad = QLabel(self.row_55)
+        self.CEnergiaY2LabelProfundidad.setObjectName(u"CEnergiaY2LabelProfundidad")
+        sizePolicy16.setHeightForWidth(self.CEnergiaY2LabelProfundidad.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidad.setSizePolicy(sizePolicy16)
+        self.CEnergiaY2LabelProfundidad.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaY2LabelProfundidad.setLineWidth(1)
+        self.CEnergiaY2LabelProfundidad.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2LabelProfundidad, 0, 0, 1, 1)
+
+        self.CEnergiaY2LabelProfundidad_2 = QLabel(self.row_55)
+        self.CEnergiaY2LabelProfundidad_2.setObjectName(u"CEnergiaY2LabelProfundidad_2")
+        sizePolicy16.setHeightForWidth(self.CEnergiaY2LabelProfundidad_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidad_2.setSizePolicy(sizePolicy16)
+        self.CEnergiaY2LabelProfundidad_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaY2LabelProfundidad_2.setLineWidth(1)
+        self.CEnergiaY2LabelProfundidad_2.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2LabelProfundidad_2, 1, 0, 1, 1)
+
+        self.CEnergiaY2FieldEc = QLineEdit(self.row_55)
+        self.CEnergiaY2FieldEc.setObjectName(u"CEnergiaY2FieldEc")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2FieldEc.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2FieldEc.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2FieldEc.setMinimumSize(QSize(115, 40))
+        self.CEnergiaY2FieldEc.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2FieldEc.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2FieldEc, 3, 1, 1, 1)
+
+        self.CEnergiaY2FieldYc = QLineEdit(self.row_55)
+        self.CEnergiaY2FieldYc.setObjectName(u"CEnergiaY2FieldYc")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2FieldYc.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2FieldYc.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2FieldYc.setMinimumSize(QSize(115, 40))
+        self.CEnergiaY2FieldYc.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2FieldYc.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2FieldYc, 2, 1, 1, 1)
+
+        self.CEnergiaY2LabelProfundidadCritica = QLabel(self.row_55)
+        self.CEnergiaY2LabelProfundidadCritica.setObjectName(u"CEnergiaY2LabelProfundidadCritica")
+        sizePolicy16.setHeightForWidth(self.CEnergiaY2LabelProfundidadCritica.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadCritica.setSizePolicy(sizePolicy16)
+        self.CEnergiaY2LabelProfundidadCritica.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaY2LabelProfundidadCritica.setLineWidth(1)
+        self.CEnergiaY2LabelProfundidadCritica.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2LabelProfundidadCritica, 2, 0, 1, 1)
+
+        self.verticalLayout_32 = QVBoxLayout()
+        self.verticalLayout_32.setObjectName(u"verticalLayout_32")
+        self.CEnergiaY2LabelProfundidadRaiz1 = QLineEdit(self.row_55)
+        self.CEnergiaY2LabelProfundidadRaiz1.setObjectName(u"CEnergiaY2LabelProfundidadRaiz1")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2LabelProfundidadRaiz1.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadRaiz1.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2LabelProfundidadRaiz1.setMinimumSize(QSize(115, 36))
+        self.CEnergiaY2LabelProfundidadRaiz1.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2LabelProfundidadRaiz1.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.verticalLayout_32.addWidget(self.CEnergiaY2LabelProfundidadRaiz1)
+
+        self.CEnergiaY2LabelProfundidadRaiz2 = QLineEdit(self.row_55)
+        self.CEnergiaY2LabelProfundidadRaiz2.setObjectName(u"CEnergiaY2LabelProfundidadRaiz2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2LabelProfundidadRaiz2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadRaiz2.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2LabelProfundidadRaiz2.setMinimumSize(QSize(115, 36))
+        self.CEnergiaY2LabelProfundidadRaiz2.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2LabelProfundidadRaiz2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.verticalLayout_32.addWidget(self.CEnergiaY2LabelProfundidadRaiz2)
+
+        self.CEnergiaY2LabelProfundidadRaiz3 = QLineEdit(self.row_55)
+        self.CEnergiaY2LabelProfundidadRaiz3.setObjectName(u"CEnergiaY2LabelProfundidadRaiz3")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2LabelProfundidadRaiz3.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadRaiz3.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2LabelProfundidadRaiz3.setMinimumSize(QSize(115, 36))
+        self.CEnergiaY2LabelProfundidadRaiz3.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2LabelProfundidadRaiz3.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.verticalLayout_32.addWidget(self.CEnergiaY2LabelProfundidadRaiz3)
+
+
+        self.gridLayout_114.addLayout(self.verticalLayout_32, 0, 1, 1, 1)
+
+        self.verticalLayout_33 = QVBoxLayout()
+        self.verticalLayout_33.setObjectName(u"verticalLayout_33")
+        self.CEnergiaY2LabelProfundidadRaiz1_2 = QLineEdit(self.row_55)
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setObjectName(u"CEnergiaY2LabelProfundidadRaiz1_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2LabelProfundidadRaiz1_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setMinimumSize(QSize(115, 40))
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.verticalLayout_33.addWidget(self.CEnergiaY2LabelProfundidadRaiz1_2)
+
+        self.CEnergiaY2LabelProfundidadRaiz2_2 = QLineEdit(self.row_55)
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setObjectName(u"CEnergiaY2LabelProfundidadRaiz2_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2LabelProfundidadRaiz2_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setMinimumSize(QSize(115, 40))
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.verticalLayout_33.addWidget(self.CEnergiaY2LabelProfundidadRaiz2_2)
+
+        self.CEnergiaY2LabelProfundidadRaiz3_2 = QLineEdit(self.row_55)
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setObjectName(u"CEnergiaY2LabelProfundidadRaiz3_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2LabelProfundidadRaiz3_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setMinimumSize(QSize(115, 40))
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.verticalLayout_33.addWidget(self.CEnergiaY2LabelProfundidadRaiz3_2)
+
+
+        self.gridLayout_114.addLayout(self.verticalLayout_33, 1, 1, 1, 1)
+
+        self.CEnergiaY2LabelEnergiaCritica_2 = QLabel(self.row_55)
+        self.CEnergiaY2LabelEnergiaCritica_2.setObjectName(u"CEnergiaY2LabelEnergiaCritica_2")
+        sizePolicy6.setHeightForWidth(self.CEnergiaY2LabelEnergiaCritica_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2LabelEnergiaCritica_2.setSizePolicy(sizePolicy6)
+        self.CEnergiaY2LabelEnergiaCritica_2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
+        self.CEnergiaY2LabelEnergiaCritica_2.setLineWidth(1)
+        self.CEnergiaY2LabelEnergiaCritica_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2LabelEnergiaCritica_2, 4, 0, 1, 1)
+
+        self.CEnergiaY2FieldEc_2 = QLineEdit(self.row_55)
+        self.CEnergiaY2FieldEc_2.setObjectName(u"CEnergiaY2FieldEc_2")
+        sizePolicy5.setHeightForWidth(self.CEnergiaY2FieldEc_2.sizePolicy().hasHeightForWidth())
+        self.CEnergiaY2FieldEc_2.setSizePolicy(sizePolicy5)
+        self.CEnergiaY2FieldEc_2.setMinimumSize(QSize(115, 40))
+        self.CEnergiaY2FieldEc_2.setMaximumSize(QSize(160, 16777215))
+        self.CEnergiaY2FieldEc_2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
+"font: 650 11pt \"Allerta\";")
+
+        self.gridLayout_114.addWidget(self.CEnergiaY2FieldEc_2, 4, 1, 1, 1)
+
+
+        self.verticalLayout_75.addLayout(self.gridLayout_114)
+
+
+        self.gridLayout_113.addWidget(self.row_55, 0, 1, 1, 1)
+
+        self.tabConservacionEnergia.addTab(self.rhProfundidad, "")
         self.stackedWidget.addWidget(self.pagina_conservacionE)
         self.pagina_conservacionM = QWidget()
         self.pagina_conservacionM.setObjectName(u"pagina_conservacionM")
@@ -3582,8 +4738,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelE1 = QLabel(self.row_38)
         self.RHAnalisisLabelE1.setObjectName(u"RHAnalisisLabelE1")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelE1.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelE1.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelE1.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelE1.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelE1.setStyleSheet(u"font: 650 11pt \"Allerta\";\n"
 "color: rgb(116, 116, 116);")
         self.RHAnalisisLabelE1.setLineWidth(1)
@@ -3603,8 +4759,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelAltura = QLabel(self.row_38)
         self.RHAnalisisLabelAltura.setObjectName(u"RHAnalisisLabelAltura")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelAltura.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelAltura.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelAltura.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelAltura.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelAltura.setStyleSheet(u"font: 650 11pt \"Allerta\";\n"
 "color: rgb(116, 116, 116);")
         self.RHAnalisisLabelAltura.setLineWidth(1)
@@ -3614,8 +4770,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelE2 = QLabel(self.row_38)
         self.RHAnalisisLabelE2.setObjectName(u"RHAnalisisLabelE2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelE2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelE2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelE2.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelE2.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelE2.setStyleSheet(u"font: 650 11pt \"Allerta\";\n"
 "color: rgb(116, 116, 116);")
         self.RHAnalisisLabelE2.setLineWidth(1)
@@ -3641,10 +4797,10 @@ class Ui_MainWindow(object):
 
         self.groupBox_Propiedades_14 = QGroupBox(self.rhFuerzaSubsecuente)
         self.groupBox_Propiedades_14.setObjectName(u"groupBox_Propiedades_14")
-        self.groupBox_Propiedades_14.setGeometry(QRect(20, 10, 765, 231))
+        self.groupBox_Propiedades_14.setGeometry(QRect(20, 10, 790, 231))
         sizePolicy13.setHeightForWidth(self.groupBox_Propiedades_14.sizePolicy().hasHeightForWidth())
         self.groupBox_Propiedades_14.setSizePolicy(sizePolicy13)
-        self.groupBox_Propiedades_14.setMinimumSize(QSize(765, 0))
+        self.groupBox_Propiedades_14.setMinimumSize(QSize(790, 0))
         self.groupBox_Propiedades_14.setMaximumSize(QSize(700, 16777215))
         self.groupBox_Propiedades_14.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(250, 190, 167);\n"
@@ -3682,8 +4838,8 @@ class Ui_MainWindow(object):
         self.gridLayout_70.setContentsMargins(10, 10, 20, 10)
         self.RHAnalisisLabelPendienteLateral = QLabel(self.row_33)
         self.RHAnalisisLabelPendienteLateral.setObjectName(u"RHAnalisisLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelPendienteLateral.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelPendienteLateral.setLineWidth(1)
         self.RHAnalisisLabelPendienteLateral.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -3730,8 +4886,9 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelPendienteLateral2 = QLabel(self.row_33)
         self.RHAnalisisLabelPendienteLateral2.setObjectName(u"RHAnalisisLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelPendienteLateral2.setSizePolicy(sizePolicy6)
+        self.RHAnalisisLabelPendienteLateral2.setMinimumSize(QSize(239, 0))
         self.RHAnalisisLabelPendienteLateral2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelPendienteLateral2.setLineWidth(1)
         self.RHAnalisisLabelPendienteLateral2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -3778,7 +4935,7 @@ class Ui_MainWindow(object):
         self.RHAnalisisComboBoxPendienteLateral2.setObjectName(u"RHAnalisisComboBoxPendienteLateral2")
         sizePolicy13.setHeightForWidth(self.RHAnalisisComboBoxPendienteLateral2.sizePolicy().hasHeightForWidth())
         self.RHAnalisisComboBoxPendienteLateral2.setSizePolicy(sizePolicy13)
-        self.RHAnalisisComboBoxPendienteLateral2.setMinimumSize(QSize(260, 30))
+        self.RHAnalisisComboBoxPendienteLateral2.setMinimumSize(QSize(234, 30))
         self.RHAnalisisComboBoxPendienteLateral2.setMaximumSize(QSize(260, 16777215))
         self.RHAnalisisComboBoxPendienteLateral2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -3803,8 +4960,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelBase = QLabel(self.row_33)
         self.RHAnalisisLabelBase.setObjectName(u"RHAnalisisLabelBase")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelBase.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelBase.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelBase.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelBase.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelBase.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelBase.setLineWidth(1)
         self.RHAnalisisLabelBase.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -3824,8 +4981,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelProfundidad1 = QLabel(self.row_33)
         self.RHAnalisisLabelProfundidad1.setObjectName(u"RHAnalisisLabelProfundidad1")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelProfundidad1.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelProfundidad1.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelProfundidad1.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelProfundidad1.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelProfundidad1.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelProfundidad1.setLineWidth(1)
         self.RHAnalisisLabelProfundidad1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -3834,8 +4991,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelCaudal = QLabel(self.row_33)
         self.RHAnalisisLabelCaudal.setObjectName(u"RHAnalisisLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelCaudal.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelCaudal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelCaudal.setLineWidth(1)
         self.RHAnalisisLabelCaudal.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -3868,8 +5025,8 @@ class Ui_MainWindow(object):
         self.RHAnalisisComboBoxPendienteLateral.setObjectName(u"RHAnalisisComboBoxPendienteLateral")
         sizePolicy14.setHeightForWidth(self.RHAnalisisComboBoxPendienteLateral.sizePolicy().hasHeightForWidth())
         self.RHAnalisisComboBoxPendienteLateral.setSizePolicy(sizePolicy14)
-        self.RHAnalisisComboBoxPendienteLateral.setMinimumSize(QSize(260, 30))
-        self.RHAnalisisComboBoxPendienteLateral.setMaximumSize(QSize(260, 16777215))
+        self.RHAnalisisComboBoxPendienteLateral.setMinimumSize(QSize(234, 30))
+        self.RHAnalisisComboBoxPendienteLateral.setMaximumSize(QSize(263, 16777215))
         self.RHAnalisisComboBoxPendienteLateral.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
         self.RHAnalisisComboBoxPendienteLateral.setEditable(True)
@@ -3915,8 +5072,11 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_14 = QGroupBox(self.rhFuerzaSubsecuente)
         self.groupBox_Resultados_14.setObjectName(u"groupBox_Resultados_14")
         self.groupBox_Resultados_14.setGeometry(QRect(590, 440, 480, 161))
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_14.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_14.setSizePolicy(sizePolicy16)
+        sizePolicy17 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy17.setHorizontalStretch(0)
+        sizePolicy17.setVerticalStretch(0)
+        sizePolicy17.setHeightForWidth(self.groupBox_Resultados_14.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_14.setSizePolicy(sizePolicy17)
         self.groupBox_Resultados_14.setMinimumSize(QSize(480, 0))
         self.groupBox_Resultados_14.setMaximumSize(QSize(480, 16777215))
         self.groupBox_Resultados_14.setStyleSheet(u"QGroupBox {\n"
@@ -3965,8 +5125,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelEficiencia = QLabel(self.row_34)
         self.RHAnalisisLabelEficiencia.setObjectName(u"RHAnalisisLabelEficiencia")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelEficiencia.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelEficiencia.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelEficiencia.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelEficiencia.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelEficiencia.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelEficiencia.setLineWidth(1)
         self.RHAnalisisLabelEficiencia.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -4022,8 +5182,8 @@ class Ui_MainWindow(object):
         self.gridLayout_85.setContentsMargins(10, 10, 20, 10)
         self.RHAnalisisLabelProfundidad = QLabel(self.row_41)
         self.RHAnalisisLabelProfundidad.setObjectName(u"RHAnalisisLabelProfundidad")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelProfundidad.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelProfundidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelProfundidad.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelProfundidad.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelProfundidad.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelProfundidad.setLineWidth(1)
         self.RHAnalisisLabelProfundidad.setAlignment(Qt.AlignCenter)
@@ -4075,8 +5235,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelLongitudInclinada = QLabel(self.row_41)
         self.RHAnalisisLabelLongitudInclinada.setObjectName(u"RHAnalisisLabelLongitudInclinada")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelLongitudInclinada.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelLongitudInclinada.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelLongitudInclinada.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelLongitudInclinada.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelLongitudInclinada.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelLongitudInclinada.setLineWidth(1)
         self.RHAnalisisLabelLongitudInclinada.setAlignment(Qt.AlignCenter)
@@ -4096,8 +5256,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelInclinacion = QLabel(self.row_41)
         self.RHAnalisisLabelInclinacion.setObjectName(u"RHAnalisisLabelInclinacion")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelInclinacion.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelInclinacion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelInclinacion.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelInclinacion.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelInclinacion.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelInclinacion.setLineWidth(1)
         self.RHAnalisisLabelInclinacion.setAlignment(Qt.AlignCenter)
@@ -4158,8 +5318,8 @@ class Ui_MainWindow(object):
 
         self.RHAnalisisLabelFuerza = QLabel(self.row_41)
         self.RHAnalisisLabelFuerza.setObjectName(u"RHAnalisisLabelFuerza")
-        sizePolicy7.setHeightForWidth(self.RHAnalisisLabelFuerza.sizePolicy().hasHeightForWidth())
-        self.RHAnalisisLabelFuerza.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHAnalisisLabelFuerza.sizePolicy().hasHeightForWidth())
+        self.RHAnalisisLabelFuerza.setSizePolicy(sizePolicy6)
         self.RHAnalisisLabelFuerza.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHAnalisisLabelFuerza.setLineWidth(1)
         self.RHAnalisisLabelFuerza.setAlignment(Qt.AlignCenter)
@@ -4208,7 +5368,7 @@ class Ui_MainWindow(object):
 
         self.gridLayoutWidget = QWidget(self.rhFuerzaSubsecuente)
         self.gridLayoutWidget.setObjectName(u"gridLayoutWidget")
-        self.gridLayoutWidget.setGeometry(QRect(790, 30, 271, 171))
+        self.gridLayoutWidget.setGeometry(QRect(840, 30, 221, 171))
         self.gridLayout_8 = QGridLayout(self.gridLayoutWidget)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.gridLayout_8.setHorizontalSpacing(10)
@@ -4281,8 +5441,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_11 = QGroupBox(self.rhPropiedades)
         self.groupBox_Resultados_11.setObjectName(u"groupBox_Resultados_11")
         self.groupBox_Resultados_11.setGeometry(QRect(590, 410, 480, 181))
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_11.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_11.setSizePolicy(sizePolicy16)
+        sizePolicy17.setHeightForWidth(self.groupBox_Resultados_11.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_11.setSizePolicy(sizePolicy17)
         self.groupBox_Resultados_11.setMinimumSize(QSize(480, 0))
         self.groupBox_Resultados_11.setMaximumSize(QSize(480, 16777215))
         self.groupBox_Resultados_11.setStyleSheet(u"QGroupBox {\n"
@@ -4321,8 +5481,8 @@ class Ui_MainWindow(object):
         self.gridLayout_57.setContentsMargins(10, 10, 10, 10)
         self.RHPropiedadesLabelClasificacion = QLabel(self.row_27)
         self.RHPropiedadesLabelClasificacion.setObjectName(u"RHPropiedadesLabelClasificacion")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelClasificacion.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelClasificacion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelClasificacion.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelClasificacion.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelClasificacion.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelClasificacion.setLineWidth(1)
         self.RHPropiedadesLabelClasificacion.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -4351,8 +5511,8 @@ class Ui_MainWindow(object):
 
         self.RHPropiedadesLabelLongitud = QLabel(self.row_27)
         self.RHPropiedadesLabelLongitud.setObjectName(u"RHPropiedadesLabelLongitud")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelLongitud.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelLongitud.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelLongitud.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelLongitud.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelLongitud.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelLongitud.setLineWidth(1)
         self.RHPropiedadesLabelLongitud.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -4419,8 +5579,8 @@ class Ui_MainWindow(object):
 
         self.RHPropiedadesLabelBase = QLabel(self.row_28)
         self.RHPropiedadesLabelBase.setObjectName(u"RHPropiedadesLabelBase")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelBase.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelBase.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelBase.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelBase.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelBase.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelBase.setLineWidth(1)
         self.RHPropiedadesLabelBase.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -4502,8 +5662,8 @@ class Ui_MainWindow(object):
 
         self.RHPropiedadesLabelProfundidad = QLabel(self.row_28)
         self.RHPropiedadesLabelProfundidad.setObjectName(u"RHPropiedadesLabelProfundidad")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelProfundidad.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelProfundidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelProfundidad.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelProfundidad.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelProfundidad.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelProfundidad.setLineWidth(1)
         self.RHPropiedadesLabelProfundidad.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -4523,8 +5683,8 @@ class Ui_MainWindow(object):
 
         self.RHPropiedadesLabelDiametro = QLabel(self.row_28)
         self.RHPropiedadesLabelDiametro.setObjectName(u"RHPropiedadesLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelDiametro.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelDiametro.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelDiametro.setLineWidth(1)
         self.RHPropiedadesLabelDiametro.setAlignment(Qt.AlignCenter)
@@ -4570,21 +5730,21 @@ class Ui_MainWindow(object):
 
         self.RHPropiedadesLabelPendienteLateral2 = QLabel(self.row_28)
         self.RHPropiedadesLabelPendienteLateral2.setObjectName(u"RHPropiedadesLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelPendienteLateral2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelPendienteLateral2.setLineWidth(1)
-        self.RHPropiedadesLabelPendienteLateral2.setAlignment(Qt.AlignCenter)
+        self.RHPropiedadesLabelPendienteLateral2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.gridLayout_59.addWidget(self.RHPropiedadesLabelPendienteLateral2, 3, 0, 1, 1)
 
         self.RHPropiedadesLabelPendienteLateral = QLabel(self.row_28)
         self.RHPropiedadesLabelPendienteLateral.setObjectName(u"RHPropiedadesLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelPendienteLateral.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelPendienteLateral.setLineWidth(1)
-        self.RHPropiedadesLabelPendienteLateral.setAlignment(Qt.AlignCenter)
+        self.RHPropiedadesLabelPendienteLateral.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.gridLayout_59.addWidget(self.RHPropiedadesLabelPendienteLateral, 2, 0, 1, 1)
 
@@ -4601,8 +5761,8 @@ class Ui_MainWindow(object):
 
         self.RHPropiedadesLabelCaudal = QLabel(self.row_28)
         self.RHPropiedadesLabelCaudal.setObjectName(u"RHPropiedadesLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelCaudal.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelCaudal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHPropiedadesLabelCaudal.setLineWidth(1)
         self.RHPropiedadesLabelCaudal.setAlignment(Qt.AlignCenter)
@@ -4801,8 +5961,8 @@ class Ui_MainWindow(object):
         self.gridLayout_76.setContentsMargins(10, 10, 10, 10)
         self.RHPropiedadesLabelFroude = QLabel(self.row_36)
         self.RHPropiedadesLabelFroude.setObjectName(u"RHPropiedadesLabelFroude")
-        sizePolicy7.setHeightForWidth(self.RHPropiedadesLabelFroude.sizePolicy().hasHeightForWidth())
-        self.RHPropiedadesLabelFroude.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHPropiedadesLabelFroude.sizePolicy().hasHeightForWidth())
+        self.RHPropiedadesLabelFroude.setSizePolicy(sizePolicy6)
         self.RHPropiedadesLabelFroude.setStyleSheet(u"font: 650 11pt \"Allerta\";\n"
 "color: rgb(116, 116, 116);")
         self.RHPropiedadesLabelFroude.setLineWidth(1)
@@ -4832,10 +5992,10 @@ class Ui_MainWindow(object):
         self.rhTipo.setStyleSheet(u"font: 500 11pt \"Allerta\";")
         self.groupBox_Propiedades_13 = QGroupBox(self.rhTipo)
         self.groupBox_Propiedades_13.setObjectName(u"groupBox_Propiedades_13")
-        self.groupBox_Propiedades_13.setGeometry(QRect(20, 10, 780, 391))
+        self.groupBox_Propiedades_13.setGeometry(QRect(20, 10, 850, 391))
         sizePolicy11.setHeightForWidth(self.groupBox_Propiedades_13.sizePolicy().hasHeightForWidth())
         self.groupBox_Propiedades_13.setSizePolicy(sizePolicy11)
-        self.groupBox_Propiedades_13.setMinimumSize(QSize(780, 0))
+        self.groupBox_Propiedades_13.setMinimumSize(QSize(850, 0))
         self.groupBox_Propiedades_13.setMaximumSize(QSize(700, 16777215))
         self.groupBox_Propiedades_13.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(250, 190, 167);\n"
@@ -4866,9 +6026,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_51.setObjectName(u"verticalLayout_51")
         self.verticalLayout_51.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_66 = QGridLayout()
-        self.gridLayout_66.setSpacing(10)
         self.gridLayout_66.setObjectName(u"gridLayout_66")
         self.gridLayout_66.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_66.setHorizontalSpacing(25)
+        self.gridLayout_66.setVerticalSpacing(15)
         self.gridLayout_66.setContentsMargins(10, 10, 20, 10)
         self.horizontalLayout_51 = QHBoxLayout()
         self.horizontalLayout_51.setSpacing(0)
@@ -4898,8 +6059,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelProfundidad = QLabel(self.row_31)
         self.RHTipoLabelProfundidad.setObjectName(u"RHTipoLabelProfundidad")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelProfundidad.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelProfundidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelProfundidad.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelProfundidad.setSizePolicy(sizePolicy6)
         self.RHTipoLabelProfundidad.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelProfundidad.setLineWidth(1)
         self.RHTipoLabelProfundidad.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -4951,8 +6112,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelPendienteLateral2 = QLabel(self.row_31)
         self.RHTipoLabelPendienteLateral2.setObjectName(u"RHTipoLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.RHTipoLabelPendienteLateral2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelPendienteLateral2.setLineWidth(1)
         self.RHTipoLabelPendienteLateral2.setAlignment(Qt.AlignCenter)
@@ -4961,8 +6122,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelPendienteLateral = QLabel(self.row_31)
         self.RHTipoLabelPendienteLateral.setObjectName(u"RHTipoLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.RHTipoLabelPendienteLateral.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelPendienteLateral.setLineWidth(1)
         self.RHTipoLabelPendienteLateral.setAlignment(Qt.AlignCenter)
@@ -4971,8 +6132,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelCaudal = QLabel(self.row_31)
         self.RHTipoLabelCaudal.setObjectName(u"RHTipoLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelCaudal.setSizePolicy(sizePolicy6)
         self.RHTipoLabelCaudal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelCaudal.setLineWidth(1)
         self.RHTipoLabelCaudal.setAlignment(Qt.AlignCenter)
@@ -5074,8 +6235,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelProfundidadNormal = QLabel(self.row_31)
         self.RHTipoLabelProfundidadNormal.setObjectName(u"RHTipoLabelProfundidadNormal")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelProfundidadNormal.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelProfundidadNormal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelProfundidadNormal.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelProfundidadNormal.setSizePolicy(sizePolicy6)
         self.RHTipoLabelProfundidadNormal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelProfundidadNormal.setLineWidth(1)
         self.RHTipoLabelProfundidadNormal.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5104,8 +6265,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelInclinacion = QLabel(self.row_31)
         self.RHTipoLabelInclinacion.setObjectName(u"RHTipoLabelInclinacion")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelInclinacion.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelInclinacion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelInclinacion.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelInclinacion.setSizePolicy(sizePolicy6)
         self.RHTipoLabelInclinacion.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelInclinacion.setLineWidth(1)
         self.RHTipoLabelInclinacion.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5125,8 +6286,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelBase = QLabel(self.row_31)
         self.RHTipoLabelBase.setObjectName(u"RHTipoLabelBase")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelBase.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelBase.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelBase.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelBase.setSizePolicy(sizePolicy6)
         self.RHTipoLabelBase.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelBase.setLineWidth(1)
         self.RHTipoLabelBase.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5233,8 +6394,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelSubsecuente = QLabel(self.row_37)
         self.RHTipoLabelSubsecuente.setObjectName(u"RHTipoLabelSubsecuente")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelSubsecuente.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelSubsecuente.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelSubsecuente.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelSubsecuente.setSizePolicy(sizePolicy6)
         self.RHTipoLabelSubsecuente.setStyleSheet(u"font: 650 11pt \"Allerta\";\n"
 "color: rgb(116, 116, 116);")
         self.RHTipoLabelSubsecuente.setLineWidth(1)
@@ -5244,8 +6405,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelAsterisco = QLabel(self.row_37)
         self.RHTipoLabelAsterisco.setObjectName(u"RHTipoLabelAsterisco")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelAsterisco.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelAsterisco.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelAsterisco.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelAsterisco.setSizePolicy(sizePolicy6)
         self.RHTipoLabelAsterisco.setStyleSheet(u"font: 650 11pt \"Allerta\";\n"
 "color: rgb(116, 116, 116);")
         self.RHTipoLabelAsterisco.setLineWidth(1)
@@ -5272,8 +6433,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_13 = QGroupBox(self.rhTipo)
         self.groupBox_Resultados_13.setObjectName(u"groupBox_Resultados_13")
         self.groupBox_Resultados_13.setGeometry(QRect(590, 410, 480, 181))
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_13.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_13.setSizePolicy(sizePolicy16)
+        sizePolicy17.setHeightForWidth(self.groupBox_Resultados_13.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_13.setSizePolicy(sizePolicy17)
         self.groupBox_Resultados_13.setMinimumSize(QSize(480, 0))
         self.groupBox_Resultados_13.setMaximumSize(QSize(480, 16777215))
         self.groupBox_Resultados_13.setStyleSheet(u"QGroupBox {\n"
@@ -5322,8 +6483,8 @@ class Ui_MainWindow(object):
 
         self.RHTipoLabelTipo = QLabel(self.row_32)
         self.RHTipoLabelTipo.setObjectName(u"RHTipoLabelTipo")
-        sizePolicy7.setHeightForWidth(self.RHTipoLabelTipo.sizePolicy().hasHeightForWidth())
-        self.RHTipoLabelTipo.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHTipoLabelTipo.sizePolicy().hasHeightForWidth())
+        self.RHTipoLabelTipo.setSizePolicy(sizePolicy6)
         self.RHTipoLabelTipo.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHTipoLabelTipo.setLineWidth(1)
         self.RHTipoLabelTipo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5338,7 +6499,7 @@ class Ui_MainWindow(object):
 
         self.gridLayoutWidget_4 = QWidget(self.rhTipo)
         self.gridLayoutWidget_4.setObjectName(u"gridLayoutWidget_4")
-        self.gridLayoutWidget_4.setGeometry(QRect(800, 20, 261, 171))
+        self.gridLayoutWidget_4.setGeometry(QRect(890, 20, 171, 171))
         self.gridLayout_21 = QGridLayout(self.gridLayoutWidget_4)
         self.gridLayout_21.setObjectName(u"gridLayout_21")
         self.gridLayout_21.setHorizontalSpacing(5)
@@ -5410,10 +6571,10 @@ class Ui_MainWindow(object):
         self.tab.setStyleSheet(u"font: 500 11pt \"Allerta\";")
         self.groupBox_Propiedades_15 = QGroupBox(self.tab)
         self.groupBox_Propiedades_15.setObjectName(u"groupBox_Propiedades_15")
-        self.groupBox_Propiedades_15.setGeometry(QRect(20, 20, 700, 361))
+        self.groupBox_Propiedades_15.setGeometry(QRect(20, 20, 700, 371))
         sizePolicy5.setHeightForWidth(self.groupBox_Propiedades_15.sizePolicy().hasHeightForWidth())
         self.groupBox_Propiedades_15.setSizePolicy(sizePolicy5)
-        self.groupBox_Propiedades_15.setMinimumSize(QSize(700, 0))
+        self.groupBox_Propiedades_15.setMinimumSize(QSize(380, 0))
         self.groupBox_Propiedades_15.setMaximumSize(QSize(700, 16777215))
         self.groupBox_Propiedades_15.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(250, 190, 167);\n"
@@ -5471,8 +6632,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelCaudal = QLabel(self.row_35)
         self.RHCompuertasLabelCaudal.setObjectName(u"RHCompuertasLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelCaudal.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelCaudal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelCaudal.setLineWidth(1)
         self.RHCompuertasLabelCaudal.setAlignment(Qt.AlignCenter)
@@ -5481,8 +6642,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelPendienteLateral = QLabel(self.row_35)
         self.RHCompuertasLabelPendienteLateral.setObjectName(u"RHCompuertasLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelPendienteLateral.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelPendienteLateral.setLineWidth(1)
         self.RHCompuertasLabelPendienteLateral.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5596,8 +6757,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelBase = QLabel(self.row_35)
         self.RHCompuertasLabelBase.setObjectName(u"RHCompuertasLabelBase")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelBase.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelBase.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelBase.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelBase.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelBase.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelBase.setLineWidth(1)
         self.RHCompuertasLabelBase.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5618,8 +6779,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelPendienteLateral2 = QLabel(self.row_35)
         self.RHCompuertasLabelPendienteLateral2.setObjectName(u"RHCompuertasLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelPendienteLateral2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelPendienteLateral2.setLineWidth(1)
         self.RHCompuertasLabelPendienteLateral2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5660,8 +6821,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelProfundidad = QLabel(self.row_35)
         self.RHCompuertasLabelProfundidad.setObjectName(u"RHCompuertasLabelProfundidad")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelProfundidad.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelProfundidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelProfundidad.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelProfundidad.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelProfundidad.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelProfundidad.setLineWidth(1)
         self.RHCompuertasLabelProfundidad.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5670,8 +6831,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelDiametro = QLabel(self.row_35)
         self.RHCompuertasLabelDiametro.setObjectName(u"RHCompuertasLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelDiametro.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelDiametro.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelDiametro.setLineWidth(1)
         self.RHCompuertasLabelDiametro.setAlignment(Qt.AlignCenter)
@@ -5724,8 +6885,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_18 = QGroupBox(self.tab)
         self.groupBox_Resultados_18.setObjectName(u"groupBox_Resultados_18")
         self.groupBox_Resultados_18.setGeometry(QRect(720, 170, 350, 421))
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_18.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_18.setSizePolicy(sizePolicy16)
+        sizePolicy17.setHeightForWidth(self.groupBox_Resultados_18.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_18.setSizePolicy(sizePolicy17)
         self.groupBox_Resultados_18.setMinimumSize(QSize(300, 0))
         self.groupBox_Resultados_18.setMaximumSize(QSize(350, 16777215))
         self.groupBox_Resultados_18.setStyleSheet(u"QGroupBox {\n"
@@ -5764,8 +6925,8 @@ class Ui_MainWindow(object):
         self.gridLayout_82.setContentsMargins(10, 10, 10, 10)
         self.RHCompuertasLabelMomentum = QLabel(self.row_39)
         self.RHCompuertasLabelMomentum.setObjectName(u"RHCompuertasLabelMomentum")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelMomentum.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelMomentum.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelMomentum.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelMomentum.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelMomentum.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelMomentum.setLineWidth(1)
         self.RHCompuertasLabelMomentum.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5804,8 +6965,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelMomentum2 = QLabel(self.row_39)
         self.RHCompuertasLabelMomentum2.setObjectName(u"RHCompuertasLabelMomentum2")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelMomentum2.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelMomentum2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelMomentum2.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelMomentum2.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelMomentum2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelMomentum2.setLineWidth(1)
         self.RHCompuertasLabelMomentum2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5814,8 +6975,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelFuerza = QLabel(self.row_39)
         self.RHCompuertasLabelFuerza.setObjectName(u"RHCompuertasLabelFuerza")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelFuerza.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelFuerza.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelFuerza.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelFuerza.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelFuerza.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelFuerza.setLineWidth(1)
         self.RHCompuertasLabelFuerza.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5824,8 +6985,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelFuerzaCompuerta = QLabel(self.row_39)
         self.RHCompuertasLabelFuerzaCompuerta.setObjectName(u"RHCompuertasLabelFuerzaCompuerta")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelFuerzaCompuerta.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelFuerzaCompuerta.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelFuerzaCompuerta.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelFuerzaCompuerta.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelFuerzaCompuerta.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelFuerzaCompuerta.setLineWidth(1)
         self.RHCompuertasLabelFuerzaCompuerta.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -5850,7 +7011,7 @@ class Ui_MainWindow(object):
 
         self.groupBox_Propiedades_17 = QGroupBox(self.tab)
         self.groupBox_Propiedades_17.setObjectName(u"groupBox_Propiedades_17")
-        self.groupBox_Propiedades_17.setGeometry(QRect(20, 400, 700, 191))
+        self.groupBox_Propiedades_17.setGeometry(QRect(20, 410, 700, 181))
         sizePolicy11.setHeightForWidth(self.groupBox_Propiedades_17.sizePolicy().hasHeightForWidth())
         self.groupBox_Propiedades_17.setSizePolicy(sizePolicy11)
         self.groupBox_Propiedades_17.setMinimumSize(QSize(700, 0))
@@ -5902,8 +7063,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelDensidad = QLabel(self.row_42)
         self.RHCompuertasLabelDensidad.setObjectName(u"RHCompuertasLabelDensidad")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelDensidad.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelDensidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelDensidad.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelDensidad.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelDensidad.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelDensidad.setLineWidth(1)
         self.RHCompuertasLabelDensidad.setAlignment(Qt.AlignCenter)
@@ -5935,8 +7096,8 @@ class Ui_MainWindow(object):
 
         self.RHCompuertasLabelProfundidad2 = QLabel(self.row_42)
         self.RHCompuertasLabelProfundidad2.setObjectName(u"RHCompuertasLabelProfundidad2")
-        sizePolicy7.setHeightForWidth(self.RHCompuertasLabelProfundidad2.sizePolicy().hasHeightForWidth())
-        self.RHCompuertasLabelProfundidad2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.RHCompuertasLabelProfundidad2.sizePolicy().hasHeightForWidth())
+        self.RHCompuertasLabelProfundidad2.setSizePolicy(sizePolicy6)
         self.RHCompuertasLabelProfundidad2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.RHCompuertasLabelProfundidad2.setLineWidth(1)
         self.RHCompuertasLabelProfundidad2.setAlignment(Qt.AlignCenter)
@@ -6125,8 +7286,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelProfundidadCritica = QLabel(self.row_19)
         self.ManningCriticaLabelProfundidadCritica.setObjectName(u"ManningCriticaLabelProfundidadCritica")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelProfundidadCritica.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelProfundidadCritica.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelProfundidadCritica.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelProfundidadCritica.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelProfundidadCritica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelProfundidadCritica.setLineWidth(1)
@@ -6136,8 +7297,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelVelocidadCritica = QLabel(self.row_19)
         self.ManningCriticaLabelVelocidadCritica.setObjectName(u"ManningCriticaLabelVelocidadCritica")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelVelocidadCritica.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelVelocidadCritica.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelVelocidadCritica.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelVelocidadCritica.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelVelocidadCritica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelVelocidadCritica.setLineWidth(1)
@@ -6270,8 +7431,8 @@ class Ui_MainWindow(object):
         self.gridLayout_43.setContentsMargins(0, 20, 0, 10)
         self.ManningCriticaLabelDiametro = QLabel(self.groupBox_Propiedades_7)
         self.ManningCriticaLabelDiametro.setObjectName(u"ManningCriticaLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelDiametro.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelDiametro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelDiametro.setLineWidth(1)
@@ -6281,8 +7442,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelCaudal = QLabel(self.groupBox_Propiedades_7)
         self.ManningCriticaLabelCaudal.setObjectName(u"ManningCriticaLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelCaudal.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelCaudal.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelCaudal.setLineWidth(1)
@@ -6307,8 +7468,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelPendienteLateral = QLabel(self.groupBox_Propiedades_7)
         self.ManningCriticaLabelPendienteLateral.setObjectName(u"ManningCriticaLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelPendienteLateral.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelPendienteLateral.setLineWidth(1)
@@ -6318,8 +7479,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelBase = QLabel(self.groupBox_Propiedades_7)
         self.ManningCriticaLabelBase.setObjectName(u"ManningCriticaLabelBase")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelBase.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelBase.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelBase.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelBase.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelBase.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelBase.setLineWidth(1)
@@ -6355,8 +7516,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelPendienteLateral2 = QLabel(self.groupBox_Propiedades_7)
         self.ManningCriticaLabelPendienteLateral2.setObjectName(u"ManningCriticaLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelPendienteLateral2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelPendienteLateral2.setLineWidth(1)
@@ -6408,8 +7569,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaFieldBase = QLineEdit(self.groupBox_Propiedades_7)
         self.ManningCriticaFieldBase.setObjectName(u"ManningCriticaFieldBase")
-        sizePolicy8.setHeightForWidth(self.ManningCriticaFieldBase.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaFieldBase.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.ManningCriticaFieldBase.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaFieldBase.setSizePolicy(sizePolicy7)
         self.ManningCriticaFieldBase.setMinimumSize(QSize(150, 30))
         self.ManningCriticaFieldBase.setMaximumSize(QSize(16777215, 30))
         self.ManningCriticaFieldBase.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
@@ -6458,8 +7619,8 @@ class Ui_MainWindow(object):
 
         self.ManningCriticaLabelVelocidad = QLabel(self.groupBox_Propiedades_7)
         self.ManningCriticaLabelVelocidad.setObjectName(u"ManningCriticaLabelVelocidad")
-        sizePolicy7.setHeightForWidth(self.ManningCriticaLabelVelocidad.sizePolicy().hasHeightForWidth())
-        self.ManningCriticaLabelVelocidad.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningCriticaLabelVelocidad.sizePolicy().hasHeightForWidth())
+        self.ManningCriticaLabelVelocidad.setSizePolicy(sizePolicy6)
         self.ManningCriticaLabelVelocidad.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningCriticaLabelVelocidad.setLineWidth(1)
@@ -6506,8 +7667,8 @@ class Ui_MainWindow(object):
         self.groupBox_Propiedades_8 = QGroupBox(self.mngPendienteCritica)
         self.groupBox_Propiedades_8.setObjectName(u"groupBox_Propiedades_8")
         self.groupBox_Propiedades_8.setGeometry(QRect(10, 10, 620, 291))
-        sizePolicy6.setHeightForWidth(self.groupBox_Propiedades_8.sizePolicy().hasHeightForWidth())
-        self.groupBox_Propiedades_8.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.groupBox_Propiedades_8.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_8.setSizePolicy(sizePolicy8)
         self.groupBox_Propiedades_8.setMinimumSize(QSize(620, 0))
         self.groupBox_Propiedades_8.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(114, 161, 228);\n"
@@ -6543,8 +7704,8 @@ class Ui_MainWindow(object):
         self.gridLayout_45.setContentsMargins(0, 10, 0, 10)
         self.ManningPendienteLabelNumManning = QLabel(self.row_21)
         self.ManningPendienteLabelNumManning.setObjectName(u"ManningPendienteLabelNumManning")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelNumManning.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelNumManning.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelNumManning.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelNumManning.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelNumManning.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelNumManning.setLineWidth(1)
@@ -6554,8 +7715,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteLabelAncho = QLabel(self.row_21)
         self.ManningPendienteLabelAncho.setObjectName(u"ManningPendienteLabelAncho")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelAncho.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelAncho.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelAncho.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelAncho.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelAncho.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelAncho.setLineWidth(1)
@@ -6630,8 +7791,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteFieldDiametro = QLineEdit(self.row_21)
         self.ManningPendienteFieldDiametro.setObjectName(u"ManningPendienteFieldDiametro")
-        sizePolicy8.setHeightForWidth(self.ManningPendienteFieldDiametro.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteFieldDiametro.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.ManningPendienteFieldDiametro.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteFieldDiametro.setSizePolicy(sizePolicy7)
         self.ManningPendienteFieldDiametro.setMinimumSize(QSize(120, 30))
         self.ManningPendienteFieldDiametro.setMaximumSize(QSize(150, 30))
         self.ManningPendienteFieldDiametro.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
@@ -6669,8 +7830,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteLabelDiametro = QLabel(self.row_21)
         self.ManningPendienteLabelDiametro.setObjectName(u"ManningPendienteLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelDiametro.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelDiametro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelDiametro.setLineWidth(1)
@@ -6680,8 +7841,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteLabelPendienteLateral = QLabel(self.row_21)
         self.ManningPendienteLabelPendienteLateral.setObjectName(u"ManningPendienteLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelPendienteLateral.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelPendienteLateral.setLineWidth(1)
@@ -6698,8 +7859,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_8 = QGroupBox(self.mngPendienteCritica)
         self.groupBox_Resultados_8.setObjectName(u"groupBox_Resultados_8")
         self.groupBox_Resultados_8.setGeometry(QRect(650, 360, 421, 231))
-        sizePolicy6.setHeightForWidth(self.groupBox_Resultados_8.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_8.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.groupBox_Resultados_8.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_8.setSizePolicy(sizePolicy8)
         self.groupBox_Resultados_8.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(114, 161, 228);\n"
 "font: bold; \n"
@@ -6747,8 +7908,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteLabelPendienteCritica = QLabel(self.row_22)
         self.ManningPendienteLabelPendienteCritica.setObjectName(u"ManningPendienteLabelPendienteCritica")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelPendienteCritica.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelPendienteCritica.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelPendienteCritica.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelPendienteCritica.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelPendienteCritica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelPendienteCritica.setLineWidth(1)
@@ -6765,8 +7926,8 @@ class Ui_MainWindow(object):
         self.groupBox_Propiedades_18 = QGroupBox(self.mngPendienteCritica)
         self.groupBox_Propiedades_18.setObjectName(u"groupBox_Propiedades_18")
         self.groupBox_Propiedades_18.setGeometry(QRect(10, 320, 621, 121))
-        sizePolicy6.setHeightForWidth(self.groupBox_Propiedades_18.sizePolicy().hasHeightForWidth())
-        self.groupBox_Propiedades_18.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.groupBox_Propiedades_18.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_18.setSizePolicy(sizePolicy8)
         self.groupBox_Propiedades_18.setMinimumSize(QSize(400, 0))
         self.groupBox_Propiedades_18.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(176, 187, 209);\n"
@@ -6814,8 +7975,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteLabelCaudal = QLabel(self.row_46)
         self.ManningPendienteLabelCaudal.setObjectName(u"ManningPendienteLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelCaudal.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelCaudal.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelCaudal.setLineWidth(1)
@@ -6848,8 +8009,8 @@ class Ui_MainWindow(object):
         self.groupBox_Propiedades_19 = QGroupBox(self.mngPendienteCritica)
         self.groupBox_Propiedades_19.setObjectName(u"groupBox_Propiedades_19")
         self.groupBox_Propiedades_19.setGeometry(QRect(10, 450, 621, 141))
-        sizePolicy6.setHeightForWidth(self.groupBox_Propiedades_19.sizePolicy().hasHeightForWidth())
-        self.groupBox_Propiedades_19.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.groupBox_Propiedades_19.sizePolicy().hasHeightForWidth())
+        self.groupBox_Propiedades_19.setSizePolicy(sizePolicy8)
         self.groupBox_Propiedades_19.setMinimumSize(QSize(400, 0))
         self.groupBox_Propiedades_19.setStyleSheet(u"QGroupBox {\n"
 "color: rgb(176, 187, 209);\n"
@@ -6897,8 +8058,8 @@ class Ui_MainWindow(object):
 
         self.ManningPendienteLabelProfundidadCritica = QLabel(self.row_47)
         self.ManningPendienteLabelProfundidadCritica.setObjectName(u"ManningPendienteLabelProfundidadCritica")
-        sizePolicy7.setHeightForWidth(self.ManningPendienteLabelProfundidadCritica.sizePolicy().hasHeightForWidth())
-        self.ManningPendienteLabelProfundidadCritica.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningPendienteLabelProfundidadCritica.sizePolicy().hasHeightForWidth())
+        self.ManningPendienteLabelProfundidadCritica.setSizePolicy(sizePolicy6)
         self.ManningPendienteLabelProfundidadCritica.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningPendienteLabelProfundidadCritica.setLineWidth(1)
@@ -7076,8 +8237,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelPendienteLateral2 = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelPendienteLateral2.setObjectName(u"ManningUniformeLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelPendienteLateral2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelPendienteLateral2.setLineWidth(1)
@@ -7087,8 +8248,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelPendienteLateral = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelPendienteLateral.setObjectName(u"ManningUniformeLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelPendienteLateral.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelPendienteLateral.setLineWidth(1)
@@ -7175,8 +8336,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelCaudal = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelCaudal.setObjectName(u"ManningUniformeLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelCaudal.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelCaudal.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelCaudal.setLineWidth(1)
@@ -7186,8 +8347,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelBase = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelBase.setObjectName(u"ManningUniformeLabelBase")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelBase.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelBase.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelBase.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelBase.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelBase.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelBase.setLineWidth(1)
@@ -7197,8 +8358,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelInclinacion = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelInclinacion.setObjectName(u"ManningUniformeLabelInclinacion")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelInclinacion.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelInclinacion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelInclinacion.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelInclinacion.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelInclinacion.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelInclinacion.setLineWidth(1)
@@ -7223,8 +8384,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelDiametro = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelDiametro.setObjectName(u"ManningUniformeLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelDiametro.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelDiametro.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelDiametro.setLineWidth(1)
@@ -7260,8 +8421,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeFieldBase = QLineEdit(self.groupBox_Propiedades_9)
         self.ManningUniformeFieldBase.setObjectName(u"ManningUniformeFieldBase")
-        sizePolicy8.setHeightForWidth(self.ManningUniformeFieldBase.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeFieldBase.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.ManningUniformeFieldBase.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeFieldBase.setSizePolicy(sizePolicy7)
         self.ManningUniformeFieldBase.setMinimumSize(QSize(150, 30))
         self.ManningUniformeFieldBase.setMaximumSize(QSize(16777215, 30))
         self.ManningUniformeFieldBase.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
@@ -7272,8 +8433,8 @@ class Ui_MainWindow(object):
 
         self.ManningUniformeLabelNumManning = QLabel(self.groupBox_Propiedades_9)
         self.ManningUniformeLabelNumManning.setObjectName(u"ManningUniformeLabelNumManning")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelNumManning.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelNumManning.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelNumManning.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelNumManning.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelNumManning.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelNumManning.setLineWidth(1)
@@ -7376,8 +8537,8 @@ class Ui_MainWindow(object):
         self.gridLayout_54.setContentsMargins(15, 15, 15, 15)
         self.ManningUniformeLabelNormal = QLabel(self.row_26)
         self.ManningUniformeLabelNormal.setObjectName(u"ManningUniformeLabelNormal")
-        sizePolicy7.setHeightForWidth(self.ManningUniformeLabelNormal.sizePolicy().hasHeightForWidth())
-        self.ManningUniformeLabelNormal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.ManningUniformeLabelNormal.sizePolicy().hasHeightForWidth())
+        self.ManningUniformeLabelNormal.setSizePolicy(sizePolicy6)
         self.ManningUniformeLabelNormal.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 650 11pt \"Allerta\";")
         self.ManningUniformeLabelNormal.setLineWidth(1)
@@ -7649,8 +8810,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelProfundidad1 = QLabel(self.row_45)
         self.FGVLabelProfundidad1.setObjectName(u"FGVLabelProfundidad1")
-        sizePolicy7.setHeightForWidth(self.FGVLabelProfundidad1.sizePolicy().hasHeightForWidth())
-        self.FGVLabelProfundidad1.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelProfundidad1.sizePolicy().hasHeightForWidth())
+        self.FGVLabelProfundidad1.setSizePolicy(sizePolicy6)
         self.FGVLabelProfundidad1.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelProfundidad1.setLineWidth(1)
         self.FGVLabelProfundidad1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7691,7 +8852,7 @@ class Ui_MainWindow(object):
         self.FGVComboBoxInclinacion.setObjectName(u"FGVComboBoxInclinacion")
         sizePolicy14.setHeightForWidth(self.FGVComboBoxInclinacion.sizePolicy().hasHeightForWidth())
         self.FGVComboBoxInclinacion.setSizePolicy(sizePolicy14)
-        self.FGVComboBoxInclinacion.setMinimumSize(QSize(260, 30))
+        self.FGVComboBoxInclinacion.setMinimumSize(QSize(234, 30))
         self.FGVComboBoxInclinacion.setMaximumSize(QSize(260, 16777215))
         self.FGVComboBoxInclinacion.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -7734,7 +8895,7 @@ class Ui_MainWindow(object):
         self.FGVComboBoxPendienteLateral.setObjectName(u"FGVComboBoxPendienteLateral")
         sizePolicy14.setHeightForWidth(self.FGVComboBoxPendienteLateral.sizePolicy().hasHeightForWidth())
         self.FGVComboBoxPendienteLateral.setSizePolicy(sizePolicy14)
-        self.FGVComboBoxPendienteLateral.setMinimumSize(QSize(260, 30))
+        self.FGVComboBoxPendienteLateral.setMinimumSize(QSize(234, 30))
         self.FGVComboBoxPendienteLateral.setMaximumSize(QSize(260, 16777215))
         self.FGVComboBoxPendienteLateral.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -7748,8 +8909,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelInclinacion = QLabel(self.row_45)
         self.FGVLabelInclinacion.setObjectName(u"FGVLabelInclinacion")
-        sizePolicy7.setHeightForWidth(self.FGVLabelInclinacion.sizePolicy().hasHeightForWidth())
-        self.FGVLabelInclinacion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelInclinacion.sizePolicy().hasHeightForWidth())
+        self.FGVLabelInclinacion.setSizePolicy(sizePolicy6)
         self.FGVLabelInclinacion.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelInclinacion.setLineWidth(1)
         self.FGVLabelInclinacion.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7758,8 +8919,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelDiametro = QLabel(self.row_45)
         self.FGVLabelDiametro.setObjectName(u"FGVLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.FGVLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.FGVLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.FGVLabelDiametro.setSizePolicy(sizePolicy6)
         self.FGVLabelDiametro.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelDiametro.setLineWidth(1)
         self.FGVLabelDiametro.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7768,8 +8929,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelCaudal = QLabel(self.row_45)
         self.FGVLabelCaudal.setObjectName(u"FGVLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.FGVLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.FGVLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.FGVLabelCaudal.setSizePolicy(sizePolicy6)
         self.FGVLabelCaudal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelCaudal.setLineWidth(1)
         self.FGVLabelCaudal.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7785,7 +8946,7 @@ class Ui_MainWindow(object):
         self.FGVComboBoxPendienteLateral2.setObjectName(u"FGVComboBoxPendienteLateral2")
         sizePolicy13.setHeightForWidth(self.FGVComboBoxPendienteLateral2.sizePolicy().hasHeightForWidth())
         self.FGVComboBoxPendienteLateral2.setSizePolicy(sizePolicy13)
-        self.FGVComboBoxPendienteLateral2.setMinimumSize(QSize(260, 30))
+        self.FGVComboBoxPendienteLateral2.setMinimumSize(QSize(234, 30))
         self.FGVComboBoxPendienteLateral2.setMaximumSize(QSize(260, 16777215))
         self.FGVComboBoxPendienteLateral2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -7836,8 +8997,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelProfundidad2 = QLabel(self.row_45)
         self.FGVLabelProfundidad2.setObjectName(u"FGVLabelProfundidad2")
-        sizePolicy7.setHeightForWidth(self.FGVLabelProfundidad2.sizePolicy().hasHeightForWidth())
-        self.FGVLabelProfundidad2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelProfundidad2.sizePolicy().hasHeightForWidth())
+        self.FGVLabelProfundidad2.setSizePolicy(sizePolicy6)
         self.FGVLabelProfundidad2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelProfundidad2.setLineWidth(1)
         self.FGVLabelProfundidad2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7883,8 +9044,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelPendienteLateral = QLabel(self.row_45)
         self.FGVLabelPendienteLateral.setObjectName(u"FGVLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.FGVLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.FGVLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.FGVLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.FGVLabelPendienteLateral.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelPendienteLateral.setLineWidth(1)
         self.FGVLabelPendienteLateral.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7919,8 +9080,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelAncho = QLabel(self.row_45)
         self.FGVLabelAncho.setObjectName(u"FGVLabelAncho")
-        sizePolicy7.setHeightForWidth(self.FGVLabelAncho.sizePolicy().hasHeightForWidth())
-        self.FGVLabelAncho.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelAncho.sizePolicy().hasHeightForWidth())
+        self.FGVLabelAncho.setSizePolicy(sizePolicy6)
         self.FGVLabelAncho.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelAncho.setLineWidth(1)
         self.FGVLabelAncho.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7955,8 +9116,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelPendienteLateral2 = QLabel(self.row_45)
         self.FGVLabelPendienteLateral2.setObjectName(u"FGVLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.FGVLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.FGVLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.FGVLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.FGVLabelPendienteLateral2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelPendienteLateral2.setLineWidth(1)
         self.FGVLabelPendienteLateral2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -7980,8 +9141,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelManning = QLabel(self.row_45)
         self.FGVLabelManning.setObjectName(u"FGVLabelManning")
-        sizePolicy7.setHeightForWidth(self.FGVLabelManning.sizePolicy().hasHeightForWidth())
-        self.FGVLabelManning.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelManning.sizePolicy().hasHeightForWidth())
+        self.FGVLabelManning.setSizePolicy(sizePolicy6)
         self.FGVLabelManning.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelManning.setLineWidth(1)
         self.FGVLabelManning.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8008,7 +9169,7 @@ class Ui_MainWindow(object):
         self.RHAnalisisComboBoxPendienteLateral_5.setObjectName(u"RHAnalisisComboBoxPendienteLateral_5")
         sizePolicy14.setHeightForWidth(self.RHAnalisisComboBoxPendienteLateral_5.sizePolicy().hasHeightForWidth())
         self.RHAnalisisComboBoxPendienteLateral_5.setSizePolicy(sizePolicy14)
-        self.RHAnalisisComboBoxPendienteLateral_5.setMinimumSize(QSize(260, 30))
+        self.RHAnalisisComboBoxPendienteLateral_5.setMinimumSize(QSize(234, 30))
         self.RHAnalisisComboBoxPendienteLateral_5.setMaximumSize(QSize(260, 16777215))
         self.RHAnalisisComboBoxPendienteLateral_5.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -8029,8 +9190,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_19 = QGroupBox(self.rhLongitud)
         self.groupBox_Resultados_19.setObjectName(u"groupBox_Resultados_19")
         self.groupBox_Resultados_19.setGeometry(QRect(20, 470, 1055, 121))
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_19.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_19.setSizePolicy(sizePolicy16)
+        sizePolicy17.setHeightForWidth(self.groupBox_Resultados_19.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_19.setSizePolicy(sizePolicy17)
         self.groupBox_Resultados_19.setMinimumSize(QSize(1055, 0))
         self.groupBox_Resultados_19.setMaximumSize(QSize(480, 16777215))
         self.groupBox_Resultados_19.setStyleSheet(u"QGroupBox {\n"
@@ -8079,8 +9240,8 @@ class Ui_MainWindow(object):
 
         self.FGVLabelDistanciaX = QLabel(self.row_40)
         self.FGVLabelDistanciaX.setObjectName(u"FGVLabelDistanciaX")
-        sizePolicy7.setHeightForWidth(self.FGVLabelDistanciaX.sizePolicy().hasHeightForWidth())
-        self.FGVLabelDistanciaX.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVLabelDistanciaX.sizePolicy().hasHeightForWidth())
+        self.FGVLabelDistanciaX.setSizePolicy(sizePolicy6)
         self.FGVLabelDistanciaX.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVLabelDistanciaX.setLineWidth(1)
         self.FGVLabelDistanciaX.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8278,8 +9439,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelProfundidadObjetivo = QLabel(self.row_51)
         self.FGVPasoDLabelProfundidadObjetivo.setObjectName(u"FGVPasoDLabelProfundidadObjetivo")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelProfundidadObjetivo.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelProfundidadObjetivo.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelProfundidadObjetivo.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelProfundidadObjetivo.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelProfundidadObjetivo.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelProfundidadObjetivo.setLineWidth(1)
         self.FGVPasoDLabelProfundidadObjetivo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8288,8 +9449,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelAncho = QLabel(self.row_51)
         self.FGVPasoDLabelAncho.setObjectName(u"FGVPasoDLabelAncho")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelAncho.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelAncho.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelAncho.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelAncho.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelAncho.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelAncho.setLineWidth(1)
         self.FGVPasoDLabelAncho.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8305,7 +9466,7 @@ class Ui_MainWindow(object):
         self.FGVPasoDComboBoxNumManning.setObjectName(u"FGVPasoDComboBoxNumManning")
         sizePolicy14.setHeightForWidth(self.FGVPasoDComboBoxNumManning.sizePolicy().hasHeightForWidth())
         self.FGVPasoDComboBoxNumManning.setSizePolicy(sizePolicy14)
-        self.FGVPasoDComboBoxNumManning.setMinimumSize(QSize(260, 30))
+        self.FGVPasoDComboBoxNumManning.setMinimumSize(QSize(234, 30))
         self.FGVPasoDComboBoxNumManning.setMaximumSize(QSize(260, 16777215))
         self.FGVPasoDComboBoxNumManning.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -8319,8 +9480,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelNumManning = QLabel(self.row_51)
         self.FGVPasoDLabelNumManning.setObjectName(u"FGVPasoDLabelNumManning")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelNumManning.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelNumManning.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelNumManning.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelNumManning.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelNumManning.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelNumManning.setLineWidth(1)
         self.FGVPasoDLabelNumManning.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8361,7 +9522,7 @@ class Ui_MainWindow(object):
         self.FGVPasoDComboBoxInclinacion.setObjectName(u"FGVPasoDComboBoxInclinacion")
         sizePolicy14.setHeightForWidth(self.FGVPasoDComboBoxInclinacion.sizePolicy().hasHeightForWidth())
         self.FGVPasoDComboBoxInclinacion.setSizePolicy(sizePolicy14)
-        self.FGVPasoDComboBoxInclinacion.setMinimumSize(QSize(260, 30))
+        self.FGVPasoDComboBoxInclinacion.setMinimumSize(QSize(234, 30))
         self.FGVPasoDComboBoxInclinacion.setMaximumSize(QSize(260, 16777215))
         self.FGVPasoDComboBoxInclinacion.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -8375,8 +9536,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelDiametro = QLabel(self.row_51)
         self.FGVPasoDLabelDiametro.setObjectName(u"FGVPasoDLabelDiametro")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelDiametro.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelDiametro.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelDiametro.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelDiametro.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelDiametro.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelDiametro.setLineWidth(1)
         self.FGVPasoDLabelDiametro.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8385,8 +9546,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelPendienteLateral2 = QLabel(self.row_51)
         self.FGVPasoDLabelPendienteLateral2.setObjectName(u"FGVPasoDLabelPendienteLateral2")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelPendienteLateral2.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelPendienteLateral2.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelPendienteLateral2.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelPendienteLateral2.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelPendienteLateral2.setLineWidth(1)
         self.FGVPasoDLabelPendienteLateral2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8467,8 +9628,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelProfundidadControl = QLabel(self.row_51)
         self.FGVPasoDLabelProfundidadControl.setObjectName(u"FGVPasoDLabelProfundidadControl")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelProfundidadControl.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelProfundidadControl.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelProfundidadControl.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelProfundidadControl.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelProfundidadControl.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelProfundidadControl.setLineWidth(1)
         self.FGVPasoDLabelProfundidadControl.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8477,8 +9638,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelInclinacion = QLabel(self.row_51)
         self.FGVPasoDLabelInclinacion.setObjectName(u"FGVPasoDLabelInclinacion")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelInclinacion.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelInclinacion.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelInclinacion.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelInclinacion.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelInclinacion.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelInclinacion.setLineWidth(1)
         self.FGVPasoDLabelInclinacion.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8487,8 +9648,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelCaudal = QLabel(self.row_51)
         self.FGVPasoDLabelCaudal.setObjectName(u"FGVPasoDLabelCaudal")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelCaudal.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelCaudal.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelCaudal.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelCaudal.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelCaudal.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelCaudal.setLineWidth(1)
         self.FGVPasoDLabelCaudal.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8504,7 +9665,7 @@ class Ui_MainWindow(object):
         self.FGVPasoDComboBoxPendienteLateral2.setObjectName(u"FGVPasoDComboBoxPendienteLateral2")
         sizePolicy13.setHeightForWidth(self.FGVPasoDComboBoxPendienteLateral2.sizePolicy().hasHeightForWidth())
         self.FGVPasoDComboBoxPendienteLateral2.setSizePolicy(sizePolicy13)
-        self.FGVPasoDComboBoxPendienteLateral2.setMinimumSize(QSize(260, 30))
+        self.FGVPasoDComboBoxPendienteLateral2.setMinimumSize(QSize(234, 30))
         self.FGVPasoDComboBoxPendienteLateral2.setMaximumSize(QSize(260, 16777215))
         self.FGVPasoDComboBoxPendienteLateral2.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -8566,8 +9727,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelPendienteLateral = QLabel(self.row_51)
         self.FGVPasoDLabelPendienteLateral.setObjectName(u"FGVPasoDLabelPendienteLateral")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelPendienteLateral.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelPendienteLateral.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelPendienteLateral.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelPendienteLateral.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelPendienteLateral.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelPendienteLateral.setLineWidth(1)
         self.FGVPasoDLabelPendienteLateral.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8637,7 +9798,7 @@ class Ui_MainWindow(object):
         self.FGVPasoDComboBoxPendienteLateral.setObjectName(u"FGVPasoDComboBoxPendienteLateral")
         sizePolicy14.setHeightForWidth(self.FGVPasoDComboBoxPendienteLateral.sizePolicy().hasHeightForWidth())
         self.FGVPasoDComboBoxPendienteLateral.setSizePolicy(sizePolicy14)
-        self.FGVPasoDComboBoxPendienteLateral.setMinimumSize(QSize(260, 30))
+        self.FGVPasoDComboBoxPendienteLateral.setMinimumSize(QSize(234, 30))
         self.FGVPasoDComboBoxPendienteLateral.setMaximumSize(QSize(260, 16777215))
         self.FGVPasoDComboBoxPendienteLateral.setStyleSheet(u"border-color: rgb(211, 212, 216);\n"
 "background-color: rgb(255, 255, 255);")
@@ -8666,15 +9827,15 @@ class Ui_MainWindow(object):
 
         self.gridLayout_105.addWidget(self.row_51, 0, 1, 1, 1)
 
-        self.layoutWidget1 = QWidget(self.rhPasoDirecto)
-        self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(800, 160, 262, 121))
-        self.gridLayout_26 = QGridLayout(self.layoutWidget1)
+        self.layoutWidget = QWidget(self.rhPasoDirecto)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(800, 160, 262, 121))
+        self.gridLayout_26 = QGridLayout(self.layoutWidget)
         self.gridLayout_26.setObjectName(u"gridLayout_26")
         self.gridLayout_26.setHorizontalSpacing(10)
         self.gridLayout_26.setVerticalSpacing(0)
         self.gridLayout_26.setContentsMargins(0, 0, 0, 0)
-        self.FGVPasoDTextoReiniciar = QLabel(self.layoutWidget1)
+        self.FGVPasoDTextoReiniciar = QLabel(self.layoutWidget)
         self.FGVPasoDTextoReiniciar.setObjectName(u"FGVPasoDTextoReiniciar")
         sizePolicy5.setHeightForWidth(self.FGVPasoDTextoReiniciar.sizePolicy().hasHeightForWidth())
         self.FGVPasoDTextoReiniciar.setSizePolicy(sizePolicy5)
@@ -8685,7 +9846,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_26.addWidget(self.FGVPasoDTextoReiniciar, 2, 1, 1, 1)
 
-        self.FGVPasoDTextoCalcular = QLabel(self.layoutWidget1)
+        self.FGVPasoDTextoCalcular = QLabel(self.layoutWidget)
         self.FGVPasoDTextoCalcular.setObjectName(u"FGVPasoDTextoCalcular")
         sizePolicy5.setHeightForWidth(self.FGVPasoDTextoCalcular.sizePolicy().hasHeightForWidth())
         self.FGVPasoDTextoCalcular.setSizePolicy(sizePolicy5)
@@ -8699,7 +9860,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_45 = QHBoxLayout()
         self.horizontalLayout_45.setObjectName(u"horizontalLayout_45")
-        self.FGVPasoDBotonCalcular = QPushButton(self.layoutWidget1)
+        self.FGVPasoDBotonCalcular = QPushButton(self.layoutWidget)
         self.FGVPasoDBotonCalcular.setObjectName(u"FGVPasoDBotonCalcular")
         self.FGVPasoDBotonCalcular.setMinimumSize(QSize(50, 50))
         self.FGVPasoDBotonCalcular.setMaximumSize(QSize(40, 40))
@@ -8717,7 +9878,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_46 = QHBoxLayout()
         self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
-        self.FGVPasoDBotonReiniciar = QPushButton(self.layoutWidget1)
+        self.FGVPasoDBotonReiniciar = QPushButton(self.layoutWidget)
         self.FGVPasoDBotonReiniciar.setObjectName(u"FGVPasoDBotonReiniciar")
         self.FGVPasoDBotonReiniciar.setMinimumSize(QSize(50, 50))
         self.FGVPasoDBotonReiniciar.setMaximumSize(QSize(40, 40))
@@ -8740,11 +9901,11 @@ class Ui_MainWindow(object):
         self.FGVPasoDBotonDescargarCSV.setObjectName(u"FGVPasoDBotonDescargarCSV")
         self.FGVPasoDBotonDescargarCSV.setEnabled(False)
         self.FGVPasoDBotonDescargarCSV.setGeometry(QRect(800, 310, 260, 50))
-        sizePolicy17 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Ignored)
-        sizePolicy17.setHorizontalStretch(0)
-        sizePolicy17.setVerticalStretch(0)
-        sizePolicy17.setHeightForWidth(self.FGVPasoDBotonDescargarCSV.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDBotonDescargarCSV.setSizePolicy(sizePolicy17)
+        sizePolicy18 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Ignored)
+        sizePolicy18.setHorizontalStretch(0)
+        sizePolicy18.setVerticalStretch(0)
+        sizePolicy18.setHeightForWidth(self.FGVPasoDBotonDescargarCSV.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDBotonDescargarCSV.setSizePolicy(sizePolicy18)
         self.FGVPasoDBotonDescargarCSV.setMinimumSize(QSize(260, 50))
         self.FGVPasoDBotonDescargarCSV.setMaximumSize(QSize(40, 40))
         self.FGVPasoDBotonDescargarCSV.setStyleSheet(u"background-color: rgb(163, 160, 159);\n"
@@ -8762,8 +9923,8 @@ class Ui_MainWindow(object):
         self.FGVPasoDBotonDescargarPerfil.setObjectName(u"FGVPasoDBotonDescargarPerfil")
         self.FGVPasoDBotonDescargarPerfil.setEnabled(False)
         self.FGVPasoDBotonDescargarPerfil.setGeometry(QRect(800, 390, 260, 50))
-        sizePolicy17.setHeightForWidth(self.FGVPasoDBotonDescargarPerfil.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDBotonDescargarPerfil.setSizePolicy(sizePolicy17)
+        sizePolicy18.setHeightForWidth(self.FGVPasoDBotonDescargarPerfil.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDBotonDescargarPerfil.setSizePolicy(sizePolicy18)
         self.FGVPasoDBotonDescargarPerfil.setMinimumSize(QSize(260, 50))
         self.FGVPasoDBotonDescargarPerfil.setMaximumSize(QSize(40, 40))
         self.FGVPasoDBotonDescargarPerfil.setStyleSheet(u"background-color: rgb(163, 160, 159);\n"
@@ -8777,8 +9938,8 @@ class Ui_MainWindow(object):
         self.groupBox_Resultados_21 = QGroupBox(self.rhPasoDirecto)
         self.groupBox_Resultados_21.setObjectName(u"groupBox_Resultados_21")
         self.groupBox_Resultados_21.setGeometry(QRect(20, 460, 750, 141))
-        sizePolicy16.setHeightForWidth(self.groupBox_Resultados_21.sizePolicy().hasHeightForWidth())
-        self.groupBox_Resultados_21.setSizePolicy(sizePolicy16)
+        sizePolicy17.setHeightForWidth(self.groupBox_Resultados_21.sizePolicy().hasHeightForWidth())
+        self.groupBox_Resultados_21.setSizePolicy(sizePolicy17)
         self.groupBox_Resultados_21.setMinimumSize(QSize(750, 0))
         self.groupBox_Resultados_21.setMaximumSize(QSize(480, 16777215))
         self.groupBox_Resultados_21.setStyleSheet(u"QGroupBox {\n"
@@ -8817,8 +9978,8 @@ class Ui_MainWindow(object):
         self.gridLayout_100.setContentsMargins(10, 10, 10, 10)
         self.FGVPasoDLabelPasos = QLabel(self.row_48)
         self.FGVPasoDLabelPasos.setObjectName(u"FGVPasoDLabelPasos")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelPasos.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelPasos.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelPasos.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelPasos.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelPasos.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelPasos.setLineWidth(1)
         self.FGVPasoDLabelPasos.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8837,8 +9998,8 @@ class Ui_MainWindow(object):
 
         self.FGVPasoDLabelDatum = QLabel(self.row_48)
         self.FGVPasoDLabelDatum.setObjectName(u"FGVPasoDLabelDatum")
-        sizePolicy7.setHeightForWidth(self.FGVPasoDLabelDatum.sizePolicy().hasHeightForWidth())
-        self.FGVPasoDLabelDatum.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.FGVPasoDLabelDatum.sizePolicy().hasHeightForWidth())
+        self.FGVPasoDLabelDatum.setSizePolicy(sizePolicy6)
         self.FGVPasoDLabelDatum.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.FGVPasoDLabelDatum.setLineWidth(1)
         self.FGVPasoDLabelDatum.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -8862,6 +10023,9 @@ class Ui_MainWindow(object):
         self.gridLayout_99.addWidget(self.row_48, 0, 0, 1, 1)
 
         self.tabFGV.addTab(self.rhPasoDirecto, "")
+        self.tab_5 = QWidget()
+        self.tab_5.setObjectName(u"tab_5")
+        self.tabFGV.addTab(self.tab_5, "")
         self.stackedWidget.addWidget(self.pagina_FGV)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
@@ -8997,7 +10161,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(7)
+        self.stackedWidget.setCurrentIndex(0)
         self.tabGeometria.setCurrentIndex(0)
         self.tabConservacionEnergia.setCurrentIndex(0)
         self.tabResaltosHidraulicos.setCurrentIndex(0)
@@ -9231,6 +10395,38 @@ class Ui_MainWindow(object):
         self.botonMenuManningFRV.setText(QCoreApplication.translate("MainWindow", u"Flujo\n"
 "Rapidamente\n"
 "Variado", None))
+        self.groupBox_Propiedades.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
+        self.geoCTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
+        self.geoCTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
+        self.geoCBotonCalcular.setText("")
+        self.geoCBotonReiniciar.setText("")
+        self.geoCComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.geoCComboBoxDiametro.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.geoCComboBoxDiametro.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.geoCComboBoxDiametro.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.geoCComboBoxDiametro.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.geoLabelRelacionLlenado.setText(QCoreApplication.translate("MainWindow", u"Relaci\u00f3n de llenado", None))
+#if QT_CONFIG(tooltip)
+        self.geoCFieldDiametro.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.geoCFieldDiametro.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.geoCFieldDiametro.setInputMask("")
+        self.geoCFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.geoLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (Di)", None))
+#if QT_CONFIG(tooltip)
+        self.geoCFieldRelacionLlenado.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.geoCFieldRelacionLlenado.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.geoCFieldRelacionLlenado.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.geoCFieldRelacionLlenado.setPlaceholderText("")
+        self.geoCComboBoxRelacionLlenado.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
+
+        self.geoCComboBoxRelacionLlenado.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
         self.groupBox_Resultados.setTitle(QCoreApplication.translate("MainWindow", u"Resultados", None))
         self.geoCLabelAngulo.setText(QCoreApplication.translate("MainWindow", u"\u00c1ngulo (\u03b8)", None))
 #if QT_CONFIG(tooltip)
@@ -9244,7 +10440,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.geoCFieldRadio.setText("")
-        self.geoCFieldRadio.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.geoCFieldRadio.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
 #if QT_CONFIG(tooltip)
         self.geoCFieldArea.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -9264,7 +10460,7 @@ class Ui_MainWindow(object):
         self.geoCFieldAnchoSuperficial.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.geoCFieldAnchoSuperficial.setText("")
-        self.geoCFieldAnchoSuperficial.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.geoCFieldAnchoSuperficial.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.geoCLabelRadio.setText(QCoreApplication.translate("MainWindow", u"Radio Hidr\u00e1ulico (R)", None))
 #if QT_CONFIG(tooltip)
         self.geoCFieldPerimetro.setToolTip("")
@@ -9273,7 +10469,7 @@ class Ui_MainWindow(object):
         self.geoCFieldPerimetro.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.geoCFieldPerimetro.setText("")
-        self.geoCFieldPerimetro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.geoCFieldPerimetro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
 #if QT_CONFIG(tooltip)
         self.geoCFieldProfundidadHidraulica.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -9281,7 +10477,7 @@ class Ui_MainWindow(object):
         self.geoCFieldProfundidadHidraulica.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.geoCFieldProfundidadHidraulica.setText("")
-        self.geoCFieldProfundidadHidraulica.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.geoCFieldProfundidadHidraulica.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.geoCLabelProfundidadNormal.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad Normal (y<span style=\" vertical-align:sub;\">n</span>)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.geoCFieldAngulo.setToolTip("")
@@ -9298,40 +10494,8 @@ class Ui_MainWindow(object):
         self.geoCFieldProfundidadNormal.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.geoCFieldProfundidadNormal.setText("")
-        self.geoCFieldProfundidadNormal.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.geoCFieldProfundidadNormal.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.geoCImagenCanal.setText("")
-        self.groupBox_Propiedades.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
-        self.geoCTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
-        self.geoCTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
-        self.geoCBotonCalcular.setText("")
-        self.geoCBotonReiniciar.setText("")
-        self.geoLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (Di)", None))
-#if QT_CONFIG(tooltip)
-        self.geoCFieldDiametro.setToolTip("")
-#endif // QT_CONFIG(tooltip)
-#if QT_CONFIG(whatsthis)
-        self.geoCFieldDiametro.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
-#endif // QT_CONFIG(whatsthis)
-        self.geoCFieldDiametro.setInputMask("")
-        self.geoCFieldDiametro.setText("")
-        self.geoCComboBoxRelacionLlenado.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-
-        self.geoCComboBoxRelacionLlenado.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.geoCComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.geoCComboBoxDiametro.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
-        self.geoCComboBoxDiametro.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
-        self.geoCComboBoxDiametro.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
-
-        self.geoCComboBoxDiametro.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-#if QT_CONFIG(tooltip)
-        self.geoCFieldRelacionLlenado.setToolTip("")
-#endif // QT_CONFIG(tooltip)
-#if QT_CONFIG(whatsthis)
-        self.geoCFieldRelacionLlenado.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
-#endif // QT_CONFIG(whatsthis)
-        self.geoCFieldRelacionLlenado.setText("")
-        self.geoCFieldRelacionLlenado.setPlaceholderText("")
-        self.geoLabelRelacionLlenado.setText(QCoreApplication.translate("MainWindow", u"Relaci\u00f3n de llenado", None))
 #if QT_CONFIG(tooltip)
         self.groupBox_Canal.setToolTip(QCoreApplication.translate("MainWindow", u"QGroupBox::title {\n"
 "    subcontrol-origin: margin;\n"
@@ -9352,19 +10516,19 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.geoCFieldAncho.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoCFieldAncho.setText("")
+        self.geoCFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoCFieldAncho.setPlaceholderText("")
-        self.geoRComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.geoRComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.geoRComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.geoRComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.geoRComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.geoRComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.geoRComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.geoRComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.geoRLabelAncho.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
         self.geoRLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:11pt; font-weight:650; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Pendiente lateral (m<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Inclinaci\u00f3n lateral derecha</p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.geoCFieldPendienteLateral.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -9375,7 +10539,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoCFieldPendienteLateral.setText("")
+        self.geoCFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoCFieldPendienteLateral.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.geoCFieldProfundidadSeccion.setToolTip("")
@@ -9383,7 +10547,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.geoCFieldProfundidadSeccion.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoCFieldProfundidadSeccion.setText("")
+        self.geoCFieldProfundidadSeccion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoCFieldProfundidadSeccion.setPlaceholderText("")
         self.geoRComboBoxProfundidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.geoRComboBoxProfundidad.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -9402,7 +10566,7 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:11pt; font-weight:650; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Pendiente lateral (m<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.geoCFieldPendienteLateral2.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -9413,13 +10577,13 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoCFieldPendienteLateral2.setText("")
+        self.geoCFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoCFieldPendienteLateral2.setPlaceholderText("")
-        self.geoRComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.geoRComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.geoRComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.geoRComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.geoRComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.geoRComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.geoRComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.geoRComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.geoRTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
         self.geoRTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
         self.geoRBotonCalcular.setText("")
@@ -9521,12 +10685,12 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldPendienteLateral.setText("")
+        self.geoFroudeFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldPendienteLateral.setPlaceholderText("")
-        self.geoFroudeComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.geoFroudeComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.geoFroudeComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.geoFroudeComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.geoFroudeComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
 #if QT_CONFIG(tooltip)
         self.geoFroudeFieldPendienteLateral2.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -9537,7 +10701,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldPendienteLateral2.setText("")
+        self.geoFroudeFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldPendienteLateral2.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.geoFroudeFieldCaudal.setToolTip("")
@@ -9549,9 +10713,9 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldCaudal.setText("")
+        self.geoFroudeFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldCaudal.setPlaceholderText("")
-        self.geoFroudeLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+        self.geoFroudeLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
         self.geoFroudeLabelPendienteLateral_3.setText(QCoreApplication.translate("MainWindow", u"Caudal (Q)", None))
         self.geoFroudeLabelPendienteLateral_4.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (D)", None))
 #if QT_CONFIG(tooltip)
@@ -9560,7 +10724,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.geoFroudeFieldProfundidadSeccion.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldProfundidadSeccion.setText("")
+        self.geoFroudeFieldProfundidadSeccion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldProfundidadSeccion.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.geoFroudeFieldDiametro.setToolTip("")
@@ -9572,9 +10736,9 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldDiametro.setText("")
+        self.geoFroudeFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldDiametro.setPlaceholderText("")
-        self.geoFroudeLabelPendienteLateral_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.geoFroudeLabelPendienteLateral_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
         self.geoFroudeComboBoxProfundidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.geoFroudeComboBoxProfundidad.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
         self.geoFroudeComboBoxProfundidad.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
@@ -9588,16 +10752,16 @@ class Ui_MainWindow(object):
 
         self.geoFroudeComboBoxDiametro.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.geoFroudeLabelProfundidadSeccion.setText(QCoreApplication.translate("MainWindow", u"Profundidad de secci\u00f3n (d)", None))
-        self.geoFroudeComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.geoFroudeComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.geoFroudeComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.geoFroudeComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.geoFroudeComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.geoFroudeComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.geoFroudeComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.geoFroudeComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.geoFroudeComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.geoFroudeComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.geoFroudeComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.geoFroudeComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.geoFroudeComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.geoFroudeComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.geoFroudeComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.geoFroudeComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.geoFroudeLabelAncho.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
 #if QT_CONFIG(tooltip)
         self.geoFroudeFieldAncho.setToolTip("")
@@ -9605,7 +10769,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.geoFroudeFieldAncho.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldAncho.setText("")
+        self.geoFroudeFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldAncho.setPlaceholderText("")
         self.geoFroudeLabelVelocidad.setText(QCoreApplication.translate("MainWindow", u"Velocidad (v)", None))
 #if QT_CONFIG(tooltip)
@@ -9618,7 +10782,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.geoFroudeFieldVelocidad.setText("")
+        self.geoFroudeFieldVelocidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.geoFroudeFieldVelocidad.setPlaceholderText("")
         self.geoFroudeComboBoxVelocidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros/segundos", None))
 
@@ -9626,124 +10790,467 @@ class Ui_MainWindow(object):
         self.geoFroudeTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
         self.geoFroudeTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
         self.tabGeometria.setTabText(self.tabGeometria.indexOf(self.geometriaFroude), QCoreApplication.translate("MainWindow", u"Froude", None))
-        self.groupBox_Propiedades_20.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
-        self.RHAnalisisLabelPendienteLateral2_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+        self.ManningUniformeTextoReiniciar_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
+        self.ManningUniformeBotonCalcular_2.setText("")
+        self.ManningUniformeBotonReiniciar_2.setText("")
+        self.ManningUniformeTextoCalcular_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
+        self.groupBox_Propiedades_28.setTitle(QCoreApplication.translate("MainWindow", u"Resultados", None))
 #if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldProfundidad1_2.setToolTip("")
+        self.RHAnalisisFieldCaudal_7.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldProfundidad1_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.RHAnalisisFieldCaudal_7.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldProfundidad1_2.setText("")
-        self.RHAnalisisFieldProfundidad1_2.setPlaceholderText("")
-        self.RHAnalisisLabelCaudal_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
-        self.RHAnalisisComboBoxCaudal_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
-        self.RHAnalisisComboBoxCaudal_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
-
-        self.RHAnalisisComboBoxCaudal_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
-        self.RHAnalisisComboBoxPendienteLateral_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHAnalisisComboBoxPendienteLateral_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHAnalisisComboBoxPendienteLateral_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
-
-        self.RHAnalisisComboBoxPendienteLateral_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.RHAnalisisFieldCaudal_7.setText("")
+        self.RHAnalisisFieldCaudal_7.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m\u00b3/s]", None))
+        self.RHAnalisisLabelCaudal_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Caudal (Q)</p></body></html>", None))
+        self.RHAnalisisLabelCaudal_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Velocidad</p><p>(v)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldCaudal_3.setToolTip("")
+        self.RHAnalisisFieldCaudal_8.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldCaudal_3.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.RHAnalisisFieldCaudal_8.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldCaudal_3.setText("")
-        self.RHAnalisisFieldCaudal_3.setPlaceholderText("")
-        self.RHAnalisisComboBoxAncho_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHAnalisisComboBoxAncho_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
-        self.RHAnalisisComboBoxAncho_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
-        self.RHAnalisisComboBoxAncho_2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+        self.RHAnalisisFieldCaudal_8.setText("")
+        self.RHAnalisisFieldCaudal_8.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m/s]", None))
+        self.groupBox_Propiedades_20.setTitle(QCoreApplication.translate("MainWindow", u"Secci\u00f3n 1", None))
+        self.CEnergiaComboBoxPendienteLateralSec1.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateralSec1.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateralSec1.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHAnalisisComboBoxAncho_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHAnalisisLabelCaudal_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Velocidad (v<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
-        self.RHAnalisisLabelPendienteLateral_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.CEnergiaComboBoxPendienteLateralSec1.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxAnchoSec1.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec1.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec1.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxAnchoSec1.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxAnchoSec1.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaLabelProfundidadSec1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.CEnergiaLabelPendienteLateral2Sec1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
 #if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldPendienteLateral_2.setToolTip("")
+        self.CEnergiaFieldPendienteLateralSec1.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldPendienteLateral_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
+        self.CEnergiaFieldPendienteLateralSec1.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldPendienteLateral_2.setText("")
-        self.RHAnalisisFieldPendienteLateral_2.setPlaceholderText("")
-        self.RHAnalisisLabelBase_2.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
-        self.RHAnalisisLabelProfundidad1_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
-#if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldAncho_2.setWhatsThis("")
-#endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldAncho_2.setText("")
-        self.RHAnalisisFieldAncho_2.setPlaceholderText("")
+        self.CEnergiaFieldPendienteLateralSec1.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateralSec1.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldPendienteLateral2_2.setToolTip("")
+        self.CEnergiaFieldProfundidad1Sec1.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldPendienteLateral2_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.CEnergiaFieldProfundidad1Sec1.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldPendienteLateral2_2.setText("")
-        self.RHAnalisisFieldPendienteLateral2_2.setPlaceholderText("")
-        self.RHAnalisisComboBoxProfundidad1_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHAnalisisComboBoxProfundidad1_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
-        self.RHAnalisisComboBoxProfundidad1_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
-        self.RHAnalisisComboBoxProfundidad1_2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
-
-        self.RHAnalisisComboBoxProfundidad1_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaFieldProfundidad1Sec1.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldProfundidad1Sec1.setPlaceholderText("")
+        self.CEnergiaLabelBaseSec1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Ancho (b<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.CEnergiaLabelPendienteLateralSec1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
 #if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldCaudal_2.setToolTip("")
+        self.CEnergiaFieldPendienteLateral2Sec1.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldCaudal_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.CEnergiaFieldPendienteLateral2Sec1.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldCaudal_2.setText("")
-        self.RHAnalisisFieldCaudal_2.setPlaceholderText("")
-        self.RHAnalisisComboBoxPendienteLateral2_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHAnalisisComboBoxPendienteLateral2_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHAnalisisComboBoxPendienteLateral2_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.CEnergiaFieldPendienteLateral2Sec1.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateral2Sec1.setPlaceholderText("")
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec1.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec1.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldAnchoSec1.setPlaceholderText("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHAnalisisComboBoxPendienteLateral2_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHAnalisisComboBoxCaudal_3.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros/segundos", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec1.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxProfundidad1Sec1.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxProfundidad1Sec1.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxProfundidad1Sec1.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxProfundidad1Sec1.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
-        self.RHAnalisisComboBoxCaudal_3.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros/segundos", None))
-        self.groupBox_Resultados_20.setTitle(QCoreApplication.translate("MainWindow", u"Resultados", None))
+        self.CEnergiaComboBoxProfundidad1Sec1.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.groupBox_Propiedades_23.setTitle(QCoreApplication.translate("MainWindow", u"Secci\u00f3n 2", None))
+        self.CEnergiaComboBoxProfundidad1Sec2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxProfundidad1Sec2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxProfundidad1Sec2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxProfundidad1Sec2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxProfundidad1Sec2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec2.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldAnchoSec2.setPlaceholderText("")
+        self.CEnergiaLabelPendienteLateral2Sec2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
 #if QT_CONFIG(tooltip)
-        self.RHAnalisisFieldEficiencia_2.setToolTip("")
+        self.CEnergiaFieldProfundidad1Sec2.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldEficiencia_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.CEnergiaFieldProfundidad1Sec2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldEficiencia_2.setText(QCoreApplication.translate("MainWindow", u"[metros c\u00fabicos/segundos]", None))
-        self.RHAnalisisFieldEficiencia_2.setPlaceholderText("")
-        self.RHAnalisisLabelEficiencia_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Caudal (Q)</p></body></html>", None))
-        self.geoCImagenCanal_12.setText("")
-        self.FGVTextoReiniciar_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
-        self.FGVTextoCalcular_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
-        self.FGVBotonCalcular_2.setText("")
-        self.FGVBotonReiniciar_2.setText("")
-        self.tabConservacionEnergia.setTabText(self.tabConservacionEnergia.indexOf(self.rhCalculoCaudal), QCoreApplication.translate("MainWindow", u"Caudal seg\u00fan \u00e1rea", None))
-        self.tabConservacionEnergia.setTabText(self.tabConservacionEnergia.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Page", None))
+        self.CEnergiaFieldProfundidad1Sec2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldProfundidad1Sec2.setPlaceholderText("")
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
+
+        self.CEnergiaComboBoxPendienteLateralSec1_2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxAnchoSec2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxAnchoSec2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxAnchoSec2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaLabelProfundidadSec2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldPendienteLateralSec2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateralSec2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateralSec2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateralSec2.setPlaceholderText("")
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldPendienteLateral2Sec2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateral2Sec2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateral2Sec2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateral2Sec2.setPlaceholderText("")
+        self.CEnergiaLabelBaseSec2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Ancho (b<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+        self.CEnergiaLabelPendienteLateralSec2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
+
+        self.CEnergiaComboBoxPendienteLateral2Sec2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.groupBox_Propiedades_24.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
+        self.RHAnalisisLabelCaudal_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Escal\u00f3n (\u0394z)</p></body></html>", None))
+        self.CEnergiaComboBoxAnchoSec2_3.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2_3.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2_3.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxAnchoSec2_3.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxAnchoSec2_3.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+#if QT_CONFIG(tooltip)
+        self.RHAnalisisFieldCaudal_4.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.RHAnalisisFieldCaudal_4.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.RHAnalisisFieldCaudal_4.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.RHAnalisisFieldCaudal_4.setPlaceholderText("")
+        self.tabConservacionEnergia.setTabText(self.tabConservacionEnergia.indexOf(self.rhCalculoCaudal), QCoreApplication.translate("MainWindow", u"Caudal", None))
+        self.ManningUniformeTextoReiniciar_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
+        self.ManningUniformeBotonCalcular_3.setText("")
+        self.ManningUniformeBotonReiniciar_3.setText("")
+        self.ManningUniformeTextoCalcular_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
+        self.groupBox_Propiedades_25.setTitle(QCoreApplication.translate("MainWindow", u"Secci\u00f3n 1", None))
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec1_2.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec1_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldAnchoSec1_2.setPlaceholderText("")
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
+
+        self.CEnergiaComboBoxPendienteLateralSec1_3.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxAnchoSec1_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec1_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec1_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxAnchoSec1_2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxAnchoSec1_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldProfundidad1Sec1_3.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldProfundidad1Sec1_3.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldProfundidad1Sec1_3.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldProfundidad1Sec1_3.setPlaceholderText("")
+        self.CEnergiaLabelPendienteLateralSec1_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldProfundidad1Sec1_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldProfundidad1Sec1_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldProfundidad1Sec1_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldProfundidad1Sec1_2.setPlaceholderText("")
+        self.CEnergiaLabelProfundidadSec1_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Velocidad (v<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.CEnergiaLabelProfundidadSec1_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldPendienteLateralSec1_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateralSec1_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateralSec1_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateralSec1_2.setPlaceholderText("")
+        self.CEnergiaLabelBaseSec1_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Ancho (b<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.CEnergiaLabelPendienteLateral2Sec1_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateral2Sec1_2.setPlaceholderText("")
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
+
+        self.CEnergiaComboBoxPendienteLateral2Sec1_2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxProfundidad1Sec1_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros/segundos", None))
+
+        self.CEnergiaComboBoxPendienteLateral2Sec1_3.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros/segundos", None))
+        self.groupBox_Propiedades_26.setTitle(QCoreApplication.translate("MainWindow", u"Secci\u00f3n 2", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateral2Sec2_2.setPlaceholderText("")
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
+
+        self.CEnergiaComboBoxPendienteLateral2Sec2_2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
+
+        self.CEnergiaComboBoxPendienteLateralSec1_4.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.CEnergiaLabelBaseSec2_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Ancho (b<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+        self.CEnergiaComboBoxAnchoSec2_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxAnchoSec2_2.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxAnchoSec2_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaLabelPendienteLateral2Sec2_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec2_2.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldAnchoSec2_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldAnchoSec2_2.setPlaceholderText("")
+#if QT_CONFIG(tooltip)
+        self.CEnergiaFieldPendienteLateralSec2_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateralSec2_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaFieldPendienteLateralSec2_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.CEnergiaFieldPendienteLateralSec2_2.setPlaceholderText("")
+        self.CEnergiaLabelPendienteLateralSec2_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
+        self.groupBox_Propiedades_27.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
+        self.CEnergiaComboBoxAnchoSec2_4.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2_4.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
+        self.CEnergiaComboBoxAnchoSec2_4.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
+        self.CEnergiaComboBoxAnchoSec2_4.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
+
+        self.CEnergiaComboBoxAnchoSec2_4.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
+#if QT_CONFIG(tooltip)
+        self.RHAnalisisFieldCaudal_5.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.RHAnalisisFieldCaudal_5.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.RHAnalisisFieldCaudal_5.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.RHAnalisisFieldCaudal_5.setPlaceholderText("")
+        self.RHAnalisisLabelCaudal_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Escal\u00f3n (\u0394z)</p></body></html>", None))
+        self.RHAnalisisLabelCaudal_11.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Caudal (Q)</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.RHAnalisisFieldCaudal_6.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.RHAnalisisFieldCaudal_6.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.RHAnalisisFieldCaudal_6.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.RHAnalisisFieldCaudal_6.setPlaceholderText("")
+        self.RHCompuertasComboBoxCaudal_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
+        self.RHCompuertasComboBoxCaudal_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
+
+        self.RHCompuertasComboBoxCaudal_2.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
+        self.groupBox_Propiedades_29.setTitle(QCoreApplication.translate("MainWindow", u"Resultados", None))
+        self.CEnergiaY2LabelEnergiaCritica.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>E<span style=\" vertical-align:sub;\">c</span></p></body></html>", None))
+        self.CEnergiaY2LabelProfundidad.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>y<span style=\" vertical-align:sub;\">2</span></p></body></html>", None))
+        self.CEnergiaY2LabelProfundidad_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>y<span style=\" vertical-align:sub;\">1n</span></p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2FieldEc.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2FieldEc.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2FieldEc.setText("")
+        self.CEnergiaY2FieldEc.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2FieldYc.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2FieldYc.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2FieldYc.setText("")
+        self.CEnergiaY2FieldYc.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+        self.CEnergiaY2LabelProfundidadCritica.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>y<span style=\" vertical-align:sub;\">c</span></p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2LabelProfundidadRaiz1.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz1.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz1.setText("")
+        self.CEnergiaY2LabelProfundidadRaiz1.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2LabelProfundidadRaiz2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz2.setText("")
+        self.CEnergiaY2LabelProfundidadRaiz2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2LabelProfundidadRaiz3.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz3.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz3.setText("")
+        self.CEnergiaY2LabelProfundidadRaiz3.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setText("")
+        self.CEnergiaY2LabelProfundidadRaiz1_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setText("")
+        self.CEnergiaY2LabelProfundidadRaiz2_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setText("")
+        self.CEnergiaY2LabelProfundidadRaiz3_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+        self.CEnergiaY2LabelEnergiaCritica_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Represamiento</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.CEnergiaY2FieldEc_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.CEnergiaY2FieldEc_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.CEnergiaY2FieldEc_2.setText("")
+        self.CEnergiaY2FieldEc_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
+        self.tabConservacionEnergia.setTabText(self.tabConservacionEnergia.indexOf(self.rhProfundidad), QCoreApplication.translate("MainWindow", u"Profundidad", None))
         self.groupBox_Resultados_17.setTitle(QCoreApplication.translate("MainWindow", u"C\u00e1lculos realizados", None))
 #if QT_CONFIG(tooltip)
         self.RHAnalisisFieldAltura.setToolTip("")
@@ -9755,7 +11262,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldAltura.setText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHAnalisisFieldAltura.setText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.RHAnalisisFieldAltura.setPlaceholderText("")
         self.RHAnalisisLabelE1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Energ\u00eda espec\u00edfica (E<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -9768,7 +11275,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldE1.setText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHAnalisisFieldE1.setText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.RHAnalisisFieldE1.setPlaceholderText("")
         self.RHAnalisisLabelAltura.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Altura (z<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
         self.RHAnalisisLabelE2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Energ\u00eda espec\u00edfica (E<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
@@ -9782,7 +11289,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldE2.setText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHAnalisisFieldE2.setText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.RHAnalisisFieldE2.setPlaceholderText("")
         self.groupBox_Propiedades_14.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
         self.RHAnalisisLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
@@ -9798,7 +11305,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHAnalisisFieldPendienteLateral.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldPendienteLateral.setText("")
+        self.RHAnalisisFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldPendienteLateral.setPlaceholderText("")
         self.RHAnalisisLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -9811,12 +11318,12 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldCaudal.setText("")
+        self.RHAnalisisFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldCaudal.setPlaceholderText("")
-        self.RHAnalisisComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.RHAnalisisComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.RHAnalisisComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.RHAnalisisComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.RHAnalisisComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.RHAnalisisComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.RHAnalisisComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
         self.RHAnalisisComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
@@ -9832,7 +11339,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldProfundidad1.setText("")
+        self.RHAnalisisFieldProfundidad1.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldProfundidad1.setPlaceholderText("")
         self.RHAnalisisLabelBase.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
 #if QT_CONFIG(tooltip)
@@ -9845,14 +11352,14 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldPendienteLateral2.setText("")
+        self.RHAnalisisFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldPendienteLateral2.setPlaceholderText("")
         self.RHAnalisisLabelProfundidad1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
         self.RHAnalisisLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Caudal (Q)</p></body></html>", None))
 #if QT_CONFIG(whatsthis)
         self.RHAnalisisFieldAncho.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldAncho.setText("")
+        self.RHAnalisisFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldAncho.setPlaceholderText("")
         self.RHAnalisisComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.RHAnalisisComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
@@ -9891,7 +11398,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldInclinacion.setText("")
+        self.RHAnalisisFieldInclinacion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldInclinacion.setPlaceholderText("")
         self.RHAnalisisComboBoxInclinacion.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
         self.RHAnalisisComboBoxInclinacion.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
@@ -9908,7 +11415,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldLongitudInclinada.setText("")
+        self.RHAnalisisFieldLongitudInclinada.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldLongitudInclinada.setPlaceholderText("")
         self.RHAnalisisLabelLongitudInclinada.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Longitud zona inclinada (L)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -9921,7 +11428,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldProfundidad.setText("")
+        self.RHAnalisisFieldProfundidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldProfundidad.setPlaceholderText("")
         self.RHAnalisisLabelInclinacion.setText(QCoreApplication.translate("MainWindow", u"Inclinaci\u00f3n canal (S0)", None))
         self.RHAnalisisComboBoxProfundidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
@@ -9947,7 +11454,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHAnalisisFieldFuerza.setText("")
+        self.RHAnalisisFieldFuerza.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHAnalisisFieldFuerza.setPlaceholderText("")
         self.RHAnalisisComboBoxFuerza.setItemText(0, QCoreApplication.translate("MainWindow", u"Newtons", None))
 
@@ -9974,7 +11481,7 @@ class Ui_MainWindow(object):
         self.RHPropiedadesFieldLongitud.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldLongitud.setText("")
-        self.RHPropiedadesFieldLongitud.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHPropiedadesFieldLongitud.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.RHPropiedadesLabelLongitud.setText(QCoreApplication.translate("MainWindow", u"Longitud", None))
         self.groupBox_Propiedades_11.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
 #if QT_CONFIG(tooltip)
@@ -9983,7 +11490,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldPendienteLateral.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHPropiedadesFieldPendienteLateral.setText("")
+        self.RHPropiedadesFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHPropiedadesFieldPendienteLateral.setPlaceholderText("")
         self.RHPropiedadesLabelBase.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
         self.RHPropiedadesComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
@@ -9992,23 +11499,23 @@ class Ui_MainWindow(object):
         self.RHPropiedadesComboBoxDiametro.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.RHPropiedadesComboBoxDiametro.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHPropiedadesComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHPropiedadesComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHPropiedadesComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.RHPropiedadesComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHPropiedadesComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.RHPropiedadesComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHPropiedadesComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHPropiedadesComboBoxPendientaLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHPropiedadesComboBoxPendientaLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHPropiedadesComboBoxPendientaLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.RHPropiedadesComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHPropiedadesComboBoxPendientaLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHPropiedadesComboBoxPendientaLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.RHPropiedadesComboBoxPendientaLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHPropiedadesComboBoxPendientaLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.RHPropiedadesComboBoxPendientaLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.RHPropiedadesFieldProfundidad.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldProfundidad.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHPropiedadesFieldProfundidad.setText("")
+        self.RHPropiedadesFieldProfundidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHPropiedadesFieldProfundidad.setPlaceholderText("")
         self.RHPropiedadesLabelProfundidad.setText(QCoreApplication.translate("MainWindow", u"Profundidad aguas\n"
 "arriba (y)", None))
@@ -10018,7 +11525,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldDiametro.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHPropiedadesFieldDiametro.setText("")
+        self.RHPropiedadesFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHPropiedadesFieldDiametro.setPlaceholderText("")
         self.RHPropiedadesLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (D)", None))
 #if QT_CONFIG(tooltip)
@@ -10027,7 +11534,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldCaudal.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHPropiedadesFieldCaudal.setText("")
+        self.RHPropiedadesFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHPropiedadesFieldCaudal.setPlaceholderText("")
         self.RHPropiedadesComboBoxProfundidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHPropiedadesComboBoxProfundidad.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10035,15 +11542,15 @@ class Ui_MainWindow(object):
         self.RHPropiedadesComboBoxProfundidad.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.RHPropiedadesComboBoxProfundidad.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHPropiedadesLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
-        self.RHPropiedadesLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
+        self.RHPropiedadesLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral</p><p>izquierda</p></body></html>", None))
+        self.RHPropiedadesLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral</p><p>derecha</p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.RHPropiedadesFieldPendienteLateral2.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldPendienteLateral2.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHPropiedadesFieldPendienteLateral2.setText("")
+        self.RHPropiedadesFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHPropiedadesFieldPendienteLateral2.setPlaceholderText("")
         self.RHPropiedadesLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"Caudal (Q)", None))
 #if QT_CONFIG(tooltip)
@@ -10052,7 +11559,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHPropiedadesFieldBase.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHPropiedadesFieldBase.setText("")
+        self.RHPropiedadesFieldBase.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHPropiedadesFieldBase.setPlaceholderText("")
         self.RHPropiedadesComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
         self.RHPropiedadesComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
@@ -10088,11 +11595,11 @@ class Ui_MainWindow(object):
 
         self.RHTipoComboBoxProfundidad.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHTipoLabelProfundidad.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad aguas arriba (y)</p></body></html>", None))
-        self.RHTipoComboBoxPendientaLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHTipoComboBoxPendientaLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHTipoComboBoxPendientaLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.RHTipoComboBoxPendientaLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHTipoComboBoxPendientaLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.RHTipoComboBoxPendientaLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHTipoComboBoxPendientaLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.RHTipoComboBoxPendientaLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.RHTipoFieldInclinacion.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -10103,7 +11610,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldInclinacion.setText("")
+        self.RHTipoFieldInclinacion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldInclinacion.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.RHTipoFieldBase.setToolTip("")
@@ -10111,7 +11618,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHTipoFieldBase.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldBase.setText("")
+        self.RHTipoFieldBase.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldBase.setPlaceholderText("")
         self.RHTipoLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
         self.RHTipoLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
@@ -10122,17 +11629,17 @@ class Ui_MainWindow(object):
         self.RHTipoComboBoxBase.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.RHTipoComboBoxBase.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHTipoComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.RHTipoComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.RHTipoComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.RHTipoComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.RHTipoComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
 #if QT_CONFIG(tooltip)
         self.RHTipoFieldPendienteLateral.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.RHTipoFieldPendienteLateral.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldPendienteLateral.setText("")
+        self.RHTipoFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldPendienteLateral.setPlaceholderText("")
         self.RHTipoComboBoxNormal.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHTipoComboBoxNormal.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10146,7 +11653,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHTipoFieldProfundidad.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldProfundidad.setText("")
+        self.RHTipoFieldProfundidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldProfundidad.setPlaceholderText("")
         self.RHTipoLabelProfundidadNormal.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad normal aguas abajo (y<span style=\" vertical-align:sub;\">n</span>)</p></body></html>", None))
         self.RHTipoComboBoxInclinacion.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
@@ -10165,7 +11672,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldNormal.setText("")
+        self.RHTipoFieldNormal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldNormal.setPlaceholderText("")
         self.RHTipoLabelBase.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
 #if QT_CONFIG(tooltip)
@@ -10178,7 +11685,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldCaudal.setText("")
+        self.RHTipoFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldCaudal.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.RHTipoFieldPendienteLateral2.setToolTip("")
@@ -10186,13 +11693,13 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHTipoFieldPendienteLateral2.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.RHTipoFieldPendienteLateral2.setText("")
+        self.RHTipoFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHTipoFieldPendienteLateral2.setPlaceholderText("")
-        self.RHTipoComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHTipoComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHTipoComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.RHTipoComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHTipoComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.RHTipoComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHTipoComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.RHTipoComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.groupBox_Resultados_16.setTitle(QCoreApplication.translate("MainWindow", u"C\u00e1lculos realizados", None))
 #if QT_CONFIG(tooltip)
         self.RHTipoFieldSubsecuente.setToolTip("")
@@ -10205,7 +11712,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.RHTipoFieldSubsecuente.setText("")
-        self.RHTipoFieldSubsecuente.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHTipoFieldSubsecuente.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.RHTipoLabelSubsecuente.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad subsecuente (y<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
         self.RHTipoLabelAsterisco.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y*)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -10219,7 +11726,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.RHTipoFieldAsterisco.setText("")
-        self.RHTipoFieldAsterisco.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHTipoFieldAsterisco.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.groupBox_Resultados_13.setTitle(QCoreApplication.translate("MainWindow", u"Resultados", None))
 #if QT_CONFIG(tooltip)
         self.RHTipoFieldTipo.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
@@ -10240,13 +11747,13 @@ class Ui_MainWindow(object):
         self.RHTipoBotonReiniciar.setText("")
         self.tabResaltosHidraulicos.setTabText(self.tabResaltosHidraulicos.indexOf(self.rhTipo), QCoreApplication.translate("MainWindow", u"Tipo de resalto", None))
         self.groupBox_Propiedades_15.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
-        self.RHCompuertasComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHCompuertasComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHCompuertasComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.RHCompuertasComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHCompuertasComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.RHCompuertasComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHCompuertasComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.RHCompuertasComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.RHCompuertasLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"Caudal (Q)", None))
-        self.RHCompuertasLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
+        self.RHCompuertasLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral</p><p>derecha</p></body></html>", None))
         self.RHCompuertasComboBoxAncho.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHCompuertasComboBoxAncho.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
         self.RHCompuertasComboBoxAncho.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
@@ -10263,7 +11770,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldPendienteLateral.setText("")
+        self.RHCompuertasFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldPendienteLateral.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldCaudal.setToolTip("")
@@ -10275,7 +11782,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldCaudal.setText("")
+        self.RHCompuertasFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldCaudal.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldPendienteLateral2.setToolTip("")
@@ -10287,7 +11794,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldPendienteLateral2.setText("")
+        self.RHCompuertasFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldPendienteLateral2.setPlaceholderText("")
         self.RHCompuertasComboBoxProfundidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHCompuertasComboBoxProfundidad.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10295,10 +11802,10 @@ class Ui_MainWindow(object):
         self.RHCompuertasComboBoxProfundidad.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.RHCompuertasComboBoxProfundidad.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.RHCompuertasComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.RHCompuertasComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.RHCompuertasComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.RHCompuertasComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.RHCompuertasComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.RHCompuertasLabelBase.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldProfundidad.setToolTip("")
@@ -10306,21 +11813,21 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.RHCompuertasFieldProfundidad.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldProfundidad.setText("")
+        self.RHCompuertasFieldProfundidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldProfundidad.setPlaceholderText("")
-        self.RHCompuertasLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
-        self.RHCompuertasComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.RHCompuertasComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.RHCompuertasComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.RHCompuertasLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral</p><p>izquierda</p></body></html>", None))
+        self.RHCompuertasComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.RHCompuertasComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.RHCompuertasComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.RHCompuertasComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.RHCompuertasComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldAncho.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.RHCompuertasFieldAncho.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldAncho.setText("")
+        self.RHCompuertasFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldAncho.setPlaceholderText("")
         self.RHCompuertasLabelProfundidad.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
         self.RHCompuertasLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (D)", None))
@@ -10334,7 +11841,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldDiametro.setText("")
+        self.RHCompuertasFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldDiametro.setPlaceholderText("")
         self.RHCompuertasComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHCompuertasComboBoxDiametro.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10355,7 +11862,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.RHCompuertasFieldFuerza.setText("")
-        self.RHCompuertasFieldFuerza.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[Newtons]", None))
+        self.RHCompuertasFieldFuerza.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[N]", None))
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldMomentum2.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -10367,7 +11874,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.RHCompuertasFieldMomentum2.setText("")
-        self.RHCompuertasFieldMomentum2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHCompuertasFieldMomentum2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldMomentum.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -10379,10 +11886,10 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.RHCompuertasFieldMomentum.setText("")
-        self.RHCompuertasFieldMomentum.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.RHCompuertasFieldMomentum.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.RHCompuertasLabelMomentum2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Momentum (M<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
-        self.RHCompuertasLabelFuerza.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Fuerza espec\u00edfica </p><p>(F*)</p></body></html>", None))
-        self.RHCompuertasLabelFuerzaCompuerta.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Fuerza compuerta </p><p>(F)</p></body></html>", None))
+        self.RHCompuertasLabelFuerza.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Fuerza </p><p>espec\u00edfica (F*)</p></body></html>", None))
+        self.RHCompuertasLabelFuerzaCompuerta.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Fuerza </p><p>compuerta (F)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldFuerzaCompuerta.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -10394,7 +11901,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.RHCompuertasFieldFuerzaCompuerta.setText("")
-        self.RHCompuertasFieldFuerzaCompuerta.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[Newtons]", None))
+        self.RHCompuertasFieldFuerzaCompuerta.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[N]", None))
         self.groupBox_Propiedades_17.setTitle(QCoreApplication.translate("MainWindow", u"Par\u00e1metros opcionales", None))
 #if QT_CONFIG(tooltip)
         self.RHCompuertasFieldDensidad.setToolTip("")
@@ -10406,12 +11913,12 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldDensidad.setText("")
+        self.RHCompuertasFieldDensidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldDensidad.setPlaceholderText("")
         self.RHCompuertasLabelDensidad.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Densidad (<span style=\" font-family:'Google Sans Text','arial','sans-serif'; font-size:14px; font-weight:400; color:#4d5156; background-color:#ffffff;\">\u03c1)</span></p></body></html>", None))
-        self.RHCompuertasComboBoxDensidad.setItemText(0, QCoreApplication.translate("MainWindow", u"kilogramos/metros cubicos", None))
+        self.RHCompuertasComboBoxDensidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Kilogramos/metros\u00b3", None))
 
-        self.RHCompuertasComboBoxDensidad.setCurrentText(QCoreApplication.translate("MainWindow", u"kilogramos/metros cubicos", None))
+        self.RHCompuertasComboBoxDensidad.setCurrentText(QCoreApplication.translate("MainWindow", u"Kilogramos/metros\u00b3", None))
         self.RHCompuertasLabelProfundidad2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
         self.RHCompuertasComboBoxProfundidad2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.RHCompuertasComboBoxProfundidad2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10429,7 +11936,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.RHCompuertasFieldProfundidad2.setText("")
+        self.RHCompuertasFieldProfundidad2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.RHCompuertasFieldProfundidad2.setPlaceholderText("")
         self.RHCompuertasTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
         self.RHCompuertasTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
@@ -10444,7 +11951,7 @@ class Ui_MainWindow(object):
         self.ManningCriticaLabelFieldProfundidadCritica.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.ManningCriticaLabelFieldProfundidadCritica.setText("")
-        self.ManningCriticaLabelFieldProfundidadCritica.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.ManningCriticaLabelFieldProfundidadCritica.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.ManningCriticaLabelProfundidadCritica.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad cr\u00edtica (y<span style=\" vertical-align:sub;\">c</span>)</p></body></html>", None))
         self.ManningCriticaLabelVelocidadCritica.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Velocidad cr\u00edtica (v<span style=\" vertical-align:sub;\">c</span>)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -10454,7 +11961,7 @@ class Ui_MainWindow(object):
         self.ManningCriticaLabelFieldVelocidadCritica.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.ManningCriticaLabelFieldVelocidadCritica.setText("")
-        self.ManningCriticaLabelFieldVelocidadCritica.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros/segundos]", None))
+        self.ManningCriticaLabelFieldVelocidadCritica.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m/s]", None))
         self.groupBox_Propiedades_7.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
         self.ManningCriticaTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
         self.ManningCriticaTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
@@ -10462,11 +11969,11 @@ class Ui_MainWindow(object):
         self.ManningCriticaBotonReiniciar.setText("")
         self.ManningCriticaLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (D)", None))
         self.ManningCriticaLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"Caudal (Q)", None))
-        self.ManningCriticaComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.ManningCriticaComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.ManningCriticaComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.ManningCriticaComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
-        self.ManningCriticaLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.ManningCriticaComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
+        self.ManningCriticaLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
         self.ManningCriticaLabelBase.setText(QCoreApplication.translate("MainWindow", u"Base (b)", None))
 #if QT_CONFIG(tooltip)
         self.ManningCriticaFieldPendienteLateral2.setToolTip("")
@@ -10474,21 +11981,21 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningCriticaFieldPendienteLateral2.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningCriticaFieldPendienteLateral2.setText("")
+        self.ManningCriticaFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningCriticaFieldPendienteLateral2.setPlaceholderText("")
-        self.ManningCriticaComboBoxPendientaLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.ManningCriticaComboBoxPendientaLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.ManningCriticaComboBoxPendientaLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.ManningCriticaComboBoxPendientaLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.ManningCriticaComboBoxPendientaLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.ManningCriticaComboBoxPendientaLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.ManningCriticaComboBoxPendientaLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.ManningCriticaLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
+        self.ManningCriticaComboBoxPendientaLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.ManningCriticaLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.ManningCriticaFieldCaudal.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.ManningCriticaFieldCaudal.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningCriticaFieldCaudal.setText("")
+        self.ManningCriticaFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningCriticaFieldCaudal.setPlaceholderText("")
         self.ManningCriticaComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.ManningCriticaComboBoxDiametro.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10508,7 +12015,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningCriticaFieldBase.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.ManningCriticaFieldBase.setText("")
+        self.ManningCriticaFieldBase.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningCriticaFieldBase.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.ManningCriticaFieldPendienteLateral.setToolTip("")
@@ -10516,20 +12023,20 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningCriticaFieldPendienteLateral.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningCriticaFieldPendienteLateral.setText("")
+        self.ManningCriticaFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningCriticaFieldPendienteLateral.setPlaceholderText("")
-        self.ManningCriticaComboBoxPendientaLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.ManningCriticaComboBoxPendientaLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.ManningCriticaComboBoxPendientaLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.ManningCriticaComboBoxPendientaLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.ManningCriticaComboBoxPendientaLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.ManningCriticaComboBoxPendientaLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.ManningCriticaComboBoxPendientaLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.ManningCriticaComboBoxPendientaLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.ManningCriticaFieldDiametro.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.ManningCriticaFieldDiametro.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningCriticaFieldDiametro.setText("")
+        self.ManningCriticaFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningCriticaFieldDiametro.setPlaceholderText("")
         self.ManningCriticaLabelVelocidad.setText(QCoreApplication.translate("MainWindow", u"Velocidad (v)", None))
 #if QT_CONFIG(tooltip)
@@ -10538,7 +12045,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningCriticaFieldVelocidad.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningCriticaFieldVelocidad.setText("")
+        self.ManningCriticaFieldVelocidad.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningCriticaFieldVelocidad.setPlaceholderText("")
         self.ManningCriticaComboBoxVelocidad.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros/segundos", None))
 
@@ -10563,7 +12070,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.ManningPendienteFieldPendienteLateral.setText("")
+        self.ManningPendienteFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningPendienteFieldPendienteLateral.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.ManningPendienteFieldNumeManning.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
@@ -10575,7 +12082,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.ManningPendienteFieldNumeManning.setText("")
+        self.ManningPendienteFieldNumeManning.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningPendienteFieldNumeManning.setPlaceholderText("")
         self.ManningPendienteComboBoxNumManning.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
         self.ManningPendienteComboBoxNumManning.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
@@ -10591,7 +12098,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningPendienteFieldDiametro.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.ManningPendienteFieldDiametro.setText("")
+        self.ManningPendienteFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningPendienteFieldDiametro.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.ManningPendienteFieldAncho.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
@@ -10599,7 +12106,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningPendienteFieldAncho.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.ManningPendienteFieldAncho.setText("")
+        self.ManningPendienteFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningPendienteFieldAncho.setPlaceholderText("")
         self.ManningPendienteComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.ManningPendienteComboBoxDiametro.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10664,8 +12171,8 @@ class Ui_MainWindow(object):
         self.ManningUniformeComboBoxBase.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.ManningUniformeComboBoxBase.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.ManningUniformeLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
-        self.ManningUniformeLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
+        self.ManningUniformeLabelPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral izquierda</p></body></html>", None))
+        self.ManningUniformeLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n lateral derecha</p></body></html>", None))
         self.ManningUniformeComboBoxDiametro.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.ManningUniformeComboBoxDiametro.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
         self.ManningUniformeComboBoxDiametro.setItemText(2, QCoreApplication.translate("MainWindow", u"Metros", None))
@@ -10678,20 +12185,20 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldPendienteLateral2.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldPendienteLateral2.setText("")
+        self.ManningUniformeFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldPendienteLateral2.setPlaceholderText("")
-        self.ManningUniformeComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.ManningUniformeComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.ManningUniformeComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.ManningUniformeComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.ManningUniformeComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.ManningUniformeComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.ManningUniformeComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.ManningUniformeComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.ManningUniformeFieldDiametro.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldDiametro.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldDiametro.setText("")
+        self.ManningUniformeFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldDiametro.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.ManningUniformeFieldCaudal.setToolTip("")
@@ -10699,7 +12206,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldCaudal.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldCaudal.setText("")
+        self.ManningUniformeFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldCaudal.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.ManningUniformeFieldInclinacion.setToolTip("")
@@ -10707,15 +12214,15 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldInclinacion.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldInclinacion.setText("")
+        self.ManningUniformeFieldInclinacion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldInclinacion.setPlaceholderText("")
         self.ManningUniformeLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"Caudal (Q)", None))
         self.ManningUniformeLabelBase.setText(QCoreApplication.translate("MainWindow", u"Base (b)", None))
         self.ManningUniformeLabelInclinacion.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n del canal (S<span style=\" vertical-align:sub;\">0</span>)</p></body></html>", None))
-        self.ManningUniformeComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.ManningUniformeComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.ManningUniformeComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.ManningUniformeComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.ManningUniformeComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.ManningUniformeLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (D)", None))
 #if QT_CONFIG(tooltip)
         self.ManningUniformeFieldPendienteLateral.setToolTip("")
@@ -10723,20 +12230,20 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldPendienteLateral.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldPendienteLateral.setText("")
+        self.ManningUniformeFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldPendienteLateral.setPlaceholderText("")
-        self.ManningUniformeComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.ManningUniformeComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.ManningUniformeComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.ManningUniformeComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.ManningUniformeComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.ManningUniformeComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.ManningUniformeComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.ManningUniformeComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.ManningUniformeFieldBase.setToolTip("")
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldBase.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldBase.setText("")
+        self.ManningUniformeFieldBase.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldBase.setPlaceholderText("")
         self.ManningUniformeLabelNumManning.setText(QCoreApplication.translate("MainWindow", u"N\u00famero de Manning (n)", None))
 #if QT_CONFIG(tooltip)
@@ -10745,7 +12252,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.ManningUniformeFieldNumManning.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.ManningUniformeFieldNumManning.setText("")
+        self.ManningUniformeFieldNumManning.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.ManningUniformeFieldNumManning.setPlaceholderText("")
         self.ManningUniformeComboBoxInclinacion.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
         self.ManningUniformeComboBoxInclinacion.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
@@ -10766,7 +12273,7 @@ class Ui_MainWindow(object):
         self.geoCFieldAngulo_4.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.geoCFieldAngulo_4.setText("")
-        self.geoCFieldAngulo_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.geoCFieldAngulo_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.checkBox_3.setText(QCoreApplication.translate("MainWindow", u"Sistema Anglosaj\u00f3n\n"
 "de Unidades", None))
 #if QT_CONFIG(whatsthis)
@@ -10783,7 +12290,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.FGVFieldAncho.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldAncho.setText("")
+        self.FGVFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldAncho.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.FGVFieldPendienteLateral2.setToolTip("")
@@ -10795,7 +12302,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldPendienteLateral2.setText("")
+        self.FGVFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldPendienteLateral2.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.FGVFieldProfundidad2.setToolTip("")
@@ -10807,7 +12314,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldProfundidad2.setText("")
+        self.FGVFieldProfundidad2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldProfundidad2.setPlaceholderText("")
         self.FGVLabelProfundidad1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -10820,7 +12327,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldInclinacion.setText("")
+        self.FGVFieldInclinacion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldInclinacion.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.FGVFieldPendienteLateral.setToolTip("")
@@ -10828,30 +12335,30 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.FGVFieldPendienteLateral.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldPendienteLateral.setText("")
+        self.FGVFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldPendienteLateral.setPlaceholderText("")
         self.FGVComboBoxInclinacion.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
         self.FGVComboBoxInclinacion.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
         self.FGVComboBoxInclinacion.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
 
         self.FGVComboBoxInclinacion.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.FGVComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.FGVComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.FGVComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.FGVComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
-        self.FGVComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.FGVComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.FGVComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.FGVComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
+        self.FGVComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.FGVComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.FGVComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.FGVComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.FGVComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
         self.FGVLabelInclinacion.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n del canal (S<span style=\" vertical-align:sub;\">0</span>)</p></body></html>", None))
         self.FGVLabelDiametro.setText(QCoreApplication.translate("MainWindow", u"Di\u00e1metro (D)", None))
         self.FGVLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Caudal (Q)</p></body></html>", None))
-        self.FGVComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.FGVComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.FGVComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.FGVComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.FGVComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.FGVComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.FGVComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.FGVComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.FGVFieldCaudal.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -10862,7 +12369,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldCaudal.setText("")
+        self.FGVFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldCaudal.setPlaceholderText("")
         self.FGVComboBoxProfundidad2.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.FGVComboBoxProfundidad2.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -10887,7 +12394,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldProfundidad1.setText("")
+        self.FGVFieldProfundidad1.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldProfundidad1.setPlaceholderText("")
         self.FGVLabelPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pendiente lateral (m<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
         self.FGVComboBoxAncho.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
@@ -10907,7 +12414,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.FGVFieldDiametro.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldDiametro.setText("")
+        self.FGVFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldDiametro.setPlaceholderText("")
         self.FGVLabelManning.setText(QCoreApplication.translate("MainWindow", u"N\u00famero de Manning (n)", None))
 #if QT_CONFIG(tooltip)
@@ -10920,7 +12427,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldNumManning.setText("")
+        self.FGVFieldNumManning.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVFieldNumManning.setPlaceholderText("")
         self.RHAnalisisComboBoxPendienteLateral_5.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
 
@@ -10936,7 +12443,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVFieldDistanciaX.setText(QCoreApplication.translate("MainWindow", u"[metros]", None))
+        self.FGVFieldDistanciaX.setText(QCoreApplication.translate("MainWindow", u"[m]", None))
         self.FGVFieldDistanciaX.setPlaceholderText("")
         self.FGVLabelDistanciaX.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Distancia (x)</p></body></html>", None))
         self.RHAnalisisTextoCalcular_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcula la longitud que requiere </p><p>el flujo para pasar de una </p><p>profundidad a otra.</p><p><br/></p></body></html>", None))
@@ -10945,13 +12452,13 @@ class Ui_MainWindow(object):
         self.FGVTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
         self.FGVBotonCalcular.setText("")
         self.FGVBotonReiniciar.setText("")
-        self.tabFGV.setTabText(self.tabFGV.indexOf(self.rhLongitud), QCoreApplication.translate("MainWindow", u"Longitud", None))
+        self.tabFGV.setTabText(self.tabFGV.indexOf(self.rhLongitud), QCoreApplication.translate("MainWindow", u"Integral", None))
         self.RHAnalisisTextoCalcular_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\">Calcula el perfil de un flujo </p><p align=\"justify\">gradualmente variado a partir </p><p align=\"justify\">de una aproximaci\u00f3n de </p><p align=\"justify\">diferencias finitas. <br/></p></body></html>", None))
         self.groupBox_Propiedades_22.setTitle(QCoreApplication.translate("MainWindow", u"Propiedades", None))
 #if QT_CONFIG(whatsthis)
         self.FGVPasoDFieldAncho.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldAncho.setText("")
+        self.FGVPasoDFieldAncho.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldAncho.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.FGVPasoDFieldCaudal.setToolTip("")
@@ -10963,7 +12470,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldCaudal.setText("")
+        self.FGVPasoDFieldCaudal.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldCaudal.setPlaceholderText("")
         self.FGVPasoDLabelProfundidadObjetivo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad objetivo (y<span style=\" vertical-align:sub;\">2</span>)</p></body></html>", None))
         self.FGVPasoDLabelAncho.setText(QCoreApplication.translate("MainWindow", u"Ancho (b)", None))
@@ -10981,7 +12488,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldNumManning.setText("")
+        self.FGVPasoDFieldNumManning.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldNumManning.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.FGVPasoDFieldPendienteLateral.setToolTip("")
@@ -10989,7 +12496,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.FGVPasoDFieldPendienteLateral.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p/></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldPendienteLateral.setText("")
+        self.FGVPasoDFieldPendienteLateral.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldPendienteLateral.setPlaceholderText("")
         self.FGVPasoDComboBoxInclinacion.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
         self.FGVPasoDComboBoxInclinacion.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
@@ -11001,7 +12508,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(whatsthis)
         self.FGVPasoDFieldDiametro.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldDiametro.setText("")
+        self.FGVPasoDFieldDiametro.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldDiametro.setPlaceholderText("")
         self.FGVPasoDComboBoxAncho.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.FGVPasoDComboBoxAncho.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -11009,10 +12516,10 @@ class Ui_MainWindow(object):
         self.FGVPasoDComboBoxAncho.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.FGVPasoDComboBoxAncho.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.FGVPasoDComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.FGVPasoDComboBoxCaudal.setItemText(0, QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
         self.FGVPasoDComboBoxCaudal.setItemText(1, QCoreApplication.translate("MainWindow", u"Litros/segundos", None))
 
-        self.FGVPasoDComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros c\u00fabicos/segundos", None))
+        self.FGVPasoDComboBoxCaudal.setCurrentText(QCoreApplication.translate("MainWindow", u"Metros\u00b3/segundos", None))
 #if QT_CONFIG(tooltip)
         self.FGVPasoDFieldProfundidadControl.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -11023,16 +12530,16 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldProfundidadControl.setText("")
+        self.FGVPasoDFieldProfundidadControl.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldProfundidadControl.setPlaceholderText("")
         self.FGVPasoDLabelProfundidadControl.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Profundidad de control (y<span style=\" vertical-align:sub;\">1</span>)</p></body></html>", None))
         self.FGVPasoDLabelInclinacion.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Inclinaci\u00f3n del canal (S<span style=\" vertical-align:sub;\">0</span>)</p></body></html>", None))
         self.FGVPasoDLabelCaudal.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Caudal (Q)</p></body></html>", None))
-        self.FGVPasoDComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.FGVPasoDComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.FGVPasoDComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.FGVPasoDComboBoxPendienteLateral2.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.FGVPasoDComboBoxPendienteLateral2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.FGVPasoDComboBoxPendienteLateral2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.FGVPasoDComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.FGVPasoDComboBoxPendienteLateral2.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.FGVPasoDFieldProfundidadObjetivo.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -11043,7 +12550,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldProfundidadObjetivo.setText("")
+        self.FGVPasoDFieldProfundidadObjetivo.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldProfundidadObjetivo.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.FGVPasoDFieldPendienteLateral2.setToolTip("")
@@ -11055,7 +12562,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldPendienteLateral2.setText("")
+        self.FGVPasoDFieldPendienteLateral2.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldPendienteLateral2.setPlaceholderText("")
         self.FGVPasoDComboBoxPendienteControl.setItemText(0, QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
         self.FGVPasoDComboBoxPendienteControl.setItemText(1, QCoreApplication.translate("MainWindow", u"Cent\u00edmetros", None))
@@ -11076,11 +12583,11 @@ class Ui_MainWindow(object):
         self.FGVPasoDComboBoxDiametro.setItemText(3, QCoreApplication.translate("MainWindow", u"Pulgadas", None))
 
         self.FGVPasoDComboBoxDiametro.setCurrentText(QCoreApplication.translate("MainWindow", u"Mil\u00edmetros", None))
-        self.FGVPasoDComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"Adimensional", None))
-        self.FGVPasoDComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"Grados", None))
-        self.FGVPasoDComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"Radianes", None))
+        self.FGVPasoDComboBoxPendienteLateral.setItemText(0, QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
+        self.FGVPasoDComboBoxPendienteLateral.setItemText(1, QCoreApplication.translate("MainWindow", u"\u03b1 - Grados", None))
+        self.FGVPasoDComboBoxPendienteLateral.setItemText(2, QCoreApplication.translate("MainWindow", u"\u03b1 - Radianes", None))
 
-        self.FGVPasoDComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"Adimensional", None))
+        self.FGVPasoDComboBoxPendienteLateral.setCurrentText(QCoreApplication.translate("MainWindow", u"m - Adimensional", None))
 #if QT_CONFIG(tooltip)
         self.FGVPasoDFieldInclinacion.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -11091,7 +12598,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldInclinacion.setText("")
+        self.FGVPasoDFieldInclinacion.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldInclinacion.setPlaceholderText("")
         self.FGVPasoDTextoReiniciar.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Reiniciar</p></body></html>", None))
         self.FGVPasoDTextoCalcular.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Calcular</p></body></html>", None))
@@ -11111,7 +12618,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldPasos.setText("")
+        self.FGVPasoDFieldPasos.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldPasos.setPlaceholderText("")
         self.FGVPasoDLabelDatum.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Datum</p></body></html>", None))
 #if QT_CONFIG(tooltip)
@@ -11124,9 +12631,10 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Allerta'; font-size:12pt; font-weight:650; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.FGVPasoDFieldDatum.setText("")
+        self.FGVPasoDFieldDatum.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.FGVPasoDFieldDatum.setPlaceholderText("")
         self.tabFGV.setTabText(self.tabFGV.indexOf(self.rhPasoDirecto), QCoreApplication.translate("MainWindow", u"Paso directo", None))
+        self.tabFGV.setTabText(self.tabFGV.indexOf(self.tab_5), QCoreApplication.translate("MainWindow", u"Paso est\u00e1ndar", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
