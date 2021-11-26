@@ -18,21 +18,22 @@ import sys
 import os
 import platform
 from aplicaciones.Aplicacion import *
+from aplicaciones.ComprobaciondeDiseno import *
+from macros_graficas.PasoEstandar import *
 
-# IMPORT / GUI AND MODULES AND WIDGETS
-# ///////////////////////////////////////////////////////////////
+from PySide6.QtWidgets import QFileDialog
+
 from modules import *
 from widgets import *
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
-# SET AS GLOBAL WIDGETS
-# ///////////////////////////////////////////////////////////////
 widgets = None
+
 cambioUnidadesLongitud = {"Milímetros": "mm" , "Centímetros": "cm", "Metros": "m", "Pulgadas": "in"}
 cambioUnidadesAngulo = {"Adimensional":"m/m", "Grados": "grados", "Radianes": "radianes"}
 
 parametrosGrafica = ''
-
+ruta = ''
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -49,20 +50,14 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         Settings.ENABLE_CUSTOM_TITLE_BAR = True
 
-        # APP NAME
-        # ///////////////////////////////////////////////////////////////
         title = "HidrApp Uniandes"
         description = "La forma más fácil de diseñar canales y estructuras hidráulicas"
-        # APPLY TEXTS
+
         self.setWindowTitle(title)
         widgets.titleRightInfo.setText(description)
 
-        # TOGGLE MENU
-        # ///////////////////////////////////////////////////////////////
         widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, True))
 
-        # SET UI DEFINITIONS
-        # ///////////////////////////////////////////////////////////////
         UIFunctions.uiDefinitions(self)
 
         # QTableWidget PARAMETERS
@@ -113,6 +108,12 @@ class MainWindow(QMainWindow):
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
 
+
+
+
+
+
+
         # ///////////////////////////////////////////////////////////////
         # GEOMETRIA
 
@@ -130,6 +131,33 @@ class MainWindow(QMainWindow):
         # Sección Froude
         widgets.geoFroudeBotonCalcular.clicked.connect(self.geometriaFroude)
         widgets.geoFroudeBotonReiniciar.clicked.connect(self.reiniciarCamposGeoFroude)
+
+
+
+
+        # ///////////////////////////////////////////////////////////////
+        # CONSERVACIÓN DE ENERGÍA
+
+        # Menú principal
+        widgets.botonMenuConservacionE.clicked.connect(self.pagConservacionESeleccionada)
+        
+        # Sección Caudal
+        widgets.CECaudalBotonCalcular.clicked.connect(self.conservacionEnergiaCaudal)
+        #widgets.CECaudalBotonReiniciar.clicked.connect(self.reiniciarCamposConservacionEnergiaCaudal)
+
+        # Sección Profundidad y2
+        widgets.CEnergiaY2BotonCalcular.clicked.connect(self.conservacionEnergiaY2)
+        #widgets.CEnergiaY2BotonReiniciar.clicked.connect(self.reiniciarCamposConservacionEnergiaY2)
+
+        # Sección Máximo Z
+        widgets.CEnergiaZBotonCalcular.clicked.connect(self.conservacionEnergiaMaxZ)
+        #widgets.CEnergiaZBotonReiniciar.clicked.connect(self.reiniciarCamposConservacionEnergiaMaxZ)
+
+        # Sección Mínimo B
+        widgets.CEnergiaBBotonCalcular.clicked.connect(self.conservacionEnergiaMinB)
+        #widgets.CEnergiaBBotonReiniciar.clicked.connect(self.reiniciarCamposConservacionEnergiaMinB)
+
+
 
         # ///////////////////////////////////////////////////////////////
         # CONSERVACION MOMENTUM
@@ -154,8 +182,48 @@ class MainWindow(QMainWindow):
         widgets.RHCompuertasBotonReiniciar.clicked.connect(self.reiniciarCamposRHCompuertas)
 
 
+
+        # ///////////////////////////////////////////////////////////////
+        # COMPROBACIÓN DE DISEÑO
+
+        # Menú principal
+        widgets.botonMenuComprobacion.clicked.connect(self.pagComprobacionSeleccionada)
+        
+        # Sección Comprobacion
+        widgets.ComprobacionBotonCalcular.clicked.connect(self.comprobacionDiseno)
+        widgets.ComprobacionBotonReiniciar.clicked.connect(self.reiniciarCamposComprobacion)
+
+
+
+        # ///////////////////////////////////////////////////////////////
+        # DISEÑO
+
+        # Menú principal
+        widgets.botonMenuDiseno.clicked.connect(self.pagDisenoSeleccionada)
+        
+        # Sección Tuberias simples
+        widgets.DisenoBotonCalcular.clicked.connect(self.disenoTuberiasSimples)
+        widgets.DisenoBotonReiniciar.clicked.connect(self.reiniciarCamposDiseno)
+
+
+
         # ///////////////////////////////////////////////////////////////
         # ECUACIÓN DE MANNING
+
+        # Menú principal
+        widgets.botonMenuManning.clicked.connect(self.pagManningSeleccionada)
+
+        # Sección Condición crítica
+        widgets.ManningCriticaBotonCalcular.clicked.connect(self.ManningCondicionCritica)
+        widgets.ManningCriticaBotonReiniciar.clicked.connect(self.reiniciarCamposManningCondicionCritica)
+
+        # Sección Pendiente crítica
+        widgets.ManningPendienteBotonCalcular.clicked.connect(self.ManningPendienteCritica)
+        widgets.ManningPendienteBotonReiniciar.clicked.connect(self.reiniciarCamposManningPendienteCritica)
+
+        # Sección Flujo Uniforme
+        widgets.ManningUniformeBotonCalcular.clicked.connect(self.ManningFlujoUniforme)
+        widgets.ManningUniformeBotonReiniciar.clicked.connect(self.reiniciarCamposManningFlujoUniforme)
 
 
         # ///////////////////////////////////////////////////////////////
@@ -163,46 +231,21 @@ class MainWindow(QMainWindow):
 
         # Menú principal
         widgets.botonMenuFGV.clicked.connect(self.pagFGVSeleccionada)
+
+        # Sección Integral
         widgets.FGVBotonCalcular.clicked.connect(self.FGVIntegracion)
+
+        # Sección Método de paso directo
         widgets.FGVPasoDBotonCalcular.clicked.connect(self.FGVPasoDirecto)
-        widgets.FGVPasoDBotonDescargarCSV.clicked.connect(self.RGVTxt_pasoDirecto)
-        widgets.FGVPasoDBotonDescargarPerfil.clicked.connect(self.RGVGrafica_pasoDirecto)
+        widgets.FGVPasoDBotonDescargarCSV.clicked.connect(self.FGVPasoDirectoCSV)
+        widgets.FGVPasoDBotonDescargarPerfil.clicked.connect(self.FGVPasoDirectoGrafica)
 
+        # Sección Método de paso estándar
+        #widgets.FGVPasoEBotonCalcular.clicked.connect(self.FGVPasoDirecto)
+        #widgets.FGVPasoEBotonDescargarCSV.clicked.connect(self.FGVPasoDirectoCSV)
+        #widgets.FGVPasoEBotonDescargarPerfil.clicked.connect(self.FGVPasoDirectoGrafica)
 
-
-
-
-    # BUTTONS CLICK
-    # Post here your functions for clicked buttons
-    # //////////////////////////////////////////////////////////////
-
-    def buttonClick(self):
-        # GET BUTTON CLICKED
-        btn = self.sender()
-        btnName = btn.objectName()
-
-        # SHOW HOME PAGE
-        if btnName == "btn_home":
-            widgets.stackedWidget.setCurrentWidget(widgets.home)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-
-        # SHOW WIDGETS PAGE
-        if btnName == "btn_widgets":
-            widgets.stackedWidget.setCurrentWidget(widgets.widgets)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-
-        # SHOW NEW PAGE
-        if btnName == "btn_new":
-            widgets.stackedWidget.setCurrentWidget(widgets.menu_principal) # SET PAGE
-            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
-
-   
-
-
-
+    
 
     # ///////////////////////////////////////////////////////////////
     # MENÚ PRINCIPAL
@@ -210,11 +253,21 @@ class MainWindow(QMainWindow):
     def pagGeometriaSeleccionada (self):
         widgets.stackedWidget.setCurrentWidget(widgets.pagina_geometria)
 
+    def pagConservacionESeleccionada (self):
+        widgets.stackedWidget.setCurrentWidget(widgets.pagina_conservacionE)
+
     def pagConservacionMSeleccionada (self):
         widgets.stackedWidget.setCurrentWidget(widgets.pagina_conservacionM)
+
+    def pagComprobacionSeleccionada (self):
+        widgets.stackedWidget.setCurrentWidget(widgets.pagina_comprobacion)
     
+    def pagDisenoSeleccionada (self):
+        widgets.stackedWidget.setCurrentWidget(widgets.pagina_diseno)
+
     def pagFGVSeleccionada (self):
         widgets.stackedWidget.setCurrentWidget(widgets.pagina_FGV)
+
 
     # ///////////////////////////////////////////////////////////////
     # GEOMETRÍA
@@ -330,7 +383,7 @@ class MainWindow(QMainWindow):
         ub = cambioUnidadesLongitud[ub]
 
         uQ = widgets.geoFroudeComboBoxCaudal.currentText()
-        uQ = "L" if "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if "Litros/segundos" else "Metros³/segundos"
 
         ud = widgets.geoFroudeComboBoxDiametro.currentText()
         ud = cambioUnidadesLongitud[ud]
@@ -356,6 +409,232 @@ class MainWindow(QMainWindow):
         widgets.geoFroudeComboBoxDiametro.setCurrentIndex(0)
 
         widgets.geoFroudeFieldFroude.setText("")
+
+
+
+
+    # ///////////////////////////////////////////////////////////////
+    # CONSERVACIÓN DE ENERGÍA
+
+    def conservacionEnergiaCaudal(self):
+        b1 =  float (widgets.CEnergiaCaudalFieldAnchoSec1.text())
+        m11 =  float (widgets.CEnergiaCaudalFieldPendienteLateralSec1.text())
+        m12 =  float (widgets.CEnergiaCaudalFieldPendienteLateral2Sec1.text())
+        y1 =  float (widgets.CEnergiaCaudalFieldProfundidadSec1.text())
+
+        ub1 = widgets.CEnergiaCaudalComboBoxAnchoSec1.currentText()
+        ub1 = cambioUnidadesLongitud[ub1]
+
+        um11 = widgets.CEnergiaCaudalComboBoxPendienteLateralSec1.currentText().split(" - ")[1]
+        um11 = cambioUnidadesAngulo[um11]
+
+        um12 = widgets.CEnergiaCaudalComboBoxPendienteLateral2Sec1.currentText().split(" - ")[1]
+        um12 = cambioUnidadesAngulo[um12]
+
+        uy1 = widgets.CEnergiaCaudalComboBoxProfundidadSec1.currentText()
+        uy1 = cambioUnidadesLongitud[uy1]
+
+
+        b2 =  float (widgets.CEnergiaCaudalFieldAnchoSec2.text())
+        m21 =  float (widgets.CEnergiaCaudalFieldPendienteLateralSec2.text())
+        m22 =  float (widgets.CEnergiaCaudalFieldPendienteLateral2Sec2.text())
+        y2 =  float (widgets.CEnergiaCaudalFieldProfundidadSec2.text())
+
+        ub2 = widgets.CEnergiaCaudalComboBoxAnchoSec2.currentText()
+        ub1 = cambioUnidadesLongitud[ub2]
+
+        um21 = widgets.CEnergiaCaudalComboBoxPendienteLateralSec2.currentText().split(" - ")[1]
+        um21 = cambioUnidadesAngulo[um21]
+
+        um22 = widgets.CEnergiaCaudalComboBoxPendienteLateral2Sec2.currentText().split(" - ")[1]
+        um22 = cambioUnidadesAngulo[um22]
+
+        uy2 = widgets.CEnergiaCaudalComboBoxProfundidadSec2.currentText()
+        uy2 = cambioUnidadesLongitud[uy2]
+
+        z =  float (widgets.CEnergiaCaudalFieldEscalon.text())
+        
+        uz = widgets.CEnergiaCaudalComboBoxEscalon.currentText()
+        uz = cambioUnidadesLongitud[uz]
+
+        v, Q = conservacionE(y1,m11,m12,b1,None,y2,m21,m22,b2,uy1,uy2,um11,None,ub1,ub2,None,None,z,"caudal")
+
+        widgets.CEnergiaCaudalFieldVelocidad.setText(str(round(v, 3)) + " m/s")
+        widgets.CEEnergiaCaudalFieldCaudal.setText(str(round(Q, 3)) + " m³/s")
+
+
+    def conservacionEnergiaY2(self):
+        b1 =  float (widgets.CEnergiaY2FieldAnchoSec1.text())
+        m11 =  float (widgets.CEnergiaY2FieldPendienteLateralSec1.text())
+        m12 =  float (widgets.CEnergiaY2FieldPendienteLateral2Sec1.text())
+        y1 =  float (widgets.CEnergiaY2FieldProfundidadSec1.text())
+
+        ub1 = widgets.CEnergiaY2ComboBoxAnchoSec1.currentText()
+        ub1 = cambioUnidadesLongitud[ub1]
+
+        um11 = widgets.CEnergiaY2ComboBoxPendienteLateralSec1.currentText().split(" - ")[1]
+        um11 = cambioUnidadesAngulo[um11]
+
+        um12 = widgets.CEnergiaY2ComboBoxPendienteLateral2Sec1.currentText().split(" - ")[1]
+        um12 = cambioUnidadesAngulo[um12]
+
+        uy1 = widgets.CEnergiaY2ComboBoxProfundidadSec1.currentText()
+        uy1 = cambioUnidadesLongitud[uy1]
+
+
+        b2 =  float (widgets.CEnergiaY2FieldAnchoSec2.text())
+        m21 =  float (widgets.CEnergiaY2FieldPendienteLateralSec2.text())
+        m22 =  float (widgets.CEnergiaY2FieldPendienteLateral2Sec2.text())
+
+        ub2 = widgets.CEnergiaY2ComboBoxAnchoSec2.currentText()
+        ub1 = cambioUnidadesLongitud[ub2]
+
+        um21 = widgets.CEnergiaY2ComboBoxPendienteLateralSec2.currentText().split(" - ")[1]
+        um21 = cambioUnidadesAngulo[um21]
+
+        um22 = widgets.CEnergiaY2ComboBoxPendienteLateral2Sec2.currentText().split(" - ")[1]
+        um22 = cambioUnidadesAngulo[um22]
+
+
+        z =  float (widgets.CEnergiaY2FieldEscalon.text())
+        
+        uz = widgets.CEnergiaY2ComboBoxEscalon.currentText()
+        uz = cambioUnidadesLongitud[uz]
+
+
+        uQ = widgets.CEnergiaY2ComboBoxCaudal.currentText()
+
+        if uQ == "No aplica":
+            v1 = float (widgets.CEnergiaY2FieldVelocidad.text())
+        else:
+            Q = float (widgets.CEnergiaY2FieldCaudal.text())
+            uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+
+
+        y2_raiz1, y2_raiz2, y2_raiz3, yc, Ec, y1n_raiz1, y1n_raiz2, y1n_raiz3, represamiento = conservacionE(y1,m11,m12,b1,Q,None,m21,m22,b2,uy1,None,um11,uQ,ub1,ub2,v1,None,z,"y")
+
+        widgets.CEnergiaY2LabelProfundidad2Raiz1.setText(str(round(y2_raiz1, 3)) + " m")
+        widgets.CEnergiaY2LabelProfundidad2Raiz2.setText(str(round(y2_raiz2, 3)) + " m")
+        widgets.CEnergiaY2LabelProfundidad2Raiz3.setText(str(round(y2_raiz3, 3)) + " m")
+
+        if yc:
+            widgets.CEnergiaY2FieldYc.setText(str(round(yc, 3)) + " m")
+            widgets.CEnergiaY2FieldEc.setText(str(round(Ec, 3)) + " m")
+
+            widgets.CEnergiaY2LabelProfundidad1Raiz1.setText(str(round(y1n_raiz1, 3)) + " m")
+            widgets.CEnergiaY2LabelProfundidad1Raiz2.setText(str(round(y1n_raiz2, 3)) + " m")
+            widgets.CEnergiaY2LabelProfundidad1Raiz3.setText(str(round(y1n_raiz3, 3)) + " m")           
+
+            widgets.CEnergiaY2FieldRepresamiento.setText(str(round(represamiento, 3)) + " m")  
+
+        else:
+            
+            widgets.CEnergiaY2FieldYc.setText("No aplica")
+            widgets.CEnergiaY2FieldEc.setText("No aplica")
+
+            widgets.CEnergiaY2LabelProfundidad1Raiz1.setText("No aplica")
+            widgets.CEnergiaY2LabelProfundidad1Raiz2.setText("No aplica")
+            widgets.CEnergiaY2LabelProfundidad1Raiz3.setText("No aplica")           
+
+            widgets.CEnergiaY2FieldRepresamiento.setText("No aplica") 
+
+
+    def conservacionEnergiaMaxZ (self):
+        
+        b1 =  float (widgets.CEnergiaZFieldAnchoSec1.text())
+        m11 =  float (widgets.CEnergiaZFieldPendienteLateralSec1.text())
+        m12 =  float (widgets.CEnergiaZFieldPendienteLateral2Sec1.text())
+        y1 =  float (widgets.CEnergiaZFieldProfundidad1Sec1.text())
+
+        ub1 = widgets.CEnergiaZComboBoxAnchoSec1.currentText()
+        ub1 = cambioUnidadesLongitud[ub1]
+
+        um11 = widgets.CEnergiaZComboBoxPendienteLateralSec1.currentText().split(" - ")[1]
+        um11 = cambioUnidadesAngulo[um11]
+
+        um12 = widgets.CEnergiaZComboBoxPendienteLateral2Sec1.currentText().split(" - ")[1]
+        um12 = cambioUnidadesAngulo[um12]
+
+        uy1 = widgets.CEnergiaZComboBoxProfundidad1Sec1.currentText()
+        uy1 = cambioUnidadesLongitud[uy1]
+
+        b2 =  float (widgets.CEnergiaZFieldAnchoSec2.text())
+        m21 =  float (widgets.CEnergiaZFieldPendienteLateralSec2.text())
+        m22 =  float (widgets.CEnergiaZFieldPendienteLateral2Sec2.text())
+
+        ub2 = widgets.CEnergiaZComboBoxAnchoSec2.currentText()
+        ub2 = cambioUnidadesLongitud[ub2]
+
+        um21 = widgets.CEnergiaZComboBoxPendienteLateralSec2.currentText().split(" - ")[1]
+        um21 = cambioUnidadesAngulo[um21]
+
+        um22 = widgets.CEnergiaZComboBoxPendienteLateral2Sec2.currentText().split(" - ")[1]
+        um22 = cambioUnidadesAngulo[um22]
+
+        uQ = widgets.CEnergiaZComboBoxCaudal.currentText()
+
+        if uQ == "No aplica":
+            v1 = float (widgets.CEnergiaZFieldVelocidad.text())
+        else:
+            Q = float (widgets.CEnergiaZFieldCaudal.text())
+            uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+
+        z, yc = conservacionE(y1,m11,m12,b1,Q,None,m21,m22,b2,uy1,None,um11,uQ,ub1,ub2,v1,None,None,"maximoZ")
+
+        widgets.CEnergiaZFieldZ.setText(str(round(z, 3)) + " m")
+        widgets.CEnergiaZFieldYc.setText(str(round(yc, 3)) + " m")
+
+
+    def conservacionEnergiaMinB (self):
+
+        
+        b1 =  float (widgets.CEnergiaBFieldAnchoSec1.text())
+        m11 =  float (widgets.CEnergiaBFieldPendienteLateralSec1.text())
+        m12 =  float (widgets.CEnergiaBFieldPendienteLateral2Sec1.text())
+        y1 =  float (widgets.CEnergiaBFieldProfundidadSec1.text())
+
+        ub1 = widgets.CEnergiaBComboBoxAnchoSec1.currentText()
+        ub1 = cambioUnidadesLongitud[ub1]
+
+        um11 = widgets.CEnergiaBComboBoxPendienteLateralSec1.currentText().split(" - ")[1]
+        um11 = cambioUnidadesAngulo[um11]
+
+        um12 = widgets.CEnergiaBComboBoxPendienteLateral2Sec1.currentText().split(" - ")[1]
+        um12 = cambioUnidadesAngulo[um12]
+
+        uy1 = widgets.CEnergiaBComboBoxProfundidad1Sec1.currentText()
+        uy1 = cambioUnidadesLongitud[uy1]
+
+        m21 =  float (widgets.CEnergiaBFieldPendienteLateralSec2.text())
+        m22 =  float (widgets.CEnergiaBFieldPendienteLateral2Sec2.text())
+
+        um21 = widgets.CEnergiaBComboBoxPendienteLateralSec2.currentText().split(" - ")[1]
+        um21 = cambioUnidadesAngulo[um21]
+
+        um22 = widgets.CEnergiaBComboBoxPendienteLateral2Sec2.currentText().split(" - ")[1]
+        um22 = cambioUnidadesAngulo[um22]
+
+        uQ = widgets.CEnergiaBComboBoxCaudal.currentText()
+
+        if uQ == "No aplica":
+            v1 = float (widgets.CEnergiaBFieldVelocidad.text())
+        else:
+            Q = float (widgets.CEnergiaBFieldCaudal.text())
+            uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+
+        
+        z =  float (widgets.CEnergiaBFieldEscalon.text())
+        
+        uz = widgets.CEnergiaBComboBoxEscalon.currentText()
+        uz = cambioUnidadesLongitud[uz]
+
+        E1, b2, yc = conservacionE(y1,m11,m12,b1,Q,None,m21,m22,None,uy1,None,um11,uQ,ub1,None,v1,None,z, "maximoB")
+
+        widgets.CEnergiaBFieldEnergia1.setText(str(round(E1, 3)) + " m")
+        widgets.CEnergiaBFieldAncho2.setText(str(round(b2, 3)) + " m")
+        widgets.CEnergiaBFieldYc.setText(str(round(yc, 3)) + " m")
+
+
 
     # ///////////////////////////////////////////////////////////////
     # CONSERVACIÓN DE MOMENTUM
@@ -386,7 +665,7 @@ class MainWindow(QMainWindow):
         uy1 = cambioUnidadesLongitud[uy1]
 
         uQ = widgets.RHAnalisisComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
 
 
         ul = widgets.RHAnalisisComboBoxLongitudInclinada.currentText()
@@ -458,18 +737,19 @@ class MainWindow(QMainWindow):
         uy = cambioUnidadesLongitud[uy]
 
         uQ = widgets.RHPropiedadesComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
         
         ud = widgets.RHPropiedadesComboBoxDiametro.currentText()
         ud = cambioUnidadesLongitud[ud]
-
-        opcionales, resultados = clasificacionResalto(Q,b,m1,m2,d,ud,um1,y,ub,uy,uQ)
+        
+        if d == 0: 
+            opcionales, resultados = clasificacionResalto(Q,b,m1,m2,d,ud,um1,y,ub,uy,uQ)
+            
         widgets.RHPropiedadesFieldFroude.setText(str(round(opcionales[0], 3)))
         widgets.RHPropiedadesFieldClasificacion.setText(resultados[0])
 
         Lr = longitudResalto(y,b,m1,m2,Q,d,uy,ub,uQ,ud,um1)
         widgets.RHPropiedadesFieldLongitud.setText(str(round(Lr, 3)) + " m")
-
     def reiniciarCamposRHPropiedades(self):
         widgets.RHPropiedadesFieldBase.setText(0)
         widgets.RHPropiedadesFieldProfundidad.setText(0) 
@@ -518,7 +798,7 @@ class MainWindow(QMainWindow):
         uyn = cambioUnidadesLongitud[uyn]
 
         uQ = widgets.RHTipoComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
 
         ui = widgets.RHTipoComboBoxInclinacion.currentText()
         ui = cambioUnidadesAngulo[ui]
@@ -582,7 +862,7 @@ class MainWindow(QMainWindow):
         ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.RHCompuertasComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
         
         uy2 = widgets.RHCompuertasComboBoxProfundidad2.currentText()
         uy2 = cambioUnidadesLongitud[uy2]
@@ -627,8 +907,115 @@ class MainWindow(QMainWindow):
         widgets.RHCompuertasFieldFuerza.setText("")
         widgets.RHCompuertasFieldFuerzaCompuerta.setText("")
 
+
+
+    # ///////////////////////////////////////////////////////////////
+    # COMPROBACIÓN DE DISEÑO
+    def comprobacionDiseno(self):
+        ynd =  float (widgets.AComprobacionFieldRelacionLlenado.text())
+        d =  float (widgets.BComprobacionFieldDiametro.text())
+        s0 =  float (widgets.CComprobacionFieldInclinacion.text())       
+        ks =  float (widgets.DComprobacionFieldRugosidad.text())
+        viscosidad =  float (widgets.EComprobacionFieldViscosidad.text())
+        g =  float (widgets.FComprobacionFieldGravedad.text())
+
+        ud = widgets.ComprobacionComboBoxDiametro.currentText()
+        ud = cambioUnidadesLongitud[ud]
+
+        us0 = widgets.ComprobacionComboBoxInclinacion.currentText()
+        us0 = cambioUnidadesAngulo[us0]
+        
+        #theta, T, A, Q, Fr, v, P, y, D, R 
+
+        widgets.ComprobacionFieldAngulo.setText(str(round(theta, 3)) + " radianes")
+        widgets.ComprobacionFieldAnchoSuperficial.setText(str(round(T, 3)) + " radianes")
+        widgets.ComprobacionFieldArea.setText(str(round(A, 3)) + " m²")
+        widgets.ComprobacionFieldCaudal.setText(str(round(Q, 3)) + " m³/s")
+        widgets.ComprobacionFieldFroude.setText(str(round(Fr, 3)))
+        widgets.ComprobacionFieldVelocidad.setText(str(round(v, 3)) + " m/s")
+        widgets.ComprobacionFieldPerimetro.setText(str(round(P, 3)) + " m")
+        widgets.ComprobacionFieldProfundidad.setText(str(round(y 3)) + " m")
+        widgets.ComprobacionFieldProfundidadHidraulica.setText(str(round(D, 3)) + " m")
+        widgets.ComprobacionFieldRadioHidraulico.setText(str(round(R, 3)) + " m")
+
+    def reiniciarCamposComprobacion (self):
+        widgets.AComprobacionFieldRelacionLlenado.setText(0) 
+        widgets.BComprobacionFieldDiametro.setText(0) 
+        widgets.CComprobacionFieldInclinacion.setText(0)       
+        widgets.DComprobacionFieldRugosidad.setText(0) 
+        widgets.EComprobacionFieldViscosidad.setText(0) 
+        widgets.FComprobacionFieldGravedad.setText(9.81) 
+
+        widgets.ComprobacionComboBoxDiametro.setCurrentIndex(0)
+
+        widgets.ComprobacionComboBoxInclinacion.setCurrentIndex(0)
+
+        widgets.ComprobacionFieldAngulo.setText("")
+        widgets.ComprobacionFieldAnchoSuperficial.setText("")
+        widgets.ComprobacionFieldArea.setText("")
+        widgets.ComprobacionFieldCaudal.setText("")
+        widgets.ComprobacionFieldFroude.setText("")
+        widgets.ComprobacionFieldVelocidad.setText("")
+        widgets.ComprobacionFieldPerimetro.setText("")
+        widgets.ComprobacionFieldProfundidadHidraulica.setText("")
+        widgets.ComprobacionFieldRadioHidraulico.setText("")
+        widgets.ComprobacionFieldProfundidad.setText("")
+
+    # ///////////////////////////////////////////////////////////////
+    # DISEÑO
+    def disenoTuberiasSimples (self):
+        ynd =  float (widgets.ADisenoFieldRelacionLlenado.text())
+        d =  float (widgets.BDisenoFieldDiametro.text())
+        s0 =  float (widgets.CDisenoFieldInclinacion.text())       
+        ks =  float (widgets.DDisenoFieldRugosidad.text())
+        viscosidad =  float (widgets.EDisenoFieldViscosidad.text())
+        g =  float (widgets.FDisenoFieldGravedad.text())
+
+        ud = widgets.DisenoComboBoxDiametro.currentText()
+        ud = cambioUnidadesLongitud[ud]
+
+        us0 = widgets.DisenoComboBoxInclinacion.currentText()
+        us0 = cambioUnidadesAngulo[us0]
+        
+        #theta, T, A, Q, Fr, v, P, D, R, tao
+
+        widgets.DisenoFieldAngulo.setText(str(round(theta, 3)) + " radianes")
+        widgets.DisenoFieldAnchoSuperficial.setText(str(round(T, 3)) + " radianes")
+        widgets.DisenoFieldArea.setText(str(round(A, 3)) + " m²")
+        widgets.DisenoFieldCaudal.setText(str(round(Q, 3)) + " m³/s")
+        widgets.DisenoFieldFroude.setText(str(round(Fr, 3)))
+        widgets.DisenoFieldVelocidad.setText(str(round(v, 3)) + " m/s")
+        widgets.DisenoFieldPerimetro.setText(str(round(P, 3)) + " m")
+        widgets.DisenoFieldProfundidadHidraulica.setText(str(round(D, 3)) + " m")
+        widgets.DisenoFieldRadioHidraulico.setText(str(round(R, 3)) + " m")
+        widgets.DisenoFieldTao.setText(str(round(tao, 3)) + " Pa")
+
+    def reiniciarCamposDiseno (self):
+        widgets.ADisenoFieldRelacionLlenado.setText(0) 
+        widgets.BDisenoFieldDiametro.setText(0) 
+        widgets.CDisenoFieldInclinacion.setText(0)       
+        widgets.DDisenoFieldRugosidad.setText(0) 
+        widgets.EDisenoFieldViscosidad.setText(0) 
+        widgets.FDisenoFieldGravedad.setText(9.81) 
+
+        widgets.DisenoComboBoxDiametro.setCurrentIndex(0)
+
+        widgets.DisenoComboBoxInclinacion.setCurrentIndex(0)
+
+        widgets.DisenoFieldAngulo.setText("")
+        widgets.DisenoFieldAnchoSuperficial.setText("")
+        widgets.DisenoFieldArea.setText("")
+        widgets.DisenoFieldCaudal.setText("")
+        widgets.DisenoFieldFroude.setText("")
+        widgets.DisenoFieldVelocidad.setText("")
+        widgets.DisenoFieldPerimetro.setText("")
+        widgets.DisenoFieldProfundidadHidraulica.setText("")
+        widgets.DisenoFieldRadioHidraulico.setText("")
+        widgets.DisenoFieldTao.setText("")
+
     # ///////////////////////////////////////////////////////////////
     # FLUJO GRADUALMENTE VARIADO (FGV)
+
     def FGVIntegracion (self):
         
         b =  float (widgets.FGVFieldAncho.text())
@@ -641,7 +1028,7 @@ class MainWindow(QMainWindow):
         y2 =  float (widgets.FGVFieldProfundidad2.text())       
         Q =  float (widgets.FGVFieldCaudal.text())
 
-        um = widgets.FGVComboBoxPendienteLateral.currentText()
+        um = widgets.FGVComboBoxPendienteLateral.currentText().split(" - ")[1]
         um = cambioUnidadesAngulo[um]
 
         uS0 = widgets.FGVComboBoxInclinacion.currentText()
@@ -660,7 +1047,7 @@ class MainWindow(QMainWindow):
         ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.FGVComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
         
 
         x = fgv_int(Q,n,S0,b,m1,m2,um,d,y1,y2,uQ,uS0,ub,ud,uy1,uy2)
@@ -668,7 +1055,9 @@ class MainWindow(QMainWindow):
         widgets.FGVFieldDistanciaX.setText(str(round(x, 3)) + "m")
 
     def FGVPasoDirecto (self):
-        
+
+        global parametrosGrafica
+
         b =  float (widgets.FGVPasoDFieldAncho.text())
         d =  float (widgets.FGVPasoDFieldDiametro.text())
         S0 =  float (widgets.FGVPasoDFieldInclinacion.text())       
@@ -681,7 +1070,7 @@ class MainWindow(QMainWindow):
         pasos =  int (widgets.FGVPasoDFieldPasos.text())
         datum =  float (widgets.FGVPasoDFieldDatum.text())
 
-        um = widgets.FGVPasoDComboBoxPendienteLateral.currentText()
+        um = widgets.FGVPasoDComboBoxPendienteLateral.currentText().split(" - ")[1]
         um = cambioUnidadesAngulo[um]
 
         uS0 = widgets.FGVPasoDComboBoxInclinacion.currentText()
@@ -700,19 +1089,26 @@ class MainWindow(QMainWindow):
         ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.FGVPasoDComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros cúbicos/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
         
-        ruta = self.FGVSolicitarRutaCSV ()
+        parametrosGrafica = pasoDirecto(Q,n,S0,b,m1,m2,um,d,y1,y2,pasos,datum,uQ,uS0,ub,ud,uy1,uy2)
 
-        parametrosGrafica = pasoDirecto(Q,n,S0,b,m1,m2,um,d,y1,y2,pasos,datum,uQ,uS0,ub,ud,uy1,uy2, ruta)
+    def FGVPasoDirectoCSV (self):
 
-        return parametrosGrafica 
+        global parametrosGrafica, ruta
+        print ("Entro aquí")
+        plot_i, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_Sfi, plot_sfm, plot_So_Sfm, plot_deltaE, plot_deltaX, plot_x, plot_fondo, plot_y, plot_yc, plot_yn = parametrosGrafica
+        ruta = self.FGVSolicitarRuta ()
+        txt_pasoDirecto(plot_i, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_Sfi, plot_sfm, plot_So_Sfm, plot_deltaE, plot_deltaX, plot_x, plot_fondo, plot_y, plot_yc, plot_yn, ruta)
 
-    def RGVTxt_pasoDirecto (self):
+    def FGVPasoDirectoGrafica (self):
+        global ruta
+        print ("Entro a gráfica ", ruta)
+        ejecutarMacro (ruta)
+
+    def FGVSolicitarRuta (self):
         
-        txt_pasoDirecto(parametrosGrafica, './')
-
-        """ fname = QFileDialog.getExistingDirectory(self, 'Select a directory', '/home')
+        fname = QFileDialog.getExistingDirectory(self, 'Seleccionar una carpeta', '/')
 
         if fname:
             # Returns pathName with the '/' separators converted to separators that are appropriate for the underlying operating system.
@@ -720,14 +1116,42 @@ class MainWindow(QMainWindow):
             # "c:\winnt\system32".
             fname = QDir.toNativeSeparators(fname)
 
-        if os.path.isdir(fname):
-            self.download_folder_lineEdit.setText(fname)
- """
+        return fname
 
-    def RGVGrafica_pasoDirecto (self):
-        """         global parametrosGrafica
-                (_, _, _, _, _, _, _, _, _, _, _, _, plot_x, plot_fondo, plot_y, plot_yc, plot_yn) = parametrosGrafica
-                graficaMatlab (plot_x,plot_fondo,plot_y,plot_yc,plot_yn,'') """
+        """  if os.path.isdir(fname):
+                    self.download_folder_lineEdit.setText(fname)
+        """
+
+
+    # BUTTONS CLICK
+    # Post here your functions for clicked buttons
+    # //////////////////////////////////////////////////////////////
+
+    def buttonClick(self):
+        # GET BUTTON CLICKED
+        btn = self.sender()
+        btnName = btn.objectName()
+
+        # SHOW HOME PAGE
+        if btnName == "btn_home":
+            widgets.stackedWidget.setCurrentWidget(widgets.home)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+
+        # SHOW WIDGETS PAGE
+        if btnName == "btn_widgets":
+            widgets.stackedWidget.setCurrentWidget(widgets.widgets)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+
+        # SHOW NEW PAGE
+        if btnName == "btn_new":
+            widgets.stackedWidget.setCurrentWidget(widgets.menu_principal) # SET PAGE
+            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+
+   
+
 
 
 
@@ -736,3 +1160,4 @@ if __name__ == "__main__":
     app.setWindowIcon(QIcon("icon.ico"))
     window = MainWindow()
     sys.exit(app.exec_())
+

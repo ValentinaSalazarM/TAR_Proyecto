@@ -988,7 +988,7 @@ def txt_pasoDirecto(plot_i, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plo
     plot_yc.insert(0,"yc(m)")
     plot_yn.insert(0,"yn(m)")
     
-    file = open(ruta, 'w')
+    file = open(ruta + "/paso_directo.csv", 'w')
    
     for index in range(len(plot_i)):
         file.write(str(plot_i[index]) + "\t" + str(plot_yi[index]) + "\t" + str(plot_A[index]) + "\t" + str(plot_P[index]) + "\t" + str(plot_R[index]) + "\t" + str(plot_v[index]) + "\t" + str(plot_E[index]) + "\t" + str(plot_Sfi[index]) + "\t" + str(plot_sfm[index]) + "\t" + str(plot_So_Sfm[index]) + "\t" + str(plot_deltaE[index]) + "\t" + str(plot_deltaX[index]) + "\t" + str(plot_x[index]) + "\t" + str(plot_fondo[index]) + "\t" + str(plot_y[index]) + "\t" + str(plot_yc[index]) + "\t" + str(plot_yn[index]) + "\n")
@@ -1017,8 +1017,6 @@ def grafica_paso(plot_x,plot_fondo,plot_y,plot_yc,plot_yn,ruta):
     plt.legend()
     plt.savefig(ruta)
     plt.show() 
-
-
 
 
 def conservacionE(y1,m11,m12,b1,Q,y2,m21,m22,b2,uy1,uy2,um,uQ,ub1,ub2,v1,v2,z,incognita):
@@ -1103,7 +1101,7 @@ def conservacionE(y1,m11,m12,b1,Q,y2,m21,m22,b2,uy1,uy2,um,uQ,ub1,ub2,v1,v2,z,in
         
             return y2.args[0],y2.args[1],y2.args[2],y_c,Ec,y1_n.args[0],y1_n.args[1],y1_n.args[2],Represamiento
         else:
-            return y2.args[0],y2.args[1],y2.args[2]
+            return y2.args[0],y2.args[1],y2.args[2], "-", "-", "-", "-", "-", "-"
 
     
     # máximo deltaZ para que no haya fenónemo de choque
@@ -1144,8 +1142,7 @@ def conservacionE(y1,m11,m12,b1,Q,y2,m21,m22,b2,uy1,uy2,um,uQ,ub1,ub2,v1,v2,z,in
         b2=solveset(-E1+y_c+Q**2/((b*y_c+(m21*y_c**2)/2+(m22*y_c**2)/2)**2*2*9.81),b)
         b2 = [x for x in b2 if x > 0]
         
-        print(E1, b2[0],y_c)
-        return E1, b2[0]
+        return E1, b2[0],y_c
         
 def pendientePropia(Q,d,uQ,ud,ynd,ecuacion,n,ks,nu):
     """Calcula pendiente propia\n
@@ -1318,26 +1315,39 @@ def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,u
         
 def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,x1,x2,L1,L2,pasos1,pasos2,datum,direccion,uQ,ub1,ub2,um,uy,uSo1,uSo2,uL1,uL2,ux1,ux2,secciones):
     """Paso estándar para tramos con cambios de sección\n
-    Q = caudal
     n1 = n de manning tramo 1
     n2 = n de manning tramo 2
+
     So1 = Inclinación del canal tramo 1
     So2 = Inclinación del canal tramo 2
+
     b1 = Base tramo 1 
     b2 = Base tramo 2
+
     m11 = pendiente lateral izquierda tramo 1
     m12 = pendiente lateral derecha tramo 1
+
     m21 = pendiente lateral izquierda tramo 2
     m22 = pendiente lateral derecha tramo 1 
-    y_control = y de control
+
     x1 = x de inicio tramo 1
     x2 = x de inicio tramo 2
+
     L1 = longitud tramo 1
     L2 = longitud tramo 2
+
     pasos1 = número de pasos tramo 1
     pasos2 = número de pasos tramo 2
+
+    Q = caudal
+    y_control = y de control
+
+
     datum = datum
     direccion = hacia aguas abajo (positivo) hacia aguas arriba (negativo) <br>
+    secciones = numero de secciones
+
+
     uQ = unidades caudal 
     ub1 = unidades b1
     ub2 = unidades b2
@@ -1349,9 +1359,8 @@ def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,x1,x2,L1,L2,pas
     uL2 = unidades longitud tramo 2
     ux1 = unidades x inicial tramo 1
     ux2 = unidades x inicial tramo 2
-    secciones = numero de secciones"""
     
-    
+    """
     
     if secciones==1:
         plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z, plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn=pasoEstandar1(Q,n1,So1,b1,m11,m12,y_control,x1,L1,pasos1,0,datum,direccion,uQ,ub1,um,uy,uSo1,uL1,ux1)
