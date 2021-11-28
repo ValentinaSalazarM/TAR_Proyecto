@@ -3,6 +3,9 @@
     <file>images/images/LogoHome.png</file>
     <file>images/images/wave.png</file>
   </qresource>
+  <qresource prefix="FGV">
+    <file>images/FGV/A1.jpeg</file>
+  </qresource>
   <qresource prefix="menu">
     <file>images/images/Geometria.png</file>
   </qresource>

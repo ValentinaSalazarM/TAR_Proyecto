@@ -17,14 +17,26 @@
 import sys
 import os
 import platform
-from aplicaciones.Aplicacion import *
-from aplicaciones.ComprobaciondeDiseno import *
+
+from aplicaciones.Geometria.geometria import *
+from aplicaciones.ConservacionEnergia.conservacionEnergia import *
+from aplicaciones.ConservacionMomentum.conservacionMomentum import *
+from aplicaciones.EcuacionManning.ecuacionManning import *
+from aplicaciones.EcuacionManning.flujoCritico import *
+from aplicaciones.FlujoGradualmenteVariado.integral import *
+from aplicaciones.FlujoGradualmenteVariado.pasoDirecto import *
+from aplicaciones.FlujoGradualmenteVariado.pasoEstandar import *
+from aplicaciones.FlujoGradualmenteVariado.analisisCualitativo import *
+from aplicaciones.ComprobaciondeDiseno.comprobacion import *
+from aplicaciones.ComprobaciondeDiseno.pendientePropia import *
+
 from macros_graficas.PasoEstandar import *
 
 from PySide6.QtWidgets import QFileDialog
 
 from modules import *
 from widgets import *
+
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
 widgets = None
@@ -246,7 +258,6 @@ class MainWindow(QMainWindow):
         #widgets.FGVPasoEBotonDescargarPerfil.clicked.connect(self.FGVPasoDirectoGrafica)
 
     
-
     # ///////////////////////////////////////////////////////////////
     # MENÚ PRINCIPAL
 
@@ -265,12 +276,16 @@ class MainWindow(QMainWindow):
     def pagDisenoSeleccionada (self):
         widgets.stackedWidget.setCurrentWidget(widgets.pagina_diseno)
 
+    def pagManningSeleccionada (self):
+        widgets.stackedWidget.setCurrentWidget(widgets.pagina_manning)
+
     def pagFGVSeleccionada (self):
         widgets.stackedWidget.setCurrentWidget(widgets.pagina_FGV)
 
 
     # ///////////////////////////////////////////////////////////////
     # GEOMETRÍA
+
     def geometriaCircular (self):
         d =  float (widgets.geoCFieldDiametro.text())
         ynd =  float (widgets.geoCFieldRelacionLlenado.text())
@@ -312,8 +327,6 @@ class MainWindow(QMainWindow):
 
         um1 = widgets.geoRComboBoxPendienteLateral.currentText().split(" - ")[1]
         um1 = cambioUnidadesAngulo[um1]
-
-        print (um1)
 
         um2 = widgets.geoRComboBoxPendienteLateral2.currentText().split(" - ")[1]
         um2 = cambioUnidadesAngulo[um2]
@@ -366,8 +379,6 @@ class MainWindow(QMainWindow):
         b =  float (widgets.geoFroudeFieldAncho.text())
         m1 = float (widgets.geoFroudeFieldPendienteLateral.text())
         m2 = float (widgets.geoFroudeFieldPendienteLateral2.text())
-        Q = float (widgets.geoFroudeFieldCaudal.text())
-        v = float (widgets.geoFroudeFieldVelocidad.text())
         d = float (widgets.geoFroudeFieldDiametro.text())
          
         um1 = widgets.geoFroudeComboBoxPendienteLateral.currentText().split(" - ")[1]
@@ -383,7 +394,12 @@ class MainWindow(QMainWindow):
         ub = cambioUnidadesLongitud[ub]
 
         uQ = widgets.geoFroudeComboBoxCaudal.currentText()
-        uQ = "L" if "Litros/segundos" else "Metros³/segundos"
+
+        if uQ == "No aplica":
+            v = float (widgets.geoFroudeFieldVelocidad.text())
+        else:
+            Q = float (widgets.geoFroudeFieldCaudal.text())
+            uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
 
         ud = widgets.geoFroudeComboBoxDiametro.currentText()
         ud = cambioUnidadesLongitud[ud]
@@ -409,7 +425,6 @@ class MainWindow(QMainWindow):
         widgets.geoFroudeComboBoxDiametro.setCurrentIndex(0)
 
         widgets.geoFroudeFieldFroude.setText("")
-
 
 
 
@@ -508,7 +523,7 @@ class MainWindow(QMainWindow):
             v1 = float (widgets.CEnergiaY2FieldVelocidad.text())
         else:
             Q = float (widgets.CEnergiaY2FieldCaudal.text())
-            uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+            uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
 
 
         y2_raiz1, y2_raiz2, y2_raiz3, yc, Ec, y1n_raiz1, y1n_raiz2, y1n_raiz3, represamiento = conservacionE(y1,m11,m12,b1,Q,None,m21,m22,b2,uy1,None,um11,uQ,ub1,ub2,v1,None,z,"y")
@@ -529,14 +544,14 @@ class MainWindow(QMainWindow):
 
         else:
             
-            widgets.CEnergiaY2FieldYc.setText("No aplica")
-            widgets.CEnergiaY2FieldEc.setText("No aplica")
+            widgets.CEnergiaY2FieldYc.setText("")
+            widgets.CEnergiaY2FieldEc.setText("")
 
-            widgets.CEnergiaY2LabelProfundidad1Raiz1.setText("No aplica")
-            widgets.CEnergiaY2LabelProfundidad1Raiz2.setText("No aplica")
-            widgets.CEnergiaY2LabelProfundidad1Raiz3.setText("No aplica")           
+            widgets.CEnergiaY2LabelProfundidad1Raiz1.setText("")
+            widgets.CEnergiaY2LabelProfundidad1Raiz2.setText("")
+            widgets.CEnergiaY2LabelProfundidad1Raiz3.setText("")           
 
-            widgets.CEnergiaY2FieldRepresamiento.setText("No aplica") 
+            widgets.CEnergiaY2FieldRepresamiento.setText("") 
 
 
     def conservacionEnergiaMaxZ (self):
@@ -577,7 +592,7 @@ class MainWindow(QMainWindow):
             v1 = float (widgets.CEnergiaZFieldVelocidad.text())
         else:
             Q = float (widgets.CEnergiaZFieldCaudal.text())
-            uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+            uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
 
         z, yc = conservacionE(y1,m11,m12,b1,Q,None,m21,m22,b2,uy1,None,um11,uQ,ub1,ub2,v1,None,None,"maximoZ")
 
@@ -620,7 +635,7 @@ class MainWindow(QMainWindow):
             v1 = float (widgets.CEnergiaBFieldVelocidad.text())
         else:
             Q = float (widgets.CEnergiaBFieldCaudal.text())
-            uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+            uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
 
         
         z =  float (widgets.CEnergiaBFieldEscalon.text())
@@ -665,7 +680,7 @@ class MainWindow(QMainWindow):
         uy1 = cambioUnidadesLongitud[uy1]
 
         uQ = widgets.RHAnalisisComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
 
 
         ul = widgets.RHAnalisisComboBoxLongitudInclinada.currentText()
@@ -737,19 +752,19 @@ class MainWindow(QMainWindow):
         uy = cambioUnidadesLongitud[uy]
 
         uQ = widgets.RHPropiedadesComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
         
         ud = widgets.RHPropiedadesComboBoxDiametro.currentText()
         ud = cambioUnidadesLongitud[ud]
-        
-        if d == 0: 
-            opcionales, resultados = clasificacionResalto(Q,b,m1,m2,d,ud,um1,y,ub,uy,uQ)
+    
+        opcionales, resultados = clasificacionResalto(Q,b,m1,m2,d,ud,um1,y,ub,uy,uQ)
             
         widgets.RHPropiedadesFieldFroude.setText(str(round(opcionales[0], 3)))
         widgets.RHPropiedadesFieldClasificacion.setText(resultados[0])
 
         Lr = longitudResalto(y,b,m1,m2,Q,d,uy,ub,uQ,ud,um1)
         widgets.RHPropiedadesFieldLongitud.setText(str(round(Lr, 3)) + " m")
+
     def reiniciarCamposRHPropiedades(self):
         widgets.RHPropiedadesFieldBase.setText(0)
         widgets.RHPropiedadesFieldProfundidad.setText(0) 
@@ -798,7 +813,7 @@ class MainWindow(QMainWindow):
         uyn = cambioUnidadesLongitud[uyn]
 
         uQ = widgets.RHTipoComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
 
         ui = widgets.RHTipoComboBoxInclinacion.currentText()
         ui = cambioUnidadesAngulo[ui]
@@ -862,7 +877,7 @@ class MainWindow(QMainWindow):
         ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.RHCompuertasComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
         
         uy2 = widgets.RHCompuertasComboBoxProfundidad2.currentText()
         uy2 = cambioUnidadesLongitud[uy2]
@@ -925,7 +940,7 @@ class MainWindow(QMainWindow):
         us0 = widgets.ComprobacionComboBoxInclinacion.currentText()
         us0 = cambioUnidadesAngulo[us0]
         
-        #theta, T, A, Q, Fr, v, P, y, D, R 
+        theta, T, A, Q, Fr, v, P, y, D, R = None
 
         widgets.ComprobacionFieldAngulo.setText(str(round(theta, 3)) + " radianes")
         widgets.ComprobacionFieldAnchoSuperficial.setText(str(round(T, 3)) + " radianes")
@@ -934,7 +949,7 @@ class MainWindow(QMainWindow):
         widgets.ComprobacionFieldFroude.setText(str(round(Fr, 3)))
         widgets.ComprobacionFieldVelocidad.setText(str(round(v, 3)) + " m/s")
         widgets.ComprobacionFieldPerimetro.setText(str(round(P, 3)) + " m")
-        widgets.ComprobacionFieldProfundidad.setText(str(round(y 3)) + " m")
+        widgets.ComprobacionFieldProfundidad.setText(str(round(y, 3)) + " m")
         widgets.ComprobacionFieldProfundidadHidraulica.setText(str(round(D, 3)) + " m")
         widgets.ComprobacionFieldRadioHidraulico.setText(str(round(R, 3)) + " m")
 
@@ -961,6 +976,8 @@ class MainWindow(QMainWindow):
         widgets.ComprobacionFieldRadioHidraulico.setText("")
         widgets.ComprobacionFieldProfundidad.setText("")
 
+
+
     # ///////////////////////////////////////////////////////////////
     # DISEÑO
     def disenoTuberiasSimples (self):
@@ -977,7 +994,7 @@ class MainWindow(QMainWindow):
         us0 = widgets.DisenoComboBoxInclinacion.currentText()
         us0 = cambioUnidadesAngulo[us0]
         
-        #theta, T, A, Q, Fr, v, P, D, R, tao
+        theta, T, A, Q, Fr, v, P, D, R, tao = None
 
         widgets.DisenoFieldAngulo.setText(str(round(theta, 3)) + " radianes")
         widgets.DisenoFieldAnchoSuperficial.setText(str(round(T, 3)) + " radianes")
@@ -1013,6 +1030,106 @@ class MainWindow(QMainWindow):
         widgets.DisenoFieldRadioHidraulico.setText("")
         widgets.DisenoFieldTao.setText("")
 
+ 
+ 
+    # ///////////////////////////////////////////////////////////////
+    # ECUACIÓN DE MANNING
+    
+    def ManningCondicionCritica (self):
+        b =  float (widgets.ManningCriticaFieldBase.text())
+        m1 =  float (widgets.ManningCriticaFieldPendienteLateral.text())       
+        m2 =  float (widgets.ManningCriticaFieldPendienteLateral2.text())
+        d =  float (widgets.ManningCriticaFieldDiametro.text())
+        
+        ud = widgets.ManningCriticaComboBoxDiametro.currentText()
+
+        if ud != 'No aplica':
+            ud = cambioUnidadesLongitud[ud]
+        else:
+            ub = widgets.ManningCriticaComboBoxBase.currentText()
+            ub = cambioUnidadesLongitud[ub]
+            
+            um1 = widgets.ManningCriticaComboBoxPendienteLateral.currentText().split(" - ")[1]
+            um1 = cambioUnidadesAngulo[um1]
+
+            um2 = widgets.ManningCriticaComboBoxPendienteLateral2.currentText().split(" - ")[1]
+            um2 = cambioUnidadesAngulo[um2]
+
+        uQ = widgets.ManningCriticaComboBoxCaudal.currentText()
+        if uQ == "No aplica":
+            v = float (widgets.ManningCriticaFieldVelocidad.text())
+        else:
+            Q = float (widgets.ManningCriticaFieldCaudal.text())
+            uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
+
+        profundidad_critica = yc(Q,b,v,m1,m2,um1,d,ub,ud,uQ)
+        velocidad_critica = vc(m1,m2,um1,b,yc,d,"m",ub,ud)
+
+        widgets.ManningCriticaLabelFieldProfundidadCritica.setText(str(round(profundidad_critica, 3)) + " m")
+        widgets.ManningCriticaLabelFieldVelocidadCritica.setText(str(round(vc, 3)) + " m/s")
+
+    def ManningPendienteCritica (self):
+        b =  float (widgets.ManningPendienteFieldAncho.text())
+        d =  float (widgets.ManningPendienteFieldDiametro.text())
+        n =  float (widgets.ManningPendienteFieldNumeManning.text())       
+        m1 =  float (widgets.ManningPendienteFieldPendienteLateral.text())
+        m2 =  float (widgets.ManningPendienteFieldPendienteLateral2.text())
+
+        ub = widgets.ManningPendienteComboBoxAncho.currentText()
+        ub = cambioUnidadesLongitud[ub]
+        
+        um1 = widgets.ManningPendienteComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.ManningPendienteComboBoxPendienteLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
+
+        ud = widgets.ManningCriticaComboBoxDiametro.currentText()
+        ud = cambioUnidadesLongitud[ud]
+
+        uQ = widgets.ManningPendienteComboBoxCaudal.currentText()
+        
+        if uQ == "No aplica":
+            yc = float (widgets.ManningPendienteFieldProfundidadCritica.text())
+            y,v,Sc = pendienteC_especifica(n,yc,b,m1,m2,um1,d,ub,ud,"m")
+        else:
+            Q = float (widgets.ManningPendienteFieldCaudal.text())
+            uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
+            Sc = pendienteC_limite(n,Q,b,m1,m2,um1,d,uQ,ub,ud)
+
+        widgets.ManningPendienteFieldPendienteCritica.setText(str(round(Sc, 3)))
+
+    def ManningFlujoUniforme (self):
+        b =  float (widgets.ManningUniformeFieldBase.text())
+        d =  float (widgets.ManningUniformeFieldDiametro.text())
+        m1 =  float (widgets.ManningUniformeFieldPendienteLateral.text())
+        m2 =  float (widgets.ManningUniformeFieldPendienteLateral2.text())
+        S0 =  float (widgets.ManningUniformeFieldInclinacion.text())
+        Q =  float (widgets.ManningUniformeFieldCaudal.text())
+        n =  float (widgets.ManningUniformeFieldNumManning.text())
+
+        ub = widgets.ManningUniformeComboBoxBase.currentText()
+        ub = cambioUnidadesLongitud[ub]
+        
+        ud = widgets.ManningCriticaComboBoxDiametro.currentText()
+        ud = cambioUnidadesLongitud[ud]
+
+        um1 = widgets.ManningUniformeComboBoxPendienteLateral.currentText().split(" - ")[1]
+        um1 = cambioUnidadesAngulo[um1]
+
+        um2 = widgets.ManningUniformeComboBoxPendienteLateral2.currentText().split(" - ")[1]
+        um2 = cambioUnidadesAngulo[um2]
+
+        uS0 = widgets.ManningUniformeComboBoxInclinacion.currentText()
+        uS0 = cambioUnidadesAngulo[uS0]
+
+        uQ = widgets.ManningUniformeComboBoxCaudal.currentText()
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
+        
+        yn = yn_manning(Q,n,S0,m1,m2,um1,b,d,S0,uQ,ub,ud,uS0)
+
+        widgets.ManningUniformeFieldNormal.setText(str(round(yn, 3) + "m"))
+
     # ///////////////////////////////////////////////////////////////
     # FLUJO GRADUALMENTE VARIADO (FGV)
 
@@ -1047,7 +1164,7 @@ class MainWindow(QMainWindow):
         ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.FGVComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
         
 
         x = fgv_int(Q,n,S0,b,m1,m2,um,d,y1,y2,uQ,uS0,ub,ud,uy1,uy2)
@@ -1089,7 +1206,7 @@ class MainWindow(QMainWindow):
         ud = cambioUnidadesLongitud[ud]
 
         uQ = widgets.FGVPasoDComboBoxCaudal.currentText()
-        uQ = "L" if uQ == "Litros/segundos" else "Metros³/segundos"
+        uQ = "L" if uQ == "Litros/segundos" else uQ == "Metros³/segundos"
         
         parametrosGrafica = pasoDirecto(Q,n,S0,b,m1,m2,um,d,y1,y2,pasos,datum,uQ,uS0,ub,ud,uy1,uy2)
 

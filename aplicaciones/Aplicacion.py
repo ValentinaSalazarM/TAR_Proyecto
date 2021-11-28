@@ -7,12 +7,14 @@ Created on Thu Jul  8 12:59:07 2021
 
 'Importar librerias'
 import numpy as np
+import matplotlib.pyplot as plt
 import math
 import scipy.integrate as integrate
 from sympy.solvers import solve
 from sympy import Symbol
 from sympy import var,solveset, S
 import numpy as np
+
 '-----------------------------------------------------------------------------'
 'Funciones para cambio de unidades'
 
@@ -44,88 +46,6 @@ def CU_theta(x,u):
     return theta
 
 
-'-----------------------------------------------------------------------------'
-'Funciones que retornan geometría del canal'
-
-def  geom_c(d,ynd,ud):
-    """ Esta función retorna la geometría de un canal circular\n
-    d=diametro<br />
-    ynd=relación de llenado<br />
-    unidades=unidades de d (mm, cm, m, in)<br />"""
-    
-    d = CU_m(d,ud)
-
-    
-    yn=ynd*d
-    theta = math.pi+2*math.asin((yn-(d/2))/(d/2))
-    A= (theta-math.sin(theta))*d**2/8
-    P= theta*d/2
-    Rh=(1-math.sin(theta)/theta)*d/4
-    T=d*math.cos(math.asin((yn-(d/2))/(d/2)))
-    D=A/T
-    return yn,theta,A,P,Rh,T,D
-
-def geom_r(y,b,m1,m2,um,uy,ub):
-    """ Esta función retorna la geometría de un canal geométrico no circular\n
-    y=profundidad<br />
-    b=base<br />
-    m1=inclinación lado 1<br />
-    m2 = inclinación lado 2<br />
-    um = unidades de m (grados, radianes, m/m)
-    uy=unidades de y (mm, cm, m, in)<br />
-    ub=unidades de b (mm, cm, m, in)<br />"""
-    
-    m1=CU_theta(m1,um)
-    m2=CU_theta(m2,um)
-    m1=math.tan(math.radians(m1))
-    m2=math.tan(math.radians(m2))
-    
-    y=CU_m(y,uy)
-    b=CU_m(b,ub)
-    
-    A = b*y+(m1*y**2)/2+(m2*y**2)/2
-    P=b+y*math.sqrt(m1**2+1)+y*math.sqrt(m2**2+1)
-    Rh=A/P
-    T=b+m1*y+m2*y
-    D=A/T
-    return A,P,Rh,T,D
-
-'-----------------------------------------------------------------------------'
-def froude(y,b,m1,m2,um,Q,v,d,uy,ub,ud,uQ):
-    """Calcula el número de froude con las propiedades geométricas y el caudal\n
-    y=profundidad (m)<br />
-    b=base (m)<br />
-    m1=inclinación lado 1<br />
-    m2 = inclinación lado 2<br />
-    um = unidades de m (grados, radianes, m/m)<br />
-    Q=caudal (m3/s) <br />
-    v = velocidad (m/s) <br />
-    d=diámetro (m)<br />
-    u_y=unidades de y (mm, cm, m, in)<br />
-    u_b=unidades de b (mm, cm, m, in)<br />
-    u_d=unidades de d (mm, cm, m, in)<br />
-    u_Q = unidades de caudal--> L, m3 <br />
-    Los parámetros que no se requieran, se dejan en 0"""
-    
-    y=CU_m(y,uy)
-    b=CU_m(b,ub)
-    d=CU_m(d,ud)
-    if uQ=='L':
-        Q=Q/1000
-    
-    if d==0:
-        A,P,Rh,T,D=geom_r(y,b,m1,m2,um,"m","m")
-    else:
-        ynd=y/d
-        yn,theta,A,P,Rh,T,D=geom_c(d,ynd,"m")
-    
-    if v!=0:
-        Fr = v/(math.sqrt(9.81*A/T))
-    elif Q!=0:
-        Fr=Q/(A*math.sqrt(9.81*A/T))
-    else:
-        raise Exception ("Faltan datos")
-    return Fr
 
 '-----------------------------------------------------------------------------'
 def ecuacion_yc_Rectangulo(Q,v,b,m1,m2,y):
@@ -427,7 +347,7 @@ def y_subsecuente(Q,b,m1,m2,um,y1,f,uy1,ub,uQ):
 #     return (E1, E2), (eficiencia,)
 
 '-----------------------------------------------------------------------------'
-def eficienciaRH(Q,b,m1,m2,um,y1,yn,f,l,i,uQ,ub,uy1,ul,ui):
+def eficienciaRH(Q,b,m1,m2,um,y1,yn,f,l,i,uQ,ub,uy1,uyn,ul,ui,d):
     """Calcula eficiencia del RH inclinado a partir del caudal, geometría aguas arriba, inclinación del canal y longitud de la parte inclinada del canal (utilizar gráfica)\n
     Q = caudal <br>
     b = base <br>
@@ -442,10 +362,14 @@ def eficienciaRH(Q,b,m1,m2,um,y1,yn,f,l,i,uQ,ub,uy1,ul,ui):
     ub = unidades de b (mm, cm, m, in)<br />
     uQ = unidades de caudal--> L, m3 <br />
     uy1 = unidades y1 (mm ,cm ,m , in) <br />
+    uyn = unidades yn (mm ,cm ,m , in) <br />
     ul = unidades de longitud--> (mm ,cm ,m , in) 
     ui = unidades de inclinacion--> grados, radianes, m/m <br />"""
     
+    if d!=0:
+        return "no aplica"
     y1=CU_m(y1,uy1)
+    yn=CU_m(yn,uyn)
     b=CU_m(b,ub)
     l=CU_m(l,ul)
     if uQ=='L':
@@ -475,6 +399,7 @@ def eficienciaRH(Q,b,m1,m2,um,y1,yn,f,l,i,uQ,ub,uy1,ul,ui):
     eficiencia=abs(E1-E2)/E1*100
     
     return (E1, E2, z), (eficiencia,)
+
 '-----------------------------------------------------------------------------'
 def clasificacionResalto(Q,b,m1,m2,d,ud,um,y,ub,uy,uQ):
     """Clasifica resalto con el número de Froude a partir de las propiedades geométricas aguas arriba\n
@@ -499,6 +424,9 @@ def clasificacionResalto(Q,b,m1,m2,d,ud,um,y,ub,uy,uQ):
     m2=math.tan(math.radians(m2))
     
     Fr=froude(y,b,m1,m2,"m",Q,0,d,"m","m","m","m3/s")
+    if d!=0:
+        return (Fr,),('No aplica')
+    
     if Fr<1:
         return (Fr,),('Flujo subcrítico',)
     elif Fr<=1.7:
@@ -869,18 +797,6 @@ def pasoDirecto(Q,n,So,b,m1,m2,um,d,y1,y2,pasos,datum,uQ,uSo,ub,ud,uy1,uy2):
     
     y_c,v_c,Sc=pendienteC_limite(n,Q,b,m1,m2,"m",d,"m","m","m")
     
-    
-    # if So<Sc:
-    #     tipo='suave'
-    # elif So>Sc:
-    #     tipo='empinada'
-    # elif So==Sc:
-    #     tipo='crítica'
-    # elif So==0:
-    #     tipo= 'horizontal'
-    # elif So<0:
-    #     tipo='adversa'
-    
     p=0
     y=y_control
     Sfi=0
@@ -1018,131 +934,6 @@ def grafica_paso(plot_x,plot_fondo,plot_y,plot_yc,plot_yn,ruta):
     plt.savefig(ruta)
     plt.show() 
 
-
-def conservacionE(y1,m11,m12,b1,Q,y2,m21,m22,b2,uy1,uy2,um,uQ,ub1,ub2,v1,v2,z,incognita):
-    """Encuentra el parámetro que falta por medio de la ecuación de conservación de energía y de masa\n
-    y1 = profundidad 1 (mm, cm, m, in) <br>
-    y2 = profundidad 2 (mm, cm, m, in) <br>
-    b1 = base 1 (mm, cm, m, in) <br>
-    b2 = base 2 (mm, cm, m, in) <br>
-    Q = caudal (m3, L) <br>
-    m11 = inclinación izquierda 1 (grados, rad, m/m)<br>
-    m12 = inclinación derecha 1 (grados, rad, m/m)<br>
-    m21 = inclinación izquierda 2 (grados, rad, m/m)<br>
-    m22 = inclinación derecha 2 (grados, rad, m/m)<br>
-    v1 = velocidad 1 (m/s)
-    v2 = velocidad 2 (m/s)
-
-    uQ = unidades de caudal--> L, m3 <br />
-    ub1 = unidades de b1 (mm, cm, m, in)<br />
-    ub2 = unidades de b2 (mm, cm, m, in)<br />
-    uy1 = unidades de y1 (mm, cm, m, in)<br />
-    uy2 = unidades de y2 (mm, cm, m, in)<br />
-    um = unidades de inclinación (grados, rad, m/m)
-
-    incognita = lo que se busca (caudal, y1, y2, b1, b2, m11, m12, m21, m22, v1, v2)
-    El/los parámetros que no se conocen se dejan como 0
-    """
-    b1=CU_m(b1,ub1)
-    b2=CU_m(b2,ub2)
-    y1=CU_m(y1,uy1)
-    y2=CU_m(y2,uy2) 
-    if uQ=='L':
-        Q=Q/1000
-        
-    m11=CU_theta(m11,um)
-    m12=CU_theta(m12,um)
-    m21=CU_theta(m21,um)
-    m22=CU_theta(m22,um)
-    
-    m11=math.tan(math.radians(m11))
-    m12=math.tan(math.radians(m12))
-    m21=math.tan(math.radians(m21))
-    m22=math.tan(math.radians(m22))
-    
-    "Caudal --> se tiene geometría de ambos lados y z"
-    if incognita =="caudal":
-        
-        x = Symbol("x") #v1
-                
-        A1,P1,Rh1,T1,D1=geom_r(y1, b1, m11, m12, um, uy1, ub1)
-        A2,P2,Rh2,T2,D2=geom_r(y2, b2, m21, m22, um, uy2, ub2)
-        
-        v1=solve(x**2/(2*9.81)+y1-(A1/A2*x)**2/(2*9.81)-y2-z,x)
-        v = [x for x in v1 if x > 0]
-        Q=v[0]*A1
-        return v[0],Q
-    
-    "y2 con geometría 1 y 2 y Q o velocidad 1 --> y1,b1,m11,m12,um,uy1,ub1,v1 o Q,z"
-    if incognita=='y':
-        A1,P1,Rh1,T1,D1=geom_r(y1, b1, m11, m12, um, uy1, ub1)
-        if Q==0:
-            if v1==0:
-                return "Debe ingresar caudal o velocidad"
-            else:
-                Q=A1*v1
-        else:
-            v1=Q/A1
-        y=var("y", real=True) #y2
-        y2=solveset(y1+Q**2/(A1**2*2*9.81)-y-Q**2/(2*9.81*(b2*y+(m21*y**2)/2+(m22*y**2)/2)**2)-z,y)
-        y=Symbol("y",real=True) #y2
-        reales=solve(y1+Q**2/(A1**2*2*9.81)-y-Q**2/(2*9.81*(b2*y+(m21*y**2)/2+(m22*y**2)/2)**2)-z,y)
-        
-        #Fenomeno de choque. Calcula represamiento
-        if len(reales)<2:
-            y_c=yc(Q,b2,0,m21,m22,"m",0,"m",0,"m3")
-            Ac,Pc,Rhc,Tc,Dc=geom_r(y_c, b2, m21, m22, um, uy2, ub2)
-            Ec=y_c+Q**2/((Ac)**2*2*9.81)
-         
-        
-            y=var("y", real=True) #y2
-            y1_n=solveset(-Ec+y+Q**2/((b1*y+(m11*y**2)/2+(m12*y**2)/2)**2*2*9.81),y)
-            Represamiento = max(y1_n.args[0],y1_n.args[1],y1_n.args[2])-y1
-        
-            return y2.args[0],y2.args[1],y2.args[2],y_c,Ec,y1_n.args[0],y1_n.args[1],y1_n.args[2],Represamiento
-        else:
-            return y2.args[0],y2.args[1],y2.args[2], "-", "-", "-", "-", "-", "-"
-
-    
-    # máximo deltaZ para que no haya fenónemo de choque
-    if incognita=='maximoZ':
-        A1,P1,Rh1,T1,D1=geom_r(y1, b1, m11, m12, um, uy1, ub1)
-        if Q==0:
-            if v1==0:
-                return "Debe ingresar caudal o velocidad"
-            else:
-                Q=A1*v1
-        else:
-            v1=Q/A1
-        
-        y_c=yc(Q,b2,0,m21,m22,"m",0,"m",0,"m3")
-        Ac,Pc,Rhc,Tc,Dc=geom_r(y_c, b2, m21, m22, um, uy2, ub2)
-        Ec=y_c+Q**2/((Ac)**2*2*9.81)
-        
-        E1=y1+Q**2/((A1)**2*2*9.81)
-        z = E1-Ec
-                
-        return z, y_c
-    
-    # mínimo b2 para que no haya fenónemo de choque
-    if incognita=='minimoB':
-        A1,P1,Rh1,T1,D1=geom_r(y1, b1, m11, m12, um, uy1, ub1)
-        if Q==0:
-            if v1==0:
-                return "Debe ingresar caudal o velocidad"
-            else:
-                Q=A1*v1
-        else:
-            v1=Q/A1
-        
-        E1 = y1+Q**2/((A1)**2*2*9.81)-z
-        y_c=yc(Q,b1,0,m11,m12,"m",0,"m",0,"m3")
-        
-        b=var("b", real=True) #y2
-        b2=solveset(-E1+y_c+Q**2/((b*y_c+(m21*y_c**2)/2+(m22*y_c**2)/2)**2*2*9.81),b)
-        b2 = [x for x in b2 if x > 0]
-        
-        return E1, b2[0],y_c
         
 def pendientePropia(Q,d,uQ,ud,ynd,ecuacion,n,ks,nu):
     """Calcula pendiente propia\n
@@ -1171,7 +962,7 @@ def pendientePropia(Q,d,uQ,ud,ynd,ecuacion,n,ks,nu):
         S0=solveset(Q/A+2*math.sqrt(8*9.81*Rh*s)*math.log10(ks/(14.8*Rh)+2.51*nu/(4*Rh*math.sqrt(8*9.81*Rh*s))),s)
         return S0.args[0]
 
-def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,ub,um,uy,uSo,uL,ux):
+def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,ub,um,uy,uSo,uL,ux,Sfi,Sfm,H21,H22,p):
     """Calcula el perfil de un flujo gradualmente variado con sección transversal homogenea a partir del método del paso estándar. Distancia entre dos profundidades desconocidas\n
     Q = caudal (m3/s) <br>
     n = número de Manning<br>
@@ -1233,12 +1024,8 @@ def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,u
     if direccion=="positivo":
         deltaX=L/pasos
     elif direccion=="negativo":
-        x=-x
         deltaX=-L/pasos
-    Sfm=0
-    H22=0
     y=y_control
-    p=0
     error=0.0001
     y_c=yc(Q,b,0,m1,m2,0,0,0,0,0)
     
@@ -1274,12 +1061,6 @@ def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,u
                 H22=H21_1-Sfm*deltaX
                 er = abs(H22-H21)
                 
-        if So!=0:
-            yn=yn_manning(Q,n,So,m1,m2,"m",b,0,"si","m","m","m","m")
-        else:
-            yn=0
-        
-        
            
         plot_pasos.append(p+pasosI)
         plot_yi.append(float(y))
@@ -1309,45 +1090,31 @@ def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,u
         plot_z.append(float(z))
         
         p=p+1
-    print (plot_yi)
     return (plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z,plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn)
 
         
-def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,x1,x2,L1,L2,pasos1,pasos2,datum,direccion,uQ,ub1,ub2,um,uy,uSo1,uSo2,uL1,uL2,ux1,ux2,secciones):
+def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,L1,L2,pasos1,pasos2,datum,direccion,uQ,ub1,ub2,um,uy,uSo1,uSo2,uL1,uL2,ux1,ux2,secciones):
     """Paso estándar para tramos con cambios de sección\n
+    Q = caudal
     n1 = n de manning tramo 1
     n2 = n de manning tramo 2
-
     So1 = Inclinación del canal tramo 1
     So2 = Inclinación del canal tramo 2
-
     b1 = Base tramo 1 
     b2 = Base tramo 2
-
     m11 = pendiente lateral izquierda tramo 1
     m12 = pendiente lateral derecha tramo 1
-
     m21 = pendiente lateral izquierda tramo 2
     m22 = pendiente lateral derecha tramo 1 
-
+    y_control = y de control
     x1 = x de inicio tramo 1
     x2 = x de inicio tramo 2
-
     L1 = longitud tramo 1
     L2 = longitud tramo 2
-
     pasos1 = número de pasos tramo 1
     pasos2 = número de pasos tramo 2
-
-    Q = caudal
-    y_control = y de control
-
-
     datum = datum
     direccion = hacia aguas abajo (positivo) hacia aguas arriba (negativo) <br>
-    secciones = numero de secciones
-
-
     uQ = unidades caudal 
     ub1 = unidades b1
     ub2 = unidades b2
@@ -1359,15 +1126,16 @@ def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,x1,x2,L1,L2,pas
     uL2 = unidades longitud tramo 2
     ux1 = unidades x inicial tramo 1
     ux2 = unidades x inicial tramo 2
+    secciones = numero de secciones"""
     
-    """
+    
     
     if secciones==1:
-        plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z, plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn=pasoEstandar1(Q,n1,So1,b1,m11,m12,y_control,x1,L1,pasos1,0,datum,direccion,uQ,ub1,um,uy,uSo1,uL1,ux1)
+        plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z, plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn=pasoEstandar1(Q,n1,So1,b1,m11,m12,y_control,0,L1,pasos1,0,datum,direccion,uQ,ub1,um,uy,uSo1,uL1,ux1,0,0,0,0,0)
         return plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z, plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn
     else:
-        plot_pasos1, plot_yi1, plot_A1, plot_P1, plot_R1, plot_v1, plot_E1, plot_z1, plot_H211, plot_Sfi1, plot_Sfm1, plot_H221, plot_deltaH1, plot_x1, plot_y1, plot_yc1, plot_yn1=pasoEstandar1(Q,n1,So1,b1,m11,m12,y_control,x1,L1,pasos1,0,datum,direccion,uQ,ub1,um,uy,uSo1,uL1,ux1)
-        plot_pasos2, plot_yi2, plot_A2, plot_P2, plot_R2, plot_v2, plot_E2, plot_z2, plot_H212, plot_Sfi2, plot_Sfm2, plot_H222, plot_deltaH2, plot_x2, plot_y2, plot_yc2, plot_yn2=pasoEstandar1(Q,n2,So2,b2,m21,m22,plot_yi1[len(plot_yi1)-1],x2,L2,pasos2,plot_pasos1[len(plot_pasos1)-1],datum,direccion,uQ,ub2,um,uy,uSo2,uL2,ux2)
+        plot_pasos1, plot_yi1, plot_A1, plot_P1, plot_R1, plot_v1, plot_E1, plot_z1, plot_H211, plot_Sfi1, plot_Sfm1, plot_H221, plot_deltaH1, plot_x1, plot_y1, plot_yc1, plot_yn1=pasoEstandar1(Q,n1,So1,b1,m11,m12,y_control,0,L1,pasos1,0,datum,direccion,uQ,ub1,um,uy,uSo1,uL1,ux1,0,0,0,0,0)
+        plot_pasos2, plot_yi2, plot_A2, plot_P2, plot_R2, plot_v2, plot_E2, plot_z2, plot_H212, plot_Sfi2, plot_Sfm2, plot_H222, plot_deltaH2, plot_x2, plot_y2, plot_yc2, plot_yn2=pasoEstandar1(Q,n2,So2,b2,m21,m22,plot_yi1[len(plot_yi1)-1],plot_x1[len(plot_x1)-1],L2,pasos2,plot_pasos1[len(plot_pasos1)-1],datum,direccion,uQ,ub2,um,uy,uSo2,uL2,ux2,plot_Sfi1[len(plot_Sfi1)-1],plot_Sfm1[len(plot_Sfm1)-1],plot_H211[len(plot_H211)-1],plot_H221[len(plot_H221)-1],1)
         
         plot_pasos=plot_pasos1+plot_pasos2
         plot_yi=plot_yi1+plot_yi2
@@ -1387,10 +1155,10 @@ def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,x1,x2,L1,L2,pas
         plot_yn=plot_yn1+plot_yn2
         plot_yc=plot_yc1+plot_yc2
     
-    print (plot_pasos,plot_x,plot_yi,plot_deltaH)
+    print (plot_R,plot_v,plot_E,plot_z,plot_H21 ,plot_Sfi,plot_Sfm,plot_H22)
     return plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z,plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn
-
-#pasoEstandar(2.38,0.013,0.013,0,0,4.6,2,0,0,0,0,0.525,0,15,15,15,3,3,0,'negativo',0,0,0,0,0,0,0,0,0,0,0,2)
+#pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,L1,L2,pasos1,pasos2,datum,direccion,uQ,ub1,ub2,um,uy,uSo1,uSo2,uL1,uL2,ux1,ux2,secciones):
+pasoEstandar(2.38,0.013,0.013,0,0,2,4.6,0,0,0,0,0.525,15,15,3,3,0,'negativo',0,0,0,0,0,0,0,0,0,0,0,2)
 #pasoEstandar1(2.38,0.013,0,4.26,0,0,0.525,0,15,3,0,0,'negativo',0,0,0,0,0,0,0)
         
      
@@ -1439,9 +1207,4 @@ def txt_pasoEstandar(plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E
     for index in range(len(plot_pasos)):
         file.write(str(plot_pasos[index]) + "\t" + str(plot_yi[index]) + "\t" + str(plot_A[index]) + "\t" + str(plot_P[index]) + "\t" + str(plot_R[index]) + "\t" + str(plot_v[index]) + "\t" + str(plot_E[index]) + "\t" + str(plot_z[index]) + "\t" + str(plot_H21[index]) + "\t" + str(plot_Sfi[index]) + "\t" + str(plot_Sfm[index]) + "\t" + str(plot_H22[index]) + "\t" + str(plot_deltaH[index]) + "\t" + str(plot_x[index]) + "\t" + str(plot_y[index]) + "\t" + str(plot_yc[index]) + "\t" + str(plot_yn[index]) + "\n")
     file.close()
-    
-    
-    
-    
-    
     
