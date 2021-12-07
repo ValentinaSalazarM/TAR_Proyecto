@@ -2,8 +2,6 @@ import numpy as np
 import sympy as sp
 from sympy import *
 
-ys= symbols('ys')
-
 def cambio_unidades(unidad,propiedad):
     
     """ Esta realiza el cambio de unidades para las propiedades de la figura\n
@@ -103,6 +101,7 @@ def Area(y,b,m1,m2,uni,uni2):
             
     return A
 
+
 def Perimetro(y,b,m1,m2,uni,uni2):
     """ Esta función retorna el perimetro de la sección transversal\n
         
@@ -140,6 +139,7 @@ def Perimetro(y,b,m1,m2,uni,uni2):
             P = b + y*sqrt(1+m1**2)+y*sqrt(1+m2**2)
     
     return P
+
 
 def T(y,b,m1,m2,uni,uni2):
     
@@ -182,7 +182,9 @@ def T(y,b,m1,m2,uni,uni2):
 
     return T
 
-def yc(Q,g,y,b,m1,m2,uni,uni2):
+def yc(Q,g,b,m1,m2,uni,uni2):
+    
+    ys= symbols('ys')
     
     centinela = False
     
@@ -203,9 +205,12 @@ def yc(Q,g,y,b,m1,m2,uni,uni2):
     return yc
     
 
-def yn (n,Q,S,y,b,m1,m2,uni,uni2):
+def yn (n,Q,S,b,m1,m2,uni,uni2):
+    
+    ys= symbols('ys')
     
     temp = n*Q/sqrt(S)
+    
     
     temp2 = Eq(temp, Area(ys,b,m1,m2,uni,uni2)**(5/3)/Perimetro(ys,b,m1,m2,uni,uni2)**(2/3))
     
@@ -229,10 +234,10 @@ def yn (n,Q,S,y,b,m1,m2,uni,uni2):
                    
     return yn
 
-def TipoSeccion(n,Q,S,g,y,b,m1,m2,uni,uni2):
+def TipoSeccion(n,Q,S,g,b,m1,m2,uni,uni2):
     
-    yc1 = yc(Q,g,y,b,m1,m2,uni,uni2)
-    yn1 = yn (n,Q,S,y,b,m1,m2,uni,uni2)
+    yc1 = yc(Q,g,b,m1,m2,uni,uni2)
+    yn1 = yn (n,Q,S,b,m1,m2,uni,uni2)
     
     if S == 0:
     
@@ -254,86 +259,77 @@ def TipoSeccion(n,Q,S,g,y,b,m1,m2,uni,uni2):
         
         msg = 'Critica'
         
-    
-        
     return msg
 
-
-def abrir_imagen(im):
+def tipoZona (yin, n, Q, S, g, b, m1, m2, uni, uni2):
     
-    ruta ='D:/Documents/Hidraulica-APP/Proyecto especial/Flujo gradualmente variado/' + im + '.jpeg'
-    im = Image.open(ruta)
-    im.show()
-
-def tipoZona (yin, n, Q, S, g, y, b, m1, m2, uni, uni2):
-    
-    yc1 = yc(Q,g,y,b,m1,m2,uni,uni2)
-    yn1 = yn (n,Q,S,y,b,m1,m2,uni,uni2)    
-    msg = TipoSeccion(n, Q, S, g, y, b, m1, m2, uni, uni2)
-        
+    yc1 = yc(Q,g,b,m1,m2,uni,uni2)
+    yn1 = yn (n,Q,S,b,m1,m2,uni,uni2)    
+    msg = TipoSeccion(n, Q, S, g, b, m1, m2, uni, uni2)
+    nombre_imagen = ''
     
     if msg == 'Suave':
     
         if yin > yn1:
             
-            abrir_imagen('M1')
+            nombre_imagen = 'M1'
             
         elif yin < yn1 and yin > yc1:
         
-            abrir_imagen('M2')
+            nombre_imagen = 'M2'
         
         elif yin < yc1:
         
-            abrir_imagen('M3')
+            nombre_imagen = 'M3'
             
     elif msg == 'Empinada':
             
         if yin > yc1:
             
-            abrir_imagen('S1')
+            nombre_imagen = 'S1'
             
         elif yin < yc1 and yin > yn1:
         
-            abrir_imagen('S2')
+            nombre_imagen = 'S2'
         
         elif yin < yn1:
-        
-            abrir_imagen('S3')
+            
+            nombre_imagen = 'S3'
 
     elif msg == 'Critica':
 
         if yin > yn1:
             
-            abrir_imagen('C1')
+            nombre_imagen = 'C1'
             
         elif yin == yn1:
         
-            abrir_imagen('C2')
+            nombre_imagen = 'C2'
         
         elif yin < yn1:
-        
-            abrir_imagen('C3')
+            
+            nombre_imagen = 'C3'
     
     elif msg == 'Horizontal':
     
         
         if yin > yc1:
         
-            abrir_imagen('H2')
+            nombre_imagen = 'H2'
         
         elif yin < yc1:
         
-            abrir_imagen('H3')  
+            nombre_imagen = 'H3'
 
     if msg == 'Adversa':
 
                    
         if yin > yc1:
-        
-            abrir_imagen('A2')
+            
+            nombre_imagen = 'A2'
         
         elif yin < yc1:
         
-            abrir_imagen('A3')
+            nombre_imagen = 'A3'
             
     return msg

@@ -23,7 +23,7 @@ from aplicaciones.ConservacionEnergia.conservacionEnergia import *
 from aplicaciones.ConservacionMomentum.conservacionMomentum import *
 from aplicaciones.EcuacionManning.ecuacionManning import *
 from aplicaciones.EcuacionManning.flujoCritico import *
-from aplicaciones.ComprobaciondeDiseno.comprobacion import *
+from aplicaciones.ComprobaciondeDiseno.Comprobacion import *
 from aplicaciones.ComprobaciondeDiseno.pendientePropia import *
 from aplicaciones.FlujoGradualmenteVariado.analisisCualitativo import *
 from aplicaciones.FlujoGradualmenteVariado.integral import *

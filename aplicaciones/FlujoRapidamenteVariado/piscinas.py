@@ -1,5 +1,3 @@
-
-
 import numpy as np
 import sympy as sp
 from sympy import *
@@ -232,7 +230,7 @@ def delta_y_i(sigma,yn,yo,delta_y,Q,b,g,S,uniyn,uniy,unidy,uniQ,unib):
     
     return delta_y_temp
     
-def ciclo_Fr(sigma, yn, yo, Q, b, g, S,uniyn,uniy,uniQ,unib):
+def ciclo_Fr(sigma, yn, yo, Q, b, g, S,uniyn,uniy,uniQ,unib,):
     
     """ Realiza las iteraciones necesarias para calcular el tipo de piscina\n
     Parámetros:
