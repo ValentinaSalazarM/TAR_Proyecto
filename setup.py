@@ -8,7 +8,7 @@ files = ['icon.ico','themes/']
 # TARGET
 target = Executable(
     script="main.py",
-    base="Win32GUI",
+    base="Win64GUI",
     icon="icon.ico"
 )
 

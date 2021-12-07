@@ -2,6 +2,8 @@
 from ..Cambio_de_unidades import *
 from ..EcuacionManning.ecuacionManning import *
 import math
+import os
+
 
 def pasoDirecto(Q,n,So,b,m1,m2,um,d,y1,y2,pasos,datum,uQ,uSo,ub,ud,uy1,uy2):
     """Calcula el perfil de un flujo gradualmente variado a partir de una aproximación de diferencias finitas. Distancia entre dos profundidades conocidas\n
@@ -173,7 +175,7 @@ def txt_pasoDirecto(plot_i, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plo
     plot_yc.insert(0,"yc(m)")
     plot_yn.insert(0,"yn(m)")
     
-    file = open(ruta, 'w')
+    file = open(ruta + os.path.sep + "paso_directo.csv", 'w')
    
     for index in range(len(plot_i)):
         file.write(str(plot_i[index]) + "\t" + str(plot_yi[index]) + "\t" + str(plot_A[index]) + "\t" + str(plot_P[index]) + "\t" + str(plot_R[index]) + "\t" + str(plot_v[index]) + "\t" + str(plot_E[index]) + "\t" + str(plot_Sfi[index]) + "\t" + str(plot_sfm[index]) + "\t" + str(plot_So_Sfm[index]) + "\t" + str(plot_deltaE[index]) + "\t" + str(plot_deltaX[index]) + "\t" + str(plot_x[index]) + "\t" + str(plot_fondo[index]) + "\t" + str(plot_y[index]) + "\t" + str(plot_yc[index]) + "\t" + str(plot_yn[index]) + "\n")

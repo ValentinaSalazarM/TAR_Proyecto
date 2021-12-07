@@ -1,6 +1,9 @@
 from ..Cambio_de_unidades import *
 from ..Geometria.geometria import *
 from ..EcuacionManning.ecuacionManning import *
+import math
+import os
+
 
 def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,ub,um,uy,uSo,uL,ux,Sfi,Sfm,H21,H22,p):
     """Calcula el perfil de un flujo gradualmente variado con sección transversal homogenea a partir del método del paso estándar. Distancia entre dos profundidades desconocidas\n
@@ -130,10 +133,12 @@ def pasoEstandar1(Q,n,So,b,m1,m2,y_control,x,L,pasos,pasosI,datum,direccion,uQ,u
         plot_z.append(float(z))
         
         p=p+1
+        print(y_grafica)
+
     return (plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z,plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn)
 
         
-def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,L1,L2,pasos1,pasos2,datum,direccion,uQ,ub1,ub2,um,uy,uSo1,uSo2,uL1,uL2,ux1,ux2,secciones):
+def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,L1,L2,pasos1,pasos2,datum,direccion,uQ,ub1,ub2,um,uy,uSo1,uSo2,uL1,uL2,secciones):
     """Paso estándar para tramos con cambios de sección\n
     Q = caudal
     n1 = n de manning tramo 1
@@ -168,7 +173,8 @@ def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,L1,L2,pasos1,pa
     ux2 = unidades x inicial tramo 2
     secciones = numero de secciones"""
     
-    
+    ux1 = 'm'
+    ux2 = 'm'
     
     if secciones==1:
         plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z, plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn=pasoEstandar1(Q,n1,So1,b1,m11,m12,y_control,0,L1,pasos1,0,datum,direccion,uQ,ub1,um,uy,uSo1,uL1,ux1,0,0,0,0,0)
@@ -195,8 +201,7 @@ def pasoEstandar(Q,n1,n2,So1,So2,b1,b2,m11,m12,m21,m22,y_control,L1,L2,pasos1,pa
         plot_yn=plot_yn1+plot_yn2
         plot_yc=plot_yc1+plot_yc2
     
-    return plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z,plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn
-        
+    return plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z,plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn        
      
 def txt_pasoEstandar(plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E, plot_z,plot_H21, plot_Sfi, plot_Sfm, plot_H22,plot_deltaH, plot_x, plot_y, plot_yc, plot_yn,ruta):
     """Exporta archivo txt con resultados del paso estándar\n
@@ -238,9 +243,8 @@ def txt_pasoEstandar(plot_pasos, plot_yi, plot_A, plot_P, plot_R, plot_v, plot_E
     plot_yc.insert(0,"yc(m)")
     plot_yn.insert(0,"yn(m)")
     
-    file = open(ruta, 'w')
+    file = open(ruta + os.path.sep + "paso_estandar.csv", 'w')
    
     for index in range(len(plot_pasos)):
         file.write(str(plot_pasos[index]) + "\t" + str(plot_yi[index]) + "\t" + str(plot_A[index]) + "\t" + str(plot_P[index]) + "\t" + str(plot_R[index]) + "\t" + str(plot_v[index]) + "\t" + str(plot_E[index]) + "\t" + str(plot_z[index]) + "\t" + str(plot_H21[index]) + "\t" + str(plot_Sfi[index]) + "\t" + str(plot_Sfm[index]) + "\t" + str(plot_H22[index]) + "\t" + str(plot_deltaH[index]) + "\t" + str(plot_x[index]) + "\t" + str(plot_y[index]) + "\t" + str(plot_yc[index]) + "\t" + str(plot_yn[index]) + "\n")
     file.close()
-    
