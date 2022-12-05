@@ -1,23 +1,8 @@
 <RCC>
   <qresource prefix="images">
+    <file>images/images/Wastewater treatment.png</file>
     <file>images/images/LogoHome.png</file>
     <file>images/images/wave.png</file>
-  </qresource>
-  <qresource prefix="FGV">
-    <file>images/FGV/A1.png</file>
-    <file>images/FGV/CanalHorizontal.jpeg</file>
-  </qresource>
-  <qresource prefix="menu">
-    <file>images/images/Geometria.png</file>
-  </qresource>
-  <qresource prefix="geometria">
-    <file>images/geometria/Geometria-rectangular.PNG</file>
-    <file>images/geometria/Circulo2.png</file>
-    <file>images/geometria/FigurasRectangulares2.png</file>
-    <file>images/geometria/Geometria-trapecial.PNG</file>
-    <file>images/geometria/Geometria-triangular.PNG</file>
-    <file>images/geometria/Circulo.png</file>
-    <file>images/geometria/FigurasRectangulares.png</file>
   </qresource>
   <qresource prefix="icons">
     <file>images/icons/cil-3d.png</file>

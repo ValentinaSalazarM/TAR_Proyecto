@@ -8,13 +8,13 @@ files = ['icon.ico','themes/']
 # TARGET
 target = Executable(
     script="main.py",
-    base="Win64GUI",
+    base="Win32GUI",
     icon="icon.ico"
 )
 
 # SETUP CX FREEZE
 setup(
-    name = "HidrApp",
+    name = "Aplicación TAR",
     version = "1.0",
     description = "Modern GUI for Python applications",
     author = "Universidad de los Andes",
