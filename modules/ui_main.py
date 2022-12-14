@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainsYhTPi.ui'
+## Form generated from reading UI file 'mainVLbnuM.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.1
+## Created by: Qt User Interface Compiler version 6.4.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QStackedWidget, QTabWidget, QTextEdit, QVBoxLayout,
     QWidget)
-import modules.resources_rc
+import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -32,6 +32,7 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
+        font.setFamilies([u"Segoe UI"])
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -598,6 +599,7 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
         font1 = QFont()
+        font1.setFamilies([u"Segoe UI Semibold"])
         font1.setPointSize(12)
         font1.setBold(False)
         font1.setItalic(False)
@@ -608,6 +610,7 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
+        font2.setFamilies([u"Segoe UI"])
         font2.setPointSize(8)
         font2.setBold(False)
         font2.setItalic(False)
@@ -4846,7 +4849,12 @@ class Ui_MainWindow(object):
         self.tabManning.setTabPosition(QTabWidget.West)
         self.Matriz = QWidget()
         self.Matriz.setObjectName(u"Matriz")
-        self.Matriz.setFont(font)
+        font3 = QFont()
+        font3.setFamilies([u"Allerta"])
+        font3.setPointSize(10)
+        font3.setBold(False)
+        font3.setItalic(False)
+        self.Matriz.setFont(font3)
         self.Matriz.setStyleSheet(u"color: rgb(48, 48, 48);\n"
 "\n"
 "")
@@ -5410,11 +5418,12 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_106.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_106.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_106.setMinimumSize(QSize(100, 0))
-        font3 = QFont()
-        font3.setPointSize(11)
-        font3.setBold(True)
-        font3.setItalic(False)
-        self.GeneralidadesLabel_106.setFont(font3)
+        font4 = QFont()
+        font4.setFamilies([u"Allerta"])
+        font4.setPointSize(11)
+        font4.setBold(True)
+        font4.setItalic(False)
+        self.GeneralidadesLabel_106.setFont(font4)
         self.GeneralidadesLabel_106.setStyleSheet(u"font: 600 11pt \"Allerta\";\n"
 "color: rgb(40, 106, 176);")
         self.GeneralidadesLabel_106.setLineWidth(1)
@@ -5601,7 +5610,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_120.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_120.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_120.setMinimumSize(QSize(100, 0))
-        self.GeneralidadesLabel_120.setFont(font3)
+        self.GeneralidadesLabel_120.setFont(font4)
         self.GeneralidadesLabel_120.setStyleSheet(u"font: 600 11pt \"Allerta\";\n"
 "color: rgb(40, 106, 176);")
         self.GeneralidadesLabel_120.setLineWidth(1)
@@ -5614,7 +5623,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_111.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_111.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_111.setMinimumSize(QSize(100, 0))
-        self.GeneralidadesLabel_111.setFont(font3)
+        self.GeneralidadesLabel_111.setFont(font4)
         self.GeneralidadesLabel_111.setStyleSheet(u"font: 600 11pt \"Allerta\";\n"
 "color: rgb(40, 106, 176);")
         self.GeneralidadesLabel_111.setLineWidth(1)
@@ -5663,7 +5672,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_107.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_107.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_107.setMinimumSize(QSize(100, 0))
-        self.GeneralidadesLabel_107.setFont(font3)
+        self.GeneralidadesLabel_107.setFont(font4)
         self.GeneralidadesLabel_107.setStyleSheet(u"font: 600 11pt \"Allerta\";\n"
 "color: rgb(40, 106, 176);")
         self.GeneralidadesLabel_107.setLineWidth(1)
@@ -5676,7 +5685,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_108.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_108.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_108.setMinimumSize(QSize(100, 0))
-        self.GeneralidadesLabel_108.setFont(font3)
+        self.GeneralidadesLabel_108.setFont(font4)
         self.GeneralidadesLabel_108.setStyleSheet(u"font: 600 11pt \"Allerta\";\n"
 "color: rgb(40, 106, 176);")
         self.GeneralidadesLabel_108.setLineWidth(1)
@@ -6186,7 +6195,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_226.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_226.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_226.setMinimumSize(QSize(120, 0))
-        self.GeneralidadesLabel_226.setFont(font3)
+        self.GeneralidadesLabel_226.setFont(font4)
         self.GeneralidadesLabel_226.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.GeneralidadesLabel_226.setLineWidth(1)
         self.GeneralidadesLabel_226.setAlignment(Qt.AlignCenter)
@@ -6198,7 +6207,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_227.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_227.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_227.setMinimumSize(QSize(270, 0))
-        self.GeneralidadesLabel_227.setFont(font3)
+        self.GeneralidadesLabel_227.setFont(font4)
         self.GeneralidadesLabel_227.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.GeneralidadesLabel_227.setLineWidth(1)
         self.GeneralidadesLabel_227.setAlignment(Qt.AlignCenter)
@@ -6210,7 +6219,7 @@ class Ui_MainWindow(object):
         sizePolicy8.setHeightForWidth(self.GeneralidadesLabel_228.sizePolicy().hasHeightForWidth())
         self.GeneralidadesLabel_228.setSizePolicy(sizePolicy8)
         self.GeneralidadesLabel_228.setMinimumSize(QSize(100, 0))
-        self.GeneralidadesLabel_228.setFont(font3)
+        self.GeneralidadesLabel_228.setFont(font4)
         self.GeneralidadesLabel_228.setStyleSheet(u"font: 650 11pt \"Allerta\";")
         self.GeneralidadesLabel_228.setLineWidth(1)
         self.GeneralidadesLabel_228.setAlignment(Qt.AlignCenter)
@@ -6761,10 +6770,11 @@ class Ui_MainWindow(object):
         self.creditsLabel = QLabel(self.bottomBar)
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
-        font4 = QFont()
-        font4.setBold(False)
-        font4.setItalic(False)
-        self.creditsLabel.setFont(font4)
+        font5 = QFont()
+        font5.setFamilies([u"Segoe UI"])
+        font5.setBold(False)
+        font5.setItalic(False)
+        self.creditsLabel.setFont(font5)
         self.creditsLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.creditsLabel)
@@ -6810,11 +6820,11 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(tooltip)
         self.topLogo.setToolTip("")
 #endif // QT_CONFIG(tooltip)
-        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"TAR Uniandes", None))
-        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Tecnologías de tratamiento", None))
+        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"HidrApp Uniandes", None))
+        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Hidr\u00e1ulica de canales abiertos", None))
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.btn_new.setText(QCoreApplication.translate("MainWindow", u"Menú", None))
+        self.btn_new.setText(QCoreApplication.translate("MainWindow", u"New", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
@@ -6826,17 +6836,20 @@ class Ui_MainWindow(object):
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">PyDracula</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ffffff;\">An interface created using Python and PySide (support for PyQt), and with colors based on the Dracula theme created by Zeno Rocha.</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-inde"
-                        "nt:0; text-indent:0px;\"><span style=\" color:#ffffff;\">MIT License</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ffffff;\">An interface created using Python and PySide (support for PyQt), and with colors based on the Dracula theme created by Zen"
+                        "o Rocha.</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ffffff;\">MIT License</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#bd93f9;\">Created by: Wanderson M. Pimenta</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert UI</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-uic main.ui &gt; ui_main.py</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
-"<p align=\"center\" "
-                        "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-in"
+                        "dent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
         self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Selecci\u00f3n de tecnolog\u00edas de tratamiento de aguas residuales</span></p></body></html>", None))
 #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
@@ -6854,7 +6867,7 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
-        self.botonGeneralidades.setText(QCoreApplication.translate("MainWindow", u"Generalidades", None))
+        self.botonGeneralidades.setText(QCoreApplication.translate("MainWindow", u"Informaci\u00f3n", None))
         self.botonGeneralidades_2.setText("")
         self.botonMenuPrimario.setText(QCoreApplication.translate("MainWindow", u"Tratamiento \n"
 " primario", None))

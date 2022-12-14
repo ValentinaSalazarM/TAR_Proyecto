@@ -48,24 +48,24 @@ def seleccion (minCC, maxCC, minOM, maxOM, rp, re, so, ro, ra, en, criterio, min
     ubicacionRemocion = {"DQO":0, "DBO":1, "Nitrógeno Total":2, "Fósforo Total":3, "SST":4}
 
     valorCostoConstruccion = 1.5
-    if (minCC >= 3000000 ):
+    if (minCC >= 120 ):
         valorCostoConstruccion = 5
-    elif (minCC >= 1000000):
-        if (maxCC <= 3000000):
+    elif (minCC >= 90):
+        if (maxCC <= 120):
             valorCostoConstruccion = 4
         else:
             valorCostoConstruccion = 4.5
-    elif (minCC >= 500000):
-        if (maxCC <= 1000000):
+    elif (minCC >= 60):
+        if (maxCC <= 90):
             valorCostoConstruccion = 3
         else:
             valorCostoConstruccion = 3.5
-    elif (minCC >= 200000):
-        if (maxCC <= 500000):
+    elif (minCC >= 30):
+        if (maxCC <= 60):
             valorCostoConstruccion = 2
         else:
             valorCostoConstruccion = 2.5
-    elif (maxCC < 200000):
+    elif (maxCC < 30):
         valorCostoConstruccion = 1
 
     valorCostoOM = 1.5
@@ -161,5 +161,3 @@ def seleccion (minCC, maxCC, minOM, maxOM, rp, re, so, ro, ra, en, criterio, min
     #print ("Máximo: ", maximo, " | Tecnología: ", mejorTecnologia[-1])
 
     return vector
-    
-#seleccion(500000, 550000, 500000, 550000, "Alto", "Alto", "Moderado", "Moderado", "Bajo", "Alto", "Nitrógeno Total", 90, 95, "Económico")
