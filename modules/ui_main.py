@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainVLbnuM.ui'
+## Form generated from reading UI file 'mainJbXpjA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.1
 ##
@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QStackedWidget, QTabWidget, QTextEdit, QVBoxLayout,
     QWidget)
-import resources_rc
+import modules.resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -992,7 +992,8 @@ class Ui_MainWindow(object):
         self.stackedWidget.setSizePolicy(sizePolicy3)
         self.stackedWidget.setMaximumSize(QSize(1350, 610))
         self.stackedWidget.setBaseSize(QSize(50, 50))
-        self.stackedWidget.setStyleSheet(u"background: transparent;")
+        self.stackedWidget.setStyleSheet(u"background: transparent;\n"
+"")
         self.stackedWidget.setLineWidth(-2)
         self.home = QWidget()
         self.home.setObjectName(u"home")
@@ -1081,6 +1082,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.menu_principal)
         self.pagina_Primario = QWidget()
         self.pagina_Primario.setObjectName(u"pagina_Primario")
+        self.pagina_Primario.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.tabPrim = QTabWidget(self.pagina_Primario)
         self.tabPrim.setObjectName(u"tabPrim")
         self.tabPrim.setGeometry(QRect(0, 0, 1131, 613))
@@ -1090,11 +1092,12 @@ class Ui_MainWindow(object):
         sizePolicy4.setHeightForWidth(self.tabPrim.sizePolicy().hasHeightForWidth())
         self.tabPrim.setSizePolicy(sizePolicy4)
         self.tabPrim.setStyleSheet(u"font: 500 10pt \"Allerta\";\n"
-"color: rgb(79, 79, 79);")
+"color: rgb(79, 79, 79);\n"
+"background-color: rgb(255, 255, 255);")
         self.tabPrim.setTabPosition(QTabWidget.West)
         self.primarioEntrada = QWidget()
         self.primarioEntrada.setObjectName(u"primarioEntrada")
-        self.primarioEntrada.setStyleSheet(u"\n"
+        self.primarioEntrada.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "font: 500 11pt \"Allerta\";")
         self.groupBox_Resultados_19 = QGroupBox(self.primarioEntrada)
         self.groupBox_Resultados_19.setObjectName(u"groupBox_Resultados_19")
@@ -2005,18 +2008,21 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.pagina_Primario)
         self.pagina_Secundario = QWidget()
         self.pagina_Secundario.setObjectName(u"pagina_Secundario")
+        self.pagina_Secundario.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.tabSec = QTabWidget(self.pagina_Secundario)
         self.tabSec.setObjectName(u"tabSec")
         self.tabSec.setGeometry(QRect(0, 0, 1131, 621))
         sizePolicy4.setHeightForWidth(self.tabSec.sizePolicy().hasHeightForWidth())
         self.tabSec.setSizePolicy(sizePolicy4)
         self.tabSec.setStyleSheet(u"font: 500 10pt \"Allerta\";\n"
-"color: rgb(79, 79, 79);")
+"color: rgb(79, 79, 79);\n"
+"background-color: rgb(255, 255, 255);")
         self.tabSec.setTabPosition(QTabWidget.West)
         self.tabSec.setTabsClosable(False)
         self.secundarioEntrada = QWidget()
         self.secundarioEntrada.setObjectName(u"secundarioEntrada")
-        self.secundarioEntrada.setStyleSheet(u"font: 500 11pt \"Allerta\";")
+        self.secundarioEntrada.setStyleSheet(u"font: 500 11pt \"Allerta\";\n"
+"background-color: rgb(255, 255, 255);")
         self.SecuComboBoxPeso = QComboBox(self.secundarioEntrada)
         self.SecuComboBoxPeso.addItem("")
         self.SecuComboBoxPeso.addItem("")
@@ -2664,6 +2670,7 @@ class Ui_MainWindow(object):
         self.tabSec.addTab(self.secundarioEntrada, "")
         self.secundarioResultados = QWidget()
         self.secundarioResultados.setObjectName(u"secundarioResultados")
+        self.secundarioResultados.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.SecuBtnReiniciar = QPushButton(self.secundarioResultados)
         self.SecuBtnReiniciar.setObjectName(u"SecuBtnReiniciar")
         self.SecuBtnReiniciar.setEnabled(True)
@@ -2961,18 +2968,21 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.pagina_Secundario)
         self.pagina_Terciario = QWidget()
         self.pagina_Terciario.setObjectName(u"pagina_Terciario")
+        self.pagina_Terciario.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.tabTerc = QTabWidget(self.pagina_Terciario)
         self.tabTerc.setObjectName(u"tabTerc")
         self.tabTerc.setGeometry(QRect(0, 0, 1131, 621))
         sizePolicy4.setHeightForWidth(self.tabTerc.sizePolicy().hasHeightForWidth())
         self.tabTerc.setSizePolicy(sizePolicy4)
         self.tabTerc.setStyleSheet(u"font: 500 10pt \"Allerta\";\n"
-"color: rgb(79, 79, 79);")
+"color: rgb(79, 79, 79);\n"
+"background-color: rgb(255, 255, 255);")
         self.tabTerc.setTabPosition(QTabWidget.West)
         self.tabTerc.setTabsClosable(False)
         self.terciarioEntrada = QWidget()
         self.terciarioEntrada.setObjectName(u"terciarioEntrada")
-        self.terciarioEntrada.setStyleSheet(u"font: 500 11pt \"Allerta\";")
+        self.terciarioEntrada.setStyleSheet(u"font: 500 11pt \"Allerta\";\n"
+"background-color: rgb(255, 255, 255);")
         self.TercComboBoxPeso = QComboBox(self.terciarioEntrada)
         self.TercComboBoxPeso.addItem("")
         self.TercComboBoxPeso.addItem("")
@@ -3620,6 +3630,7 @@ class Ui_MainWindow(object):
         self.tabTerc.addTab(self.terciarioEntrada, "")
         self.terciarioResultado = QWidget()
         self.terciarioResultado.setObjectName(u"terciarioResultado")
+        self.terciarioResultado.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.TercBtnReiniciar = QPushButton(self.terciarioResultado)
         self.TercBtnReiniciar.setObjectName(u"TercBtnReiniciar")
         self.TercBtnReiniciar.setEnabled(True)
@@ -3887,18 +3898,21 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.pagina_Terciario)
         self.pagina_NoC = QWidget()
         self.pagina_NoC.setObjectName(u"pagina_NoC")
+        self.pagina_NoC.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.tabNoC = QTabWidget(self.pagina_NoC)
         self.tabNoC.setObjectName(u"tabNoC")
         self.tabNoC.setGeometry(QRect(0, 0, 1131, 621))
         sizePolicy4.setHeightForWidth(self.tabNoC.sizePolicy().hasHeightForWidth())
         self.tabNoC.setSizePolicy(sizePolicy4)
         self.tabNoC.setStyleSheet(u"font: 500 10pt \"Allerta\";\n"
-"color: rgb(79, 79, 79);")
+"color: rgb(79, 79, 79);\n"
+"background-color: rgb(255, 255, 255);")
         self.tabNoC.setTabPosition(QTabWidget.West)
         self.tabNoC.setTabsClosable(False)
         self.NoConvEntrada = QWidget()
         self.NoConvEntrada.setObjectName(u"NoConvEntrada")
-        self.NoConvEntrada.setStyleSheet(u"font: 500 11pt \"Allerta\";")
+        self.NoConvEntrada.setStyleSheet(u"font: 500 11pt \"Allerta\";\n"
+"background-color: rgb(255, 255, 255);")
         self.NoCComboBoxPeso = QComboBox(self.NoConvEntrada)
         self.NoCComboBoxPeso.addItem("")
         self.NoCComboBoxPeso.addItem("")
@@ -6804,10 +6818,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(4)
         self.tabPrim.setCurrentIndex(0)
-        self.tabSec.setCurrentIndex(0)
-        self.tabTerc.setCurrentIndex(0)
+        self.tabSec.setCurrentIndex(1)
+        self.tabTerc.setCurrentIndex(1)
         self.tabNoC.setCurrentIndex(0)
         self.tabManning.setCurrentIndex(0)
 

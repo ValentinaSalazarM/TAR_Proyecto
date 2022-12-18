@@ -1736,13 +1736,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       </size>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background: transparent;</string>
+                      <string notr="true">background: transparent;
+</string>
                      </property>
                      <property name="lineWidth">
                       <number>-2</number>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>4</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -1929,6 +1930,9 @@ background-color: rgb(118, 199, 158);</string>
                       </layout>
                      </widget>
                      <widget class="QWidget" name="pagina_Primario">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <widget class="QTabWidget" name="tabPrim">
                        <property name="geometry">
                         <rect>
@@ -1946,7 +1950,8 @@ background-color: rgb(118, 199, 158);</string>
                        </property>
                        <property name="styleSheet">
                         <string notr="true">font: 500 10pt &quot;Allerta&quot;;
-color: rgb(79, 79, 79);</string>
+color: rgb(79, 79, 79);
+background-color: rgb(255, 255, 255);</string>
                        </property>
                        <property name="tabPosition">
                         <enum>QTabWidget::West</enum>
@@ -1956,7 +1961,7 @@ color: rgb(79, 79, 79);</string>
                        </property>
                        <widget class="QWidget" name="primarioEntrada">
                         <property name="styleSheet">
-                         <string notr="true">
+                         <string notr="true">background-color: rgb(255, 255, 255);
 font: 500 11pt &quot;Allerta&quot;;</string>
                         </property>
                         <attribute name="title">
@@ -4329,6 +4334,9 @@ font: 650 11pt &quot;Allerta&quot;;
                       </widget>
                      </widget>
                      <widget class="QWidget" name="pagina_Secundario">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <widget class="QTabWidget" name="tabSec">
                        <property name="geometry">
                         <rect>
@@ -4346,20 +4354,22 @@ font: 650 11pt &quot;Allerta&quot;;
                        </property>
                        <property name="styleSheet">
                         <string notr="true">font: 500 10pt &quot;Allerta&quot;;
-color: rgb(79, 79, 79);</string>
+color: rgb(79, 79, 79);
+background-color: rgb(255, 255, 255);</string>
                        </property>
                        <property name="tabPosition">
                         <enum>QTabWidget::West</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <property name="tabsClosable">
                         <bool>false</bool>
                        </property>
                        <widget class="QWidget" name="secundarioEntrada">
                         <property name="styleSheet">
-                         <string notr="true">font: 500 11pt &quot;Allerta&quot;;</string>
+                         <string notr="true">font: 500 11pt &quot;Allerta&quot;;
+background-color: rgb(255, 255, 255);</string>
                         </property>
                         <attribute name="title">
                          <string>Entrada</string>
@@ -6078,6 +6088,9 @@ color: rgb(255, 255, 255);</string>
                         </widget>
                        </widget>
                        <widget class="QWidget" name="secundarioResultados">
+                        <property name="styleSheet">
+                         <string notr="true">background-color: rgb(255, 255, 255);</string>
+                        </property>
                         <attribute name="title">
                          <string>Resultados</string>
                         </attribute>
@@ -6862,6 +6875,9 @@ font: 650 11pt &quot;Allerta&quot;;
                       </widget>
                      </widget>
                      <widget class="QWidget" name="pagina_Terciario">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <widget class="QTabWidget" name="tabTerc">
                        <property name="geometry">
                         <rect>
@@ -6879,20 +6895,22 @@ font: 650 11pt &quot;Allerta&quot;;
                        </property>
                        <property name="styleSheet">
                         <string notr="true">font: 500 10pt &quot;Allerta&quot;;
-color: rgb(79, 79, 79);</string>
+color: rgb(79, 79, 79);
+background-color: rgb(255, 255, 255);</string>
                        </property>
                        <property name="tabPosition">
                         <enum>QTabWidget::West</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <property name="tabsClosable">
                         <bool>false</bool>
                        </property>
                        <widget class="QWidget" name="terciarioEntrada">
                         <property name="styleSheet">
-                         <string notr="true">font: 500 11pt &quot;Allerta&quot;;</string>
+                         <string notr="true">font: 500 11pt &quot;Allerta&quot;;
+background-color: rgb(255, 255, 255);</string>
                         </property>
                         <attribute name="title">
                          <string>Entrada</string>
@@ -8611,6 +8629,9 @@ color: rgb(255, 255, 255);</string>
                         </widget>
                        </widget>
                        <widget class="QWidget" name="terciarioResultado">
+                        <property name="styleSheet">
+                         <string notr="true">background-color: rgb(255, 255, 255);</string>
+                        </property>
                         <attribute name="title">
                          <string>Resultados</string>
                         </attribute>
@@ -9320,6 +9341,9 @@ font: 650 11pt &quot;Allerta&quot;;
                       </widget>
                      </widget>
                      <widget class="QWidget" name="pagina_NoC">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <widget class="QTabWidget" name="tabNoC">
                        <property name="geometry">
                         <rect>
@@ -9337,7 +9361,8 @@ font: 650 11pt &quot;Allerta&quot;;
                        </property>
                        <property name="styleSheet">
                         <string notr="true">font: 500 10pt &quot;Allerta&quot;;
-color: rgb(79, 79, 79);</string>
+color: rgb(79, 79, 79);
+background-color: rgb(255, 255, 255);</string>
                        </property>
                        <property name="tabPosition">
                         <enum>QTabWidget::West</enum>
@@ -9350,7 +9375,8 @@ color: rgb(79, 79, 79);</string>
                        </property>
                        <widget class="QWidget" name="NoConvEntrada">
                         <property name="styleSheet">
-                         <string notr="true">font: 500 11pt &quot;Allerta&quot;;</string>
+                         <string notr="true">font: 500 11pt &quot;Allerta&quot;;
+background-color: rgb(255, 255, 255);</string>
                         </property>
                         <attribute name="title">
                          <string>Entrada</string>
